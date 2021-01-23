@@ -1,0 +1,24 @@
+{{ define "main" }}
+
+  <div class="mw6 center ph3 pv4">
+    <h1 class="f2 lh-title b mb3">{{.Title}}</h1>
+    <div class="flex justify-between grey-3">
+      <p>{{ .Date.Format "Mon, Jan 2, 2006" }}</p>
+    </div>
+    <div class="cms mw6">
+      <p>{{ .Description }}</p>
+      <div class="mw7 center ph3 pv4">
+        <div class="flex flex-wrap mhn1">
+          <p>images: {{ .Params.images }}</p>
+          {{ range .Params.images}}
+            <p>IMAGE</p>
+            {{ partial "album-image.html" . }}
+          {{ else }}
+            <p>NO IMAGES :(</p>
+          {{ end }}
+        </div>
+      </div>
+      {{ .Content }}
+    </div>
+  </div>
+{{ end }}
