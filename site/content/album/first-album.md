@@ -1,9 +1,7 @@
 ---
 title: My first album
 date: 2017-01-04T15:04:10.000Z
-description: Brewing with a Chemex probably seems like a complicated,
-  time-consuming ordeal, but once you get used to the process, it becomes a
-  soothing ritual that's worth the effort every time.
+description: Welcome to my first gallery. Enjoy the photos :)
 image: /img/blog-chemex.jpg
 images:
   - image: img/about-direct-sourcing.jpg
