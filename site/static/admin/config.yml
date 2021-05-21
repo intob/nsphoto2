@@ -1,6 +1,7 @@
 backend:
   name: github
   repo: dr-useless/nsphoto2
+  base_url: github-oauth.dr-useless.workers.dev
 
 media_folder: "site/static/img" # Folder where user uploaded files should go
 public_folder: "img"
