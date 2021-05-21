@@ -2,7 +2,7 @@ backend:
   name: github
   repo: dr-useless/nsphoto2
   base_url: https://github-oauth.dr-useless.workers.dev
-  cms_label_prefix: netlify-cms/
+  branch: master
 
 media_folder: "site/static/img" # Folder where user uploaded files should go
 public_folder: "img"
