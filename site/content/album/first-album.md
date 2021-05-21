@@ -1,7 +1,7 @@
 ---
 title: My first album
 date: 2017-01-04T15:04:10.000Z
-description: Welcome to my first gallery. Enjoy the photos :)
+description: Welcome to my first gallery. Enjoy the photos :) WOOOHOO!
 image: /img/blog-chemex.jpg
 images:
   - image: img/about-direct-sourcing.jpg
