@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: dr-useless/nsphoto2
 
 media_folder: "site/static/img" # Folder where user uploaded files should go
 public_folder: "img"
