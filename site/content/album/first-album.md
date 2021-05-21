@@ -6,8 +6,10 @@ image: /img/blog-chemex.jpg
 images:
   - image: img/about-direct-sourcing.jpg
     text: Random guy
+    caption: Man with cool hat
   - image: img/about-reinvest-profits.jpg
     text: School
+    caption: Kids at school
 ---
 
 This is my first album!
