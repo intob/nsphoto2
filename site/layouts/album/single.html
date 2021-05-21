@@ -9,16 +9,11 @@
       <p>{{ .Description }}</p>
       <div class="mw7 center ph3 pv4">
         <div class="flex flex-wrap mhn1">
-          <p>images: {{ .Params.images }}</p>
           {{ range .Params.images}}
-            <p>IMAGE</p>
             {{ partial "album-image.html" . }}
-          {{ else }}
-            <p>NO IMAGES :(</p>
           {{ end }}
         </div>
       </div>
-      {{ .Content }}
     </div>
   </div>
 {{ end }}
