@@ -31,6 +31,24 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Images", name: "images", widget: "list", fields: [
           {label: "Image", name: "image", widget: "image"},
           {label: "Caption", name: "caption", widget: "string"}]}
+  - name: "service"
+    label: "Service"
+    folder: "site/content/service"
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Image", name: "image", widget: "image"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Packages", name: "packages", widget: "list", fields: [
+          {label: "Name", name: "name", widget: "string"},
+          {label: "Description", name: "description", widget: "text"},
+          {label: "Features", name: "features", widget: "list", fields: [
+            {label: "Name", name: "name", widget: "string"},
+            {label: "Description", name: "description", widget: "text"}
+          ]},
+          {label: "Price", name: "price", widget: "number", value_type: "int", min: 0, step: 1, default: 100}
+        ]}
   - name: "pages"
     label: "Pages"
     files:
@@ -53,24 +71,6 @@ collections: # A list of collections the CMS should be able to edit
           - {label: "Values", name: "values", widget: "object", fields: [
               {label: "Heading", name: "heading", widget: string},
               {label: "Text", name: "text", widget: "text"}]}
-      - file: "site/content/portfolio/_index.md"
-        label: "Portfolio Page"
-        name: "portfolio"
-        fields:
-          - {label: Title, name: title, widget: string}
-      - file: "site/content/services/_index.md"
-        label: "Services Page"
-        name: "services"
-        fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Image, name: image, widget: image}
-          - {label: Heading, name: heading, widget: string}
-          - {label: Description, name: description, widget: string}
-          - {label: Intro, name: intro, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: text}]}]}
-          - {label: Main, name: main, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Image1, name: image1, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image2, name: image2, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image3, name: image3, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}]}
-          - {label: Testimonials, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]}
-          - {label: Full_image, name: full_image, widget: image}
-          - {label: Pricing, name: pricing, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: string}, {label: Plans, name: plans, widget: list, fields: [{label: Plan, name: plan, widget: string}, {label: Price, name: price, widget: string}, {label: Description, name: description, widget: string}, {label: Items, name: items, widget: list}]}]}
       - file: "site/content/contact/_index.md"
         label: "Contact Page"
         name: "contact"
