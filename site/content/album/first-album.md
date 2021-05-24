@@ -6,6 +6,9 @@ description: |-
   WOOOHOO!
   Test using Nicole's user
 image: /img/blog-chemex.jpg
+tags:
+  - adventure
+featured_image: img/about-sustainable-farming.jpg
 images:
   - image: img/about-direct-sourcing.jpg
     text: Random guy
