@@ -1,9 +1,9 @@
-{{ if gt (len (where .Pages "Section" "album")) 0 }}
+{{ if gt (len (where .Site.Pages "Section" "album")) 0 }}
 <div class="bg-off-white pv4">
 	<div class="ph3 mw7 center">
 		<h2 class="f2 b lh-title mb3">{{ i18n "latest"}} {{ i18n "album"}}</h2>
 		<div class="w-100 flex-ns mhn1-ns flex-wrap mb3">
-			{{ range first 4 (where .Pages "Type" "album") }}
+			{{ range first 4 (after 1 (where .Site.Pages "Section" "album")) }}
 				<div class="ph1-ns w-50-ns flex">
 					{{ .Render "li" }}
 				</div>

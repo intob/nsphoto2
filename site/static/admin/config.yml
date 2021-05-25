@@ -60,18 +60,21 @@ collections: # A list of collections the CMS should be able to edit
         ]}
   - name: pages
     label: Pages
-    i18n:
-      structure: single_file
-      locales: [en, de]
     files:
-      - file: "site/content/_index.md"
-        name: home
-        label: "Home Page"
-        i18n: true
+      - file: "site/content/_index.en.md"
+        name: home_en
+        label: "Home Page EN"
         fields:
-          - {label: Title, name: title, widget: string, i18n: true}
-          - {label: Subtitle, name: subtitle, widget: string, i18n: true}
-          - {label: Image, name: image, widget: image, i18n: duplicate}
+          - {label: Title, name: title, widget: string}
+          - {label: Subtitle, name: subtitle, widget: string}
+          - {label: Image, name: image, widget: image}
+      - file: "site/content/_index.de.md"
+        name: home_de
+        label: "Home Page DE"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Subtitle, name: subtitle, widget: string}
+          - {label: Image, name: image, widget: image}
       - file: "site/content/contact/_index.md"
         name: contact
         label: "Contact Page"

@@ -1,6 +1,13 @@
 {{ define "main" }}
 
-{{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title "subtitle" .Params.subtitle) }}
+{{ $clang := .Params.Get .Site.Language.Lang}}
+
+<p>clang {{ $clang }}</p>
+<p>lang {{ .Site.Language.Lang }}</p>
+<p>params en {{ .Param "en" }}</p>
+<p>params de {{ .Param "de" }}</p>
+
+{{ partial "jumbotron" (dict "imageUrl" $clang.image "title" $clang.title "subtitle" $clang.subtitle) }}
 
 {{ partial "latest-albums" . }}
 
