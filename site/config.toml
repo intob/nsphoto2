@@ -10,35 +10,42 @@ disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
 enableEmoji = true
 
 defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = true
 
 [languages]
   [languages.de]
     languageName = "DE"
-    weight = 2
     [[languages.de.menu.main]]
         name = "Startseite"
         url = "/"
-        weight = 2
+        weight = 3
     [[languages.de.menu.main]]
         name = "Portfolio"
         url = "/album"
-        weight = 1
+        weight = 2
     [[languages.de.menu.main]]
         name = "Dienstleistungen"
         url = "/service"
+        weight = 1
+    [[languages.de.menu.main]]
+        name = "Blog"
+        url = "/post"
         weight = 0
   [languages.en]
     languageName = "EN"
-    weight = 1
     [[languages.en.menu.main]]
         name = "Home"
         url = "/"
-        weight = 2
+        weight = 3
     [[languages.en.menu.main]]
         name = "Portfolio"
         url = "/album"
-        weight = 1
+        weight = 2
     [[languages.en.menu.main]]
         name = "Services"
         url = "/service"
+        weight = 1
+    [[languages.en.menu.main]]
+        name = "Blog"
+        url = "/post"
         weight = 0
