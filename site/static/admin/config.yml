@@ -5,102 +5,90 @@ backend:
   branch: master
 
 media_folder: "site/static/img" # Folder where user uploaded files should go
-public_folder: "img"
+public_folder: img
 
 locale: en
-
 i18n:
-  # Required and can be one of multiple_folders, multiple_files or single_file
-  # multiple_folders - persists files in `<folder>/<locale>/<slug>.<extension>`
-  # multiple_files - persists files in `<folder>/<slug>.<locale>.<extension>`
-  # single_file - persists a single file in `<folder>/<slug>.<extension>`
   structure: multiple_files
   locales: [en, de]
   default_locale: en
 
 collections: # A list of collections the CMS should be able to edit
-  - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
-    label: "Post" # Used in the UI, ie.: "New Post"
+  - name: post # Used in routes, ie.: /admin/collections/:slug/edit
+    label: Post # Used in the UI, ie.: "New Post"
     folder: "site/content/post" # The path to the folder where the documents are stored
     i18n: true
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Intro Blurb", name: "description", widget: "text"}
-      - {label: "Image", name: "image", widget: "image", required: false}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: Title, name: title, widget: string}
+      - {label: "Publish Date", name: date, widget: datetime}
+      - {label: "Intro Blurb", name: description, widget: text}
+      - {label: Image, name: image, widget: image, required: false}
+      - {label: Body, name: body, widget: markdown}
   - name: "album"
     label: "Album"
     folder: "site/content/album"
     i18n: true
     create: true
     fields:
-      - {label: "Title", name: "title", widget: "string", i18n: true}
-      - {label: "Publish Date", name: "date", widget: "datetime", i18n: "duplicate"}
-      - {label: "Description", name: "description", widget: "text", i18n: true}
-      - {label: "Tags", name: "tags", widget: "list", min: 1, max: 3, i18n: true}
-      - {label: "Featured Image", name: "featured_image", widget: "image", i18n: "duplicate"}
-      - {label: "Images", name: "images", widget: "list", fields: [
-          {label: "Image", name: "image", widget: "image"},
-          {label: "Caption", name: "caption", widget: "string", required: false}]}
+      - {label: Title, name: title, widget: string, i18n: true}
+      - {label: "Publish Date", name: date, widget: datetime, i18n: duplicate}
+      - {label: Description, name: description, widget: text, i18n: true}
+      - {label: "Tags", name: "tags", widget: list, min: 1, max: 3, i18n: true}
+      - {label: "Featured Image", name: featured_image, widget: image, i18n: duplicate}
+      - {label: Images, name: images, widget: list, fields: [
+          {label: Image, name: image, widget: image},
+          {label: Caption, name: caption, widget: string, required: false}]}
   - name: "service"
     label: "Service"
     folder: "site/content/service"
     i18n: true
     create: true
     fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Description", name: "description", widget: "text"}
-      - {label: "Image", name: "image", widget: "image"}
-      - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Packages", name: "packages", widget: "list", fields: [
-          {label: "Name", name: "name", widget: "string"},
-          {label: "Description", name: "description", widget: "text"},
-          {label: "Features", name: "features", widget: "list", fields: [
-            {label: "Name", name: "name", widget: "string"},
-            {label: "Description", name: "description", widget: "text"}
+      - {label: Title, name: title, widget: string, i18n: true}
+      - {label: Description, name: description, widget: text, i18n: true}
+      - {label: Image, name: image, widget: image, i18n: duplicate}
+      - {label: Body, name: body, widget: markdown, i18n: true}
+      - {label: "Packages", name: "packages", widget: list, i18n: true, fields: [
+          {label: Name, name: "name", widget: string, i18n: true},
+          {label: Description, name: description, widget: text, i18n: true},
+          {label: Features, name: features, widget: list, i18n: true, fields: [
+            {label: Name, name: "name", widget: string, i18n: true},
+            {label: Description, name: description, widget: text, i18n: true}
           ]},
-          {label: "Price", name: "price", widget: "number", value_type: "int", min: 0, step: 1, default: 100}
+          {label: Price, name: price, widget: number, value_type: int, min: 0, step: 1, default: 100, i18n: duplicate}
         ]}
-  - name: "pages"
-    label: "Pages"
+  - name: pages
+    label: Pages
+    i18n:
+      structure: single_file
     files:
       - file: "site/content/_index.md"
-        name: "home"
+        name: home
         label: "Home Page"
         i18n: true
         fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Subtitle, name: subtitle, widget: string}
-          - {label: Image, name: image, widget: image}
-          - {label: "Blurb", name: blurb, widget: object, fields: [
-              {label: "Heading", name: "heading", widget: string},
-              {label: "Text", name: "text", widget: "text"}]}
-          - {label: "Intro", name: intro, widget: object, fields: [
-              {label: "Heading", name: "heading", widget: string},
-              {label: "Text", name: "text", widget: "text"}]}
-          - {label: "Services", name: services, widget: list, fields: [
-              {label: "Image", name: "image", widget: "image"},
-              {label: "Text", name: "text", widget: "text"}]}
-          - {label: "Values", name: "values", widget: "object", fields: [
-              {label: "Heading", name: "heading", widget: string},
-              {label: "Text", name: "text", widget: "text"}]}
+          - {label: Title, name: title, widget: string, i18n: true}
+          - {label: Subtitle, name: subtitle, widget: string, i18n: true}
+          - {label: Image, name: image, widget: image, i18n: duplicate}
       - file: "site/content/contact/_index.md"
-        name: "contact"
+        name: contact
         label: "Contact Page"
         i18n: true
         fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Logo, name: logo, widget: image}
-          - {label: Body, name: body, widget: markdown}
+          - {label: Title, name: title, widget: string, i18n: true}
+          - {label: Logo, name: logo, widget: image, i18n: duplicate}
+          - {label: Body, name: body, widget: markdown, i18n: true}
           - label: Contact Entries
             name: contact_entries
             widget: list
+            i18n: true
             fields:
               - label: Heading
                 name: heading
                 widget: string
+                i18n: true
               - label: Text
                 name: text
                 widget: text
+                i18n: true
