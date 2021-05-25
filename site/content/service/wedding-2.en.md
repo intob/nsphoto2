@@ -1,5 +1,5 @@
 ---
-title: Wedding 2
+title: Wedding
 description: I will take photos while you get married.
 image: img/blog-flavor_wheel.jpg
 packages:
