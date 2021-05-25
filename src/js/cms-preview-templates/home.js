@@ -3,7 +3,7 @@ import format from "date-fns/format";
 
 import Jumbotron from "./components/jumbotron";
 
-export default class PostPreview extends React.Component {
+export default class HomePreview extends React.Component {
   render() {
     const {entry, getAsset} = this.props;
     let image = getAsset(entry.getIn(["data", "image"]));
