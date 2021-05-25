@@ -7,13 +7,19 @@
 
 	<!-- Primary Nav -->
 	<ul class="flex b grey-3">
-		<li><a href="/album" class="pa3 no-underline db">Portfolio</a></li>
+		<ul>
+			{{- $currentPage := . -}}
+			{{ range .Site.Menus.main -}}
+			<li class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+				<a href="{{ .URL | absLangURL }}" class="pa3 no-underline db">{{ .Name }}</a>
+			</li>
+			{{- end }}
+		</ul>
 		
-		<li><a href="/service" class="pa3 no-underline db">Services</a></li>
-
-		<li><a href="/post" class="pa3 no-underline db">Blog</a></li>
-
-		<li><a href="/contact" class="pa3 no-underline db">Contact</a></li>
+		
 	</ul>
 
+	<ul class="flex b grey-3">
+		{{ partial "all-languages" . }}
+	</ul>
 </nav>

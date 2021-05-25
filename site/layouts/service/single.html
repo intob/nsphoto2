@@ -5,21 +5,22 @@
     <div class="cms mw6">
       <p>{{ .Description }}</p>
       {{ if .Params.image }}<img src="{{ .Params.image }}" alt="{{ .Title }}" />{{ end }}
-      {{ .Body }}
+      {{ .Params.body }}
     </div>
     <div class="cms mw6">
-      {{ range .Packages }}
-        <h2>{{ .Name }}</h2>
-        <p>{{ .Description }}</p>
+      <h1>Packages</h1>
+      {{ range .Params.packages }}
+        <h2>{{ .name }}</h2>
+        <p>{{ .description }}</p>
         <ul>
-          {{ range .Features }}
+          {{ range .features }}
             <li>
-              <h3>{{ .Name }}</h3>
-            <p>{{ .Description }}</p>
+              <h3>{{ .name }}</h3>
+            <p>{{ .description }}</p>
             </li>
           {{ end }}
         </ul>
-        <p>{{ .Price }}.- CHF</p>
+        <p>{{ .price }}.- CHF</p>
       {{ end }}
     </div>
   </div>

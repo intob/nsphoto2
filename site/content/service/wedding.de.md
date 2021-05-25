@@ -1,5 +1,5 @@
 ---
-title: Wedding
+title: Hochzeit
 description: I will take photos while you get married.
 image: img/about-shade-grown.jpg
 packages:
@@ -28,13 +28,13 @@ packages:
       - name: Location scouting
         description: Checking out the spots for shooting on your wedding day.
   - price: 2400
-    name: River
+    name: River 🏞️
     description: Everything from River & Stream, plus...
     features:
       - name: Evening location
         description: Shooting in the evening, while you eat & do more stuff.
   - price: 3200
-    name: Ocean
+    name: Ocean 🌊
     description: Everything from Source, Stream & River, plus...
     features:
       - name: Engagement shooting

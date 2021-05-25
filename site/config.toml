@@ -1,9 +1,48 @@
 baseurl = "/"
-languageCode = "en-us"
-languageLang = "en"
-title = "Homepage"
+
+title = "Nicole Schafer Photo & Film"
 
 # RSS, categories and tags disabled for an easy start
-# See configuration options for more details: 
-# https://gohugo.io/getting-started/configuration/#toml-configuration
+# See configuration options for more details:
+# https://gohugo.io/getting-started/configuration/#toml-configuration   
 disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
+
+enableEmoji = true
+
+defaultContentLanguage = "en"
+
+[languages]
+  [languages.de]
+    languageName = "DE"
+    weight = 2
+    [[languages.de.menu.main]]
+        name = "Startseite"
+        url = "/"
+        weight = 1
+    [[languages.de.menu.main]]
+        name = "Portfolio"
+        url = "/album"
+        weight = 1
+    [[languages.de.menu.main]]
+        name = "Dienstleistungen"
+        url = "/service"
+        weight = 0
+  [languages.en]
+    languageName = "EN"
+    weight = 1
+    [[languages.en.menu.main]]
+        name = "Home"
+        url = "/"
+        weight = 1
+    [[languages.en.menu.main]]
+        name = "Portfolio"
+        url = "/album"
+        weight = 1
+    [[languages.en.menu.main]]
+        name = "Services"
+        url = "/service"
+        weight = 0
+    [[languages.en.menu.main]]
+        name = "Services"
+        url = "/service"
+        weight = 0
