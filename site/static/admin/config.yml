@@ -7,10 +7,22 @@ backend:
 media_folder: "site/static/img" # Folder where user uploaded files should go
 public_folder: "img"
 
+locale: en
+
+i18n:
+  # Required and can be one of multiple_folders, multiple_files or single_file
+  # multiple_folders - persists files in `<folder>/<locale>/<slug>.<extension>`
+  # multiple_files - persists files in `<folder>/<slug>.<locale>.<extension>`
+  # single_file - persists a single file in `<folder>/<slug>.<extension>`
+  structure: multiple_files
+  locales: [en, de]
+  default_locale: en
+
 collections: # A list of collections the CMS should be able to edit
   - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Post" # Used in the UI, ie.: "New Post"
     folder: "site/content/post" # The path to the folder where the documents are stored
+    i18n: true
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
       - {label: "Title", name: "title", widget: "string"}
@@ -21,19 +33,21 @@ collections: # A list of collections the CMS should be able to edit
   - name: "album"
     label: "Album"
     folder: "site/content/album"
+    i18n: true
     create: true
     fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Description", name: "description", widget: "text"}
-      - {label: "Tags", name: "tags", widget: "list", min: 1, max: 3}
-      - {label: "Featured Image", name: "featured_image", widget: "image"}
+      - {label: "Title", name: "title", widget: "string", i18n: true}
+      - {label: "Publish Date", name: "date", widget: "datetime", i18n: "duplicate"}
+      - {label: "Description", name: "description", widget: "text", i18n: true}
+      - {label: "Tags", name: "tags", widget: "list", min: 1, max: 3, i18n: true}
+      - {label: "Featured Image", name: "featured_image", widget: "image", i18n: "duplicate"}
       - {label: "Images", name: "images", widget: "list", fields: [
           {label: "Image", name: "image", widget: "image"},
-          {label: "Caption", name: "caption", widget: "string"}]}
+          {label: "Caption", name: "caption", widget: "string", required: false}]}
   - name: "service"
     label: "Service"
     folder: "site/content/service"
+    i18n: true
     create: true
     fields:
       - {label: "Title", name: "title", widget: "string"}
@@ -53,8 +67,9 @@ collections: # A list of collections the CMS should be able to edit
     label: "Pages"
     files:
       - file: "site/content/_index.md"
-        label: "Home Page"
         name: "home"
+        label: "Home Page"
+        i18n: true
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Subtitle, name: subtitle, widget: string}
@@ -72,8 +87,9 @@ collections: # A list of collections the CMS should be able to edit
               {label: "Heading", name: "heading", widget: string},
               {label: "Text", name: "text", widget: "text"}]}
       - file: "site/content/contact/_index.md"
-        label: "Contact Page"
         name: "contact"
+        label: "Contact Page"
+        i18n: true
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Logo, name: logo, widget: image}
