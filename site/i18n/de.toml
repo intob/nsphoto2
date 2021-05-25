@@ -10,6 +10,17 @@ other = "Home"
 [portfolio]
 other = "Portfolio"
 
+[album]
+one = "album"
+other = "albums"
+
+[post]
+one = "post"
+other = "posts"
+
+[latest]
+other = "Neueste"
+
 [wordCount]
 other = "{{ .WordCount }} Words"
 
@@ -18,3 +29,6 @@ other = "Featured Image"
 
 [readMore]
 other = "Mehr lesen"
+
+[seeMore]
+other = "Mehr sehen"

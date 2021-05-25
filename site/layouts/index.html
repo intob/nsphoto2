@@ -2,6 +2,8 @@
 
 {{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title "subtitle" .Params.subtitle) }}
 
-{{ partial "blog" . }}
+{{ partial "latest-albums" . }}
+
+{{ partial "latest-posts" . }}
 
 {{ end }}
