@@ -1,6 +1,6 @@
 ---
 en:
-  title: Nicole Schafer Photo & Film
+  title: Nicole Schafer Photo & Film !!
   subtitle: Award-winning reportage photographer & junior filmmaker
   image: img/blog-index.jpg
 de:
