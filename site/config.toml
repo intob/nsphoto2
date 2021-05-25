@@ -18,7 +18,7 @@ defaultContentLanguage = "en"
     [[languages.de.menu.main]]
         name = "Startseite"
         url = "/"
-        weight = 1
+        weight = 2
     [[languages.de.menu.main]]
         name = "Portfolio"
         url = "/album"
@@ -33,15 +33,11 @@ defaultContentLanguage = "en"
     [[languages.en.menu.main]]
         name = "Home"
         url = "/"
-        weight = 1
+        weight = 2
     [[languages.en.menu.main]]
         name = "Portfolio"
         url = "/album"
         weight = 1
-    [[languages.en.menu.main]]
-        name = "Services"
-        url = "/service"
-        weight = 0
     [[languages.en.menu.main]]
         name = "Services"
         url = "/service"
