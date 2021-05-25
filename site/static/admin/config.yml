@@ -62,6 +62,7 @@ collections: # A list of collections the CMS should be able to edit
     label: Pages
     i18n:
       structure: single_file
+      locales: [en, de]
     files:
       - file: "site/content/_index.md"
         name: home
