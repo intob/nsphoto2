@@ -28,16 +28,17 @@ collections: # A list of collections the CMS should be able to edit
   - name: "album"
     label: "Album"
     folder: "site/content/album"
+    i18n: true
     create: true
     fields:
-      - {label: Title, name: title, widget: string}
-      - {label: "Publish Date", name: date, widget: datetime}
-      - {label: Description, name: description, widget: text}
-      - {label: "Tags", name: "tags", widget: list, max: 3}
-      - {label: "Featured Image", name: featured_image, widget: image}
-      - {label: Images, name: images, widget: list, fields: [
-          {label: Image, name: image, widget: image},
-          {label: Caption, name: caption, widget: string, required: false}
+      - {label: Title, name: title, widget: string, i18n: true}
+      - {label: "Publish Date", name: date, widget: datetime, i18n: duplicate}
+      - {label: Description, name: description, widget: text, i18n: true}
+      - {label: "Tags", name: "tags", widget: list, max: 3, i18n: true}
+      - {label: "Featured Image", name: featured_image, widget: image, i18n: duplicate}
+      - {label: Images, name: images, widget: list, i18n: true, fields: [
+          {label: Image, name: image, widget: image, i18n: true},
+          {label: Caption, name: caption, widget: string, required: false, i18n: true}
         ]}
   - name: "film"
     label: "Film"
