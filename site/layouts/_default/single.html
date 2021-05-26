@@ -2,8 +2,10 @@
   <article>
     <section>
       <h1>{{.Title}}</h1>
-      <p>{{ .Date.Format "Mon, Jan 2, 2006" }}</p>
-      <p>Read in {{ .ReadingTime }} minutes</p>
+      <div class="metadata light">
+        <p>{{ .Date.Format "Mon, Jan 2, 2006" }}</p>
+        <p>Read in {{ .ReadingTime }} minutes</p>
+      </div>
       <p>{{ .Description }}</p>
       {{ if .Params.featured_image }}<img src="{{ .Params.featured_image }}" alt="{{ .Title }}" />{{ end }}
     </section>

@@ -1,6 +1,7 @@
 a {
     text-decoration: none;
     color: var(--color-text);
+    user-select: none;
 }
 
 a:not(.no-hover) {

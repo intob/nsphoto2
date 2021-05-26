@@ -14,6 +14,11 @@ article img {
 	max-width: 100%;
 }
 
+article .metadata {
+	display: flex;
+	justify-content: space-between;
+}
+
 @media (min-width: 800px) {
 	section {
 		padding: 0;
