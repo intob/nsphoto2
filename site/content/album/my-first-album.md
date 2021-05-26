@@ -13,4 +13,10 @@ images:
   - image: media/about-shade-grown.jpg
   - image: media/blog-index.jpg
     caption: ""
+  - image: media/blog-flavor_wheel.jpg
+  - image: media/home-jumbotron.jpg
+  - image: media/blog-chemex.jpg
+  - image: media/products-full-width.jpg
+  - image: media/products-grid1.jpg
+  - image: media/products-grid2.jpg
 ---
