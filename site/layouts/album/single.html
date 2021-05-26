@@ -2,7 +2,9 @@
   <article>
     <section>
       <h1>{{.Title}}</h1>
-      <p>{{ .Date.Format "Mon, Jan 2, 2006" }}</p>
+      <div class="metadata light">
+        <p>{{ .Date.Format "2006-02-19" }}</p>
+      </div>
       <p>{{ .Description }}</p>
     </section>
     <div class="image-grid">
