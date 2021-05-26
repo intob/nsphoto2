@@ -3,5 +3,6 @@
 @import './imports/_typography';
 @import './imports/_nav';
 @import './imports/_video';
+@import './imports/_image-grid';
 
 @import './imports/_colors.css';

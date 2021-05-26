@@ -1,19 +1,14 @@
 {{ define "main" }}
-
-  <div class="mw6 center ph3 pv4">
-    <h1 class="f2 lh-title b mb3">{{.Title}}</h1>
-    <div class="flex justify-between grey-3">
-      <p>{{ .Date.Format "Mon, Jan 2, 2006" }}</p>
-    </div>
-    <div class="cms mw6">
+  <article>
+    <h1>{{.Title}}</h1>
+    <p>{{ .Date.Format "Mon, Jan 2, 2006" }}</p>
+    <section>
       <p>{{ .Description }}</p>
-      <div class="mw7 center ph3 pv4">
-        <div class="flex flex-wrap mhn1">
-          {{ range .Params.images}}
-            {{ partial "album-image.html" . }}
-          {{ end }}
-        </div>
-      </div>
-    </div>
-  </div>
+    </section>
+    <section class="image-grid">
+      {{ range .Params.images}}
+        {{ partial "album-image.html" . }}
+      {{ end }}
+    </section>
+  </article>
 {{ end }}

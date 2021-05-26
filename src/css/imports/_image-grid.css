@@ -1,0 +1,14 @@
+.image-grid {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+
+.image-grid .image {
+	background-color: inherit;
+	width: 50%;
+}
+
+.image img {
+	width: 100%;
+}
