@@ -37,7 +37,20 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Featured Image", name: featured_image, widget: image}
       - {label: Images, name: images, widget: list, fields: [
           {label: Image, name: image, widget: image},
-          {label: Caption, name: caption, widget: string, required: false}]}
+          {label: Caption, name: caption, widget: string, required: false}
+        ]}
+  - name: "film"
+    label: "Film"
+    folder: "site/content/film"
+    i18n: true
+    create: true
+    fields:
+      - {label: Title, name: title, widget: string, i18n: true}
+      - {label: "Publish Date", name: date, widget: datetime, i18n: true}
+      - {label: Description, name: description, widget: text, i18n: true}
+      - {label: "Tags", name: "tags", widget: list, max: 3, i18n: true}
+      - {label: "Featured Image", name: featured_image, widget: image, i18n: duplicate}
+      - {label: "Video File", name: video_file, widget: file, i18n: duplicate}
   - name: "service"
     label: "Service"
     folder: "site/content/service"
