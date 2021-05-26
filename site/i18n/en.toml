@@ -32,7 +32,7 @@ other = "Featured Image"
 other = "Read more"
 
 [seeMore]
-other = "See more"
+other = "See more {{ . }}"
 
 [packages]
 other = "Packages"
