@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-{{ partial "jumbotron" (dict "imageUrl" "/media/blog-index.jpg" "title" (i18n "portfolio")) }}
+{{ partial "jumbotron" (dict "imageUrl" "/media/blog-index.jpg" "title" .Params.title "subtitle" .Params.subtitle) }}
 
 {{ partial "latest-albums" . }}
 

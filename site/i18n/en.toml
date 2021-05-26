@@ -9,15 +9,15 @@ other = "Portfolio"
 
 [album]
 one = "album"
-other = "albums"
+other = "Albums"
 
 [film]
 one = "film"
-other = "films"
+other = "Films"
 
 [post]
 one = "post"
-other = "posts"
+other = "Posts"
 
 [latest]
 other = "Latest"
