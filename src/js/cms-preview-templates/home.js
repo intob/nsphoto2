@@ -52,7 +52,7 @@ export default class HomePreview extends React.Component {
               </div>
 
               <div className="w-60-l ph2-l">
-                <img src="/img/home-about-section.jpg" alt="" className="mb3"/>
+                <img src="/media/home-about-section.jpg" alt="" className="mb3"/>
               </div>
             </div>
 

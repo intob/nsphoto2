@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-{{ partial "jumbotron" (dict "imageUrl" "/img/blog-index.jpg" "title" (i18n "portfolio")) }}
+{{ partial "jumbotron" (dict "imageUrl" "/media/blog-index.jpg" "title" (i18n "album")) }}
 
 {{ $pages := where (where .Site.RegularPages "Section" "album") "Params.title" "!=" "placeholder"}}
 {{ range .Site.Home.Translations }}

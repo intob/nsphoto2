@@ -21,7 +21,7 @@ defaultContentLanguageInSubdir = true
         weight = 3
     [[languages.de.menu.main]]
         name = "Portfolio"
-        url = "/album"
+        url = "/portfolio"
         weight = 2
     [[languages.de.menu.main]]
         name = "Dienstleistungen"
@@ -39,7 +39,7 @@ defaultContentLanguageInSubdir = true
         weight = 3
     [[languages.en.menu.main]]
         name = "Portfolio"
-        url = "/album"
+        url = "/portfolio"
         weight = 2
     [[languages.en.menu.main]]
         name = "Services"

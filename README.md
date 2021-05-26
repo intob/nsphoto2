@@ -1,23 +1,26 @@
-# Hugo template for Netlify CMS with Netlify Identity
+# nsphoto2
 
-This is a small business template built with [Victor Hugo](https://github.com/netlify/victor-hugo) and [Netlify CMS](https://github.com/netlify/netlify-cms), designed and developed by [Darin Dimitroff](http://www.darindimitroff.com/), [spacefarm.digital](https://www.spacefarm.digital).
+Website for Nicole Schafer Photo & Film.
 
-## Getting started
+Built with Hugo & netlifycms. Hostable anywhere.
+Authentication with GitHub using a Cloudflare Worker https://github.com/dr-useless/github-oauth
 
-Use our deploy button to get your own copy of the repository. 
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/netlify-templates/one-click-hugo-cms&stack=cms)
+## Getting Started
 
-This will setup everything needed for running the CMS:
+### GitHub oauth with Cloudflare Worker
+Create a GitHub oauth app.
 
-* A new repository in your GitHub account with the code
-* Full Continuous Deployment to Netlify's global CDN network
-* Control users and access with Netlify Identity
-* Manage content with Netlify CMS
+Clone Cloudflare Worker repo: `git clone https://github.com/dr-useless/github-oauth`
 
-Once the initial build finishes, you can invite yourself as a user. Go to the Identity tab in your new site, click "Invite" and send yourself an invite.
+Install wrangler `npm install -g wrangler`
 
-Now you're all set, and you can start editing content!
+Set secrets
+- `wrangler secret put CLIENT_ID` enter the CLIENT_ID from your GitHub oauth app
+- `wrangler secret put CLIENT_SECRET` enter the CLENT_SECRET from your GitHub oauth
+
+### Hosting
+I am using Cloudflare Pages, but you can also use Netlify, Render, or any other service for hosting static sites. A push to master should trigger a build & deploy.
 
 ## Local Development
 
@@ -37,7 +40,7 @@ The template uses a custom fork of Tachyons and PostCSS with cssnext and cssnano
 
 ## SVG
 
-All SVG icons stored in `site/static/img/icons` are automatically optimized with SVGO (gulp-svgmin) and concatenated into a single SVG sprite stored as a a partial called `svg.html`. Make sure you use consistent icons in terms of viewport and art direction for optimal results. Refer to an SVG via the `<use>` tag like so:
+All SVG icons stored in `site/static/media/icons` are automatically optimized with SVGO (gulp-svgmin) and concatenated into a single SVG sprite stored as a a partial called `svg.html`. Make sure you use consistent icons in terms of viewport and art direction for optimal results. Refer to an SVG via the `<use>` tag like so:
 
 ```
 <svg width="16px" height="16px" class="db">

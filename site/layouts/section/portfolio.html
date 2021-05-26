@@ -1,0 +1,9 @@
+{{ define "main" }}
+
+{{ partial "jumbotron" (dict "imageUrl" "/media/blog-index.jpg" "title" (i18n "portfolio")) }}
+
+{{ partial "latest-albums" . }}
+
+{{ partial "latest-films" . }}
+
+{{ end }}

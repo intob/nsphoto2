@@ -4,15 +4,16 @@
 [notFound]
 other = "Oops, page not found…"
 
-[home]
-other = "Home"
-
 [portfolio]
 other = "Portfolio"
 
 [album]
 one = "album"
 other = "albums"
+
+[film]
+one = "film"
+other = "films"
 
 [post]
 one = "post"
