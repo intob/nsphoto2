@@ -6,8 +6,9 @@ body {
 	line-height: 1.5rem;
 }
 
-h1, h2, h3, h4, h5, h6, div, nav {
+h1, h2, h3, h4, h5, h6, div, nav, a {
 	font-family: 'Montserrat', sans-serif;
+	line-height: 1.7rem;
 }
 
 p, input, textarea, table {

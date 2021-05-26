@@ -1,6 +1,7 @@
 ---
 title: Hochzeit
 description: Hochzeit JAAHH!
+featured_image: media/blog-flavor_wheel.jpg
 packages:
   - price: 100
     name: Quelle

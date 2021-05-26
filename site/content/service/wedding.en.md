@@ -1,7 +1,7 @@
 ---
 title: Wedding
 description: I will take photos while you get married.
-image: media/blog-flavor_wheel.jpg
+featured_image: media/blog-flavor_wheel.jpg
 packages:
   - price: 1000
     name: Source

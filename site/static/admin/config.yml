@@ -23,7 +23,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: Title, name: title, widget: string, i18n: true}
       - {label: "Publish Date", name: date, widget: datetime , i18n: duplicate}
       - {label: "Intro Blurb", name: description, widget: text, i18n: true}
-      - {label: Image, name: image, widget: image, required: false, i18n: duplicate}
+      - {label: "Featured Image", name: featured_image, widget: image, required: false, i18n: duplicate}
       - {label: Body, name: body, widget: markdown, i18n: true}
   - name: "album"
     label: "Album"
@@ -60,7 +60,7 @@ collections: # A list of collections the CMS should be able to edit
     fields:
       - {label: Title, name: title, widget: string, i18n: true}
       - {label: Description, name: description, widget: text, i18n: true}
-      - {label: Image, name: image, widget: image, required: false, i18n: duplicate}
+      - {label: "Featured Image", name: featured_image, required: false, i18n: duplicate}
       - {label: Body, name: body, widget: markdown, required: false, i18n: true}
       - {label: "Packages", name: "packages", widget: list, i18n: true, fields: [
           {label: Name, name: "name", widget: string, i18n: true},

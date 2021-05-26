@@ -3,7 +3,7 @@
     <section>
       <h1>{{.Title}}</h1>
       <p>{{ .Description }}</p>
-      {{ if .Params.image }}<img src="{{ .Params.image }}" alt="{{ .Title }}" />{{ end }}
+      {{ if .Params.featured_image }}<img src="{{ .Params.featured_image }}" alt="{{ .Title }}" />{{ end }}
       {{ .Params.body }}
     </section>
     <section class="packages">

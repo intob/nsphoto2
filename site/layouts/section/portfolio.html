@@ -1,9 +1,16 @@
 {{ define "main" }}
 
-{{ partial "jumbotron" (dict "imageUrl" "/media/blog-index.jpg" "title" .Params.title "subtitle" .Params.subtitle) }}
+<article>
+    <section>
+        <h1>{{ .Params.title }}</h1>
+        <p>{{ .Params.subtitle }}<p>
 
-{{ partial "latest-albums" . }}
+        {{ partial "latest-albums" . }}
 
-{{ partial "latest-films" . }}
+        {{ partial "latest-films" . }}
+    </section>
+</article>
+
+
 
 {{ end }}

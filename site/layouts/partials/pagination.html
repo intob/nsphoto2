@@ -1,18 +1,14 @@
 {{ if gt .Paginator.TotalPages 1 }}
- 
-<nav class="cf pa3">
-    {{ if .Paginator.HasNext }}
-    <a class="fl dib link dim black f6 f5-ns b pa2" title="Next Page" href="{{ .Paginator.Next.URL }}">
-        &larr; Previous
-    </a>
-    {{ end }}
     <div class="pagination">
-        {{ if .Paginator.HasPrev }}
-        <a class="fl dib link dim black f6 f5-ns b pa2" title="Previous Page" href="{{ .Paginator.Prev.URL }}">
+        {{ if .Paginator.HasNext }}
+        <a title="Next Page" href="{{ .Paginator.Next.URL }}">
             Next &rarr;
         </a>
         {{ end }}
+        {{ if .Paginator.HasPrev }}
+        <a title="Previous Page" href="{{ .Paginator.Prev.URL }}">
+            &larr; Previous
+        </a>
+        {{ end }}
     </div>
-</nav>
- 
 {{ end }}

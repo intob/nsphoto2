@@ -1,9 +1,9 @@
 <div class="list-item">
-	<a href="{{ .RelPermalink }}">
-		<h2>{{ .Title }}</h2>
+	<a href="{{ .RelPermalink }}" class="no-hover">
+		<h3>{{ .Title }}</h3>
 		<p>{{ .Date.Format "Mon, Jan 2, 2006" }}</p>
 		{{ if .Description }}
-			<p class="mb0">{{ .Description }}</p>
+			<p>{{ .Description }}</p>
 		{{ end }}
 		<img src="{{ .Params.featured_image }}"/>
 	</a>

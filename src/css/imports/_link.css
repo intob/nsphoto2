@@ -1,7 +1,10 @@
+a {
+    text-decoration: none;
+    color: var(--color-text);
+}
+
 a:not(.no-hover) {
     display: inline-block;
-    color: var(--color-text);
-    text-decoration: none;
 }
 
 a:not(.no-hover)::after {

@@ -1,6 +1,14 @@
 {{ define "main" }}
-
-{{ partial "jumbotron" (dict "imageUrl" "/media/7.jpg" "title" .Params.title "subtitle" .Params.subtitle) }}
-{{ .Content }}
-
+  <article>
+    <section>
+      <h1>{{.Title}}</h1>
+      <p>{{ .Date.Format "Mon, Jan 2, 2006" }}</p>
+      <p>Read in {{ .ReadingTime }} minutes</p>
+      <p>{{ .Description }}</p>
+      {{ if .Params.featured_image }}<img src="{{ .Params.featured_image }}" alt="{{ .Title }}" />{{ end }}
+    </section>
+    <section>
+        {{ .Content}}
+    </section>
+  </article>
 {{ end }}
