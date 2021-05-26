@@ -28,7 +28,6 @@ collections: # A list of collections the CMS should be able to edit
   - name: "album"
     label: "Album"
     folder: "site/content/album"
-    i18n: false
     create: true
     fields:
       - {label: Title, name: title, widget: string}
