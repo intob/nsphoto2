@@ -1,5 +1,6 @@
 <head>
-	<title>{{ .Title }} | {{ $.Site.Title }}</title>
+	<title>{{ if ne .Title $.Site.Home.Title }}{{.Title}} | {{ end }}{{ $.Site.Home.Title }}</title>
+	<meta name="description" content="{{ .Params.subtitle }}">
 
 	{{ $stylesheet := .Site.Data.webpack.main }}
 	{{ with $stylesheet.css }}
@@ -11,7 +12,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 	<base href="{{ if getenv "CONTEXT" }}{{ cond (eq "production" (getenv "CONTEXT")) (getenv "URL") (getenv "DEPLOY_PRIME_URL") }}{{ else }}{{ $.Site.BaseURL }}{{ end }}">
 
-	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+	<link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans&display=swap" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans&display=swap" crossorigin>
+
 
 	<!-- Favicons -->
 	<link rel="apple-touch-icon" sizes="180x180" href="/media/apple-touch-icon.png">
@@ -23,7 +27,7 @@
 
 	<!-- Open Graph -->
 	<meta property="og:type" content="business.business">
-	<meta property="og:title" content="Nicole Schafer Photo & Film">
+	<meta property="og:title" content="{{ if ne .Title $.Site.Home.Title }}{{.Title}} | {{ end }}{{ $.Site.Home.Title }}">
 	<meta property="og:url" content="/">
-	<meta property="og:image" content="/media/og-image.jpg">
+	<meta property="og:image" content="/media/og-image">
 </head>
