@@ -2,11 +2,15 @@
 
 {{ partial "jumbotron" (dict "imageUrl" "/img/blog-index.jpg" "title" (i18n "portfolio")) }}
 
-<h2>mongo</h2>
+{{ $pages := where (where .Site.RegularPages "Section" "album") "Params.title" "!=" "placeholder"}}
+{{ range .Site.Home.Translations }}
+{{ $pages = $pages | lang.Merge (where (where .Site.RegularPages "Section" "album") "Params.title" "!=" "placeholder") }}
+{{ end }}
+
 
 <div class="mw7 center">
   <ul class="flex-ns flex-wrap mhn1-ns pa3">
-      {{ range where (where .Site.AllPages "Section" "album") "Params.title" "not in" (slice "placeholder" "Albums") }}
+      {{ range $pages }}
           <div class="w-50-ns ph1-ns flex">
             {{ .Render "li"}}
           </div>
