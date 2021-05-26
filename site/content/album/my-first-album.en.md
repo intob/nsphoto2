@@ -1,5 +1,5 @@
 ---
-title: My first album
+title: My first album EN
 date: 2021-05-25T15:25:45.907Z
 description: This is my first album! Woohoo! 📷
 tags:

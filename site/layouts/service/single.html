@@ -1,27 +1,30 @@
 {{ define "main" }}
-
-  <div class="mw6 center ph3 pv4">
-    <h1 class="f2 lh-title b mb3">{{.Title}}</h1>
-    <div class="cms mw6">
+  <article>
+    <section>
+      <h1>{{.Title}}</h1>
       <p>{{ .Description }}</p>
       {{ if .Params.image }}<img src="{{ .Params.image }}" alt="{{ .Title }}" />{{ end }}
       {{ .Params.body }}
-    </div>
-    <div class="cms mw6">
-      <h1>Packages</h1>
-      {{ range .Params.packages }}
-        <h2>{{ .name }}</h2>
-        <p>{{ .description }}</p>
-        <ul>
-          {{ range .features }}
-            <li>
-              <h3>{{ .name }}</h3>
-            <p>{{ .description }}</p>
-            </li>
-          {{ end }}
-        </ul>
-        <p>{{ .price }}.- CHF</p>
-      {{ end }}
-    </div>
-  </div>
+    </section>
+    <section class="packages">
+      <h1>{{ i18n "packages"}}</h1>
+      <ul>
+        {{ range .Params.packages }}
+        <li>
+          <h2>{{ .name }}</h2>
+          <p>{{ .description }}</p>
+          <ul>
+            {{ range .features }}
+              <li>
+                <h3>{{ .name }}</h3>
+              <p>{{ .description }}</p>
+              </li>
+            {{ end }}
+          </ul>
+          <h2>{{ .price }}.- CHF</h2>
+        </li>
+        {{ end }}
+      </ul>
+    </section>
+  </article>
 {{ end }}

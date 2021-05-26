@@ -1,0 +1,21 @@
+article {
+	display: flex;
+	flex-direction: column;
+}
+
+section {
+	align-self: center;
+	padding: 0 10px;
+	width: calc(100% - 20px);
+}
+
+article img {
+	max-width: 100%;
+}
+
+@media (min-width: 800px) {
+	section {
+		padding: 0;
+		width: 700px;
+	}
+}

@@ -1,14 +1,14 @@
 {{ define "main" }}
   <article>
-    <h1>{{.Title}}</h1>
-    <p>{{ .Date.Format "Mon, Jan 2, 2006" }}</p>
     <section>
+      <h1>{{.Title}}</h1>
+      <p>{{ .Date.Format "Mon, Jan 2, 2006" }}</p>
       <p>{{ .Description }}</p>
     </section>
-    <section class="image-grid">
+    <div class="image-grid">
       {{ range .Params.images}}
         {{ partial "album-image.html" . }}
       {{ end }}
-    </section>
+    </div>
   </article>
 {{ end }}

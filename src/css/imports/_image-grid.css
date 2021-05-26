@@ -7,6 +7,11 @@
 .image-grid .image {
 	background-color: inherit;
 	width: 50%;
+	align-self: center;
+}
+
+.image-grid .image:nth-child(3n) {
+	width: 100%;
 }
 
 .image img {

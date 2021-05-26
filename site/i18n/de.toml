@@ -33,3 +33,6 @@ other = "Mehr lesen"
 
 [seeMore]
 other = "Mehr sehen"
+
+[packages]
+other = "Pakete"
