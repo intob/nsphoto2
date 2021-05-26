@@ -33,3 +33,9 @@ other = "Read more"
 
 [seeMore]
 other = "See more"
+
+[packages]
+other = "Packages"
+
+[socialMedia]
+other = "Social media"

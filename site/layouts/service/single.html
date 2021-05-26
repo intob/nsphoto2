@@ -11,7 +11,8 @@
       <ul>
         {{ range .Params.packages }}
         <li>
-          <h2>{{ .name }}</h2>
+          <h2>{{ .name }} <h2>
+          <h3>{{ .price }}.- CHF</h3>
           <p>{{ .description }}</p>
           <ul>
             {{ range .features }}
@@ -21,7 +22,6 @@
               </li>
             {{ end }}
           </ul>
-          <h2>{{ .price }}.- CHF</h2>
         </li>
         {{ end }}
       </ul>

@@ -1,0 +1,15 @@
+.grid-list {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.grid-list .list-item {
+	width: 100%;
+}
+
+@media (min-width: 800px) {
+	.grid-list .list-item {
+		width: 50%;
+	}
+}

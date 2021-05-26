@@ -1,0 +1,18 @@
+a:not(.no-hover) {
+    display: inline-block;
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+a:not(.no-hover)::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    background: var(--color-primary);
+    transition: width .3s;
+}
+
+a:not(.no-hover):hover::after {
+    width: 100%;
+}

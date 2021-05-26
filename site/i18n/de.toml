@@ -36,3 +36,6 @@ other = "Mehr sehen"
 
 [packages]
 other = "Pakete"
+
+[socialMedia]
+other = "Social Media"

@@ -22,10 +22,6 @@ nav ul li a {
 	color: var(--color-text);
 }
 
-nav ul li a:hover {
-	color: var(--color-primary);
-}
-
 .menu {
 	display: flex;
 	justify-content: space-around;

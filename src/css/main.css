@@ -1,10 +1,13 @@
 /* Modules */
 @import './imports/_reset.css';
 @import './imports/_typography';
+@import './imports/_link';
 @import './imports/_nav';
+@import './imports/_footer';
 @import './imports/_article';
 @import './imports/_packages';
 @import './imports/_image-grid';
+@import './imports/_grid-list';
 @import './imports/_video';
 
 @import './imports/_colors.css';

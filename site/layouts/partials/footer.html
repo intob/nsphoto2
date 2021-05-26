@@ -1,41 +1,19 @@
-<footer class="bg-black ph3 pv4 white">
-
-	<div class="mw7 center pt3">
-
-		<div class="flex-ns justify-between">
-
-			<div>
-				<h3 class="f4 b lh-title mb1 primary">Kaldi</h3>
-				<ul class="mb3">
-					<li><a href="/" class="link">Home</a></li>
-					<li><a href="/products" class="link">Our products</a></li>
-					<li><a href="/values" class="link">About</a></li>
-					<li><a href="/post" class="link">Blog</a></li>
-					<li><a href="/contact" class="link">Contact</a></li>
-				</ul>
-			</div>
-
-			<div>
-				<h3 class="f4 b lh-title mb1 primary">Find out more</h3>
-				<ul class="mb3">
-					<li><a href="/post/jamaica-blue/" class="link">Latest offers</a></li>
-					<li><a href="/contact" class="link">Schedule and appointment</a></li>
-				</ul>
-			</div>
-
-			<div>
-				<h3 class="f4 b lh-title mb2 primary">Social media</h3>
-				<ul class="mhn2">
-					{{ partial "social-icon" (dict "link" "#" "svg" "icons-facebook") }}
-					{{ partial "social-icon" (dict "link" "https://instagram.com/ni_schafer" "svg" "icons-instagram") }}
-				</ul>
-			</div>
-
-		</div>
+<footer>
+	<div>
+		<section>
+			<h3>{{ .Site.Home.Title}}</h3>
+			<ul>
+				{{ partial "menu" .}}
+			</ul>
+		</section>
+		<section>
+			<h3>{{ i18n "socialMedia" }}</h3>
+			<ul class="social">
+				<li>{{ partial "social-icon" (dict "link" "#" "svg" "icons-facebook") }}</li>
+				<li>{{ partial "social-icon" (dict "link" "https://instagram.com/ni_schafer" "svg" "icons-instagram") }}</li>
+			</ul>
+		</section>
 	</div>
-
 </footer>
 
 {{ partial "svg" . }}
-
-<script src="/app.js"></script>

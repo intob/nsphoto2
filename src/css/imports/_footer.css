@@ -1,0 +1,53 @@
+footer {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	border-top: 1px solid var(--color-text)
+}
+
+footer > div {
+	width: 100%;
+}
+
+footer ul {
+	list-style: none;
+	padding: 0;
+}
+
+ul.social {
+	display: flex;
+}
+
+ul.social li {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	width: 25px;
+	height: 25px;
+	background-color: var(--color-primary);
+	border-radius: 50%;
+	padding: 10px;
+	margin: 0 5px;
+	transition: padding 0.25s;
+}
+
+ul.social li:hover {
+	padding: 15px;
+}
+
+ul.social svg, ul.social a {
+	width: 100%;
+	height: 100%;
+}
+
+@media (min-width: 800px) {
+	footer > div {
+		max-width: 700px;
+		display: flex;
+	}
+
+	footer section {
+		width: 50%;
+		align-self: flex-start;
+	}
+}

@@ -1,0 +1,6 @@
+{{- $currentPage := . -}}
+{{ range .Site.Menus.main -}}
+    <li class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+        <a href="{{ .URL | absLangURL }}" class="pa3 no-underline db">{{ .Name }}</a>
+    </li>
+{{- end }}
