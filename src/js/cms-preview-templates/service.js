@@ -1,8 +1,6 @@
 import React from "react";
 import format from "date-fns/format";
 
-import Jumbotron from "./components/jumbotron";
-
 export default class ServicePreview extends React.Component {
   render() {
     const {entry, getAsset} = this.props;
@@ -14,8 +12,6 @@ export default class ServicePreview extends React.Component {
     }
 
     return <div>
-      <Jumbotron image={image} title={entry.getIn(["data", "title"])} />
-
       <div className="bg-off-white pv4">
         <div className="ph3 mw7 center">
           <h2 className="f2 b lh-title mb2">{entry.getIn(["data", "intro", "heading"])}</h2>
