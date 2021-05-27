@@ -45,4 +45,7 @@ images:
   - en/album/newest-album/wedding_w-9011.jpg
   - en/album/newest-album/wedding_w-9106.jpg
   - en/album/newest-album/wedding_w-9109.jpg
+videos:
+  - video_file: en/album/another-awesome-wedding/video-1616746796.mp4
+    poster: en/album/another-awesome-wedding/2301a668-da04-40ae-aa13-0febaa58213a.jpeg
 ---
