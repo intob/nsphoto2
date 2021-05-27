@@ -29,7 +29,7 @@ collections: # A list of collections the CMS should be able to edit
     label: "Album"
     folder: "site/content/album"
     path: "{{slug}}/index"
-    media_folder: ""
+    media_folder: "{{slug}}"
     public_folder: ""
     i18n: true
     create: true
