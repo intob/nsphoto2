@@ -1,14 +1,18 @@
 {{ if gt .Paginator.TotalPages 1 }}
     <div class="pagination">
-        {{ if .Paginator.HasNext }}
-        <a title="Next Page" href="{{ .Paginator.Next.URL }}">
-            Next &rarr;
-        </a>
-        {{ end }}
-        {{ if .Paginator.HasPrev }}
-        <a title="Previous Page" href="{{ .Paginator.Prev.URL }}">
-            &larr; Previous
-        </a>
-        {{ end }}
+        <div>
+            {{ if .Paginator.HasPrev }}
+                <a title="Previous Page" href="{{ .Paginator.Prev.URL }}">
+                    &larr; {{ i18n "previous"}}
+                </a>
+            {{ end }}
+        </div>
+        <div>
+            {{ if .Paginator.HasNext }}
+                <a title="Next Page" href="{{ .Paginator.Next.URL }}">
+                    {{ i18n "next" }} &rarr;
+                </a>
+            {{ end }}
+        </div>
     </div>
 {{ end }}

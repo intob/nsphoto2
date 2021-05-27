@@ -1,14 +1,16 @@
-a {
+a, .link {
     text-decoration: none;
     color: var(--color-text);
     user-select: none;
 }
 
-a:not(.no-hover) {
+a:not(.no-hover),
+.link {
     display: inline-block;
 }
 
-a:not(.no-hover)::after {
+a:not(.no-hover)::after, 
+.link::after {
     content: '';
     display: block;
     width: 0;
@@ -17,6 +19,7 @@ a:not(.no-hover)::after {
     transition: width .3s;
 }
 
-a:not(.no-hover):hover::after {
+a:not(.no-hover):hover::after,
+.link:hover::after {
     width: 100%;
 }

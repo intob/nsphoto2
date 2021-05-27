@@ -1,9 +1,14 @@
 {{ define "main" }}
   <article>
     <div class="media-grid">
-      <div class="media-grid-item span-2">
+      <div class="media-grid-item span-3">
         <h1>{{.Title}}</h1>
         <div class="metadata light">
+          <p class="tags">
+            {{ range .Params.tags }}
+              <span>{{.}}</span>
+            {{end}}
+          </p>
           <p>{{ .Date.Format "2006-02-19" }}</p>
         </div>
         <p>{{ .Description }}</p>

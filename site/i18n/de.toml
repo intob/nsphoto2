@@ -1,11 +1,14 @@
 # Translations for German
 # https://gohugo.io/content-management/multilingual/#translation-of-strings
 
-[notFound]
-other = "Oops, page not found…"
+[previous]
+other = "Vorherige"
 
-[portfolio]
-other = "Portfolio"
+[next]
+other = "Nächster"
+
+[all]
+other = "Alle"
 
 [album]
 one = "album"
@@ -22,17 +25,8 @@ other = "Artikel"
 [latest]
 other = "Neueste"
 
-[wordCount]
-other = "{{ .WordCount }} Words"
-
 [featuredImage]
 other = "Featured Image"
-
-[readMore]
-other = "Mehr lesen"
-
-[seeMore]
-other = "Mehr {{ . }} sehen"
 
 [packages]
 other = "Pakete"

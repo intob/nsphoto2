@@ -4,6 +4,7 @@ date: 2021-05-27T09:07:27.123Z
 description: This is a super awesome wedding album. Enjoy the photos.
 tags:
   - wedding
+  - awesome
 featured_image: en/album/newest-album/wedding_w-3621.jpg
 images:
   - en/album/newest-album/wedding_w-2.jpg

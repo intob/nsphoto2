@@ -19,6 +19,14 @@ article .metadata {
 	justify-content: space-between;
 }
 
+article .metadata .tags {
+	text-transform: uppercase;
+}
+
+article .metadata .tags span:not(:last-of-type):after {
+	content: ",";
+}
+
 @media (min-width: 800px) {
 	section {
 		padding: 0;

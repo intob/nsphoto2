@@ -37,7 +37,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: Title, name: title, widget: string, i18n: true}
       - {label: "Publish Date", name: date, widget: datetime, i18n: duplicate}
       - {label: Description, name: description, widget: text, i18n: true}
-      - {label: "Tags", name: "tags", widget: list, max: 3, i18n: true}
+      - {label: "Tags", name: "tags", widget: list, max: 5, i18n: true}
       - {label: "Featured Image", name: featured_image, widget: image, i18n: duplicate}
       - {label: Images, name: images, widget: list, i18n: true, add_to_top: true,
           field: {label: Image, name: image, widget: image, i18n: true}
@@ -51,7 +51,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: Title, name: title, widget: string, i18n: true}
       - {label: "Publish Date", name: date, widget: datetime, i18n: true}
       - {label: Description, name: description, widget: text, i18n: true}
-      - {label: "Tags", name: "tags", widget: list, max: 3, i18n: true}
+      - {label: "Tags", name: "tags", widget: list, max: 5, i18n: true}
       - {label: "Featured Image", name: featured_image, widget: image, i18n: duplicate}
       - {label: "Video File", name: video_file, widget: file, i18n: duplicate}
   - name: "service"

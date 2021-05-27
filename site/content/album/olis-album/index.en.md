@@ -5,7 +5,7 @@ description: Oli is funny! Amazing. Good job.
 tags:
   - adventure
   - bike
-featured_image: en/album/olis-album/kittelfjall_pistkarta_2500px.jpg
+featured_image: en/album/newest-album/wedding_w-2523.jpg
 images:
-  - en/album/olis-album/kittelfjall_pistkarta_2500px.jpg
+  - en/album/newest-album/wedding_w-2523.jpg
 ---

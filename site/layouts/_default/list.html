@@ -3,7 +3,7 @@
     <section>
       <h1>{{.Title}}</h1>
       <div class="grid-list">
-        {{ range (.Paginator 4).Pages.ByPublishDate.Reverse }}
+        {{ range (.Paginator 2).Pages.ByPublishDate.Reverse }}
             {{ .Render "li"}}
         {{ end }}
       </div>

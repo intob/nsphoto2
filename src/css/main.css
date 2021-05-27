@@ -10,5 +10,6 @@
 @import './imports/_media-grid';
 @import './imports/_grid-list';
 @import './imports/_video';
+@import './imports/_pagination';
 
 @import './imports/_colors.css';
