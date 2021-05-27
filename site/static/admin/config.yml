@@ -30,7 +30,7 @@ collections: # A list of collections the CMS should be able to edit
     folder: "site/content/album"
     path: "{{slug}}/index"
     media_folder: ""
-    public_folder: "{{.Site.Language.Lang}}/album/{{slug}}"
+    public_folder: "en/album/{{slug}}"
     i18n: true
     create: true
     fields:
