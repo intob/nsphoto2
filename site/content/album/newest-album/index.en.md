@@ -6,8 +6,7 @@ tags:
   - adventure
 featured_image: /album/newest-album/wedding_w-2523.jpg
 images:
-  - image: wedding_w-2523.jpg
-  - image: wedding_w-2.jpg
-  - image: wedding_w-3621.jpg
-  - image: wedding_w-3364.jpg
+  - image: /album/newest-album/wedding_w-3364.jpg
+  - image: /album/newest-album/wedding_w-3621.jpg
+  - image: /album/newest-album/wedding_w-2.jpg
 ---
