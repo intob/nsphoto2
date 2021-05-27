@@ -18,26 +18,34 @@ defaultContentLanguageInSubdir = true
     [[languages.de.menu.main]]
         name = "Startseite"
         url = "/"
+        weight = 0
     [[languages.de.menu.main]]
         name = "Dienstleistungen"
         url = "/service"
+        weight = 1
     [[languages.de.menu.main]]
         name = "Blog"
         url = "/post"
+        weight = 2
     [[languages.de.menu.main]]
         name = "Kontakt"
         url = "/contact"
+        weight = 3
   [languages.en]
     languageName = "EN"
     [[languages.en.menu.main]]
         name = "Home"
         url = "/"
+        weight = 0
     [[languages.en.menu.main]]
         name = "Services"
         url = "/service"
+        weight = 1
     [[languages.en.menu.main]]
         name = "Blog"
         url = "/post"
+        weight = 2
     [[languages.en.menu.main]]
         name = "Contact"
         url = "/contact"
+        weight = 3

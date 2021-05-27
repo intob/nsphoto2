@@ -1,13 +1,13 @@
 {{ define "main" }}
   <article>
-    <section>
-      <h1>{{.Title}}</h1>
-      <div class="metadata light">
-        <p>{{ .Date.Format "2006-02-19" }}</p>
-      </div>
-      <p>{{ .Description }}</p>
-    </section>
     <div class="media-grid">
+      <div class="media-grid-item span-2">
+        <h1>{{.Title}}</h1>
+        <div class="metadata light">
+          <p>{{ .Date.Format "2006-02-19" }}</p>
+        </div>
+        <p>{{ .Description }}</p>
+      </div>
       {{ range .Params.images}}
         <div class="media-grid-item lazy" data-srcset="{{ . }}"></div>
       {{ end }}

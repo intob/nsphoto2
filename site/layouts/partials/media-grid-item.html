@@ -1,4 +1,4 @@
-<a href="{{ .RelPermalink }}" class="media-grid-item no-hover" style="background-image:url('{{ .Params.featured_image }}')">
+<a href="{{ .RelPermalink }}" class="media-grid-item lazy no-hover" data-srcset="{{ .Params.featured_image }}">
 	<h5>{{ .Title }}</h5>
 	{{ if eq .Section "film"}}
 		<span class="icon">🎥</span>
