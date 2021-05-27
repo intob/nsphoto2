@@ -1,9 +1,0 @@
-{{ if gt (len (where .Site.RegularPages "Section" "album")) 0 }}
-	<h2>{{ i18n "latest"}} {{ i18n "album"}}</h2>
-	<div class="grid-list">
-		{{ range first 4 (where .Site.RegularPages "Section" "album") }}
-			{{ .Render "li" }}
-		{{ end }}
-	</div>
-	<a href="{{ "album/" | relLangURL }}">{{ i18n "seeMore" (i18n "album")}}</a>
-{{ end }}

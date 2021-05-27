@@ -9,7 +9,7 @@
     </section>
     <div class="media-grid">
       {{ range .Params.images}}
-        {{ partial "album-image.html" . }}
+        <div class="media-grid-item lazy" data-srcset="{{ . }}"></div>
       {{ end }}
     </div>
   </article>

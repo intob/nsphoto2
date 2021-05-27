@@ -11,6 +11,12 @@
 	width: 100%;
 	height: 66vw;
 	margin: 10px 0;
+	opacity: 1;
+	transition: opacity 0.25s;
+}
+
+.media-grid-item.lazy {
+	opacity: 0;
 }
 
 .media-grid-item h5 {
@@ -53,12 +59,22 @@
 		margin: unset;
 	}
 
-	.media-grid-item:nth-child(3n) {
+	.media-grid-item:nth-child(1) {
+		grid-column-end: span 3;
+		grid-row-end: span 2;
+	}
+
+	.media-grid-item:nth-child(2n) {
 		grid-column-end: span 2;
 		grid-row-end: span 2;
 	}
 
 	.media-grid-item:nth-child(6n) {
+		grid-column-end: span 4;
+		grid-row-end: span 3;
+	}
+
+	.media-grid-item:nth-child(8n) {
 		grid-column-end: span 3;
 		grid-row-end: span 4;
 	}

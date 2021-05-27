@@ -1,9 +1,0 @@
-{{ if gt (len (where .Site.RegularPages "Section" "film")) 0 }}
-	<h2>{{ i18n "latest"}} {{ i18n "film"}}</h2>
-	<div class="grid-list">
-		{{ range first 4 (where .Site.RegularPages "Section" "film") }}
-			{{ .Render "li" }}
-		{{ end }}
-	</div>
-	<a href="{{ "film/" | relLangURL }}">{{ i18n "seeMore" (i18n "film")}}</a>
-{{ end }}
