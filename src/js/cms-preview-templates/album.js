@@ -3,13 +3,12 @@ import format from "date-fns/format";
 
 export default class AlbumPreview extends React.Component {
   render() {
-    const {entry, getAsset} = this.props;
+    const {entry} = this.props;
     let images = entry.getIn(["data", "images"]);
 
     const imagesTemplate = images.map(img => {
-
       const imageUrl = `${window.parent.location.protocol}//${window.parent.location.host}/${img.getIn(['image'])}`;
-      return <div className="media-grid-item" style={{backgroundImage: `url(${imageUrl})`}}></div>
+      return <div className="media-grid-item" style={{backgroundImage: `url(${imageUrl})`}}></div>;
   });
 
     return <article>
