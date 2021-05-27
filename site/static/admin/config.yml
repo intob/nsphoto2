@@ -88,18 +88,6 @@ collections: # A list of collections the CMS should be able to edit
           - {label: Title, name: title, widget: string}
           - {label: Subtitle, name: subtitle, widget: string}
           - {label: Image, name: image, widget: image}
-      - file: "site/content/portfolio/_index.en.md"
-        name: portfolio_en
-        label: "Portfolio EN"
-        fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Subtitle, name: subtitle, widget: string}
-      - file: "site/content/portfolio/_index.de.md"
-        name: portfolio_de
-        label: "Portfolio DE"
-        fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Subtitle, name: subtitle, widget: string}
       - file: "site/content/contact/_index.md"
         name: contact
         label: "Contact Page"

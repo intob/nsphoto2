@@ -1,0 +1,7 @@
+{{ $pages := where .Site.RegularPages "Section" "in" (slice "album" "film") }}
+
+<div class="media-grid">
+	{{ range first 4 $pages.ByPublishDate.Reverse }}
+		{{ partial "media-grid-item" . }}
+	{{ end }}
+</div>

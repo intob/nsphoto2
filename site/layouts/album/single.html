@@ -7,7 +7,7 @@
       </div>
       <p>{{ .Description }}</p>
     </section>
-    <div class="image-grid">
+    <div class="media-grid">
       {{ range .Params.images}}
         {{ partial "album-image.html" . }}
       {{ end }}
