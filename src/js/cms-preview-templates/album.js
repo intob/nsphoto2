@@ -7,7 +7,7 @@ export default class AlbumPreview extends React.Component {
     let images = entry.getIn(["data", "images"]);
 
     const imagesTemplate = images.map(img => {
-      const imageUrl = `${window.parent.location.protocol}//${window.parent.location.host}/${img.getIn(['image'])}`;
+      const imageUrl = `${window.parent.location.protocol}//${window.parent.location.host}/${img}`;
       return <div className="media-grid-item" style={{backgroundImage: `url(${imageUrl})`}}></div>;
   });
 
