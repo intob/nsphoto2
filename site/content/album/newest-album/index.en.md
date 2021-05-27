@@ -1,9 +1,9 @@
 ---
-title: Newest album
+title: Awesome Wedding
 date: 2021-05-27T09:07:27.123Z
-description: Test album for media dirs
+description: This is a super awesome wedding album. Enjoy the photos.
 tags:
-  - adventure
+  - wedding
 featured_image: en/album/newest-album/wedding_w-3621.jpg
 images:
   - en/album/newest-album/wedding_w-3781.jpg

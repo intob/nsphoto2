@@ -1,7 +1,9 @@
 ---
-title: Newest album de
+title: Mega Hochzeit zeit
 date: 2021-05-27T09:07:27.123Z
-description: My newest album
+description: Mega! This is a super awesome wedding album. Enjoy the photos. DE
+tags:
+  - wedding
 featured_image: en/album/newest-album/wedding_w-3621.jpg
 images:
   - en/album/newest-album/wedding_w-3781.jpg
