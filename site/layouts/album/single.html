@@ -1,7 +1,7 @@
 {{ define "main" }}
   <article>
     <div class="media-grid">
-      <div class="media-grid-item span-3">
+      <div class="media-grid-item span span-3-2">
         <h1>{{.Title}}</h1>
         <div class="metadata light">
           <p class="tags">
@@ -13,8 +13,13 @@
         </div>
         <p>{{ .Description }}</p>
       </div>
-      {{ range .Params.images}}
-        <div class="media-grid-item lazy" data-srcset="{{ . }}"></div>
+      {{ range $i, $video := .Params.videos}}
+        <div class="media-grid-item span span-4-2" style="order:{{ add $i 4 }}">
+          <video src="{{ $video.video_file }}" poster="{{ $video.poster }}" controls playsinline/>
+        </div>
+      {{ end }}
+      {{ range $i, $image := .Params.images}}
+        <div class="media-grid-item lazy" data-srcset="{{ $image }}" style="order:{{ $i }}"></div>
       {{ end }}
     </div>
   </article>
