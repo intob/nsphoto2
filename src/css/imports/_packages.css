@@ -1,5 +1,6 @@
 section.packages ul {
-	list-style: none;
+	/*list-style: none;*/
+	list-style-type: "🎁";
 }
 
 section.packages ul li::marker {
