@@ -1,4 +1,4 @@
-<a href="{{ .RelPermalink }}" class="media-grid-item lazy no-hover" data-srcset="{{ .Params.featured_image }}" data-tags="{{ range .Params.tags }}{{ . }},{{ end }}">
+<a href="{{ .RelPermalink }}" class="media-grid-item lazy no-hover" data-srcset="{{ .Params.featured_image }}" data-tags="{{ range .Params.tags }}{{ lower . }},{{ end }}">
 	<h5>{{ .Title }}</h5>
 	{{ if eq .Section "film"}}
 		<span class="icon">🎥</span>

@@ -5,7 +5,7 @@
 		<li class="link active" data-tag="">{{ i18n "all" }}</li>
 		{{ range $pages }}
 			{{ range .Params.tags }}
-				<li class="link" data-tag="{{ . }}" hidden>{{ . }}</li>
+				<li class="link" data-tag="{{ lower . }}" hidden>{{ . }}</li>
 			{{ end }}
 		{{ end }}
 	</ul>

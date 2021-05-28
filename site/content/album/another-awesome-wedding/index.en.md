@@ -3,7 +3,7 @@ title: Another awesome wedding
 date: 2021-05-27T21:05:22.101Z
 description: This is a super awesome wedding album. Enjoy the photos.
 tags:
-  - wedding
+  - Wedding
 featured_image: en/album/another-awesome-wedding/2301a668-da04-40ae-aa13-0febaa58213a.jpeg
 images:
   - en/album/newest-album/wedding_w-2.jpg
