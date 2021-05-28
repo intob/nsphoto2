@@ -10,3 +10,7 @@ a {
 a:visited {
     color: inherit;
 }
+
+[hidden] {
+    display: none !important;
+}

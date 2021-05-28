@@ -88,14 +88,12 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Subtitle, name: subtitle, widget: string}
-          - {label: Image, name: image, widget: image}
       - file: "site/content/_index.de.md"
         name: home_de
         label: "Home Page DE"
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Subtitle, name: subtitle, widget: string}
-          - {label: Image, name: image, widget: image}
       - file: "site/content/contact/_index.md"
         name: contact
         label: "Contact Page"

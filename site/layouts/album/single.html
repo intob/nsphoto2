@@ -14,7 +14,7 @@
         <p>{{ .Description }}</p>
       </div>
       {{ range $i, $video := .Params.videos}}
-        <div class="media-grid-item span span-4-2" style="order:{{ add $i 4 }}">
+        <div class="media-grid-item span span-4-2 video" style="order:{{ add $i 4 }}">
           <video src="{{ $video.video_file }}" poster="{{ $video.poster }}" controls playsinline/>
         </div>
       {{ end }}

@@ -15,6 +15,15 @@
 	transition: opacity 0.25s;
 }
 
+.media-grid-item.video {
+	height: unset;
+}
+
+.media-grid-item.video video {
+	border-radius: 5px;
+	margin-bottom: -9px;
+}
+
 .media-grid-item.lazy {
 	opacity: 0;
 }
@@ -54,6 +63,15 @@
 	flex-wrap: wrap;
 	padding: 0;
 	text-transform: uppercase;
+}
+
+.media-tags li {
+	padding: 5px;
+	cursor: pointer;
+}
+
+.media-tags li.active {
+	background-color: var(--color-bg-dark);
 }
 
 .media-tags li:not(:first-of-type) {

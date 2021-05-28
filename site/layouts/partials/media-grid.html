@@ -2,10 +2,10 @@
 
 <section>
 	<ul class="media-tags">
-		<li class="link" data-filter-clear>{{ i18n "all" }}</li>
+		<li class="link active" data-tag="">{{ i18n "all" }}</li>
 		{{ range $pages }}
 			{{ range .Params.tags }}
-				<li class="link" data-tag="{{ . }}">{{ . }}</li>
+				<li class="link" data-tag="{{ . }}" hidden>{{ . }}</li>
 			{{ end }}
 		{{ end }}
 	</ul>

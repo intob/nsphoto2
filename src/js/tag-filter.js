@@ -1,17 +1,17 @@
 const tagSelector = "[data-tag]";
-const clearFilterSelector = "[data-filter-clear]";
 const mediaItemSelector = ".media-grid-item";
 
 export default function initTagFilter() {
     filterDuplicates(document.querySelectorAll(tagSelector));
 
-    document.querySelectorAll(tagSelector).forEach(tagElement => {
-        tagElement.addEventListener('click', () => filterMedia(tagElement.dataset.tag));
+    const tagElements = document.querySelectorAll(tagSelector);
+    tagElements.forEach(tagElement => {
+        tagElement.removeAttribute('hidden');
+        tagElement.addEventListener('click', () => {
+            filterMedia(tagElement.dataset.tag)
+            tagElements.forEach(t => t === tagElement ? t.classList.add('active') : t.classList.remove('active'));
+        });
     });
-
-    document.querySelectorAll(clearFilterSelector).forEach(clearFilterElement => {
-        clearFilterElement.addEventListener('click', () => clearFilter());
-    })
 }
 
 function filterDuplicates(tagElements) {
@@ -24,7 +24,7 @@ function filterDuplicates(tagElements) {
 function filterMedia(tag) {
     document.querySelectorAll(mediaItemSelector).forEach(item => {
         const itemTags = getTags(item.dataset.tags);
-        if (itemTags.indexOf(tag) > -1) {
+        if (tag === '' || itemTags.indexOf(tag) > -1) {
             item.classList.remove('hidden');
         } else {
             item.classList.add('hidden');
@@ -35,8 +35,4 @@ function filterMedia(tag) {
 function getTags(tagList) {
     return tagList.split(',')
         .filter(tag => tag.length > 0);
-}
-
-function clearFilter() {
-    document.querySelectorAll(mediaItemSelector).forEach(item => item.classList.remove('hidden'));
 }
