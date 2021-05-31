@@ -11,7 +11,11 @@
         <p>{{ .Date.Format "2006-02-19" }}</p>
       </div>
       <p>{{ .Description }}</p>
-      {{ partial "video" . }}
+      <video controls poster="{{ .Params.featured_image }}">
+        <source src="{{ .Params.video_file }}"
+            type="video/mp4">
+        Sorry, your browser doesn't support embedded videos.
+      </video>
     </section>
   </article>
 {{ end }}

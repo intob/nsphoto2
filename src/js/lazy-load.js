@@ -2,7 +2,7 @@ export default function initLazyLoading() {
     const lazyItems = [].slice.call(document.querySelectorAll(".lazy"));
 
     const options = {
-        threshold: 0.5
+        threshold: 0.3
       }
   
     if (IntersectionObserver && lazyItems && lazyItems.length > 0) {
