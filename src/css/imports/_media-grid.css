@@ -15,6 +15,10 @@
 	transition: opacity 0.25s;
 }
 
+.media-grid-item:first-of-type {
+	height: auto;
+}
+
 .media-grid-item.video {
 	height: unset;
 }
