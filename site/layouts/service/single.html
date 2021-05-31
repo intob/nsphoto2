@@ -11,8 +11,10 @@
       <ul>
         {{ range .Params.packages }}
         <li>
-          <h2>{{ .name }} <h2>
-          <h3>{{ .price }}.- CHF</h3>
+          <header>
+            <h2>{{ .name }}</h2>
+            <h3 class="price">{{ .price }}.- CHF</h3>
+          </header>
           <p>{{ .description }}</p>
           <ul>
             {{ range .features }}

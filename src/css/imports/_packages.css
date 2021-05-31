@@ -12,3 +12,14 @@ section.packages ul ul li::marker {
 	content: "✔️ ";
 	font-size: 1.25rem;
 }
+
+section.packages header {
+	display: flex;
+	justify-content: space-between;
+}
+
+section.packages .price {
+	display: inline-block;
+	padding: 5px;
+	background-color: var(--color-bg-dark);
+}

@@ -24,7 +24,7 @@ ul.social li {
 	align-content: center;
 	width: 25px;
 	height: 25px;
-	background-color: var(--color-primary);
+	background-color: var(--color-bg-dark);
 	border-radius: 50%;
 	padding: 10px;
 	margin: 0 5px;
