@@ -1,7 +1,7 @@
 ---
 title: Wedding
 description: I will take photos while you get married.
-featured_image: ""
+featured_image: null
 packages:
   - price: 1000
     name: Source
