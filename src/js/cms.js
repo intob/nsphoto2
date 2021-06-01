@@ -8,13 +8,11 @@ import HomePreview from "./cms-preview-templates/home";
 import PostPreview from "./cms-preview-templates/post";
 import AlbumPreview from "./cms-preview-templates/album";
 import ServicePreview from "./cms-preview-templates/service";
-import ContactPreview from "./cms-preview-templates/contact";
 
 CMS.registerPreviewStyle(styles, { raw: true });
 CMS.registerPreviewTemplate("home", HomePreview);
 CMS.registerPreviewTemplate("post", PostPreview);
 CMS.registerPreviewTemplate("album", AlbumPreview);
 CMS.registerPreviewTemplate("service", ServicePreview);
-CMS.registerPreviewTemplate("contact", ContactPreview);
 
 CMS.init();

@@ -1,4 +1,4 @@
-const workerUrl = "https://nsphoto-contact.dr-useless.workers.dev"
+const workerUrl = "https://nsphoto-contact.dr-useless.workers.dev";
 
 const contactFormSelector = "form.contact";
 
