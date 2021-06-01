@@ -25,5 +25,5 @@
 	<meta property="og:title" content="{{ if ne .Title $.Site.Home.Title }}{{.Title}} | {{ end }}{{ $.Site.Home.Title }}">
 	<meta property="og:description" content="{{ default .Params.description .Params.subtitle }}">
 	<meta property="og:url" content="{{ .Permalink | absLangURL }}">
-	<meta property="og:image" content="{{ default "/media/og-image.jpg" .Params.featured_image }}">
+	<meta property="og:image" content="{{ default "/media/og-image.jpg" .Params.featured_image | absURL }}">
 </head>
