@@ -94,11 +94,17 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Subtitle, name: subtitle, widget: string}
-      - file: "site/content/contact/_index.md"
-        name: contact
-        label: "Contact Page"
-        i18n: true
+      - file: "site/content/contact/_index.en.md"
+        name: contact_en
+        label: "Contact Page EN"
         fields:
-          - {label: Title, name: title, widget: string, i18n: true}
-          - {label: Body, name: body, widget: markdown, i18n: true}
-          - {label: "Success Message", name: success_message, widget: text, i18n: true}
+          - {label: Title, name: title, widget: string}
+          - {label: Body, name: body, widget: markdown}
+          - {label: "Success Message", name: success_message, widget: text}
+      - file: "site/content/contact/_index.de.md"
+        name: contact_de
+        label: "Contact Page DE"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Body, name: body, widget: markdown}
+          - {label: "Success Message", name: success_message, widget: text}
