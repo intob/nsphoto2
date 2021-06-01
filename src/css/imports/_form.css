@@ -1,0 +1,48 @@
+form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+}
+
+fieldset:not(.message) {
+    margin-right: 5px;
+}
+
+fieldset.message {
+    width: calc(100% - 10px);
+}
+
+label {
+    display: none;
+}
+
+textarea {
+    width: 100%;
+    resize: vertical;
+}
+
+input, textarea {
+    padding: 5px;
+    outline-style: none;
+    border: 0;
+    border-bottom: 2px solid var(--color-bg-dark);
+}
+
+button {
+    padding: 10px;
+    background-color: var(--color-bg-dark);
+    border: 0;
+    cursor: pointer;
+}
+
+.response {
+    width: calc(100% - 10px);
+}
+
+.response.error {
+    color: #cc0000;
+}

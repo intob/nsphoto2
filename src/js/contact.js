@@ -1,6 +1,7 @@
 const workerUrl = "https://nsphoto-contact.dr-useless.workers.dev";
 
 const contactFormSelector = "form.contact";
+const responseContainerSelector = "form.contact .response";
 
 export default function initContactForm() {
     const contactForm = document.querySelector(contactFormSelector);
@@ -21,9 +22,16 @@ function sendToWorker(token) {
     const request = new XMLHttpRequest();
     request.open("POST", workerUrl);
     request.setRequestHeader("Content-Type", "application/json");
-    request.setRequestHeader("g-recaptcha", token)
-    request.addEventListener("load", response => {
-        console.log(response);
+    request.setRequestHeader("g-recaptcha", token);
+    request.responseType = "json";
+    request.addEventListener("load", () => {
+        console.log(request.response.message);
+        const responseContainer = document.querySelector(responseContainerSelector);
+        if (request.statusCode !== 200) {
+            responseContainer.textContent = request.response.message;
+            responseContainer.classList.add('error');
+        }
+        
     });
     const body = JSON.stringify({
         name: document.querySelector('input[name=name]').value,

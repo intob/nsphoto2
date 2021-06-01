@@ -8,22 +8,24 @@
 	<section>
 		<form class="contact" method="POST">
 			<fieldset>
-				<input type="text" name="name" placeholder="{{ i18n "name" }}"/>
 				<label>{{ i18n "name" }}</label>
+				<input type="text" name="name" placeholder="{{ i18n "name" }}"/>
 			</fieldset>
 			<fieldset>
-				<input type="email" name="email" placeholder="{{ i18n "email" }}"/>
 				<label>{{ i18n "email" }}</label>
+				<input type="email" name="email" placeholder="{{ i18n "email" }}"/>
 			</fieldset>
 			<fieldset>
-				<input type="tel" name="phone" placeholder="{{ i18n "phone" }}"/>
 				<label>{{ i18n "phone" }}</label>
+				<input type="tel" name="phone" placeholder="{{ i18n "phone" }}"/>
 			</fieldset>
-			<fieldset>
-				<textarea name="message" placeholder="{{ i18n "message" }}"></textarea>
+			<fieldset class="message">
 				<label>{{ i18n "message" }}</label>
+				<textarea name="message" placeholder="{{ i18n "message" }}"></textarea>
 			</fieldset>
-			<button type="submit">{{ i18n "submit" }}</button>	
+			<button type="submit" class="link">{{ i18n "submit" }}</button>
+			<div class="response"></div>
+			<p class="success-message hidden">{{ .Params.contact_success }}</p>
 		</form>
 	</section>
 </article>
