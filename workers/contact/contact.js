@@ -27,18 +27,7 @@ async function handle(request) {
       throw {status: "error", statusCode: 405, message: "Method not allowed, use POST"};
     }
 
-    const recaptchaToken = request.headers.get('g-recaptcha');
-    if (!recaptchaToken) {
-      throw {status: "error", statusCode: 405, message: "reCaptcha header missing"};
-    }
-
-    const recaptchaIsValid = await verifyRecaptcha(request);
-    if (!recaptchaIsValid) {
-      throw {status: "error", statusCode: 405, message: "Invalid reCaptcha"};
-    }
-
-
-    const {name, email, phone, message} = await parseFormRequest(request);
+    const {name, email, phone, message} = await parseRequest(request);
 
     if (!name || !email || !message) {
       throw {status: "error", statusCode: 400, message: "Please complete all required fields"};
@@ -48,13 +37,24 @@ async function handle(request) {
       throw {status: "error", statusCode: 400, message: "Please enter a valid email address"};
     }
 
-    const pushoverResponse = await (await sendPushoverNotification(firstName, lastName, email, phone, message)).json();
+    const recaptchaToken = request.headers.get("g-recaptcha");
+    if (!recaptchaToken) {
+      throw {status: "error", statusCode: 405, message: "reCaptcha header missing"};
+    }
+
+    const recaptchaIsValid = await verifyRecaptcha(recaptchaToken);
+    console.log('valid', recaptchaIsValid);
+    if (!recaptchaIsValid) {
+      throw {status: "error", statusCode: 400, message: "Invalid reCaptcha"};
+    }
+
+    const pushoverResponse = await (await sendPushoverNotification(name, email, phone, message)).json();
 
     if (pushoverResponse.status !== 1) {
       throw {status: "error", statusCode: 500, message: "Failed to send notification"};
     }
 
-    return new Response(JSON.stringify({ status: "sucesss", message: "Sent" }), {
+    return new Response(JSON.stringify({status: "sucesss", message: "Sent"}), {
       status: 200,
       headers,
     });
@@ -66,7 +66,7 @@ async function handle(request) {
   }
 }
 
-async function parseFormRequest(request) {
+async function parseRequest(request) {
   const json = await request.json();
   return {
     name: json.name,
@@ -78,7 +78,7 @@ async function parseFormRequest(request) {
 
 async function sendPushoverNotification(name, email, phone, message) {
   const notificationText = `Enquiry from ${name}: ${message} ${email}, ${phone}`;
-  return await fetch(
+  return fetch(
     "https://api.pushover.net/1/messages.json",
     {
       method: "POST",
@@ -97,22 +97,20 @@ async function sendPushoverNotification(name, email, phone, message) {
 }
 
 async function verifyRecaptcha(recaptchaToken) {
-  const recaptchaResponse = await fetch(
-    `https://www.google.com/recaptcha/api/siteverify`,
+  const response = await fetch(
+    "https://www.google.com/recaptcha/api/siteverify",
     {
-      method: 'POST',
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json'
+        "Content-Type": "application/x-www-form-urlencoded"
       },
-      body: JSON.stringify({
-        secret: RECAPTCHA,
-        response: recaptchaToken
-      })
+      body: `secret=${RECAPTCHA}&response=${recaptchaToken}`,
     }
   )
-  const recaptchaBody = await recaptchaResponse.json()
+  const responseJson = await response.json()
 
-  if (!recaptchaBody.success) {
+  if (!responseJson.success) {
+    console.log('recaptcha error', responseJson["error-codes"]);
     return false;
   }
 

@@ -26,7 +26,10 @@ function sendToWorker(token) {
         console.log(response);
     });
     const body = JSON.stringify({
-        message: 'name: Joey, email: joey@mail.com, message: helloooo!',
+        name: document.querySelector('input[name=name]').value,
+        email: document.querySelector('input[name=email]').value,
+        phone: document.querySelector('input[name=phone]').value,
+        message: document.querySelector('textarea[name=message]').value
     })
     request.send(body);
 }
