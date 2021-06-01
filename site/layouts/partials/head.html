@@ -21,7 +21,7 @@
 	<link rel="manifest" href="/manifest.json">
 
 	<!-- Open Graph -->
-	<meta property="og:type" content="business.business">
+	<meta property="og:type" content="website">
 	<meta property="og:title" content="{{ if ne .Title $.Site.Home.Title }}{{.Title}} | {{ end }}{{ $.Site.Home.Title }}">
 	<meta property="og:description" content="{{ default .Params.description .Params.subtitle }}">
 	<meta property="og:url" content="{{ .Permalink | absLangURL }}">
