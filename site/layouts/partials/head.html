@@ -23,6 +23,7 @@
 	<!-- Open Graph -->
 	<meta property="og:type" content="business.business">
 	<meta property="og:title" content="{{ if ne .Title $.Site.Home.Title }}{{.Title}} | {{ end }}{{ $.Site.Home.Title }}">
-	<meta property="og:url" content="/">
+	<meta property="og:description" content="{{ default .Params.description .Params.subtitle }}">
+	<meta property="og:url" content="{{ .Permalink | absLangURL }}">
 	<meta property="og:image" content="{{ default "/media/og-image.jpg" .Params.featured_image }}">
 </head>
