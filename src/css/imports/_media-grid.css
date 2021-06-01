@@ -15,7 +15,7 @@
 	transition: opacity 0.25s;
 }
 
-.media-grid-item:first-of-type {
+.media-grid.album .media-grid-item:first-of-type {
 	height: auto;
 }
 
