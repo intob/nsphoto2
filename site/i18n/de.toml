@@ -33,3 +33,18 @@ other = "Pakete"
 
 [socialMedia]
 other = "Social Media"
+
+[name]
+other = "Name"
+
+[email]
+other = "Email"
+
+[phone]
+other = "Telefon"
+
+[message]
+other = "Mitteilung"
+
+[submit]
+other = "Senden"

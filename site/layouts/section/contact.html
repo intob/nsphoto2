@@ -1,24 +1,31 @@
 {{ define "main" }}
 
-<div class="ph3 bg-off-white">
-	<div class="center mw6 pv3">
-
-		<img src="{{ .Params.logo }}" alt="" class="db w4 center pv4">
-
+<article>
+	<section>
+		<h1>{{ .Title }}</h1>
 		{{ .Content }}
-
-		<div class="flex-ns mb3">
-	        	{{ range .Params.contact_entries }}
-				<div>
-					<h4 class="f4 b lh-title mb2 primary">{{ .heading }}</h4>
-					<p>{{ .text }}</p>
-				</div>
-			{{ end }}
-		</div>
-
-		{{ partial "contact-form" . }}
-
-	</div>
-</div>
+	</section>
+	<section>
+		<form class="contact">
+			<fieldset>
+				<input type="text" name="name" placeholder="{{ i18n "name" }}"/>
+				<label>{{ i18n "name" }}</label>
+			</fieldset>
+			<fieldset>
+				<input type="email" name="email" placeholder="{{ i18n "email" }}"/>
+				<label>{{ i18n "email" }}</label>
+			</fieldset>
+			<fieldset>
+				<input type="tel" name="phone" placeholder="{{ i18n "phone" }}"/>
+				<label>{{ i18n "phone" }}</label>
+			</fieldset>
+			<fieldset>
+				<textarea name="message" placeholder="{{ i18n "message" }}"></textarea>
+				<label>{{ i18n "message" }}</label>
+			</fieldset>
+			<button type="submit">{{ i18n "submit" }}</button>	
+		</form>
+	</section>
+</article>
 
 {{ end }}

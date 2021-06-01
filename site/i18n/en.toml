@@ -28,11 +28,24 @@ other = "Latest"
 [featuredImage]
 other = "Featured Image"
 
-[seeMore]
-other = "See more {{ . }}"
-
 [packages]
 other = "Packages"
 
 [socialMedia]
 other = "Social media"
+
+[name]
+other = "Name"
+
+[email]
+other = "Email"
+
+[phone]
+other = "Phone"
+
+[message]
+other = "Message"
+
+[submit]
+other = "Submit"
+

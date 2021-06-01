@@ -100,18 +100,4 @@ collections: # A list of collections the CMS should be able to edit
         i18n: true
         fields:
           - {label: Title, name: title, widget: string, i18n: true}
-          - {label: Logo, name: logo, widget: image, i18n: duplicate}
           - {label: Body, name: body, widget: markdown, i18n: true}
-          - label: Contact Entries
-            name: contact_entries
-            widget: list
-            i18n: true
-            fields:
-              - label: Heading
-                name: heading
-                widget: string
-                i18n: true
-              - label: Text
-                name: text
-                widget: text
-                i18n: true

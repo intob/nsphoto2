@@ -16,5 +16,9 @@
     {{ with $script.js }}
       <script src="{{ relURL . }}"></script>
     {{ end }}
+
+    {{ if eq .Page.Section "contact"}}
+      <script src="https://www.google.com/recaptcha/api.js?render=6Lfv0bUUAAAAAMGdj5GMUSsPWIL8IK4pKE50epBF"></script>
+    {{ end }}
   </body>
 </html>
