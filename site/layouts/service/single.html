@@ -7,19 +7,19 @@
       {{ .Content }}
     </section>
     <section class="packages">
-      <h1>{{ i18n "packages"}}</h1>
+      <h2>{{ i18n "packages"}}</h2>
       <ul>
         {{ range .Params.packages }}
         <li>
           <header>
-            <h2>{{ .name }}</h2>
+            <h3>{{ .name }}</h3>
             <h3 class="price">{{ .price }}.- CHF</h3>
           </header>
           <p>{{ .description }}</p>
           <ul>
             {{ range .features }}
               <li>
-                <h3>{{ .name }}</h3>
+                <h4>{{ .name }}</h4>
               <p>{{ .description }}</p>
               </li>
             {{ end }}

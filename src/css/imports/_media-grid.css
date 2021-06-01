@@ -36,7 +36,7 @@
 	display: none;
 }
 
-.media-grid-item h5 {
+.media-grid-item h2 {
 	display: inline-block;
 	position: absolute;
 	bottom: 0;
@@ -45,9 +45,10 @@
 	background-color: var(--color-bg);
 	opacity: 0;
 	transition: 0.25s;
+	font-size: 1.25rem;
 }
 
-.media-grid-item:hover h5 {
+.media-grid-item:hover h2 {
 	opacity: 1;
 }
 

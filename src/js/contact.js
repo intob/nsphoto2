@@ -2,6 +2,8 @@ const workerUrl = "https://nsphoto-contact.dr-useless.workers.dev";
 
 const contactFormSelector = "form.contact";
 const responseContainerSelector = "form.contact .response";
+const successMessageSelector = "form.contact .success-message";
+const submitButtonSelector = 'form.contact button';
 
 export default function initContactForm() {
     const contactForm = document.querySelector(contactFormSelector);
@@ -9,6 +11,7 @@ export default function initContactForm() {
     if (contactForm) {
         contactForm.addEventListener("submit", e => {
             e.preventDefault();
+            contactForm.querySelector('button').setAttribute('disabled', '');
             grecaptcha.ready(() => {
                 grecaptcha.execute('6Lfv0bUUAAAAAMGdj5GMUSsPWIL8IK4pKE50epBF', {action: 'submit'}).then(token => {
                     sendToWorker(token);
@@ -25,11 +28,15 @@ function sendToWorker(token) {
     request.setRequestHeader("g-recaptcha", token);
     request.responseType = "json";
     request.addEventListener("load", () => {
-        console.log(request.response.message);
+        document.querySelector(submitButtonSelector).removeAttribute('disabled');
         const responseContainer = document.querySelector(responseContainerSelector);
-        if (request.statusCode !== 200) {
+        if (request.status !== 200) {
             responseContainer.textContent = request.response.message;
-            responseContainer.classList.add('error');
+            responseContainer.removeAttribute('hidden');
+        } else {
+            responseContainer.setAttribute('hidden', '');
+            document.querySelector(successMessageSelector).removeAttribute('hidden');
+            document.querySelector(contactFormSelector).reset();
         }
         
     });

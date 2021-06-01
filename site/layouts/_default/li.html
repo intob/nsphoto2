@@ -1,9 +1,9 @@
 <div class="list-item">
 	<a href="{{ .RelPermalink }}" class="no-hover">
-		<h3>{{ .Title }}</h3>
+		<h2>{{ .Title }}</h2>
 		{{ if .Description }}
 			<p>{{.Description }}</p>
 		{{ end }}
-		<img src="{{ .Params.featured_image }}"/>
+		<img src="{{ .Params.featured_image }}" alt="{{ .Title }} featured image"/>
 	</a>
 </div>

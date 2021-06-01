@@ -9,11 +9,12 @@ fieldset {
 }
 
 fieldset:not(.message) {
-    margin-right: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
 }
 
 fieldset.message {
-    width: calc(100% - 10px);
+    width: calc(100% - 20px);
 }
 
 label {
@@ -26,10 +27,18 @@ textarea {
 }
 
 input, textarea {
-    padding: 5px;
+    padding: 10px;
     outline-style: none;
     border: 0;
     border-bottom: 2px solid var(--color-bg-dark);
+}
+
+input:hover, input:focus, textarea:hover, textarea:focus {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+input:user-invalid, textarea:user-invalid {
+    border-bottom: 2px solid #cc0000;
 }
 
 button {
@@ -39,7 +48,7 @@ button {
     cursor: pointer;
 }
 
-.response {
+.response, .success-message {
     width: calc(100% - 10px);
 }
 

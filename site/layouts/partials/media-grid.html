@@ -12,7 +12,7 @@
 </section>
 
 <div class="media-grid">
-	{{ range first 4 $pages.ByPublishDate.Reverse }}
+	{{ range $pages.ByPublishDate.Reverse }}
 		{{ partial "media-grid-item" . }}
 	{{ end }}
 </div>
