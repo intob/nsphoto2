@@ -4,7 +4,6 @@
 		{{ if .Description }}
 			<p>{{.Description }}</p>
 		{{ end }}
-		{{- $featuredImage := resources.Get .Params.featured_image -}}
-		<img src="{{ $featuredImage }}" alt="{{ .Title }} featured image" loading="lazy" width="{{$featuredImage.Width}}" height="{{$featuredImage.Height}}"/>
+		<img data-srcset="{{ .Params.featured_image }}" alt="{{ .Title }} featured image"/>
 	</a>
 </div>

@@ -1,5 +1,5 @@
 export default function initLazyLoading() {
-    const lazyItems = [].slice.call(document.querySelectorAll(".lazy"));
+    const lazyItems = [...document.querySelectorAll(".lazy, img[data-srcset]")];
 
     const options = {
         threshold: 0.3
@@ -9,19 +9,29 @@ export default function initLazyLoading() {
         const lazyItemsObserver = new IntersectionObserver(entries => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.style.backgroundImage = `url(${entry.target.dataset.srcset})`;
-                    entry.target.classList.remove('lazy');
-                    lazyItemsObserver.unobserve(entry.target);
+                    const item = entry.target;
+                    if (item.tagName === 'IMG') {
+                        item.src = item.dataset.srcset;
+                    } else {
+                        item.classList.remove('lazy');
+                        item.style.backgroundImage = `url(${item.dataset.srcset})`;
+                    }
+                    lazyItemsObserver.unobserve(item);
                 }
             });
         }, options);
   
         lazyItems.forEach(lazyItem => {
-        lazyItemsObserver.observe(lazyItem);
+            lazyItemsObserver.observe(lazyItem);
         });
     } else {
         lazyItems.forEach(lazyItem => {
-            lazyItem.style.backgroundImage = `url(${lazyItem.dataset.srcset})`;
+            if (lazyItem.tagName === 'img') {
+                lazyItem.src = lazyItem.dataset.srcset;
+            } else {
+                lazyItem.style.backgroundImage = `url(${lazyItem.dataset.srcset})`;
+            }
+            
         });
     }
 }
