@@ -33,6 +33,11 @@ defaultContentLanguageInSubdir = true
         name = "Kontakt"
         url = "/contact"
         weight = 4
+    [[languages.de.menu.main]]
+        name = "Kundengalerie"
+        url = "https://gallery.nicole-schafer.com/portfolio"
+        weight = 5
+        post = "noopener"
   [languages.en]
     languageName = "EN"
     [[languages.en.menu.main]]
@@ -51,3 +56,8 @@ defaultContentLanguageInSubdir = true
         name = "Contact"
         url = "/contact"
         weight = 4
+    [[languages.en.menu.main]]
+        name = "Client Gallery"
+        url = "https://gallery.nicole-schafer.com/portfolio"
+        weight = 5
+        post = "noopener"
