@@ -7,8 +7,8 @@
   "scripts": {
     "lint": "eslint src",
     "start": "run-p start:**",
-    "start:hugo": "env HUGO_BASEURL=\"/\" hugo -d ../dist -s site -vw --",
-    "start:esbuild": "node ./build.js --watch",
+    "start:hugo": "hugo -d ../dist -s site -vw --",
+    "start:esbuild": "node ./build.js --dev",
     "start:server": "node ./dev-server.js",
     "prebuild": "rimraf dist",
     "build": "npm run build:esbuild && npm run build:hugo",
