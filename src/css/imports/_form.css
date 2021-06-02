@@ -30,7 +30,8 @@ input, textarea {
     padding: 10px;
     outline-style: none;
     border: 0;
-    border-bottom: 2px solid var(--color-bg-dark);
+    border-bottom: 1px solid var(--color-bg-dark);
+    transition: box-shadow 0.25s;
 }
 
 input:hover, input:focus, textarea:hover, textarea:focus {
@@ -38,7 +39,7 @@ input:hover, input:focus, textarea:hover, textarea:focus {
 }
 
 input:user-invalid, textarea:user-invalid {
-    border-bottom: 2px solid #cc0000;
+    border-bottom: 1px solid #cc0000;
 }
 
 button {

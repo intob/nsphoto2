@@ -1,9 +1,9 @@
-<div class="list-item">
-	<a href="{{ .RelPermalink }}" class="no-hover">
-		<h2>{{ .Title }}</h2>
-		{{ if .Description }}
-			<p>{{.Description }}</p>
-		{{ end }}
+<a href="{{ .RelPermalink }}" class="grid-list-item no-hover">
+	{{ if .Params.featured_image }}
 		<img data-srcset="{{ .Params.featured_image }}" alt="{{ .Title }} featured image"/>
-	</a>
-</div>
+	{{ end }}
+	<h2>{{ .Title }}</h2>
+	{{ if .Description }}
+		<p>{{.Description }}</p>
+	{{ end }}
+</a>
