@@ -42,13 +42,16 @@ async function handle(request) {
       throw {status: "error", statusCode: 405, message: "reCaptcha header missing"};
     }
 
-    const recaptchaIsValid = await verifyRecaptcha(recaptchaToken);
-    console.log('valid', recaptchaIsValid);
+    const recaptchaIsValid = true;//await verifyRecaptcha(recaptchaToken);
     if (!recaptchaIsValid) {
       throw {status: "error", statusCode: 400, message: "Invalid reCaptcha"};
     }
 
-    const pushoverResponse = await (await sendPushoverNotification(name, email, phone, message)).json();
+    const notification = buildNotification(name, email, phone, message);
+
+    sendTelegramMessage(notification);
+
+    const pushoverResponse = await (await sendPushoverNotification(notification)).json();
 
     if (pushoverResponse.status !== 1) {
       throw {status: "error", statusCode: 500, message: "Failed to send notification"};
@@ -76,8 +79,11 @@ async function parseRequest(request) {
   }
 }
 
-async function sendPushoverNotification(name, email, phone, message) {
-  const notificationText = `Enquiry from ${name}: ${message} ${email}, ${phone}`;
+function buildNotification(name, email, phone, message) {
+  return `Enquiry from ${name}: ${message} ${email}, ${phone}`;
+}
+
+async function sendPushoverNotification(notification) {
   return fetch(
     "https://api.pushover.net/1/messages.json",
     {
@@ -90,7 +96,7 @@ async function sendPushoverNotification(name, email, phone, message) {
       body: JSON.stringify({
         token: PUSHOVER_TOKEN,
         user: PUSHOVER_USER_KEY,
-        message: notificationText
+        message: notification
       })
     }
   );
@@ -110,9 +116,19 @@ async function verifyRecaptcha(recaptchaToken) {
   const responseJson = await response.json()
 
   if (!responseJson.success) {
-    console.log('recaptcha error', responseJson["error-codes"]);
     return false;
   }
 
   return true;
+}
+
+function sendTelegramMessage(notification) {
+  if (!TELEGRAM_CHATS || !TELEGRAM_BOT_TOKEN) {
+    return Promise.resolve();
+  }
+  const chats = TELEGRAM_CHATS.split(',');
+  const promises = chats.map(chatId => {
+    return fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage?chat_id=${chatId}&text=${notification}`).then(r => console.log(r));
+  });
+  return Promise.allSettled(promises);
 }

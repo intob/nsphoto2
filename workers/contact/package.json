@@ -7,9 +7,8 @@
     "author": "github.com/dr-useless",
     "license": "MIT",
     "release": {
-      "branches": [
-        "main"
-      ]
+        "branches": [
+            "main"
+        ]
     }
-  }
-  
+}
