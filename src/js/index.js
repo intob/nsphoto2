@@ -1,7 +1,10 @@
-import initLazyLoading from './lazy-load';
+import ready from './ready';
 import initMenu from './menu';
+import initLazyLoading from './lazy-load';
 import initTagFilter from './tag-filter';
 
-initMenu();
-initLazyLoading();
-initTagFilter();
+ready().then(() => {
+  initMenu();
+  initLazyLoading();
+  initTagFilter();
+});

@@ -1,4 +1,5 @@
 import loadScript from "./load-script";
+import ready from "./ready";
 
 const workerUrl = 'https://nsphoto-contact.dr-useless.workers.dev';
 const recaptchaScriptUrl = 'https://www.google.com/recaptcha/api.js?render=6Lfv0bUUAAAAAMGdj5GMUSsPWIL8IK4pKE50epBF';
@@ -9,7 +10,8 @@ const successMessageSelector = 'form.contact .success-message';
 const submitButtonSelector = 'form.contact button';
 
 loadScript(recaptchaScriptUrl)
-  .then(() => initContactForm);
+  .then(() => ready())
+  .then(() => initContactForm());
 
 
 function initContactForm() {
