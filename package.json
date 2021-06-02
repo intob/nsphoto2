@@ -17,21 +17,24 @@
   },
   "author": "dr-useless",
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
+    "@types/react": "^17.0.9",
+    "@types/react-dom": "^17.0.6",
+    "date-fns": "^2.22.1",
     "esbuild": "^0.12.5",
     "hugo-bin": "^0.71.1",
     "netlify-cms-app": "^2.15.17",
+    "npm-run-all": "^4.1.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "typescript": "^4.3.2",
-    "@types/react": "^17.0.9",
-    "@types/react-dom": "^17.0.6",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.3.2"
+  },
+  "devDependencies": {
+    "connect-livereload": "^0.6.1",
     "eslint": "^7.27.0",
     "eslint-plugin-import": "^2.23.4",
-    "date-fns": "^2.22.1",
-    "npm-run-all": "^4.1.5",
-    "rimraf": "^3.0.2",
-    "express": "^4.17.1"
-  },
-  "dependencies": {}
+    "express": "^4.17.1",
+    "livereload": "^0.9.3"
+  }
 }
