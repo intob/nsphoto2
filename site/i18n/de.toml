@@ -10,11 +10,11 @@ other = "Nächster"
 [all]
 other = "Alle"
 
-[album]
+[albums]
 one = "Album"
 other = "Alben"
 
-[film]
+[films]
 one = "Film"
 other = "Filme"
 
@@ -30,13 +30,13 @@ other = "Artikel"
 other = "Neueste"
 
 [featuredImage]
-other = "Featured image"
+other = "Featured Image"
 
 [packages]
 other = "Pakete"
 
 [socialMedia]
-other = "Social media"
+other = "Social Media"
 
 [name]
 other = "Name"

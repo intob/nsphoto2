@@ -23,20 +23,20 @@ one = "Service"
 other = "Services"
 
 [posts]
-one = "Blog post"
-other = "Blog posts"
+one = "Blog Post"
+other = "Blog Posts"
 
 [latest]
 other = "Latest"
 
 [featuredImage]
-other = "Featured image"
+other = "Featured Image"
 
 [packages]
 other = "Packages"
 
 [socialMedia]
-other = "Social media"
+other = "Social Media"
 
 [name]
 other = "Name"
