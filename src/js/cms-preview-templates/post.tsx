@@ -1,6 +1,6 @@
 import * as React from "react";
 import * as CMS from "netlify-cms-core";
-import * as format from "date-fns/format";
+import { format } from "date-fns";
 
 export default class PostPreview extends React.Component<CMS.PreviewTemplateComponentProps> {
   render() {
