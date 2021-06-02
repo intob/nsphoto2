@@ -8,25 +8,29 @@ other = "Previous"
 other = "Next"
 
 [all]
-other = "all"
+other = "All"
 
-[album]
-one = "album"
+[albums]
+one = "Album"
 other = "Albums"
 
-[film]
-one = "film"
+[films]
+one = "Film"
 other = "Films"
 
-[post]
-one = "post"
-other = "blog posts"
+[services]
+one = "Service"
+other = "Services"
+
+[posts]
+one = "Blog post"
+other = "Blog posts"
 
 [latest]
 other = "Latest"
 
 [featuredImage]
-other = "Featured Image"
+other = "Featured image"
 
 [packages]
 other = "Packages"

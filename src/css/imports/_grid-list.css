@@ -15,6 +15,10 @@
 	border: 1px solid var(--color-bg-dark);
 }
 
+.grid-list-item img {
+	border-radius: 5px 5px 0 0;
+}
+
 .grid-list-item h2, .grid-list-item p {
 	margin: 5px;
 }

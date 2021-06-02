@@ -1,7 +1,7 @@
 {{ define "main" }}
   <article>
     <section>
-      <h1>{{.Title}}</h1>
+      <h1>{{ i18n (lower .Title) }}</h1>
       <div class="grid-list">
         {{ range (.Paginator 2).Pages.ByPublishDate.Reverse }}
             {{ .Render "li"}}
