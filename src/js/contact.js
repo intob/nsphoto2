@@ -1,13 +1,19 @@
+import loadScript from "./load-script";
+
 const workerUrl = 'https://nsphoto-contact.dr-useless.workers.dev';
+const recaptchaScriptUrl = 'https://www.google.com/recaptcha/api.js?render=6Lfv0bUUAAAAAMGdj5GMUSsPWIL8IK4pKE50epBF';
 
 const contactFormSelector = 'form.contact';
 const responseContainerSelector = 'form.contact .response';
 const successMessageSelector = 'form.contact .success-message';
 const submitButtonSelector = 'form.contact button';
 
-export default function initContactForm() {
-  const contactForm = document.querySelector(contactFormSelector);
+loadScript(recaptchaScriptUrl)
+  .then(() => initContactForm);
 
+
+function initContactForm() {
+  const contactForm = document.querySelector(contactFormSelector);
   if (contactForm) {
     contactForm.addEventListener('submit', e => {
       e.preventDefault();

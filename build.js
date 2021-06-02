@@ -9,8 +9,16 @@ const cmsBuild = esbuild.build({
   watch: watch(),
   outfile: './dist/cms.js',
 }).catch(() => process.exit(1));
-
 buildPromises.push(cmsBuild);
+
+const contactBuild = esbuild.build({
+  entryPoints: ['./src/js/contact.js'],
+  bundle: true,
+  minify: !isDev(),
+  watch: watch(),
+  outfile: './dist/contact.js',
+}).catch(() => process.exit(1));
+buildPromises.push(contactBuild);
 
 const mainBuild = esbuild.build({
   entryPoints: ['./src/js/index.js'],
@@ -19,7 +27,6 @@ const mainBuild = esbuild.build({
   watch: watch(),
   outfile: './dist/index.js',
 }).catch(() => process.exit(1));
-
 buildPromises.push(mainBuild);
 
 Promise.all(buildPromises).then(() => console.log("ESBuild: done"));

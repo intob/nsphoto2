@@ -12,10 +12,10 @@
       {{ partial "footer" . }}
     {{end}}
 
-    <script src="/index.js" async></script>
+    <script async src="/index.js"></script>
 
     {{ if eq .Page.Section "contact"}}
-      <script src="https://www.google.com/recaptcha/api.js?render=6Lfv0bUUAAAAAMGdj5GMUSsPWIL8IK4pKE50epBF" async></script>
+      <script async src="/contact.js"></script>
     {{ end }}
   </body>
 </html>
