@@ -15,8 +15,11 @@ footer ul {
 }
 
 footer ul li {
-	padding: 5px 0;
 	margin: 5px 0;
+}
+
+footer ul:not(.social) li a {
+	padding: 10px 0;
 }
 
 ul.social {
