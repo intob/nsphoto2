@@ -80,7 +80,7 @@ async function parseRequest(request) {
 }
 
 function buildNotification(name, email, phone, message) {
-  return `Enquiry from ${name}: ${message} ${email}, ${phone}`;
+  return `${name} // ${message} // ${email}, ${phone}`;
 }
 
 async function sendPushoverNotification(notification) {
