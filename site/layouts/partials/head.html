@@ -2,10 +2,8 @@
 	<title>{{ if ne .Title $.Site.Home.Title }}{{.Title}} | {{ end }}{{ $.Site.Home.Title }}</title>
 	<meta name="description" content="{{ default .Params.description .Params.subtitle }}">
 
-	{{ $stylesheet := .Site.Data.webpack.main }}
-	{{ with $stylesheet.css }}
-	<link href="{{ relURL . }}" rel="stylesheet">
-	{{ end }}
+	
+	<link href="/index.css" rel="stylesheet">
 
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
