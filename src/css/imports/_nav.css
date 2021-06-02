@@ -55,6 +55,7 @@ nav.active li a {
 	display: block;
 	cursor: pointer;
 	margin: 5px;
+	padding: 10px;
 }
 
 .hamburger.active .bar:nth-child(2) {
