@@ -6,6 +6,7 @@ const cmsBuild = esbuild.build({
   entryPoints: ['./src/js/cms.tsx'],
   bundle: true,
   minify: !isDev(),
+  watch: watch(),
   outfile: './dist/cms.js',
 }).catch(() => process.exit(1));
 
