@@ -7,6 +7,7 @@ footer {
 
 footer > div {
 	width: 100%;
+	padding: 10px;
 }
 
 footer ul {
@@ -52,6 +53,7 @@ ul.social svg, ul.social a {
 	footer > div {
 		max-width: 700px;
 		display: flex;
+		padding: 0;
 	}
 
 	footer section {
