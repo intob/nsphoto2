@@ -5,4 +5,5 @@ intro: Award-winning reportage photographer & filmmaker
 featured_image: en/nicole_w-40.jpg
 clients:
   - en/redbull.png
+  - en/natgeo.png
 ---
