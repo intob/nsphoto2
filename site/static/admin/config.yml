@@ -82,12 +82,11 @@ collections: # A list of collections the CMS should be able to edit
   - name: pages
     label: Pages
     files:
-      - file: "site/content/home/_index.en.md"
+      - file: "site/content/_index.en.md"
         name: home_en
         label: "Home Page EN"
-        path: "home"
         media_folder: ""
-        public_folder: "en/home"
+        public_folder: "en"
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Subtitle, name: subtitle, widget: string}
@@ -96,12 +95,12 @@ collections: # A list of collections the CMS should be able to edit
           - {label: "Select Clients", name: clients, widget: list,
               field: {label: Logo, name: logo, widget: image}
             }
-      - file: "site/content/home/_index.de.md"
+      - file: "site/content/_index.de.md"
         name: home_de
         label: "Home Page DE"
         path: "home"
         media_folder: ""
-        public_folder: "en/home"
+        public_folder: "en"
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Subtitle, name: subtitle, widget: string}
