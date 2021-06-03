@@ -46,6 +46,5 @@ images:
   - en/album/newest-album/wedding_w-9106.jpg
   - en/album/newest-album/wedding_w-9109.jpg
 videos:
-  - video_file: en/album/another-awesome-wedding/video-1616746796.mp4
-    poster: en/album/newest-album/wedding_w-8430.jpg
+  - TNYOpI_c2WU
 ---
