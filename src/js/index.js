@@ -1,4 +1,4 @@
-import "../css/main.css";
+import '../css/main.css';
 import ready from './ready';
 import initMenu from './menu';
 import initLazyLoading from './lazy-load';

@@ -1,4 +1,12 @@
 const esbuild = require('esbuild');
+const colors = require('colors');
+
+function log(message) {
+  console.log(colors.magenta('ESBuild:'), message);
+}
+function error(message, error) {
+  console.error(colors.magenta('ESBuild:'), message, error);
+}
 
 let buildPromises = [];
 
@@ -29,16 +37,16 @@ const mainBuild = esbuild.build({
 }).catch(() => process.exit(1));
 buildPromises.push(mainBuild);
 
-Promise.all(buildPromises).then(() => console.log("ESBuild: done"));
+Promise.all(buildPromises).then(() => log('done'));
 
 function watch() {
   if (isDev()) {
     return {
-      onRebuild(error) {
-        if (error) {
-          console.error('ESBuild: watch build failed:', error)
+      onRebuild(e) {
+        if (e) {
+          error('watch build failed', e)
         } else {
-          console.log('ESBuild: watch build succeeded')
+          log('watch build succeeded')
         }
       }
     }
