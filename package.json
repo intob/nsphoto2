@@ -23,7 +23,6 @@
     "@types/react-dom": "^17.0.6",
     "date-fns": "^2.22.1",
     "esbuild": "^0.12.5",
-    "hugo-bin": "^0.71.1",
     "netlify-cms-app": "^2.15.17",
     "npm-run-all": "^4.1.5",
     "react": "^17.0.2",
