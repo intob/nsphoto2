@@ -58,7 +58,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Publish Date", name: date, widget: datetime, i18n: true}
       - {label: Description, name: description, widget: text, i18n: true}
       - {label: "Tags", name: "tags", widget: list, max: 5, i18n: true}
-      - {label: "Featured Image", name: featured_image, widget: image, i18n: duplicate}
+      - {label: "Featured Image", name: featured_image, widget: image, i18n: duplicate, required: false}
       - {label: "YouTube Video ID", name: youtube_id, widget: string, i18n: duplicate}
   - name: "service"
     label: "Service"
@@ -85,15 +85,27 @@ collections: # A list of collections the CMS should be able to edit
       - file: "site/content/_index.en.md"
         name: home_en
         label: "Home Page EN"
+        media_folder: "site/static/media/home"
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Subtitle, name: subtitle, widget: string}
+          - {label: Intro, name: intro, widget: string}
+          - {label: "Featured Image", name: featured_image, widget: image}
+          - {label: "Select Clients", name: clients, widget: list,
+              field: {label: Logo, name: logo, widget: image}
+            }
       - file: "site/content/_index.de.md"
         name: home_de
         label: "Home Page DE"
+        media_folder: "site/static/media/home"
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Subtitle, name: subtitle, widget: string}
+          - {label: Intro, name: intro, widget: string}
+          - {label: "Featured Image", name: featured_image, widget: image}
+          - {label: "Select Clients", name: clients, widget: list,
+              field: {label: Logo, name: logo, widget: image}
+            }
       - file: "site/content/contact/_index.en.md"
         name: contact_en
         label: "Contact Page EN"

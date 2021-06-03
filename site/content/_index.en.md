@@ -1,5 +1,8 @@
 ---
-title: Nicole Schafer Photo & Film
-subtitle: Award-winning reportage photographer & junior filmmaker
-image: media/about-jumbotron.jpg
+title: Nicole Schafer
+subtitle: Photo & Film
+intro: Award-winning reportage photographer & junior filmmaker
+featured_image: media/home/nicole_w-40.jpg
+clients:
+  - 
 ---

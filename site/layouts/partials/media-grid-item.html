@@ -1,4 +1,6 @@
-<a href="{{ .RelPermalink }}" class="media-grid-item lazy no-hover" data-srcset="{{ .Params.featured_image }}" data-tags="{{ range .Params.tags }}{{ lower . }},{{ end }}">
+{{ $thumbnail := default (printf "https://img.youtube.com/vi/%s/0.jpg" .Params.youtube_id) .Params.featured_image }}
+
+<a href="{{ .RelPermalink }}" class="media-grid-item lazy no-hover" data-srcset="{{ $thumbnail }}" data-tags="{{ range .Params.tags }}{{ lower . }},{{ end }}">
 	<h2>{{ .Title }}</h2>
 	{{ if eq .Section "film"}}
 		<span class="icon">🎥</span>

@@ -1,10 +1,20 @@
 {{ define "main" }}
 
+<article {{ if .Params.featured_image }}class="lazy" data-srcset="{{ .Params.featured_image}}"{{ end }}>
+    <header>
+        <div class="left">
+            <h1>{{ .Params.title }}</h1>
+        </div>
+        <div class="right">
+            <h2>{{ .Params.subtitle }}</h2>
+        </div>
+        <div class="left">
+            <h3>{{ .Params.intro }}</h3>
+        </div>
+    </header>
+</article>
+
 <article>
-    <section>
-        <h1>{{ .Params.title }}</h1>
-        <h2>{{ .Params.subtitle }}</h2>
-    </section>
     {{ partial "media-grid" . }}
     <section>
         {{ partial "latest-posts" . }}

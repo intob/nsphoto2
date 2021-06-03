@@ -1,13 +1,57 @@
 article {
 	display: flex;
 	flex-direction: column;
-	padding: 10px 0 20px 0;
+	margin: 20px 0;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
-section {
+article section, article header {
 	align-self: center;
-	padding: 0 10px;
 	width: calc(100% - 20px);
+}
+
+article section {
+	padding: 0 10px;
+}
+
+article header {
+	padding: 100px 10px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+article header div {
+	width: 100%;
+	display: flex;
+}
+
+article header .left {
+	justify-content: flex-start;
+}
+
+article header .right {
+	justify-content: flex-end;
+}
+
+article header h1 {
+	font-size: 3rem;
+	line-height: 2.5rem;
+	background-color: var(--color-bg);
+	padding: 5px;
+}
+
+article header h2 {
+	font-size: 2rem;
+	background-color: var(--color-text);
+	color: var(--color-bg);
+	padding: 5px;
+}
+
+article header h3 {
+	background-color: var(--color-bg);
+	padding: 5px;
 }
 
 article img {
@@ -28,8 +72,11 @@ article .metadata .tags span:not(:last-of-type):after {
 }
 
 @media (min-width: 800px) {
-	section {
-		padding: 0;
+	article section, article header {
 		width: 700px;
+	}
+
+	article section {
+		padding: 0;
 	}
 }
