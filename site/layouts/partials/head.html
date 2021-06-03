@@ -1,6 +1,6 @@
 <head>
-	<title>{{ if ne .Title $.Site.Home.Title }}{{.Title}} | {{ end }}{{ $.Site.Home.Title }}</title>
-	<meta name="description" content="{{ default .Params.description .Params.subtitle }}">
+	<title>{{ if not (in $.Site.Title .Title) }}{{.Title}} | {{ end }}{{ $.Site.Title }}</title>
+	<meta name="description" content="{{ default .Params.description .Params.intro }}">
 
 	<link rel="preload" as="style" href="/index.css">
 	<link href="/index.css" rel="stylesheet">
@@ -19,8 +19,8 @@
 	<base href="{{ if getenv "CONTEXT" }}{{ cond (eq "production" (getenv "CONTEXT")) (getenv "URL") (getenv "DEPLOY_PRIME_URL") }}{{ else }}{{ $.Site.BaseURL }}{{ end }}">
 
 	<meta property="og:type" content="website">
-	<meta property="og:title" content="{{ if ne .Title $.Site.Home.Title }}{{.Title}} | {{ end }}{{ $.Site.Home.Title }}">
-	<meta property="og:description" content="{{ default .Params.description .Params.subtitle }}">
+	<meta property="og:title" content="{{ if not (in $.Site.Title .Title) }}{{.Title}} | {{ end }}{{ $.Site.Title }}">
+	<meta property="og:description" content="{{ default .Params.description .Params.intro }}">
 	<meta property="og:url" content="{{ .Permalink | absLangURL }}">
 	<meta property="og:image" content="{{ default "/media/og-image.jpg" .Params.featured_image | absURL }}">
 </head>
