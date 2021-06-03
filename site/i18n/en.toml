@@ -38,6 +38,9 @@ other = "Packages"
 [socialMedia]
 other = "Social Media"
 
+[selectClients]
+other = "Select Clients"
+
 [name]
 other = "Name"
 

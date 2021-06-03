@@ -3,6 +3,9 @@
 		<img data-srcset="{{ .Params.featured_image }}" alt="{{ .Title }} featured image"/>
 	{{ end }}
 	<h2>{{ .Title }}</h2>
+	{{ if .Date }}
+		<p class="light">{{ .Date.Format "2006-02-19" }}</p>
+	{{ end }}
 	{{ if .Description }}
 		<p>{{.Description }}</p>
 	{{ end }}
