@@ -28,7 +28,7 @@ export default class AlbumPreview extends React.Component<CMS.PreviewTemplateCom
       <>
         <article>
           <div className="media-grid">
-            <div className="media-grid-item span span-3-2">
+            <div className="media-grid-item span span-4-2">
               <h1>{ entry.getIn(["data", "title"])}</h1>
               <div className="metadata light">
                 <p>{ format(entry.getIn(["data", "date"]), "yyyy-mm-dd") }</p>

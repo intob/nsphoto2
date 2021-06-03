@@ -3,7 +3,7 @@ const esbuild = require('esbuild');
 let buildPromises = [];
 
 const cmsBuild = esbuild.build({
-  entryPoints: ['./src/js/cms.tsx'],
+  entryPoints: ['./src/js/cms/cms.tsx'],
   bundle: true,
   minify: !isDev(),
   watch: watch(),
