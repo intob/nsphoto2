@@ -6,4 +6,5 @@ tags:
   - adventure
 featured_image: en/album/newest-album/wedding_w-1963.jpg
 video_file: media/video-1616746796.mp4
+youtube_id: fY0KOLAv1S4
 ---
