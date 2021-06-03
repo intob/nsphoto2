@@ -27,6 +27,8 @@
 			<p class="response error" hidden></p>
 			<p class="success-message" hidden>{{ .Params.success_message }}</p>
 		</form>
+		{{ $privacyPolicy := .Site.GetPage "/privacy"}}
+		<a href="{{ $privacyPolicy.Permalink }}">{{ $privacyPolicy.Title }}</a>
 	</section>
 </article>
 

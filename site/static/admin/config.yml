@@ -87,7 +87,7 @@ collections: # A list of collections the CMS should be able to edit
     files:
       - file: "site/content/_index.en.md"
         name: home_en
-        label: "Home Page EN"
+        label: "Home EN"
         media_folder: ""
         public_folder: "en"
         fields:
@@ -100,7 +100,7 @@ collections: # A list of collections the CMS should be able to edit
             }
       - file: "site/content/_index.de.md"
         name: home_de
-        label: "Home Page DE"
+        label: "Home DE"
         path: "home"
         media_folder: ""
         public_folder: "en"
@@ -114,15 +114,27 @@ collections: # A list of collections the CMS should be able to edit
             }
       - file: "site/content/contact/_index.en.md"
         name: contact_en
-        label: "Contact Page EN"
+        label: "Contact EN"
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Body, name: body, widget: markdown}
           - {label: "Success Message", name: success_message, widget: text}
       - file: "site/content/contact/_index.de.md"
         name: contact_de
-        label: "Contact Page DE"
+        label: "Contact DE"
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Body, name: body, widget: markdown}
           - {label: "Success Message", name: success_message, widget: text}
+      - file: "site/content/privacy/_index.en.md"
+        name: privacy_en
+        label: "Privacy Policy EN"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Body, name: body, widget: markdown}
+      - file: "site/content/privacy/_index.de.md"
+        name: privacy_de
+        label: "Privacy Policy DE"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Body, name: body, widget: markdown}
