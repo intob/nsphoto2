@@ -19,7 +19,7 @@
         </div>
       {{ end }}
       {{ range $i, $image := .Params.images}}
-        <div class="media-grid-item lazy" data-srcset="{{ $image }}" style="order:{{ $i }}"></div>
+        <div class="media-grid-item" data-lazy data-srcset="{{ $image }}" data-srcset-webp="{{ replace $image ".jpg" ".webp"}}" style="order:{{ $i }}"></div>
       {{ end }}
     </div>
   </article>

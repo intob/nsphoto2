@@ -4,16 +4,18 @@
   "description": "Website for Nicole Schafer Photo & Film, built with Hugo & netlifycms",
   "repository": "dr-useless/nsphoto2",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "lint": "eslint src",
     "start": "run-p start:**",
     "start:hugo": "hugo -d ../dist -s site --watch",
-    "start:esbuild": "node ./build.js --dev",
+    "start:esbuild": "node ./esbuild.js --dev",
     "start:server": "node ./dev-server.js",
     "prebuild": "rimraf dist",
-    "build": "npm run build:hugo && npm run build:esbuild",
+    "build": "npm run build:hugo && npm run build:esbuild && npm run build:imgmin",
     "build:hugo": "hugo -d ../dist -s site --minify",
-    "build:esbuild": "node ./build.js"
+    "build:esbuild": "node ./esbuild.js",
+    "build:imgmin": "node ./imgmin.js"
   },
   "author": "dr-useless",
   "license": "MIT",
@@ -23,12 +25,14 @@
     "@types/react-dom": "^17.0.6",
     "date-fns": "^2.22.1",
     "esbuild": "^0.12.5",
+    "glob": "^7.1.7",
     "netlify-cms-app": "^2.15.17",
     "npm-run-all": "^4.1.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "rimraf": "^3.0.2",
-    "typescript": "^4.3.2"
+    "typescript": "^4.3.2",
+    "webp-converter": "^2.3.3"
   },
   "devDependencies": {
     "colors": "^1.4.0",

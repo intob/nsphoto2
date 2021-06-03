@@ -28,7 +28,7 @@
 	margin-bottom: -9px;
 }
 
-.media-grid-item.lazy {
+.media-grid-item[data-lazy] {
 	opacity: 0;
 }
 

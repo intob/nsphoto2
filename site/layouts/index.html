@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-<article {{ if .Params.featured_image }}class="lazy" data-srcset="{{ .Params.featured_image}}"{{ end }}>
+<article {{ if .Params.featured_image }}data-lazy data-srcset="{{ .Params.featured_image}}" data-srcset-webp="{{ replace .Params.featured_image ".jpg" ".webp" }}"{{ end }}>
     <header>
         <div class="left">
             <h1>{{ .Params.title }}</h1>

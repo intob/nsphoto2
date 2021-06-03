@@ -51,6 +51,9 @@ collections: # A list of collections the CMS should be able to edit
   - name: "film"
     label: "Film"
     folder: "site/content/film"
+    path: "{{slug}}/index"
+    media_folder: ""
+    public_folder: "en/film/{{slug}}"
     i18n: true
     create: true
     fields:

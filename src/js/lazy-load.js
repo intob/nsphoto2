@@ -1,7 +1,11 @@
-export default function initLazyLoading() {
-  const lazyItems = [...document.querySelectorAll('.lazy, img[data-srcset]')];
+import supportsWebp from './webp';
 
-  const options = {
+export default function initLazyLoading() {
+  const webpEnabled = supportsWebp();
+
+  const lazyItems = [...document.querySelectorAll('[data-lazy]')];
+
+  const observerOptions = {
     threshold: 0.3
   };
 
@@ -11,27 +15,18 @@ export default function initLazyLoading() {
         if (entry.isIntersecting) {
           const item = entry.target;
           if (item.tagName === 'IMG') {
-            item.src = item.dataset.srcset;
+            item.src = webpEnabled && item.dataset.srcsetWebp ? item.dataset.srcsetWebp : item.dataset.srcset;
           } else {
-            item.classList.remove('lazy');
-            item.style.backgroundImage = `url(${item.dataset.srcset})`;
+            item.removeAttribute('data-lazy');
+            item.style.backgroundImage = `url(${webpEnabled && item.dataset.srcsetWebp ? item.dataset.srcsetWebp : item.dataset.srcset})`;
           }
           lazyItemsObserver.unobserve(item);
         }
       });
-    }, options);
+    }, observerOptions);
 
     lazyItems.forEach(lazyItem => {
       lazyItemsObserver.observe(lazyItem);
-    });
-  } else {
-    lazyItems.forEach(lazyItem => {
-      if (lazyItem.tagName === 'img') {
-        lazyItem.src = lazyItem.dataset.srcset;
-      } else {
-        lazyItem.style.backgroundImage = `url(${lazyItem.dataset.srcset})`;
-      }
-
     });
   }
 }

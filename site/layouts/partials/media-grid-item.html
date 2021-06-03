@@ -1,6 +1,6 @@
-{{ $thumbnail := default (printf "https://img.youtube.com/vi/%s/0.jpg" .Params.youtube_id) .Params.featured_image }}
+{{ $thumbnail := default (printf "https://i.ytimg.com/vi/%s/maxresdefault.jpg" .Params.youtube_id) .Params.featured_image }}
 
-<a href="{{ .RelPermalink }}" class="media-grid-item lazy no-hover" data-srcset="{{ $thumbnail }}" data-tags="{{ range .Params.tags }}{{ lower . }},{{ end }}">
+<a href="{{ .RelPermalink }}" class="media-grid-item no-hover" data-lazy data-srcset="{{ $thumbnail }}" {{ if .Params.featured_image }}data-srcset-webp="{{ replace .Params.featured_image ".jpg" ".webp" }}"{{ end }} data-tags="{{ range .Params.tags }}{{ lower . }},{{ end }}">
 	<h2>{{ .Title }}</h2>
 	{{ if eq .Section "film"}}
 		<span class="icon">🎥</span>
