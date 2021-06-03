@@ -1,4 +1,3 @@
-import path from "path";
 import express from 'express';
 import livereload from 'livereload';
 import connectLivereload from 'connect-livereload';
