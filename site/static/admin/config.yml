@@ -87,7 +87,7 @@ collections: # A list of collections the CMS should be able to edit
         label: "Home Page EN"
         path: "home"
         media_folder: ""
-        public_folder: "en/"
+        public_folder: "en/home"
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Subtitle, name: subtitle, widget: string}
@@ -101,7 +101,7 @@ collections: # A list of collections the CMS should be able to edit
         label: "Home Page DE"
         path: "home"
         media_folder: ""
-        public_folder: "en/"
+        public_folder: "en/home"
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Subtitle, name: subtitle, widget: string}
