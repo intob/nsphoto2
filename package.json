@@ -18,6 +18,7 @@
   "author": "dr-useless",
   "license": "MIT",
   "dependencies": {
+    "@types/prop-types": "^15.7.3",
     "@types/react": "^17.0.9",
     "@types/react-dom": "^17.0.6",
     "date-fns": "^2.22.1",

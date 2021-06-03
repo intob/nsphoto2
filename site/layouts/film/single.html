@@ -11,11 +11,9 @@
         <p>{{ .Date.Format "2006-02-19" }}</p>
       </div>
       <p>{{ .Description }}</p>
-      <video controls poster="{{ .Params.featured_image }}">
-        <source src="{{ .Params.video_file }}"
-            type="video/mp4">
-        Sorry, your browser doesn't support embedded videos.
-      </video>
+      <div class='video-container'>
+        <iframe src="https://www.youtube.com/embed/{{.Params.youtube_id}}?modestbranding=1&showinfo=0&rel=0&iv_load_policy=3&color=white" width="560" height="315" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+      </div>
     </section>
   </article>
 {{ end }}

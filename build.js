@@ -34,11 +34,11 @@ Promise.all(buildPromises).then(() => console.log("ESBuild: done"));
 function watch() {
   if (isDev()) {
     return {
-      onRebuild(error, result) {
+      onRebuild(error) {
         if (error) {
           console.error('ESBuild: watch build failed:', error)
         } else {
-          console.log('ESBuild: watch build succeeded:', result)
+          console.log('ESBuild: watch build succeeded')
         }
       }
     }
