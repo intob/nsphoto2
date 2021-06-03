@@ -19,13 +19,8 @@
 	height: auto;
 }
 
-.media-grid-item.video {
-	height: unset;
-}
-
-.media-grid-item.video video {
+.media-grid-item.video-container iframe {
 	border-radius: 5px;
-	margin-bottom: -9px;
 }
 
 .media-grid-item[data-lazy] {

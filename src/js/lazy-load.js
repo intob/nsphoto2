@@ -1,32 +1,33 @@
 import supportsWebp from './webp';
 
 export default function initLazyLoading() {
-  const webpEnabled = supportsWebp();
+  supportsWebp().then(webpEnabled => {
+    const lazyItems = [...document.querySelectorAll('[data-lazy]')];
 
-  const lazyItems = [...document.querySelectorAll('[data-lazy]')];
+    const observerOptions = {
+      threshold: 0.3
+    };
 
-  const observerOptions = {
-    threshold: 0.3
-  };
-
-  if (IntersectionObserver && lazyItems && lazyItems.length > 0) {
-    const lazyItemsObserver = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const item = entry.target;
-          if (item.tagName === 'IMG') {
-            item.src = webpEnabled && item.dataset.srcsetWebp ? item.dataset.srcsetWebp : item.dataset.srcset;
-          } else {
-            item.removeAttribute('data-lazy');
-            item.style.backgroundImage = `url(${webpEnabled && item.dataset.srcsetWebp ? item.dataset.srcsetWebp : item.dataset.srcset})`;
+    if (IntersectionObserver && lazyItems && lazyItems.length > 0) {
+      const lazyItemsObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const item = entry.target;
+            if (item.tagName === 'IMG') {
+              item.src = webpEnabled && item.dataset.srcsetWebp ? item.dataset.srcsetWebp : item.dataset.srcset;
+            } else {
+              item.removeAttribute('data-lazy');
+              item.style.backgroundImage = `url(${webpEnabled && item.dataset.srcsetWebp ? item.dataset.srcsetWebp : item.dataset.srcset})`;
+            }
+            lazyItemsObserver.unobserve(item);
           }
-          lazyItemsObserver.unobserve(item);
-        }
-      });
-    }, observerOptions);
+        });
+      }, observerOptions);
 
-    lazyItems.forEach(lazyItem => {
-      lazyItemsObserver.observe(lazyItem);
+      lazyItems.forEach(lazyItem => {
+        lazyItemsObserver.observe(lazyItem);
+      });
+    }
     });
-  }
+  
 }
