@@ -13,13 +13,13 @@
         </div>
         <p>{{ .Description }}</p>
       </div>
+      {{ range $i, $image := .Params.images}}
+        <div class="media-grid-item" data-lazy data-srcset="{{ $image }}" data-srcset-webp="{{ replace $image ".jpg" ".webp"}}" style="order:{{ $i }}"></div>
+      {{ end }}
       {{ range $i, $video := .Params.videos}}
         <div class="media-grid-item span span-4-2 video-container" style="order:{{ add $i 4 }}">
             {{ partial "youtube-video" $video }}
         </div>
-      {{ end }}
-      {{ range $i, $image := .Params.images}}
-        <div class="media-grid-item" data-lazy data-srcset="{{ $image }}" data-srcset-webp="{{ replace $image ".jpg" ".webp"}}" style="order:{{ $i }}"></div>
       {{ end }}
     </div>
   </article>
