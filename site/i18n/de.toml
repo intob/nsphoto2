@@ -1,0 +1,57 @@
+# Translations for German
+# https://gohugo.io/content-management/multilingual/#translation-of-strings
+
+[previous]
+other = "Vorherige"
+
+[next]
+other = "Nächster"
+
+[all]
+other = "Alle"
+
+[albums]
+one = "Album"
+other = "Alben"
+
+[films]
+one = "Film"
+other = "Filme"
+
+[services]
+one = "Dienstleistung"
+other = "Dienstleistungen"
+
+[posts]
+one = "Artikel"
+other = "Artikel"
+
+[latest]
+other = "Neueste"
+
+[featuredImage]
+other = "Featured Image"
+
+[packages]
+other = "Pakete"
+
+[socialMedia]
+other = "Social Media"
+
+[selectClients]
+other = "Ausgewählte Kunden"
+
+[name]
+other = "Name"
+
+[email]
+other = "Email"
+
+[phone]
+other = "Telefon"
+
+[message]
+other = "Mitteilung"
+
+[submit]
+other = "Senden"

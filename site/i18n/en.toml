@@ -1,0 +1,58 @@
+# Translations for English
+# https://gohugo.io/content-management/multilingual/#translation-of-strings
+
+[previous]
+other = "Previous"
+
+[next]
+other = "Next"
+
+[all]
+other = "All"
+
+[albums]
+one = "Album"
+other = "Albums"
+
+[films]
+one = "Film"
+other = "Films"
+
+[services]
+one = "Service"
+other = "Services"
+
+[posts]
+one = "Blog Post"
+other = "Blog Posts"
+
+[latest]
+other = "Latest"
+
+[featuredImage]
+other = "Featured Image"
+
+[packages]
+other = "Packages"
+
+[socialMedia]
+other = "Social Media"
+
+[selectClients]
+other = "Select Clients"
+
+[name]
+other = "Name"
+
+[email]
+other = "Email"
+
+[phone]
+other = "Phone"
+
+[message]
+other = "Message"
+
+[submit]
+other = "Submit"
+

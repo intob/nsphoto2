@@ -1,0 +1,19 @@
+<footer>
+	<div>
+		<section>
+			<h2>{{ .Site.Home.Title}}</h2>
+			<ul>
+				{{ partial "menu" . }}
+			</ul>
+			<ul class="social">
+				<li>{{ partial "social-icon" (dict "link" "#" "svg" "icons-facebook") }}</li>
+				<li>{{ partial "social-icon" (dict "link" "https://instagram.com/ni_schafer" "svg" "icons-instagram") }}</li>
+			</ul>
+		</section>
+		<section>
+			
+		</section>
+	</div>
+</footer>
+
+{{ partial "svg" . }}

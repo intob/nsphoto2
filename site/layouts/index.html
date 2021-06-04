@@ -1,12 +1,29 @@
-<!doctype html>
-<html>
-  <head>
-    <title>Hugo with Gulp and Webpack</title>
-    <link rel="stylesheet" href="/main.css"/>
-  </head>
-  <body>
-    <h1>Hugo with Gulp and Webpack</h1>
+{{ define "main" }}
 
-    <script src="/app.js"></script>
-  </body>
-</html>
+<article class="hero"
+    data-lazy-bg data-srcset-avif="{{ replace .Params.featured_image ".jpg" ".avif" }}"
+    data-lazy-bg data-srcset-webp="{{ replace .Params.featured_image ".jpg" ".webp" }}"
+    data-lazy-bg data-srcset-jpeg="{{ .Params.featured_image }}">
+    <header>
+        <div class="left">
+            <h1>{{ .Params.title }}</h1>
+        </div>
+        <div class="right">
+            <h2>{{ .Params.subtitle }}</h2>
+        </div>
+        <div class="left">
+            <h3>{{ .Params.intro }}</h3>
+        </div>
+    </header>
+</article>
+<article>
+    {{ partial "media-grid" . }}
+    <section>
+        {{ partial "latest-posts" . }}
+    </section>
+    <section>
+        {{ partial "logo-grid" . }}
+    </section>
+</article>
+
+{{ end }}

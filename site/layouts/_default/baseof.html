@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="{{ $.Site.Language.Lang }}">
+  {{ partial "head" . }}
+  <body>
+    {{ block "header" . }}
+      {{ partial "nav" . }}
+    {{end}}
+
+    {{ block "main" . }}{{ end }}
+
+    {{ block "footer" . }}
+      {{ partial "footer" . }}
+    {{end}}
+
+    <script async src="/index.js"></script>
+
+    {{ if eq .Page.Section "contact"}}
+      <script async src="/contact.js"></script>
+    {{ end }}
+  </body>
+</html>

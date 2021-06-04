@@ -1,0 +1,21 @@
+.logo-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+	grid-gap: 10px;
+	grid-auto-rows: minmax(120px, auto);
+	grid-auto-flow: dense;
+}
+
+.logo-grid-item {
+	filter: grayscale(100);
+	transition: 0.25s;
+}
+
+.logo-grid-item:hover {
+	filter: grayscale(0);
+}
+
+.logo-grid-item picture img {
+	object-fit: contain;
+	height: 100%;
+}

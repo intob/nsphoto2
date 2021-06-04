@@ -1,0 +1,8 @@
+{{ if gt (len (where .Site.RegularPages "Section" "post")) 0 }}
+	<h2>{{ i18n "latest"}} {{ i18n "posts"}}</h2>
+	<div class="grid-list">
+		{{ range first 4 (where .Site.RegularPages "Section" "post") }}
+			{{ .Render "li" }}
+		{{ end }}
+	</div>
+{{ end }}

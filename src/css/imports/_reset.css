@@ -1,0 +1,16 @@
+body {
+	margin: 0;
+	background-color: var(--color-bg);
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: inherit;
+}
+
+[hidden] {
+    display: none !important;
+}

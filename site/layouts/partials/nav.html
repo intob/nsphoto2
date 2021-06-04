@@ -1,0 +1,18 @@
+<nav>
+	<a href="/" class="no-hover">
+		<img src="/media/logo.svg" alt="NS Logo" class="logo"/>
+	</a>
+	<div class="menu">
+		<ul>
+			{{ partial "menu" . }}
+		</ul>
+		<ul>
+			{{ partial "all-languages" . }}
+		</ul>
+	</div>
+	<a href="#" class="hamburger no-hover" aria-label="Menu">
+		<span class="bar"></span>
+		<span class="bar"></span>
+		<span class="bar"></span>
+	</a>
+</nav>

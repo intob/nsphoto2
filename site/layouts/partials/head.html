@@ -1,0 +1,26 @@
+<head>
+	<title>{{ if not (in $.Site.Title .Title) }}{{.Title}} | {{ end }}{{ $.Site.Title }}</title>
+	<meta name="description" content="{{ default .Params.description .Params.intro }}">
+
+	<link rel="preload" as="style" href="/index.css">
+	<link href="/index.css" rel="stylesheet">
+
+	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+	<link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans&display=swap" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans&display=swap" crossorigin>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/media/icon-180x180.png">
+	<link rel="icon" href="/media/logo.svg" type="image/svg+xml">
+	<link rel="manifest" href="/manifest.json">
+
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+	<base href="{{ if getenv "CONTEXT" }}{{ cond (eq "production" (getenv "CONTEXT")) (getenv "URL") (getenv "DEPLOY_PRIME_URL") }}{{ else }}{{ $.Site.BaseURL }}{{ end }}">
+
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="{{ if not (in $.Site.Title .Title) }}{{.Title}} | {{ end }}{{ $.Site.Title }}">
+	<meta property="og:description" content="{{ default .Params.description .Params.intro }}">
+	<meta property="og:url" content="{{ .Permalink | absLangURL }}">
+	<meta property="og:image" content="{{ default "/media/og-image.jpg" .Params.featured_image | absURL }}">
+</head>

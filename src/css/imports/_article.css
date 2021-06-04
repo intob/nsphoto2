@@ -1,0 +1,34 @@
+article {
+	display: flex;
+	flex-direction: column;
+	margin: 20px 0;
+}
+
+article section {
+	align-self: center;
+	width: calc(100% - 20px);
+}
+
+article section {
+	padding: 0 10px;
+}
+
+article .metadata {
+	display: flex;
+	justify-content: space-between;
+}
+
+article .metadata .tags {
+	text-transform: uppercase;
+}
+
+article .metadata .tags span:not(:last-of-type):after {
+	content: ",";
+}
+
+@media (min-width: 800px) {
+	article section {
+		width: 700px;
+		padding: 0;
+	}
+}

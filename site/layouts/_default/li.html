@@ -1,0 +1,12 @@
+<a href="{{ .RelPermalink }}" class="grid-list-item no-hover">
+	{{ if .Params.featured_image }}
+		{{ partial "picture" (dict "src" .Params.featured_image) }}
+	{{ end }}
+	<h2>{{ .Title }}</h2>
+	{{ if .Date }}
+		<p class="light">{{ .Date.Format "2006-02-19" }}</p>
+	{{ end }}
+	{{ if .Description }}
+		<p>{{.Description }}</p>
+	{{ end }}
+</a>

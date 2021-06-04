@@ -1,0 +1,18 @@
+{{ $pages := where .Site.RegularPages "Section" "in" (slice "album" "film") }}
+
+<section>
+	<ul class="media-tags">
+		<li class="link active" data-tag="">{{ i18n "all" }}</li>
+		{{ range $pages }}
+			{{ range .Params.tags }}
+				<li class="link" data-tag="{{ lower . }}" hidden>{{ . }}</li>
+			{{ end }}
+		{{ end }}
+	</ul>
+</section>
+
+<div class="media-grid">
+	{{ range $pages.ByPublishDate.Reverse }}
+		{{ partial "media-grid-item" . }}
+	{{ end }}
+</div>

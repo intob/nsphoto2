@@ -1,0 +1,9 @@
+{{ $thumbnail := default (printf "https://i.ytimg.com/vi/%s/maxresdefault.jpg" .Params.youtube_id) .Params.featured_image }}
+
+<a href="{{ .RelPermalink }}" class="media-grid-item no-hover" data-tags="{{ range .Params.tags }}{{ lower . }},{{ end }}">
+	<h2>{{ .Title }}</h2>
+	{{ if eq .Section "film"}}
+	<span class="icon">🎥</span>
+	{{ end }}
+	{{partial "picture" (dict "src" $thumbnail "optim" (not (isset .Params "youtube_id"))) }}
+</a>
