@@ -19,7 +19,7 @@
         </div>
       {{ end }}
       {{ range $i, $video := .Params.videos}}
-        <div class="media-grid-item span span-3-2 video-container" style="order:{{ add $i 4 }}" data-lazy>
+        <div class="media-grid-item span span-3-2 video-container" style="order:{{ add $i 4 }}">
             {{ partial "youtube-video" $video }}
         </div>
       {{ end }}

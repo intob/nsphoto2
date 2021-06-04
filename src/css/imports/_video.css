@@ -2,7 +2,14 @@
   position: relative;
   padding-bottom: 56.25%; /* 16:9 */
   height: 0;
+  opacity: 1;
+  transition: opacity 0.5s;
 }
+
+.video-container[data-lazy] {
+  opacity: 0;
+}
+
 .video-container iframe {
   position: absolute;
   top: 0;
