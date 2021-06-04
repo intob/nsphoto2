@@ -1,5 +1,5 @@
 export default function initLazyLoading() {
-  const lazyItems = [...document.querySelectorAll('picture')];
+  const lazyItems = [...document.querySelectorAll('[data-lazy]')];
 
   const observerOptions = {
     threshold: 0.3
@@ -12,6 +12,10 @@ export default function initLazyLoading() {
         [...entry.target.querySelectorAll('[data-srcset]')].forEach(source => {
           source.srcset = source.dataset.srcset;
           source.removeAttribute('data-srcset');
+        });
+        [...entry.target.querySelectorAll('[data-srcset-iframe]')].forEach(source => {
+          source.src = source.dataset.srcsetIframe;
+          source.removeAttribute('data-srcset-iframe');
         });
         lazyItemsObserver.unobserve(entry.target);
       }

@@ -7,6 +7,10 @@ picture[data-lazy] {
   opacity: 0;
 }
 
+picture[data-lazy] img {
+  height: 250px;
+}
+
 picture img {
   object-fit: cover;
 	object-position: center center;
