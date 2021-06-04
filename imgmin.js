@@ -12,11 +12,17 @@ function processImage(src) {
   const outWebp = src.replace(path.extname(src), '.webp');
   const outAvif = src.replace(path.extname(src), '.avif');
 
-  const webpPromise = sharp(src)
+  let inputStream = sharp(src);
+
+  if (path.dirname(src) !== 'dist/en' && path.dirname(src) !== 'dist/de') {
+    inputStream = inputStream.resize(750);
+  }
+
+  const webpPromise = inputStream.clone()
     .toFile(outWebp)
     .catch(err => error(err))
 
-  const avifPromise = sharp(src)
+  const avifPromise = inputStream.clone()
     .toFile(outAvif)
     .catch(err => error(err))
 
