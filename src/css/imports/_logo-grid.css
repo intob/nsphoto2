@@ -7,13 +7,15 @@
 }
 
 .logo-grid-item {
-	background-size: contain;
-	background-position: center;
-	background-repeat: no-repeat;
 	filter: grayscale(100);
 	transition: 0.25s;
 }
 
 .logo-grid-item:hover {
 	filter: grayscale(0);
+}
+
+.logo-grid-item picture img {
+	object-fit: contain;
+	height: 100%;
 }
