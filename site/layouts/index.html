@@ -1,7 +1,9 @@
 {{ define "main" }}
 
-<article class="hero">
-    {{ partial "picture" (dict "src" .Params.featured_image) }}
+<article class="hero"
+    data-lazy-bg data-srcset-avif="{{ replace .Params.featured_image ".jpg" ".avif" }}"
+    data-lazy-bg data-srcset-webp="{{ replace .Params.featured_image ".jpg" ".webp" }}"
+    data-lazy-bg data-srcset-jpeg="{{ .Params.featured_image }}">
     <header>
         <div class="left">
             <h1>{{ .Params.title }}</h1>

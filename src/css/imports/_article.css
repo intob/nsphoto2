@@ -2,12 +2,9 @@ article {
 	display: flex;
 	flex-direction: column;
 	margin: 20px 0;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
 }
 
-article section, article header {
+article section {
 	align-self: center;
 	width: calc(100% - 20px);
 }

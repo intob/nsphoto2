@@ -1,12 +1,15 @@
+.hero {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
 .hero header {
 	display: flex;
 	flex-wrap: wrap;
-	position: absolute;
 	padding: 100px 10px;
-}
-
-.hero picture img {
-	height: 500px;
+	align-self: center;
+	width: calc(100% - 20px);
 }
 
 .hero header div {
@@ -36,10 +39,6 @@
 .hero header h3 {
 	background-color: var(--color-bg);
 	padding: 5px;
-}
-
-.hero img {
-	max-width: 100%;
 }
 
 @media (min-width: 600px) {
