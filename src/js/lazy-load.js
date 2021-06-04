@@ -1,7 +1,7 @@
 import supportsWebp from './webp';
 
 export default function initLazyLoading() {
-  supportsWebp().then(webpEnabled => {
+  supportsWebp().then(webpSupported => {
     const lazyItems = [...document.querySelectorAll('[data-lazy]')];
 
     const observerOptions = {
@@ -14,10 +14,10 @@ export default function initLazyLoading() {
           if (entry.isIntersecting) {
             const item = entry.target;
             if (item.tagName === 'IMG') {
-              item.src = webpEnabled && item.dataset.srcsetWebp ? item.dataset.srcsetWebp : item.dataset.srcset;
+              item.src = webpSupported && item.dataset.srcsetWebp ? item.dataset.srcsetWebp : item.dataset.srcset;
             } else {
               item.removeAttribute('data-lazy');
-              item.style.backgroundImage = `url(${webpEnabled && item.dataset.srcsetWebp ? item.dataset.srcsetWebp : item.dataset.srcset})`;
+              item.style.backgroundImage = `url(${webpSupported && item.dataset.srcsetWebp ? item.dataset.srcsetWebp : item.dataset.srcset})`;
             }
             lazyItemsObserver.unobserve(item);
           }
@@ -29,5 +29,4 @@ export default function initLazyLoading() {
       });
     }
     });
-  
 }
