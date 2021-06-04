@@ -5,5 +5,5 @@
 	{{ if eq .Section "film"}}
 	<span class="icon">🎥</span>
 	{{ end }}
-	{{partial "picture" (dict "src" $thumbnail "webp" (not (isset .Params "youtube_id"))) }}
+	{{partial "picture" (dict "src" $thumbnail "optim" (not (isset .Params "youtube_id"))) }}
 </a>

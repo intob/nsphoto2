@@ -1,20 +1,26 @@
 import glob from 'glob';
 import colors from 'colors';
 import path from 'path';
-import webp from 'webp-converter';
+import sharp from 'sharp';
 
-webp.grant_permission();
 glob('dist/**/*.+(jpg|png)', (e, images) => {
   Promise.all(images.map(img => processImage(img)))
-    .then(() => {
-      log('done');
-    });
+    .then(() => log('done'));
 });
 
 function processImage(src) {
-  const out = src.replace(path.extname(src), '.webp');
-  return webp.cwebp(src, out, "-preset photo -q 75 -m 5")
-    .catch(e => error('failed to process', e))
+  const outWebp = src.replace(path.extname(src), '.webp');
+  const outAvif = src.replace(path.extname(src), '.avif');
+
+  const webpPromise = sharp(src)
+    .toFile(outWebp)
+    .catch(err => error(err))
+
+  const avifPromise = sharp(src)
+    .toFile(outAvif)
+    .catch(err => error(err))
+
+  return Promise.allSettled([webpPromise, avifPromise])
 }
 
 function log(message) {

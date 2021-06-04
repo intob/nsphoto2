@@ -31,8 +31,8 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "rimraf": "^3.0.2",
-    "typescript": "^4.3.2",
-    "webp-converter": "^2.3.3"
+    "sharp": "^0.28.3",
+    "typescript": "^4.3.2"
   },
   "devDependencies": {
     "colors": "^1.4.0",
