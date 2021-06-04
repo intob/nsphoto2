@@ -1,6 +1,6 @@
 <a href="{{ .RelPermalink }}" class="grid-list-item no-hover">
 	{{ if .Params.featured_image }}
-		<img data-lazy data-srcset="{{ .Params.featured_image }}" data-srcset-webp="{{ replace .Params.featured_image ".jpg" ".webp" }}" alt="{{ .Title }} featured image"/>
+		{{ partial "picture" (dict "src" .Params.featured_image) }}
 	{{ end }}
 	<h2>{{ .Title }}</h2>
 	{{ if .Date }}

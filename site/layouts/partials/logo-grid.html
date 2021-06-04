@@ -1,6 +1,8 @@
 <h2>{{ i18n "selectClients" }}</h2>
 <div class="logo-grid">
 	{{ range .Params.clients }}
-		<div class="logo-grid-item" data-lazy data-srcset="{{.}}" data-srcset-webp={{ replace (replace . ".png" ".webp") ".jpg" ".webp" }}></div>
+		<div class="logo-grid-item">
+			{{ partial "picture" (dict "src" .) }}
+		</div>
 	{{ end }}
 </div>

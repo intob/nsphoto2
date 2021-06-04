@@ -12,5 +12,7 @@
 @import './imports/_video';
 @import './imports/_pagination';
 @import './imports/_form';
+@import './imports/_picture.css';
+@import './imports/_hero.css';
 
 @import './imports/_colors.css';

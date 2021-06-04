@@ -16,48 +16,6 @@ article section {
 	padding: 0 10px;
 }
 
-article header {
-	padding: 100px 10px;
-	display: flex;
-	flex-wrap: wrap;
-}
-
-article header div {
-	width: 100%;
-	display: flex;
-}
-
-article header .left {
-	justify-content: flex-start;
-}
-
-article header .right {
-	justify-content: flex-end;
-}
-
-article header h1 {
-	font-size: 3rem;
-	line-height: 2.5rem;
-	background-color: var(--color-bg);
-	padding: 5px;
-}
-
-article header h2 {
-	font-size: 2rem;
-	background-color: var(--color-text);
-	color: var(--color-bg);
-	padding: 5px;
-}
-
-article header h3 {
-	background-color: var(--color-bg);
-	padding: 5px;
-}
-
-article img {
-	max-width: 100%;
-}
-
 article .metadata {
 	display: flex;
 	justify-content: space-between;
@@ -72,11 +30,8 @@ article .metadata .tags span:not(:last-of-type):after {
 }
 
 @media (min-width: 800px) {
-	article section, article header {
-		width: 700px;
-	}
-
 	article section {
+		width: 700px;
 		padding: 0;
 	}
 }

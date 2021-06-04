@@ -3,7 +3,9 @@
     <section>
       <h1>{{.Title}}</h1>
       <p>{{ .Description }}</p>
-      {{ if .Params.featured_image }}<img data-lazy data-srcset="{{ .Params.featured_image }}" data-srcset-webp="{{ replace .Params.featured_image ".jpg" ".webp" }}" alt="{{ .Title }}"/>{{ end }}
+    {{ if .Params.featured_image }}
+      {{ partial "picture" (dict "src" .Params.featured_image) }}
+    {{ end }}
       {{ .Content }}
     </section>
     <section class="packages">

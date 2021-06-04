@@ -1,7 +1,7 @@
 {{ define "main" }}
   <article>
     <div class="media-grid album">
-      <div class="media-grid-item span span-3-2">
+      <div class="media-grid-item">
         <h1>{{.Title}}</h1>
         <div class="metadata light">
           <p class="tags">
@@ -14,10 +14,12 @@
         <p>{{ .Description }}</p>
       </div>
       {{ range $i, $image := .Params.images}}
-        <div class="media-grid-item" data-lazy data-srcset="{{ $image }}" data-srcset-webp="{{ replace $image ".jpg" ".webp"}}" style="order:{{ $i }}"></div>
+        <div class="media-grid-item" style="order: {{ $i }}">
+          {{ partial "picture" (dict "src" $image) }}
+        </div>
       {{ end }}
       {{ range $i, $video := .Params.videos}}
-        <div class="media-grid-item span span-4-2 video-container" style="order:{{ add $i 4 }}">
+        <div class="media-grid-item span span-3-2 video-container" style="order:{{ add $i 4 }}">
             {{ partial "youtube-video" $video }}
         </div>
       {{ end }}
