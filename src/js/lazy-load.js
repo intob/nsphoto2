@@ -43,9 +43,7 @@ function getLazyIframeObserver(options) {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.src = entry.target.dataset.srcsetIframe;
-        console.log('iframe!');
         entry.target.addEventListener('load', () => {
-          console.log('loaded');
           entry.target.removeAttribute('data-lazy');
         });
         intersectionObserver.unobserve(entry.target);
