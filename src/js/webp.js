@@ -1,13 +1,12 @@
 export default function supportsWebp() {
-  if (!createImageBitmap) return false;
-  
-  const webpData = 'data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=';
-
   return new Promise(resolve => {
-    fetch(webpData)
-    .then(r => r.blob())
-    .then(blob => {
-      createImageBitmap(blob).then(() => resolve(true), () => resolve(false));
+    var webp = new Image();
+    webp.addEventListener('error', () => {
+      resolve(false);
     });
+    webp.addEventListener('load', () => {
+      resolve(true);
+    });
+    webp.src = 'data:image/webp;base64,UklGRjIAAABXRUJQVlA4ICYAAACyAgCdASoBAAEALmk0mk0iIiIiIgBoSygABc6zbAAA/v56QAAAAA==';
   });
 }
