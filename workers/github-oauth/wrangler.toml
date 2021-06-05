@@ -1,0 +1,6 @@
+name = "nsphoto-github-oauth"
+type = "javascript"
+account_id = "b7554562ae5b04f46e2b9efa3e565d72"
+workers_dev = true
+route = ""
+zone_id = ""

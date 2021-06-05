@@ -77,8 +77,7 @@ rules:
 
 # Global scoped method and vars
 globals:
-  __dirname: true
-  require: true
   process: true
   ENV: true
   module: true
+  MEDIA: true

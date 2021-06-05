@@ -2,7 +2,7 @@
   "name": "nsphoto2",
   "version": "1.0.0",
   "description": "Website for Nicole Schafer Photo & Film, built with Hugo & netlifycms",
-  "repository": "dr-useless/nsphoto2",
+  "repository": "github.com/dr-useless/nsphoto2",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -17,7 +17,7 @@
     "build:esbuild": "node ./esbuild.js",
     "build:imgmin": "node ./imgmin.js"
   },
-  "author": "dr-useless",
+  "author": "github.com/dr-useless",
   "license": "MIT",
   "dependencies": {
     "@types/prop-types": "^15.7.3",

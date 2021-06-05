@@ -1,0 +1,15 @@
+name = "nsphoto-media-store"
+type = "javascript"
+account_id = "b7554562ae5b04f46e2b9efa3e565d72"
+workers_dev = true
+route = ""
+zone_id = ""
+kv_namespaces = [
+  { binding = "MEDIA", id = "db683d46499d4b0a8cde4ca2f0d018f6", preview_id = "8853278ae4234866ae47a45c32b70446" }
+]
+
+[build]
+command = "npm install && npm run build"
+
+[build.upload]
+format = "service-worker"
