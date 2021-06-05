@@ -5,6 +5,5 @@ esbuild.build({
   bundle: true,
   minify: true,
   outfile: './dist/index.js',
-})
-.catch(() => process.exit(1))
-.then(() => console.log('ESBuild: done'));
+}).catch(() => process.exit(1))
+  .then(() => console.log('ESBuild: done'));

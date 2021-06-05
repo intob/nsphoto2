@@ -1,4 +1,5 @@
 import validateGithubToken from "./auth";
+import { generateWebp } from './optim';
 import { getKeyFromRequestUrl, buildKey, hash, getMimeTypeFromRequest, getMimeTypeFromKey } from "./util";
 
 addEventListener("fetch", event => {
@@ -54,14 +55,20 @@ async function handle(request) {
         return Promise.resolve(new Response("Unauthorized", { status: 401 }));
       }
       return request.arrayBuffer().then(data => {
-        return store(data, getMimeTypeFromRequest(request)).then(key => {
-          return Promise.resolve(new Response(JSON.stringify({ key: key }), { status: 200}));
+        const storeOriginalPromise = store(data, getMimeTypeFromRequest(request))
+          .then(key => key);
+
+        const storeWebpPromise = generateWebp(data)
+          .then(data => store(data, "image/webp"))
+          .then(key => key);
+
+        return Promise.all([storeOriginalPromise, storeWebpPromise]).then(keys => {
+          return Promise.resolve(new Response(JSON.stringify(keys)));
         });
       });
     });
   }
 }
-
 
 function store(data, mimeType) {
   return hash(data).then(hash => {
