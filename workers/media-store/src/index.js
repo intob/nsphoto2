@@ -1,5 +1,5 @@
 import validateGithubToken from "./auth";
-import { generateWebp } from './optim';
+import { generateOptimizedVersion } from './optim';
 import { getKeyFromRequestUrl, buildKey, hash, getMimeTypeFromRequest, getMimeTypeFromKey } from "./util";
 
 addEventListener("fetch", event => {
@@ -49,21 +49,29 @@ async function handle(request) {
   }
 
   if (request.method === "PUT") {
-    const token = request.headers.get("Authorization").replace("Bearer ", "");
+    const authHeader = request.headers.get("Authorization");
+    if (!authHeader) {
+      return Promise.resolve(new Response("Unauthorized", { status: 401 }));
+    }
+    const token = authHeader.replace("Bearer ", "");
     return validateGithubToken(token).then(isAuthenticated => {
       if (!isAuthenticated) {
         return Promise.resolve(new Response("Unauthorized", { status: 401 }));
       }
       return request.arrayBuffer().then(data => {
-        const storeOriginalPromise = store(data, getMimeTypeFromRequest(request))
-          .then(key => key);
+        const storeOriginalPromise = store(data, getMimeTypeFromRequest(request));
 
-        const storeWebpPromise = generateWebp(data)
+        const storeWebpPromise = generateOptimizedVersion(data, "image/webp")
           .then(data => store(data, "image/webp"))
-          .then(key => key);
+          .catch(() => null)
 
-        return Promise.all([storeOriginalPromise, storeWebpPromise]).then(keys => {
-          return Promise.resolve(new Response(JSON.stringify(keys)));
+        const storeAvifPromise = generateOptimizedVersion(data, "image/avif")
+          .then(data => store(data, "image/avif"))
+          .catch(() => null)
+
+        return Promise.all([storeOriginalPromise, storeWebpPromise, storeAvifPromise]).then(keys => {
+          validKeys = keys.filter(k => k);
+          return Promise.resolve(new Response(JSON.stringify(validKeys)));
         });
       });
     });
