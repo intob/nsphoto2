@@ -3,9 +3,12 @@ import colors from 'colors';
 import path from 'path';
 import sharp from 'sharp';
 
+const start = Date.now();
 glob('dist/**/*.+(jpg|png)', (e, images) => {
   Promise.all(images.map(img => processImage(img)))
-    .then(() => log('done'));
+    .then(() => {
+      log(`done in ${Math.floor((Date.now()-start) / 1000)}s`);
+    });
 });
 
 function processImage(src) {
@@ -19,10 +22,12 @@ function processImage(src) {
   }
 
   const webpPromise = inputStream.clone()
+    .toFormat('webp', { reductionEffort: 6 })
     .toFile(outWebp)
     .catch(err => error(err))
 
   const avifPromise = inputStream.clone()
+    .toFormat('avif', { speed: 8 })
     .toFile(outAvif)
     .catch(err => error(err))
 
