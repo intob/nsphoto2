@@ -1,7 +1,13 @@
 export function store(data, mimeType) {
   return hash(data).then(hash => {
     const key = buildKey(hash, mimeType);
-    return MEDIA.put(key, data).then(() => key);
+    return MEDIA.get(key, {type:"arrayBuffer"}).then(currentValue => {
+      if (!currentValue) {
+        return MEDIA.put(key, data).then(() => key);
+      } else {
+        return Promise.resolve(key);
+      }
+    });
   });
 }
 
