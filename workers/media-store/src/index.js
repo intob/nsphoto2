@@ -1,13 +1,11 @@
 import validateGithubToken from "./auth";
-import { generateOptimizedVersion } from './optim';
-import { getKeyFromRequestUrl, buildKey, hash, getMimeTypeFromRequest, getMimeTypeFromKey } from "./util";
+import { getKeyFromRequestUrl, getMimeTypeFromRequest, getMimeTypeFromKey, store } from "./util";
 
 addEventListener("fetch", event => {
   event.respondWith(handle(event.request));
 });
 
 /**
- * KEY
  * Each key has the following structure:
  * {id}:{mimeType}
  */
@@ -53,34 +51,21 @@ async function handle(request) {
     if (!authHeader) {
       return Promise.resolve(new Response("Unauthorized", { status: 401 }));
     }
-    const token = authHeader.replace("Bearer ", "");
+    const token = authHeader.replace("Bearer ", "");             
     return validateGithubToken(token).then(isAuthenticated => {
       if (!isAuthenticated) {
         return Promise.resolve(new Response("Unauthorized", { status: 401 }));
       }
-      return request.arrayBuffer().then(data => {
-        const storeOriginalPromise = store(data, getMimeTypeFromRequest(request));
-
-        const storeWebpPromise = generateOptimizedVersion(data, "image/webp")
-          .then(data => store(data, "image/webp"))
-          .catch(() => null)
-
-        const storeAvifPromise = generateOptimizedVersion(data, "image/avif")
-          .then(data => store(data, "image/avif"))
-          .catch(() => null)
-
-        return Promise.all([storeOriginalPromise, storeWebpPromise, storeAvifPromise]).then(keys => {
-          validKeys = keys.filter(k => k);
-          return Promise.resolve(new Response(JSON.stringify(validKeys)));
-        });
+      return request.arrayBuffer()
+      .then(data => store(data, getMimeTypeFromRequest(request)))
+      .then(key => {
+        const requestUrl = new URL(request.url);
+        const responseBodyObject = {
+          key: key,
+          url: `${requestUrl.protocol}//${requestUrl.host}/${key}`
+        }
+        return Promise.resolve(new Response(JSON.stringify(responseBodyObject)))
       });
     });
   }
-}
-
-function store(data, mimeType) {
-  return hash(data).then(hash => {
-    const key = buildKey(hash, mimeType);
-    return MEDIA.put(key, data).then(() => key);
-  });
 }

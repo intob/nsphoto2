@@ -1,9 +1,12 @@
-export function getKeyFromRequestUrl(requestUrl) {
-  return new URL(requestUrl).pathname.replace("/", "");
+export function store(data, mimeType) {
+  return hash(data).then(hash => {
+    const key = buildKey(hash, mimeType);
+    return MEDIA.put(key, data).then(() => key);
+  });
 }
 
-export function buildKey(hash, mimeType) {
-  return `${arrayBufferToHex(hash)}:${mimeType}`
+export function getKeyFromRequestUrl(requestUrl) {
+  return new URL(requestUrl).pathname.replace("/", "");
 }
 
 export function getMimeTypeFromKey(key) {
@@ -14,8 +17,12 @@ export function getMimeTypeFromRequest(request) {
   return request.headers.get("content-type");
 }
 
-export function hash(arrayBuffer) {
+function hash(arrayBuffer) {
   return crypto.subtle.digest('SHA-256', arrayBuffer);
+}
+
+function buildKey(hash, mimeType) {
+  return `${arrayBufferToHex(hash)}:${mimeType}`
 }
 
 function arrayBufferToHex(arrayBuffer) {
