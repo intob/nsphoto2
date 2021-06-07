@@ -1,8 +1,13 @@
 ---
 title: My first post
 date: 2021-06-01T20:12:57.760Z
-description: Having trained seriously with bodyweight exercises for a long time, I strongly believe that a solidly construed bodyweight strength training regimen is at least as good as weights for strength for the upper body. The legs are a slightly different case because they are much stronger than the upper body they require weighted stimuli to make optimal progress. Hence, optimal strength and hypertrophy requires barbells for the legs.
-featured_image: en/post/my-first-post/12744690_1308756669150509_9134666407862896837_n.jpg
+description: Having trained seriously with bodyweight exercises for a long time,
+  I strongly believe that a solidly construed bodyweight strength training
+  regimen is at least as good as weights for strength for the upper body. The
+  legs are a slightly different case because they are much stronger than the
+  upper body they require weighted stimuli to make optimal progress. Hence,
+  optimal strength and hypertrophy requires barbells for the legs. Test
+featured_image: https://nsphoto-media-store.dr-useless.workers.dev/1a1917c6f21be633a17c30e87bb7274edfd636fb15422a3e6d5dbfd77a41b187:image/jpeg
 ---
 For those with other goals such as gaining mass, a combination of bodyweight exercises and barbell work or strict barbell work will get you better results. See our Barbell training recommendations or integrating bodyweight and barbell training.
 
