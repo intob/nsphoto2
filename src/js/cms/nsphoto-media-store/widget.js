@@ -3,7 +3,9 @@ import ready from '../../ready';
 
 export default class MediaStoreWidget {
 
-  constructor() {
+  constructor({ handleInsert }) {
+    this.handleInsert = handleInsert;
+
     ready().then(() => {
       const modalFragment = document.createRange().createContextualFragment(`
         <div class="nsphoto-media-store-modal" hidden="">
@@ -38,11 +40,13 @@ export default class MediaStoreWidget {
       .then(data => uploadData(data)
       .then(response => {
         console.log(response);
+        // STORE KEY IN CONTENT
+        console.log(this);
+        this.handleInsert(response.url);
       }));
 
     this.handleHide();
   }
-
 }
 
 function getModal() {

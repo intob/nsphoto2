@@ -1,7 +1,7 @@
 import MediaStoreWidget from './widget';
 
-async function init() {
-  const mediaStoreWidget = new MediaStoreWidget();
+async function init({handleInsert}) {
+  const mediaStoreWidget = new MediaStoreWidget({handleInsert});
   return {
     show: () => mediaStoreWidget.handleShow(),
     hide: () => mediaStoreWidget.handleHide(),
