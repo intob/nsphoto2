@@ -66,6 +66,9 @@ collections: # A list of collections the CMS should be able to edit
   - name: "service"
     label: "Service"
     folder: "site/content/service"
+    path: "{{slug}}/index"
+    media_folder: ""
+    public_folder: "en/service/{{slug}}"
     i18n: true
     create: true
     fields:
