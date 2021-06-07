@@ -1,0 +1,41 @@
+[hidden] {
+  display: none !important;
+}
+
+.nsphoto-media-store-modal {
+  z-index: 99999;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0,0,0,0.2);
+}
+
+.nsphoto-media-store-modal form {
+  width: 300px;
+  max-width: 100vw;
+  height: 200px;
+  max-height: 100vh;
+  background-color: #FEFEFE;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.nsphoto-media-store-modal input {
+  width: 100%;
+}
+
+.nsphoto-media-store-modal button {
+  padding: 5px;
+}
+
+.nsphoto-media-store-modal .drop-container {
+  border: 1px solid black;
+  height: 100px;
+}

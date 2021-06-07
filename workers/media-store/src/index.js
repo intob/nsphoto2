@@ -1,5 +1,5 @@
 import validateGithubToken from "./auth";
-import { getKeyFromRequestUrl, getMimeTypeFromRequest, getMimeTypeFromKey, store } from "./util";
+import { getKeyFromRequestUrl, getMimeTypeFromRequest, getMimeTypeFromKey, store, getAllowOriginHeader } from "./util";
 
 addEventListener("fetch", event => {
   event.respondWith(handle(event.request));
@@ -10,6 +10,8 @@ addEventListener("fetch", event => {
  * {id}:{mimeType}
  */
 
+ const allowedOrigins = ALLOWED_ORIGINS;
+
 async function handle(request) {
   if (request.method !== "OPTIONS" && request.method !== "GET" && request.method !== "PUT") {
     return Promise.resolve(new Response("Method not allowed. Allowed methods: OPTIONS, GET, PUT", { status: 405 }));
@@ -18,8 +20,9 @@ async function handle(request) {
   if (request.method === "OPTIONS") {
     const response = new Response(null, {
       headers: {
-        "access-control-allow-origin": "*",
+        "access-control-allow-origin": getAllowOriginHeader(request, allowedOrigins),
         "access-control-allow-methods": "GET, PUT, OPTIONS",
+        "access-control-allow-headers": "*",
         "access-control-max-age": 1728185
       },
     });
@@ -64,7 +67,11 @@ async function handle(request) {
           key: key,
           url: `${requestUrl.protocol}//${requestUrl.host}/${key}`
         }
-        return Promise.resolve(new Response(JSON.stringify(responseBodyObject)))
+        return Promise.resolve(new Response(JSON.stringify(responseBodyObject), {
+          headers: {
+            "access-control-allow-origin": getAllowOriginHeader(request, allowedOrigins)
+          }
+        }));
       });
     });
   }

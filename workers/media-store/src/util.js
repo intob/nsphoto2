@@ -30,3 +30,11 @@ function arrayBufferToHex(arrayBuffer) {
     .map(x => x.toString(16).padStart(2, '0'))
     .join('');
 }
+
+export function getAllowOriginHeader(request, allowedOrigins) {
+  const origin = request.headers.get("Origin");
+  if (allowedOrigins.match(origin)) {
+    return origin;
+  }
+  return "*";
+}
