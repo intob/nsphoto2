@@ -8,26 +8,35 @@ export function readFile(file) {
   });
 }
 
-export function processImage(data) {
-  const original = uploadData(data, "image/jpeg"); // original
+export function processImage(data, type, maxWidth = undefined) {
+  const original = uploadData(data, type);
 
-  const webp = optimizeImage(data, "image/jpeg", "image/webp")
+  const resizeOptions = maxWidth ? { withoutEnlargement: true, width: maxWidth } : undefined;
+
+  const webp = optimizeImage(data, type, "image/webp", resizeOptions)
     .then(data => uploadData(data, "image/webp"));
 
-  const avif = optimizeImage(data, "image/jpeg", "image/avif", { speed: 8 })
+  const avif = optimizeImage(data, type, "image/avif", resizeOptions, { speed: 8 })
     .then(data => uploadData(data, "image/avif"));
 
   return Promise.all([avif, webp, original]);
 }
 
-function optimizeImage(data, contentType, targetType, options = {}) {
+function optimizeImage(data, contentType, targetType, resizeOptions = undefined, outputOptions = undefined) {
+  let headers = {
+    "content-length": data.byteLength,
+    "content-type": contentType,
+    "accept": targetType
+  }
+  if (outputOptions) {
+    headers["output-options"] = JSON.stringify(outputOptions);
+  }
+  if (resizeOptions) {
+    headers["resize-options"] = JSON.stringify(resizeOptions)
+  }
   return fetch("https://joeynici.synology.me:3002/", {
     method: "POST",
-    headers: {
-      "content-type": contentType,
-      "accept": targetType,
-      "options": JSON.stringify(options)
-    },
+    headers: headers,
     body: data
   })
   .then(response => response.arrayBuffer());
@@ -38,7 +47,8 @@ function uploadData(data, contentType) {
     method: "PUT",
     headers: {
       "authorization": getAuthToken(),
-      "content-type": contentType
+      "content-type": contentType,
+      "content-length": data.byteLength
     },
     body: data
   })

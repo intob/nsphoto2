@@ -6,7 +6,7 @@ export default class NSPImage extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = { modalVisible: false };
+    this.state = { modalVisible: false, preview: null };
   }
 
   handleShowModal = () => {
@@ -30,25 +30,29 @@ export default class NSPImage extends React.Component {
   handleDropzoneDrop = event => {
     event.stopPropagation();
     event.preventDefault();
-    readFile(event.dataTransfer.files[0])
-      .then(data => processImage(data))
+    this.handleHideModal();
+    const maxWidth = this.props.field.get("max_width");
+    const file = event.target.files[0];
+    readFile(file)
+      .then(data => processImage(data, file.type, maxWidth))
       .then(responses => {
         this.props.onChange(responses);
-        this.handleHideModal();
       });
   }
 
   handleFileInput = event => {
-    readFile(event.target.files[0])
-      .then(data => processImage(data))
+    this.handleHideModal();
+    const maxWidth = this.props.field.get("max_width");
+    const file = event.target.files[0];
+    readFile(file)
+      .then(data => processImage(data, file.type, maxWidth))
       .then(responses => {
         this.props.onChange(responses);
-        this.handleHideModal();
       });
   }
 
   render() {
-    const { value } = this.props;
+    const { value, classNameWidget } = this.props;
     let thumbnail = "";
     if (Array.isArray(value)) {
       thumbnail = value.filter(i => i.indexOf('webp') > -1)[0];
@@ -58,7 +62,7 @@ export default class NSPImage extends React.Component {
 
     return (
       <>
-        <div className="nsp-image-widget">
+        <div className={`nsp-image-widget ${classNameWidget}`}>
           <img className="thumbnail" src={thumbnail}/>
           <button onClick={this.handleShowModal}>Choose image</button>
           <button onClick={this.handleRemoveImage} className="danger">Remove image</button>

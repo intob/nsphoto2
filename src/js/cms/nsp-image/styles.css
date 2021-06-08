@@ -48,16 +48,13 @@
 }
 
 .nsp-image-widget {
-  display: flex;
+  display: flex !important;
   flex-wrap: wrap;
-  border: 2px solid rgb(223, 223, 227);
-  border-radius: 0px 5px 5px;
-  padding: 16px;
 }
 
 .nsp-image-widget .thumbnail {
+  width: 100%;
   max-width: 200px;
-  margin: 0 16px 16px 0;
 }
 
 .nsp-image-widget button {
@@ -71,7 +68,7 @@
   background-color: rgb(232, 245, 254);
   color: rgb(58, 105, 199);
   cursor: pointer;
-  margin: 0 16px;
+  margin: 5px;
 }
 
 .nsp-image-widget button.danger {
