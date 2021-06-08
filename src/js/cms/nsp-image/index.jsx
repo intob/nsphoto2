@@ -50,7 +50,12 @@ export default class NSPImage extends React.Component {
   render() {
     const { value } = this.props;
     console.log(value);
-    const thumbnail = value ? value.filter(i => i.indexOf('webp') > -1)[0] : "";
+    let thumbnail = "";
+    if (value && typeof value === "object") {
+      thumbnail = value.toArray().filter(i => i.indexOf('webp') > -1)[0];
+    } else if (value && typeof value === "array") {
+      thumbnail = value.filter(i => i.indexOf('webp') > -1)[0];
+    }
     return (
       <>
         <div className="nsp-image-widget">
