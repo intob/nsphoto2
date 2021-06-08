@@ -1,4 +1,4 @@
-import * as React from 'react'
+import * as React from 'react';
 import "../common/styles.css";
 import "./styles.css";
 import { readFile, processImage } from '../common/image-util';
@@ -105,8 +105,8 @@ export default class NSPImageList extends React.Component {
       imageItems.push(
         <>
           <div className="image-item">
-            <div className="remove" onClick={() => this.handleRemoveImageItem(imageItem)}>x</div>
             <img src={iterableImageItem.filter(i => i.indexOf('webp') > -1)[0]}/>
+            <div className="remove" onClick={() => this.handleRemoveImageItem(imageItem)}>❌</div>
           </div>
         </>
       );

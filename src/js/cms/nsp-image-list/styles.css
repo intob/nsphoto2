@@ -1,12 +1,25 @@
 .nsp-widget .image-list {
   display: flex;
   flex-wrap: wrap;
+  width: 100%;;
 }
 
 .nsp-widget .image-list .image-item {
   width: 150px;
   height: 100px;
   margin: 0 5px 5px 0;
+  position: relative;
+}
+
+.nsp-widget .image-list .image-item .remove {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  padding: 5px;
+  line-height: 1.25rem;
+  font-size: 1.25rem;
+  cursor: pointer;
 }
 
 .nsp-widget .image-list .image-item img {

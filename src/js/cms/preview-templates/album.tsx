@@ -19,16 +19,24 @@ export default class AlbumPreview extends React.Component<CMS.PreviewTemplateCom
       );
     });
 
-    const imagesTemplate = images && images.map((img: any) => {
-      const imageUrl = `${window.parent.location.protocol}//${window.parent.location.host}/${img}`;
-      return <div className="media-grid-item" style={{backgroundImage: `url(${imageUrl})`}}></div>;
+    const imagesTemplate = images && images.toArray().map((img: any) => {
+      const imageUrl = img.toArray().filter((i: string[]) => i.indexOf('webp') > -1)[0];
+      return (
+      <>
+        <div className="media-grid-item">
+          <picture>
+            <img src={imageUrl}/>
+          </picture>
+        </div>
+      </>
+      );
     });
 
     return (
       <>
         <article>
-          <div className="media-grid">
-            <div className="media-grid-item span span-4-2">
+          <div className="media-grid album">
+            <div className="media-grid-item">
               <h1>{ entry.getIn(["data", "title"])}</h1>
               <div className="metadata light">
                 <p>{ format(entry.getIn(["data", "date"]), "yyyy-mm-dd") }</p>
