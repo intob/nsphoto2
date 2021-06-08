@@ -1,7 +1,7 @@
 .nsp-widget .image-list {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;;
+  width: 100%;
 }
 
 .nsp-widget .image-list .image-item {
