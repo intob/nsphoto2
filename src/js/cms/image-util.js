@@ -8,29 +8,29 @@ export function readFile(file) {
   });
 }
 
-export function processImage(data, type, progressHandler, maxWidth = undefined) {
+export function processImage(data, file, progressHandler, maxWidth = undefined) {
   const resizeOptions = maxWidth ? {withoutEnlargement: true, width: maxWidth} : undefined;
 
-  const jpeg = optimizeImage(data, type, 'image/jpeg', resizeOptions, {mozjpeg: true})
+  const jpeg = optimizeImage(data, file.type, 'image/jpeg', resizeOptions, {mozjpeg: true})
     .then(data => {
-      progressHandler(16);
-      return uploadData(data, type);
+      progressHandler(file, 16);
+      return uploadData(data, file.type);
     });
-  jpeg.then(() => progressHandler(16));
+  jpeg.then(() => progressHandler(file, 16));
 
-  const webp = optimizeImage(data, type, 'image/webp', resizeOptions, {reductionEffort: 6})
+  const webp = optimizeImage(data, file.type, 'image/webp', resizeOptions, {reductionEffort: 6})
     .then(data => {
-      progressHandler(16);
+      progressHandler(file, 16);
       return uploadData(data, 'image/webp');
     });
-  webp.then(() => progressHandler(16));
+  webp.then(() => progressHandler(file, 16));
 
-  const avif = optimizeImage(data, type, 'image/avif', resizeOptions, {speed: 8})
+  const avif = optimizeImage(data, file.type, 'image/avif', resizeOptions, {speed: 8})
     .then(data => {
-      progressHandler(16);
+      progressHandler(file, 16);
       return uploadData(data, 'image/avif');
     });
-  avif.then(() => progressHandler(16));
+  avif.then(() => progressHandler(file, 16));
 
   return Promise.all([avif, webp, jpeg]);
 }

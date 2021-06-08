@@ -41,9 +41,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: Description, name: description, widget: text, i18n: true}
       - {label: "Tags", name: "tags", widget: list, max: 5, i18n: true}
       - {label: "Featured Image", name: featured_image, widget: image, i18n: duplicate}
-      - {label: Images, name: images, widget: list, i18n: true, add_to_top: true,
-          field: {label: Image, name: image, widget: image, i18n: true}
-        }
+      - {label: Images, name: images, widget: nsp-image-list, i18n: duplicate, max_width: 750}
       - {label: Videos, name: videos, widget: list, i18n: true, add_to_top: true, required: false,
           field: {label: "YouTube Video ID", name: youtube_id, widget: string, i18n: true}
         }
