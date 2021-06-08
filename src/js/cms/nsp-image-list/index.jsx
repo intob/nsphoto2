@@ -18,10 +18,10 @@ export default class NSPImageList extends React.Component {
     this.setState({ modalVisible: false });
   };
 
-  handleRemoveImage = image => {
+  handleRemoveImageItem = imageItem => {
     const { value, onChange } = this.props;
 
-    const newValue = value.filter(i => i !== image);
+    const newValue = value.filter(i => i !== imageItem);
 
     console.log(newValue);
     onChange(newValue);
@@ -73,7 +73,6 @@ export default class NSPImageList extends React.Component {
   renderUploadList = () => {
     const uploadList = [];
     for (const [fileName, value] of Object.entries(this.state.uploads)) {
-      console.log(fileName, value);
       if (fileName && value && value.progress) {
         uploadList.push(<><div>{`${fileName}: ${value.progress}`}</div></>);
       }
@@ -84,18 +83,35 @@ export default class NSPImageList extends React.Component {
   renderImageItems = () => {
     const { value } = this.props;
     const imageItems = [];
-    if (value && Array.isArray(value)) {
-      value.forEach(imageItem => {
-        imageItems.push(
-          <>
-            <div className="image-item">
-              <div>X</div>
-              <img src={imageItem.filter(i => i.indexOf('webp') > -1)[0]}/>
-            </div>
-          </>
-        );
-      });
+
+    let iterableValue = [];
+    if (Array.isArray(value)) {
+      iterableValue = value;
+    } else {
+      try {
+        iterableValue = value.toArray();
+      } catch {
+      }
     }
+
+    iterableValue.forEach(imageItem => {
+      let iterableImageItem;
+      if (Array.isArray(imageItem)) {
+        iterableImageItem = imageItem;
+      } else {
+        iterableImageItem = imageItem.toArray();
+      }
+
+      imageItems.push(
+        <>
+          <div className="image-item">
+            <div className="remove" onClick={() => this.handleRemoveImageItem(imageItem)}>x</div>
+            <img src={iterableImageItem.filter(i => i.indexOf('webp') > -1)[0]}/>
+          </div>
+        </>
+      );
+    });
+
     return imageItems;
   }
 
@@ -110,7 +126,7 @@ export default class NSPImageList extends React.Component {
           </div>
         </div>
         <div className="nsp-modal" hidden={!this.state.modalVisible} onClick={this.handleHideModal}>
-          <div class="dropzone" onDragOver={this.handleDropzoneDragOver} onDrop={this.handleDropzoneDrop} onClick={e => e.stopPropagation()}>
+          <div className="dropzone" onDragOver={this.handleDropzoneDragOver} onDrop={this.handleDropzoneDrop} onClick={e => e.stopPropagation()}>
             <label className="upload" hidden={this.state.uploads && Object.entries(this.state.uploads).length > 0}>
                 <input type="file" onInput={this.handleFileInput}/>
                 Select a file, or drop here

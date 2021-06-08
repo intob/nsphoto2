@@ -79,7 +79,7 @@ export default class NSPImage extends React.Component {
           <button onClick={this.handleRemoveImage} className="danger">Remove image</button>
         </div>
         <div className="nsp-modal" hidden={!this.state.modalVisible} onClick={this.handleHideModal}>
-          <div class="dropzone" onDragOver={this.handleDropzoneDragOver} onDrop={this.handleDropzoneDrop} onClick={e => e.stopPropagation()}>
+          <div className="dropzone" onDragOver={this.handleDropzoneDragOver} onDrop={this.handleDropzoneDrop} onClick={e => e.stopPropagation()}>
             <label className="upload">
                 <input type="file" onInput={this.handleFileInput}/>
                 {this.state.progress > 0 ? `${this.state.progress}%` : "Select a file, or drop here"}
