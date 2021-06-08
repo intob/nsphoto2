@@ -1,4 +1,4 @@
-import { supportsAvif, supportsWebp } from './caniuse';
+import {supportsAvif, supportsWebp} from './caniuse';
 
 export default function initLazyLoading() {
   const observerOptions = {
@@ -18,7 +18,6 @@ export default function initLazyLoading() {
   });
 
   const lazyBackgrounds = [...document.querySelectorAll('[data-lazy-bg]')];
-  console.log(lazyBackgrounds);
   const lazyBackgroundObserver = getLazyBackgroundObserver(observerOptions);
   lazyBackgrounds.forEach(lazyBackground => {
     lazyBackgroundObserver.observe(lazyBackground);

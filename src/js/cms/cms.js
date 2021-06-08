@@ -1,21 +1,21 @@
-import CMS from "netlify-cms-app";
+import CMS from 'netlify-cms-app';
 
 import NSPImage from './nsp-image';
 
-import HomePreview from "./preview-templates/home";
-import PostPreview from "./preview-templates/post";
-import AlbumPreview from "./preview-templates/album";
-import ServicePreview from "./preview-templates/service";
-import FilmPreview from "./preview-templates/film";
+import HomePreview from './preview-templates/home';
+import PostPreview from './preview-templates/post';
+import AlbumPreview from './preview-templates/album';
+import ServicePreview from './preview-templates/service';
+import FilmPreview from './preview-templates/film';
 
 CMS.registerWidget('nsp-image', NSPImage);
 
 CMS.registerPreviewStyle('/index.css');
 
-CMS.registerPreviewTemplate("home", HomePreview);
-CMS.registerPreviewTemplate("post", PostPreview);
-CMS.registerPreviewTemplate("album", AlbumPreview);
-CMS.registerPreviewTemplate("film", FilmPreview);
-CMS.registerPreviewTemplate("service", ServicePreview);
+CMS.registerPreviewTemplate('home', HomePreview);
+CMS.registerPreviewTemplate('post', PostPreview);
+CMS.registerPreviewTemplate('album', AlbumPreview);
+CMS.registerPreviewTemplate('film', FilmPreview);
+CMS.registerPreviewTemplate('service', ServicePreview);
 
 CMS.init();
