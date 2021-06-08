@@ -1,0 +1,80 @@
+[hidden] {
+  display: none !important;
+}
+
+.nsp-image-modal {
+  z-index: 99999;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.nsp-image-modal #dropzone {
+  width: 600px;
+  max-width: 100vw;
+  height: 400px;
+  max-height: 100vh;
+  background-color: #FEFEFE;
+  border: 4px dashed #555;
+  border-radius: 5px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.nsp-image-modal input[type="file"] {
+  display: none;
+}
+
+.nsp-image-modal label.upload {
+  display: inline-block;
+  padding: 20px;
+  cursor: pointer;
+  font-size: 1.25rem;
+  color: #555;
+  transition: color 0.25s;
+}
+
+.nsp-image-modal label.upload:hover {
+  color: #000;
+}
+
+.nsp-image-widget {
+  display: flex;
+  flex-wrap: wrap;
+  border: 2px solid rgb(223, 223, 227);
+  border-radius: 0px 5px 5px;
+  padding: 16px;
+}
+
+.nsp-image-widget .thumbnail {
+  max-width: 200px;
+  margin: 0 16px 16px 0;
+}
+
+.nsp-image-widget button {
+  border: none;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 13px;
+  height: 23px;
+  line-height: 23px;
+  padding: 0px 15px;
+  background-color: rgb(232, 245, 254);
+  color: rgb(58, 105, 199);
+  cursor: pointer;
+  margin: 0 16px;
+}
+
+.nsp-image-widget button.danger {
+  background-color: rgb(252, 239, 234);
+  color: rgb(255, 0, 59);
+}

@@ -5,7 +5,7 @@ import { format } from "date-fns";
 export default class PostPreview extends React.Component<CMS.PreviewTemplateComponentProps> {
   render() {
     const {entry, widgetFor, getAsset} = this.props;
-    const image = getAsset(entry.getIn(["data", "featured_image"]));
+    //const image = getAsset(entry.getIn(["data", "featured_image"]));
 
     return (
       <>
@@ -17,7 +17,7 @@ export default class PostPreview extends React.Component<CMS.PreviewTemplateComp
               <p>Read in x minutes</p>
             </div>
             <p>{ entry.getIn(["data", "description"]) }</p>
-            { image && <img src={ image.url } alt={ entry.getIn(["data", "title"])} /> }
+            
           </section>
           <section>
             { widgetFor("body") }

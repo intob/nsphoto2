@@ -4,7 +4,7 @@ import colors from 'colors';
 let buildPromises = [];
 
 const cmsBuild = esbuild.build({
-  entryPoints: ['./src/js/cms/cms.tsx'],
+  entryPoints: ['./src/js/cms/cms.js'],
   bundle: true,
   minify: !isDev(),
   watch: watch(),

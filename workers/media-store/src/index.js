@@ -11,10 +11,6 @@ addEventListener("fetch", event => {
  */
 
 async function handle(request) {
-  if (request.method !== "OPTIONS" && request.method !== "GET" && request.method !== "PUT") {
-    return Promise.resolve(new Response("Method not allowed. Allowed methods: OPTIONS, GET, PUT", { status: 405 }));
-  }
-
   if (request.method === "OPTIONS") {
     const response = new Response(null, {
       headers: {
@@ -61,16 +57,16 @@ async function handle(request) {
       .then(data => store(data, getMimeTypeFromRequest(request)))
       .then(key => {
         const requestUrl = new URL(request.url);
-        const responseBodyObject = {
-          key: key,
-          url: `${requestUrl.protocol}//${requestUrl.host}/${key}`
-        }
-        return Promise.resolve(new Response(JSON.stringify(responseBodyObject), {
+        const fetchUrl = `${requestUrl.protocol}//${requestUrl.host}/${key}`;
+        return Promise.resolve(new Response(fetchUrl, {
           headers: {
-            "access-control-allow-origin": "*"
+            "access-control-allow-origin": "*",
+            "content-type": "text/plain"
           }
         }));
       });
     });
   }
+
+  return Promise.resolve(new Response("Method not allowed. Allowed methods: OPTIONS, GET, PUT", { status: 405 }));
 }

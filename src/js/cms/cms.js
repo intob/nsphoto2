@@ -1,6 +1,6 @@
 import CMS from "netlify-cms-app";
 
-import NSPhotoMediaStore from './nsphoto-media-store';
+import NSPImage from './nsp-image';
 
 import HomePreview from "./preview-templates/home";
 import PostPreview from "./preview-templates/post";
@@ -8,7 +8,7 @@ import AlbumPreview from "./preview-templates/album";
 import ServicePreview from "./preview-templates/service";
 import FilmPreview from "./preview-templates/film";
 
-CMS.registerMediaLibrary(NSPhotoMediaStore);
+CMS.registerWidget('nsp-image', NSPImage);
 
 CMS.registerPreviewStyle('/index.css');
 

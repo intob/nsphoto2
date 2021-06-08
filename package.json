@@ -24,22 +24,19 @@
     "@types/react": "^17.0.9",
     "@types/react-dom": "^17.0.6",
     "date-fns": "^2.22.1",
-    "esbuild": "^0.12.5",
-    "glob": "^7.1.7",
     "netlify-cms-app": "^2.15.17",
-    "npm-run-all": "^4.1.5",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "rimraf": "^3.0.2",
-    "sharp": "^0.28.3",
     "typescript": "^4.3.2"
   },
   "devDependencies": {
     "colors": "^1.4.0",
     "connect-livereload": "^0.6.1",
+    "esbuild": "^0.12.5",
     "eslint": "^7.27.0",
     "eslint-plugin-import": "^2.23.4",
     "express": "^4.17.1",
-    "livereload": "^0.9.3"
+    "glob": "^7.1.7",
+    "livereload": "^0.9.3",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2"
   }
 }
