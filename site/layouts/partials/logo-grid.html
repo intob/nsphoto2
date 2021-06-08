@@ -2,7 +2,7 @@
 <div class="logo-grid">
 	{{ range .Params.clients }}
 		<div class="logo-grid-item">
-			{{ partial "picture" (dict "src" .) }}
+			{{ partial "picture" . }}
 		</div>
 	{{ end }}
 </div>

@@ -5,46 +5,10 @@ description: This is a super awesome wedding album. Enjoy the photos.
 tags:
   - wedding
   - awesome
-featured_image: en/album/newest-album/wedding_w-3621.jpg
+featured_image:
+  - https://nsphoto-media-store.dr-useless.workers.dev/c9bc394342ed90799df6d0c6bed7f267a471e180f85acfa937aef71f297d2085:image/avif
+  - https://nsphoto-media-store.dr-useless.workers.dev/4d41f2eb2e07369aedd60c47758392b373c077c3ae0cf150a70788438b9993e3:image/webp
+  - https://nsphoto-media-store.dr-useless.workers.dev/1c88f459dd0497a99a54696b9fbc280a3f9e7d3e1b8770b73348b9910f512ba2:image/jpeg
 images:
-  - en/album/newest-album/wedding_w-2.jpg
-  - en/album/newest-album/wedding_w-1959.jpg
-  - en/album/newest-album/wedding_w-1963.jpg
-  - en/album/newest-album/wedding_w-2155.jpg
-  - en/album/newest-album/wedding_w-2281.jpg
-  - en/album/newest-album/wedding_w-2523.jpg
-  - en/album/newest-album/wedding_w-3226.jpg
-  - en/album/newest-album/wedding_w-3235.jpg
-  - en/album/newest-album/wedding_w-3364.jpg
-  - en/album/newest-album/wedding_w-3621.jpg
-  - en/album/newest-album/wedding_w-3660.jpg
-  - en/album/newest-album/wedding_w-3664.jpg
-  - en/album/newest-album/wedding_w-3719.jpg
-  - en/album/newest-album/wedding_w-3723.jpg
-  - en/album/newest-album/wedding_w-3730.jpg
-  - en/album/newest-album/wedding_w-3738.jpg
-  - en/album/newest-album/wedding_w-3781.jpg
-  - en/album/newest-album/wedding_w-3943.jpg
-  - en/album/newest-album/wedding_w-3963.jpg
-  - en/album/newest-album/wedding_w-3980.jpg
-  - en/album/newest-album/wedding_w-3985.jpg
-  - en/album/newest-album/wedding_w-4260.jpg
-  - en/album/newest-album/wedding_w-5167.jpg
-  - en/album/newest-album/wedding_w-5268.jpg
-  - en/album/newest-album/wedding_w-5318.jpg
-  - en/album/newest-album/wedding_w-5583.jpg
-  - en/album/newest-album/wedding_w-5848.jpg
-  - en/album/newest-album/wedding_w-6022.jpg
-  - en/album/newest-album/wedding_w-6067.jpg
-  - en/album/newest-album/wedding_w-7225.jpg
-  - en/album/newest-album/wedding_w-7467.jpg
-  - en/album/newest-album/wedding_w-7582.jpg
-  - en/album/newest-album/wedding_w-7689.jpg
-  - en/album/newest-album/wedding_w-7715.jpg
-  - en/album/newest-album/wedding_w-8430.jpg
-  - en/album/newest-album/wedding_w-8974.jpg
-  - en/album/newest-album/wedding_w-9011.jpg
-  - en/album/newest-album/wedding_w-9106.jpg
-  - en/album/newest-album/wedding_w-9109.jpg
 ---
 
