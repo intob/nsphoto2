@@ -7,7 +7,8 @@ description: Having trained seriously with bodyweight exercises for a long time,
   legs are a slightly different case because they are much stronger than the
   upper body they require weighted stimuli to make optimal progress. Hence,
   optimal strength and hypertrophy requires barbells for the legs. Test
-featured_image: https://nsphoto-media-store.dr-useless.workers.dev/1a1917c6f21be633a17c30e87bb7274edfd636fb15422a3e6d5dbfd77a41b187:image/jpeg
+featured_image:
+  - https://nsphoto-media-store.dr-useless.workers.dev/1a1917c6f21be633a17c30e87bb7274edfd636fb15422a3e6d5dbfd77a41b187:image/jpeg
 ---
 For those with other goals such as gaining mass, a combination of bodyweight exercises and barbell work or strict barbell work will get you better results. See our Barbell training recommendations or integrating bodyweight and barbell training.
 
