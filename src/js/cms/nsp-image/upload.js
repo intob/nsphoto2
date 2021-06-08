@@ -9,17 +9,18 @@ export function readFile(file) {
 }
 
 export function processImage(data, type, maxWidth = undefined) {
-  const original = uploadData(data, type);
-
   const resizeOptions = maxWidth ? { withoutEnlargement: true, width: maxWidth } : undefined;
 
-  const webp = optimizeImage(data, type, "image/webp", resizeOptions)
+  const jpeg = optimizeImage(data, type, "image/jpeg", resizeOptions, { mozjpeg: true })
+  .then(data => uploadData(data, type));
+
+  const webp = optimizeImage(data, type, "image/webp", resizeOptions, { reductionEffort: 6 })
     .then(data => uploadData(data, "image/webp"));
 
   const avif = optimizeImage(data, type, "image/avif", resizeOptions, { speed: 8 })
     .then(data => uploadData(data, "image/avif"));
 
-  return Promise.all([avif, webp, original]);
+  return Promise.all([avif, webp, jpeg]);
 }
 
 function optimizeImage(data, contentType, targetType, resizeOptions = undefined, outputOptions = undefined) {
