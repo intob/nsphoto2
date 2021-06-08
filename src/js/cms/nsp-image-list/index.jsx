@@ -1,6 +1,7 @@
 import * as React from 'react'
+import "../common/styles.css";
 import "./styles.css";
-import { readFile, processImage } from '../image-util';
+import { readFile, processImage } from '../common/image-util';
 
 export default class NSPImageList extends React.Component {
 
@@ -18,8 +19,12 @@ export default class NSPImageList extends React.Component {
   };
 
   handleRemoveImage = image => {
-    // find & remove
-    //this.props.onChange(null);
+    const { value, onChange } = this.props;
+
+    const newValue = value.filter(i => i !== image);
+
+    console.log(newValue);
+    onChange(newValue);
   }
 
   handleDropzoneDragOver = event => {
@@ -31,33 +36,33 @@ export default class NSPImageList extends React.Component {
   handleDropzoneDrop = event => {
     event.stopPropagation();
     event.preventDefault();
-    const maxWidth = this.props.field.get("max_width");
-    const files = event.dataTransfer.files;
-    files.forEach(file => {
-      readFile(file)
-      .then(data => processImage(data, file, this.handleFileProgress, maxWidth))
-      .then(responses => {
-        this.props.onChange([...this.props.value, ...[{...responses}]]);
-        this.setState(state => {
-          state.uploads[file.name] = undefined;
-        });
-      });
-    });
-    
+    this.addFiles(event.dataTransfer.files);
   }
 
   handleFileInput = event => {
+    this.addFiles(event.target.files);
+  }
+
+  addFiles = files => {
     const maxWidth = this.props.field.get("max_width");
-    const files = event.target.files;
-    files.forEach(file => {
-      readFile(file)
+    const promises = [];
+    [].forEach.call(files, file => {
+      this.setState(state => {
+        state.uploads[file.name] = { progress: 0 };
+      });
+      const promise = readFile(file)
       .then(data => processImage(data, file, this.handleFileProgress, maxWidth))
       .then(responses => {
-        this.props.onChange([...this.props.value, ...[{...responses}]]);
         this.setState(state => {
           state.uploads[file.name] = undefined;
         });
+        return responses;
       });
+      promises.push(promise);
+    });
+    return Promise.all(promises).then(responses => {
+      this.setState({ modalVisible: false, uploads: []});
+      this.props.onChange([...this.props.value||[], ...responses]);
     });
   }
 
@@ -66,35 +71,49 @@ export default class NSPImageList extends React.Component {
   }
 
   renderUploadList = () => {
-    let uploadList;
-    for (const [fileName, progress] of Object.entries(this.state.uploads)) {
-      uploadList += <><div>{fileName}: {progress}</div></>;
+    const uploadList = [];
+    for (const [fileName, value] of Object.entries(this.state.uploads)) {
+      console.log(fileName, value);
+      if (fileName && value && value.progress) {
+        uploadList.push(<><div>{`${fileName}: ${value.progress}`}</div></>);
+      }
     }
     return uploadList;
   }
 
-  renderImageList = () => {
-    //let imageList;
-    //console.log(this.props.value);
-    return <><div className="image-list"><div>One image</div></div></>;
+  renderImageItems = () => {
+    const { value } = this.props;
+    const imageItems = [];
+    if (value && Array.isArray(value)) {
+      value.forEach(imageItem => {
+        imageItems.push(
+          <>
+            <div className="image-item">
+              <div>X</div>
+              <img src={imageItem.filter(i => i.indexOf('webp') > -1)[0]}/>
+            </div>
+          </>
+        );
+      });
+    }
+    return imageItems;
   }
 
   render() {
-    const { value, classNameWidget } = this.props;
-
-    console.log(value);
-
+    const { classNameWidget } = this.props;
     return (
       <>
-        <div className={`nsp-image-list-widget ${classNameWidget}`}>
+        <div className={`nsp-widget ${classNameWidget}`}>
           <button onClick={this.handleShowModal}>Add images</button>
-          { this.renderImageList() }
+          <div className="image-list">
+            { this.renderImageItems() }
+          </div>
         </div>
-        <div className="nsp-image-modal" hidden={!this.state.modalVisible} onClick={this.handleHideModal}>
-          <div id="dropzone" onDragOver={this.handleDropzoneDragOver} onDrop={this.handleDropzoneDrop} onClick={e => e.stopPropagation()}>
-            <label className="upload">
+        <div className="nsp-modal" hidden={!this.state.modalVisible} onClick={this.handleHideModal}>
+          <div class="dropzone" onDragOver={this.handleDropzoneDragOver} onDrop={this.handleDropzoneDrop} onClick={e => e.stopPropagation()}>
+            <label className="upload" hidden={this.state.uploads && Object.entries(this.state.uploads).length > 0}>
                 <input type="file" onInput={this.handleFileInput}/>
-                {this.state.progress > 0 ? `${this.state.progress}%` : "Select a file, or drop here"}
+                Select a file, or drop here
             </label>
             <div className="upload-list">
               { this.renderUploadList() }

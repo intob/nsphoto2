@@ -1,6 +1,7 @@
 import * as React from 'react'
+import "../common/styles.css";
 import "./styles.css";
-import { readFile, processImage } from '../image-util';
+import { readFile, processImage } from '../common/image-util';
 
 export default class NSPImage extends React.Component {
 
@@ -72,13 +73,13 @@ export default class NSPImage extends React.Component {
 
     return (
       <>
-        <div className={`nsp-image-widget ${classNameWidget}`}>
+        <div className={`nsp-widget ${classNameWidget}`}>
           <img className="thumbnail" src={thumbnail}/>
           <button onClick={this.handleShowModal}>Choose image</button>
           <button onClick={this.handleRemoveImage} className="danger">Remove image</button>
         </div>
-        <div className="nsp-image-modal" hidden={!this.state.modalVisible} onClick={this.handleHideModal}>
-          <div id="dropzone" onDragOver={this.handleDropzoneDragOver} onDrop={this.handleDropzoneDrop} onClick={e => e.stopPropagation()}>
+        <div className="nsp-modal" hidden={!this.state.modalVisible} onClick={this.handleHideModal}>
+          <div class="dropzone" onDragOver={this.handleDropzoneDragOver} onDrop={this.handleDropzoneDrop} onClick={e => e.stopPropagation()}>
             <label className="upload">
                 <input type="file" onInput={this.handleFileInput}/>
                 {this.state.progress > 0 ? `${this.state.progress}%` : "Select a file, or drop here"}

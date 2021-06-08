@@ -1,63 +1,9 @@
-[hidden] {
-  display: none !important;
-}
-
-.nsp-image-modal {
-  z-index: 99999;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(0,0,0,0.4);
-}
-
-.nsp-image-modal #dropzone {
-  width: 600px;
-  max-width: 100vw;
-  height: 400px;
-  max-height: 100vh;
-  background-color: #FEFEFE;
-  border: 4px dashed #555;
-  border-radius: 5px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.nsp-image-modal input[type="file"] {
-  display: none;
-}
-
-.nsp-image-modal label.upload {
-  display: inline-block;
-  padding: 20px;
-  cursor: pointer;
-  font-size: 1.25rem;
-  color: #555;
-  transition: color 0.25s;
-}
-
-.nsp-image-modal label.upload:hover {
-  color: #000;
-}
-
-.nsp-image-widget {
-  display: flex !important;
-  flex-wrap: wrap;
-}
-
-.nsp-image-widget .thumbnail {
+.nsp-widget .thumbnail {
   width: 100%;
   max-width: 200px;
 }
 
-.nsp-image-widget button {
+.nsp-widget button {
   border: none;
   border-radius: 5px;
   font-weight: 500;
@@ -71,7 +17,7 @@
   margin: 5px;
 }
 
-.nsp-image-widget button.danger {
+.nsp-widget button.danger {
   background-color: rgb(252, 239, 234);
   color: rgb(255, 0, 59);
 }
