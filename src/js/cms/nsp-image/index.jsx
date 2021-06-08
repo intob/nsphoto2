@@ -6,7 +6,7 @@ export default class NSPImage extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = { modalVisible: false, preview: null };
+    this.state = { modalVisible: false, progress: 0 };
   }
 
   handleShowModal = () => {
@@ -30,25 +30,35 @@ export default class NSPImage extends React.Component {
   handleDropzoneDrop = event => {
     event.stopPropagation();
     event.preventDefault();
-    this.handleHideModal();
     const maxWidth = this.props.field.get("max_width");
-    const file = event.target.files[0];
+    const file = event.dataTransfer.files[0];
+    this.setState({ progress: 1 });
     readFile(file)
-      .then(data => processImage(data, file.type, maxWidth))
+      .then(data => processImage(data, file.type, this.handleProgress, maxWidth))
       .then(responses => {
+        this.handleHideModal();
         this.props.onChange(responses);
+        this.setState({ progress: 0 });
       });
   }
 
   handleFileInput = event => {
-    this.handleHideModal();
     const maxWidth = this.props.field.get("max_width");
     const file = event.target.files[0];
+    this.setState({ progress: 1 });
     readFile(file)
-      .then(data => processImage(data, file.type, maxWidth))
+      .then(data => processImage(data, file.type, this.handleProgress, maxWidth))
       .then(responses => {
+        this.handleHideModal();
         this.props.onChange(responses);
+        this.setState({ progress: 0 });
       });
+  }
+
+  handleProgress = newProgress => {
+    this.setState(state => ({
+      progress: state.progress + newProgress
+    }));
   }
 
   render() {
@@ -71,7 +81,7 @@ export default class NSPImage extends React.Component {
           <div id="dropzone" onDragOver={this.handleDropzoneDragOver} onDrop={this.handleDropzoneDrop} onClick={e => e.stopPropagation()}>
             <label className="upload">
                 <input type="file" onInput={this.handleFileInput}/>
-                Select a file, or drop here
+                {this.state.progress > 0 ? `${this.state.progress}%` : "Select a file, or drop here"}
             </label>
           </div>
         </div>

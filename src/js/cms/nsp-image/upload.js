@@ -8,17 +8,29 @@ export function readFile(file) {
   });
 }
 
-export function processImage(data, type, maxWidth = undefined) {
+export function processImage(data, type, progressHandler, maxWidth = undefined) {
   const resizeOptions = maxWidth ? { withoutEnlargement: true, width: maxWidth } : undefined;
 
   const jpeg = optimizeImage(data, type, "image/jpeg", resizeOptions, { mozjpeg: true })
-  .then(data => uploadData(data, type));
+  .then(data => {
+    progressHandler(16);
+    return uploadData(data, type);
+  });
+  jpeg.then(() => progressHandler(16));
 
   const webp = optimizeImage(data, type, "image/webp", resizeOptions, { reductionEffort: 6 })
-    .then(data => uploadData(data, "image/webp"));
+    .then(data => {
+      progressHandler(16);
+      return uploadData(data, "image/webp");
+    });
+  webp.then(() => progressHandler(16));
 
   const avif = optimizeImage(data, type, "image/avif", resizeOptions, { speed: 8 })
-    .then(data => uploadData(data, "image/avif"));
+    .then(data => {
+      progressHandler(16);
+      return uploadData(data, "image/avif");
+    });
+  avif.then(() => progressHandler(16));
 
   return Promise.all([avif, webp, jpeg]);
 }
