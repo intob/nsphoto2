@@ -8,7 +8,6 @@ const cmsBuild = esbuild.build({
   bundle: true,
   minify: !isDev(),
   watch: watch(),
-  external: ['react', 'react-dom'],
   outfile: './dist/cms.js',
 }).catch(() => process.exit(1));
 buildPromises.push(cmsBuild);
