@@ -11,12 +11,12 @@ export function readFile(file) {
 export function processImage(data, file, progressHandler, width = undefined, height = undefined, fit = undefined) {
   const resizeOptions = width || height ? {width: width, height: height, fit: fit, withoutEnlargement: true,} : undefined;
 
-  /*const jpeg = optimizeImage(data, file.type, 'image/jpeg', resizeOptions, { mozjpeg: true })
+  const jpeg = optimizeImage(data, file.type, 'image/jpeg', resizeOptions, { mozjpeg: true })
     .then(data => {
       progressHandler(file, 16);
       return uploadData(data, file.type);
     });
-  jpeg.then(() => progressHandler(file, 16));*/
+  jpeg.then(() => progressHandler(file, 16));
 
   const webp = optimizeImage(data, file.type, 'image/webp', resizeOptions, { reductionEffort: 6 })
     .then(data => {
@@ -32,7 +32,7 @@ export function processImage(data, file, progressHandler, width = undefined, hei
     });
   avif.then(() => progressHandler(file, 16));
 
-  return Promise.all([avif, webp, /*jpeg*/]);
+  return Promise.all([avif, webp, jpeg]);
 }
 
 function optimizeImage(data, contentType, targetType, resizeOptions, outputOptions) {
