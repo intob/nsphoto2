@@ -1,9 +1,25 @@
-export function store(data, mimeType) {
+import { keyTtl } from "./index";
+
+export function store(data, mimeType, force = false) {
   return hash(data).then(hash => {
     const key = buildKey(hash, mimeType);
-    return MEDIA.get(key, {type:"arrayBuffer"}).then(currentValue => {
+
+    let getCurrentValuePromise;
+    if (force) {
+      getCurrentValuePromise = Promise.resolve(null);
+    } else {
+      getCurrentValuePromise = MEDIA.get(key, {type:"arrayBuffer"});
+    }
+
+    return getCurrentValuePromise.then(currentValue => {
       if (!currentValue) {
-        return MEDIA.put(key, data, { expirationTtl: 3600 }).then(() => key);
+        const options = {
+          expirationTtl: keyTtl,
+          metadata: {
+            expires: Date.now() + keyTtl * 1000
+          }
+        };
+        return MEDIA.put(key, data, options).then(() => key); 
       } else {
         return Promise.resolve(key);
       }

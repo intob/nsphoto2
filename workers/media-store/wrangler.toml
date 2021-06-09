@@ -5,7 +5,7 @@ workers_dev = true
 route = ""
 zone_id = ""
 kv_namespaces = [
-  { binding = "MEDIA", id = "db683d46499d4b0a8cde4ca2f0d018f6", preview_id = "8853278ae4234866ae47a45c32b70446" }
+  { binding = "MEDIA", id = "db683d46499d4b0a8cde4ca2f0d018f6", preview_id = "636cfc5fb4ed4d85b05cd98f81f98cab" }
 ]
 
 [build]
