@@ -6,7 +6,7 @@
 	{{ end }}
 
 	{{ if .Params.youtube_id }}
-		{{ $thumbnail := printf "https://i.ytimg.com/vi/%s/maxresdefault.jpg" .Params.youtube_id }}
+		{{ $thumbnail := printf "https://i.ytimg.com/vi/%s/hqdefault.jpg" .Params.youtube_id }}
 		<picture data-lazy>
 			<img data-srcset="{{ $thumbnail }}" alt="{{ .Params.youtube_id }} thumbnail"/>
 		</picture>

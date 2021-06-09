@@ -15,3 +15,9 @@ ready().then(() => {
 load().then(() => {
   initHeroGridLoading();
 });
+
+window.addEventListener('resize', () => {
+  window.requestAnimationFrame(() => {
+    initHeroGridLoading();
+  });
+})
