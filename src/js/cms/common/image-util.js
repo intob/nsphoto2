@@ -71,4 +71,3 @@ function uploadData(data, contentType) {
 function getAuthToken() {
   return `Bearer ${JSON.parse(localStorage.getItem('netlify-cms-user')).token}`;
 }
-
