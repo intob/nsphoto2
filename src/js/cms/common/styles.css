@@ -19,8 +19,6 @@
   width: 600px;
   max-width: 100vw;
   min-height: 400px;
-  max-height: 100vh;
-  overflow-y: scroll;
   background-color: #FEFEFE;
   border: 4px dashed #555;
   border-radius: 5px;

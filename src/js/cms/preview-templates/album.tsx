@@ -1,6 +1,7 @@
 import * as React from "react";
 import * as CMS from "netlify-cms-core";
 import { format } from "date-fns";
+import { isArrayBindingPattern } from 'typescript';
 
 export default class AlbumPreview extends React.Component<CMS.PreviewTemplateComponentProps> {
   render() {
@@ -19,8 +20,16 @@ export default class AlbumPreview extends React.Component<CMS.PreviewTemplateCom
       );
     });
 
-    const imagesTemplate = images && images.toArray().map((img: any) => {
-      const imageUrl = img.toArray().filter((i: string[]) => i.indexOf('webp') > -1)[0];
+    if (!Array.isArray(images)) {
+      images = images.toArray();
+    }
+
+    const imagesTemplate = images && images.map((img: any) => {
+      let iterableImg = img;
+      if (!Array.isArray(img)) {
+        iterableImg = img.toArray();
+      }
+      const imageUrl = iterableImg.filter((i: string[]) => i.indexOf('webp') > -1)[0];
       return (
       <>
         <div className="media-grid-item">

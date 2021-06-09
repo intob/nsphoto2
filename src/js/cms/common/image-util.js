@@ -25,7 +25,7 @@ export function processImage(data, file, progressHandler, maxWidth = undefined) 
     });
   webp.then(() => progressHandler(file, 16));
 
-  const avif = optimizeImage(data, file.type, 'image/avif', resizeOptions, {speed: 8})
+  const avif = optimizeImage(data, file.type, 'image/avif', resizeOptions, {speed: 5})
     .then(data => {
       progressHandler(file, 16);
       return uploadData(data, 'image/avif');

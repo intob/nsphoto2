@@ -56,6 +56,7 @@ export default class NSPImageList extends React.Component {
         this.setState(state => {
           state.uploads[file.name] = undefined;
         });
+        this.props.onChange([...this.props.value||[], [...responses]]);
         return responses;
       });
       promises.push(promise);
