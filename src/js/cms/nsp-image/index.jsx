@@ -32,11 +32,10 @@ export default class NSPImage extends React.Component {
     event.stopPropagation();
     event.preventDefault();
     const maxWidth = this.props.field.get("max_width");
-    const quality = this.props.field.get("quality");
     const file = event.dataTransfer.files[0];
     this.setState({ progress: 1 });
     readFile(file)
-      .then(data => processImage(data, file, this.handleProgress, maxWidth, quality))
+      .then(data => processImage(data, file, this.handleProgress, maxWidth))
       .then(responses => {
         this.handleHideModal();
         this.props.onChange(responses);
@@ -46,11 +45,10 @@ export default class NSPImage extends React.Component {
 
   handleFileInput = event => {
     const maxWidth = this.props.field.get("max_width");
-    const quality = this.props.field.get("quality");
     const file = event.target.files[0];
     this.setState({ progress: 1 });
     readFile(file)
-      .then(data => processImage(data, file, this.handleProgress, maxWidth, quality))
+      .then(data => processImage(data, file, this.handleProgress, maxWidth))
       .then(responses => {
         this.handleHideModal();
         this.props.onChange(responses);
