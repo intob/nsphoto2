@@ -27,10 +27,6 @@ article .metadata .tags span:not(:last-of-type):after {
 }
 
 @media (min-width: 800px) {
-	article {
-		max-width: 1600px;
-		margin: auto;
-	}
 	article section {
 		width: 700px;
 		padding: 0;
