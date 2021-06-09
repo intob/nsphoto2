@@ -52,11 +52,15 @@
 	.hero-grid .subtitle {
 		grid-column: 3;
 		grid-row: 3;
+    background-color: var(--color-text);
+    color: var(--color-bg);
 	}
 	
 	.hero-grid .intro {
 		grid-column: 1 / span 2;
 		grid-row: 4 / span 2;
+    background-color: var(--color-text);
+    color: var(--color-bg);
 	}
 	
 	.hero-grid .description {
