@@ -58,9 +58,8 @@ export default class NSPImageList extends React.Component {
       });
       promises.push(promise);
     });
-    return Promise.all(promises).then(responses => {
+    return Promise.all(promises).then(() => {
       this.setState({ modalVisible: false, uploads: []});
-      this.props.onChange([...this.props.value||[], ...responses]);
     });
   }
 
