@@ -21,8 +21,3 @@
   font-size: 1.25rem;
   cursor: pointer;
 }
-
-.nsp-widget .image-list .image-item img {
-  height: 100%;
-  width: auto;
-}
