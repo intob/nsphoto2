@@ -1,26 +1,123 @@
 .hero-grid {
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-	grid-gap: 2px;
-	grid-auto-rows: 120px;
-	grid-auto-flow: dense;
 	padding: 0 5px;
 }
 
 .hero-grid-item {
-	width: unset;
-	height: unset;
-	margin: unset;
-	overflow: hidden;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	display: none;
 }
 
-.hero-grid-item picture {
-	height: 100%;
+.hero-grid .title,
+.hero-grid .subtitle,
+.hero-grid .intro,
+.hero-grid .description {
+	display: flex;
 }
 
 .hero-grid-item picture img {
-	height: 100%;
 	border-radius: 5px;
+}
+
+@media (min-width: 360px) {
+	.hero-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+		grid-gap: 2px;
+		grid-auto-rows: 120px;
+		grid-auto-flow: dense;
+	}
+
+	.hero-grid-item {
+		display: flex;
+		width: unset;
+		height: unset;
+		margin: unset;
+	}
+
+	.hero-grid-item picture {
+		height: 100%;
+	}
+	
+	.hero-grid-item picture img {
+		height: 100%;
+	}
+
+	.hero-grid .title {
+		grid-column: 1 / span 2;
+		grid-row: 2;
+	}
+	
+	.hero-grid .subtitle {
+		grid-column: 3;
+		grid-row: 3;
+	}
+	
+	.hero-grid .intro {
+		grid-column: 1 / span 2;
+		grid-row: 4 / span 2;
+	}
+	
+	.hero-grid .description {
+		grid-column: 2 / span 2;
+		grid-row: 6 / span 2;
+	}
+
+	.hero-grid-item:nth-child(n+15) {
+		display: none;
+	}
+}
+
+@media (min-width: 496px) {
+	.hero-grid .subtitle {
+		grid-column: 3 / span 2;
+	}
+
+	.hero-grid .description {
+		grid-column: 3 / span 2;
+		grid-row: 6 / span 2;
+	}
+
+	.hero-grid-item:nth-child(n+15) {
+		display: flex;
+	}
+}
+
+@media (min-width: 630px) {
+	.hero-grid .title {
+		grid-column: 2 / span 2;
+	}
+
+	.hero-grid .subtitle {
+		grid-column: 3 / span 2;
+	}
+
+	.hero-grid .description {
+		grid-column: 4 / span 2;
+		grid-row: 5 / span 2;
+	}
+}
+
+@media (min-width: 755px) {
+	.hero-grid .title {
+		grid-row: 1;
+	}
+
+	.hero-grid .subtitle {
+		grid-column: 3 / span 2;
+		grid-row: 2;
+	}
+
+	.hero-grid .intro {
+		grid-column: 4 / span 2;
+		grid-row: 3 / span 2
+	}
+
+	.hero-grid .description {
+		grid-column: 2 / span 2;
+		grid-row: 4 / span 2;
+	}
 }
 
 @media (min-width: 600px) {

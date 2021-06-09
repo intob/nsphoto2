@@ -2,6 +2,7 @@
 title: Nicole Schafer
 subtitle: Photo & Film
 intro: Award-winning reportage photographer & filmmaker
+description: Based in Switzerland, available worldwide
 images:
   - - https://nsphoto-media-store.dr-useless.workers.dev/af55e8055f2719e262d2034415660a3cf38d78516f54b4a19345bfc0676ccf0b:image/avif
     - https://nsphoto-media-store.dr-useless.workers.dev/15a6854eed08d80cf2501f40023ee8eb592b2282f58ad4ef92d7dca11ac47b23:image/webp
