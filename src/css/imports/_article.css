@@ -1,7 +1,8 @@
 article {
 	display: flex;
 	flex-direction: column;
-	margin: 10px 0;
+	margin: 10px auto;
+	max-width: 2005px;
 }
 
 article section {
