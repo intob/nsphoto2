@@ -91,7 +91,7 @@ collections: # A list of collections the CMS should be able to edit
           - {label: Title, name: title, widget: string}
           - {label: Subtitle, name: subtitle, widget: string}
           - {label: Intro, name: intro, widget: string}
-          - {label: "Featured Image", name: featured_image, widget: nsp-image, max_width: 1600, quality: 40}
+          - {label: "Featured Image", name: featured_image, widget: nsp-image, max_width: 1600, quality: 10}
           - {label: "Select Clients", name: clients, widget: nsp-image-list, max_width: 120}
       - file: "site/content/_index.de.md"
         name: home_de
