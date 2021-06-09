@@ -1,8 +1,8 @@
 backend:
   name: github
   repo: dr-useless/nsphoto2
-  base_url: https://github-oauth.dr-useless.workers.dev
-  branch: master
+  base_url: https://nsphoto-github-oauth.dr-useless.workers.dev
+  branch: cloudflare-kv-media-store # TODO: revert to master
 
 media_folder: "site/static/media" # Folder where user uploaded files should go
 public_folder: media
@@ -18,7 +18,6 @@ collections: # A list of collections the CMS should be able to edit
     label: Post # Used in the UI, ie.: "New Post"
     folder: "site/content/post" # The path to the folder where the documents are stored
     path: "{{slug}}/index"
-    media_folder: ""
     public_folder: "en/post/{{slug}}"
     i18n: true
     create: true # Allow users to create new documents in this collection
@@ -26,7 +25,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: Title, name: title, widget: string, i18n: true}
       - {label: "Publish Date", name: date, widget: datetime , i18n: duplicate}
       - {label: "Intro Blurb", name: description, widget: text, i18n: true}
-      - {label: "Featured Image", name: featured_image, widget: image, required: false, i18n: duplicate}
+      - {label: "Featured Image", name: featured_image, widget: nsp-image, required: false, max_width: 750, i18n: duplicate}
       - {label: Body, name: body, widget: markdown, i18n: true}
   - name: "album"
     label: "Album"
@@ -41,10 +40,8 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Publish Date", name: date, widget: datetime, i18n: duplicate}
       - {label: Description, name: description, widget: text, i18n: true}
       - {label: "Tags", name: "tags", widget: list, max: 5, i18n: true}
-      - {label: "Featured Image", name: featured_image, widget: image, i18n: duplicate}
-      - {label: Images, name: images, widget: list, i18n: true, add_to_top: true,
-          field: {label: Image, name: image, widget: image, i18n: true}
-        }
+      - {label: "Featured Image", name: featured_image, widget: nsp-image, max_width: 750, i18n: duplicate}
+      - {label: Images, name: images, widget: nsp-image-list, max_width: 750, i18n: duplicate}
       - {label: Videos, name: videos, widget: list, i18n: true, add_to_top: true, required: false,
           field: {label: "YouTube Video ID", name: youtube_id, widget: string, i18n: true}
         }
@@ -61,7 +58,6 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Publish Date", name: date, widget: datetime, i18n: true}
       - {label: Description, name: description, widget: text, i18n: true}
       - {label: "Tags", name: "tags", widget: list, max: 5, i18n: true}
-      - {label: "Featured Image", name: featured_image, widget: image, i18n: duplicate, required: false}
       - {label: "YouTube Video ID", name: youtube_id, widget: string, i18n: duplicate}
   - name: "service"
     label: "Service"
@@ -74,7 +70,7 @@ collections: # A list of collections the CMS should be able to edit
     fields:
       - {label: Title, name: title, widget: string, i18n: true}
       - {label: Description, name: description, widget: text, i18n: true}
-      - {label: "Featured Image", name: featured_image, widget: image, required: false, i18n: duplicate}
+      - {label: "Featured Image", name: featured_image, widget: nsp-image, max_width: 750, i18n: duplicate, required: false}
       - {label: Body, name: body, widget: markdown, required: false, i18n: true}
       - {label: "Packages", name: "packages", widget: list, i18n: true, fields: [
           {label: Name, name: "name", widget: string, i18n: true},
@@ -91,30 +87,21 @@ collections: # A list of collections the CMS should be able to edit
       - file: "site/content/_index.en.md"
         name: home_en
         label: "Home EN"
-        media_folder: ""
-        public_folder: "en"
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Subtitle, name: subtitle, widget: string}
           - {label: Intro, name: intro, widget: string}
-          - {label: "Featured Image", name: featured_image, widget: image}
-          - {label: "Select Clients", name: clients, widget: list,
-              field: {label: Logo, name: logo, widget: image}
-            }
+          - {label: "Featured Image", name: featured_image, widget: nsp-image, max_width: 1600}
+          - {label: "Select Clients", name: clients, widget: nsp-image-list, max_width: 120}
       - file: "site/content/_index.de.md"
         name: home_de
         label: "Home DE"
-        path: "home"
-        media_folder: ""
-        public_folder: "en"
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Subtitle, name: subtitle, widget: string}
           - {label: Intro, name: intro, widget: string}
-          - {label: "Featured Image", name: featured_image, widget: image}
-          - {label: "Select Clients", name: clients, widget: list,
-              field: {label: Logo, name: logo, widget: image}
-            }
+          - {label: "Featured Image", name: featured_image, widget: nsp-image, max_width: 1600}
+          - {label: "Select Clients", name: clients, widget: nsp-image-list, max_width: 120}
       - file: "site/content/contact/_index.en.md"
         name: contact_en
         label: "Contact EN"

@@ -4,7 +4,7 @@ import colors from 'colors';
 let buildPromises = [];
 
 const cmsBuild = esbuild.build({
-  entryPoints: ['./src/js/cms/cms.tsx'],
+  entryPoints: ['./src/js/cms/cms.js'],
   bundle: true,
   minify: !isDev(),
   watch: watch(),
@@ -13,7 +13,7 @@ const cmsBuild = esbuild.build({
 buildPromises.push(cmsBuild);
 
 const contactBuild = esbuild.build({
-  entryPoints: ['./src/js/contact.js'],
+  entryPoints: ['./src/js/site/contact.js'],
   bundle: true,
   minify: !isDev(),
   watch: watch(),
@@ -22,7 +22,7 @@ const contactBuild = esbuild.build({
 buildPromises.push(contactBuild);
 
 const mainBuild = esbuild.build({
-  entryPoints: ['./src/js/index.js'],
+  entryPoints: ['./src/js/site/index.js'],
   bundle: true,
   minify: !isDev(),
   watch: watch(),

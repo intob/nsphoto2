@@ -1,0 +1,14 @@
+{
+  "name": "nsphoto-github-oauth",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A Cloudflare Worker to handle GitHub oauth requests",
+  "main": "github-oauth.js",
+  "author": "github.com/dr-useless",
+  "license": "MIT",
+  "release": {
+    "branches": [
+      "main"
+    ]
+  }
+}

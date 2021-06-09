@@ -15,7 +15,7 @@
       </div>
       {{ range $i, $image := .Params.images}}
         <div class="media-grid-item" style="order: {{ $i }}">
-          {{ partial "picture" (dict "src" $image) }}
+          {{ partial "picture" $image }}
         </div>
       {{ end }}
       {{ range $i, $video := .Params.videos}}

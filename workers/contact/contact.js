@@ -128,7 +128,7 @@ function sendTelegramMessage(notification) {
   }
   const chats = TELEGRAM_CHATS.split(',');
   const promises = chats.map(chatId => {
-    return fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage?chat_id=${chatId}&text=${notification}`).then(r => console.log(r));
+    return fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage?chat_id=${chatId}&text=${notification}`);
   });
   return Promise.allSettled(promises);
 }

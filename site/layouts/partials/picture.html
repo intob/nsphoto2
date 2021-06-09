@@ -1,19 +1,11 @@
-{{ $optim := default true .optim }}
-
 <picture data-lazy>
-  {{ if in .src ".jpg" }}
-    {{ if $optim }}
-      <source data-srcset="{{ replace .src ".jpg" ".avif" }}" type="image/avif">
-      <source data-srcset="{{ replace .src ".jpg" ".webp" }}" type="image/webp">
+  {{ $default := "" }}
+  {{ range . }}
+    {{ $mimeType := index (split . ":") 2 }}
+    <source data-srcset="{{ . }}" type="{{ $mimeType }}">
+    {{ if eq $mimeType "image/jpeg" }}
+      {{ $default = . }}
     {{ end }}
-    <source data-srcset="{{ .src }}" type="image/jpeg">
   {{ end }}
-  {{ if in .src ".png" }}
-    {{ if $optim }}
-      <source data-srcset="{{ replace .src ".png" ".avif" }}" type="image/avif">
-      <source data-srcset="{{ replace .src ".png" ".webp" }}" type="image/webp">
-    {{ end }}
-    <source data-srcset="{{ .src }}" type="image/png">
-  {{ end }}
-  <img data-srcset="{{ .src }}" alt="{{ .src }}"/>
+  <img data-srcset="{{ $default }}" alt="image/jpeg"/>
 </picture>

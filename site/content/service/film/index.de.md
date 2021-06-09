@@ -1,7 +1,7 @@
 ---
 title: Film
 description: I make epic films... DE
-featured_image: en/service/film/nicole_hiking-min.jpg
+featured_image: null
 packages:
   - price: 100
 ---

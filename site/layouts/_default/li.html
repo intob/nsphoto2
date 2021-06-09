@@ -1,6 +1,6 @@
 <a href="{{ .RelPermalink }}" class="grid-list-item no-hover">
 	{{ if .Params.featured_image }}
-		{{ partial "picture" (dict "src" .Params.featured_image) }}
+		{{ partial "picture" .Params.featured_image }}
 	{{ end }}
 	<h2>{{ .Title }}</h2>
 	{{ if .Date }}
