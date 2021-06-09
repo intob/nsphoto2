@@ -8,8 +8,8 @@ export function readFile(file) {
   });
 }
 
-export function processImage(data, file, progressHandler, maxWidth = undefined) {
-  const resizeOptions = maxWidth ? {withoutEnlargement: true, width: maxWidth} : undefined;
+export function processImage(data, file, progressHandler, width = undefined, height = undefined, fit = undefined) {
+  const resizeOptions = width || height ? {width: width, height: height, fit: fit, withoutEnlargement: true,} : undefined;
 
   const jpeg = optimizeImage(data, file.type, 'image/jpeg', resizeOptions, { mozjpeg: true })
     .then(data => {

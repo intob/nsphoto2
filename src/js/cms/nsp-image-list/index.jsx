@@ -41,14 +41,16 @@ export default class NSPImageList extends React.Component {
   }
 
   addFiles = files => {
-    const maxWidth = this.props.field.get("max_width");
+    const width = this.props.field.get("width");
+    const height = this.props.field.get("height");
+    const fit = this.props.field.get("fit");
     const promises = [];
     [].forEach.call(files, file => {
       this.setState(state => {
         state.uploads[file.name] = { progress: 0 };
       });
       const promise = readFile(file)
-      .then(data => processImage(data, file, this.handleFileProgress, maxWidth))
+      .then(data => processImage(data, file, this.handleFileProgress, width, height, fit))
       .then(responses => {
         this.setState(state => {
           state.uploads[file.name] = undefined;

@@ -31,35 +31,31 @@ export default class NSPImage extends React.Component {
   handleDropzoneDrop = event => {
     event.stopPropagation();
     event.preventDefault();
-    const maxWidth = this.props.field.get("max_width");
-    const file = event.dataTransfer.files[0];
-    this.setState({ progress: 1 });
-    readFile(file)
-      .then(data => processImage(data, file, this.handleProgress, maxWidth))
-      .then(responses => {
-        this.handleHideModal();
-        this.props.onChange(responses);
-        this.setState({ progress: 0 });
-      });
+    addFile(event.dataTransfer.files[0]);
   }
 
   handleFileInput = event => {
-    const maxWidth = this.props.field.get("max_width");
-    const file = event.target.files[0];
-    this.setState({ progress: 1 });
-    readFile(file)
-      .then(data => processImage(data, file, this.handleProgress, maxWidth))
-      .then(responses => {
-        this.handleHideModal();
-        this.props.onChange(responses);
-        this.setState({ progress: 0 });
-      });
+    this.addFile(event.target.files[0]);
   }
 
   handleProgress = (file, newProgress) => {
     this.setState(state => ({
       progress: state.progress + newProgress
     }));
+  }
+
+  addFile = file => {
+    const width = this.props.field.get("width");
+    const height = this.props.field.get("height");
+    const fit = this.props.field.get("fit");
+    this.setState({ progress: 1 });
+    readFile(file)
+      .then(data => processImage(data, file, this.handleProgress, width, height, fit))
+      .then(responses => {
+        this.handleHideModal();
+        this.props.onChange(responses);
+        this.setState({ progress: 0 });
+      });
   }
 
   render() {
