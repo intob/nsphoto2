@@ -16,4 +16,13 @@ clients:
   - - https://nsphoto-media-store.dr-useless.workers.dev/f3218d682c30359adcca69c0dda939563c31f67f6b50e7074e6faba8bcf5c595:image/avif
     - https://nsphoto-media-store.dr-useless.workers.dev/bd207a7d10d10874fdf52c464ccff0b25d9460a5d836fa474b42546c0933ca08:image/webp
     - https://nsphoto-media-store.dr-useless.workers.dev/f14162788575fcc0dbcc6c7ac28a2f6bf5a650aeedc986e45a3d5d9c977a200f:image/svg+xml
+  - - https://nsphoto-media-store.dr-useless.workers.dev/cc924908a5ccc7c77f0f21b8daa1b4ca0564f792bed77fa7b56740a8d8af0a67:image/avif
+    - https://nsphoto-media-store.dr-useless.workers.dev/81ba019e6cda6d39ca1cd2b6cd0b5dc44f751082737ae583915d2d169a1361e4:image/webp
+    - https://nsphoto-media-store.dr-useless.workers.dev/d48cdf913decc6eee1fabc3a6ab449e6a3307f7eb02d8f5972a3e56998b62fce:image/png
+  - - https://nsphoto-media-store.dr-useless.workers.dev/86c913415d81279cbd04470a720598396fcc2ad9b4b27f6ac9154d7736105538:image/avif
+    - https://nsphoto-media-store.dr-useless.workers.dev/df07400619d2774c7ec70600561a1e8ba912ace63af531bc3ffc700e6e545e75:image/webp
+    - https://nsphoto-media-store.dr-useless.workers.dev/beb5ad7e4d66e7b52b5f21f2c8a14995cbdf8bad54c7c48843012c70b9f7db42:image/png
+  - - https://nsphoto-media-store.dr-useless.workers.dev/28dc6706e800762514ab057535887a2dd70910a0574fa77552cac4b3732ee235:image/avif
+    - https://nsphoto-media-store.dr-useless.workers.dev/e1879281e7ba2753d72b00e84873500d4aa253afbf6c57186021592acc66f6b3:image/webp
+    - https://nsphoto-media-store.dr-useless.workers.dev/32c7ec007a49e6fd32a268582e54ac5150ecc627c26ee682331a47a242401967:image/png
 ---
