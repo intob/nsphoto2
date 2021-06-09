@@ -2,25 +2,15 @@
 
 Website for Nicole Schafer Photo & Film.
 
-Built with Hugo & netlifycms. Hostable anywhere.
-Authentication with GitHub using a Cloudflare Worker https://github.com/dr-useless/github-oauth
+Built with Hugo & netlifycms.
 
+CMS access is authenticated using GitHub and a Cloudflare Worker.
 
 ## Getting Started
 
-### GitHub oauth with Cloudflare Worker
-Create a GitHub oauth app.
-
-Clone Cloudflare Worker repo: `git clone https://github.com/dr-useless/github-oauth`
-
-Install wrangler `npm install -g wrangler`
-
-Set secrets
-- `wrangler secret put CLIENT_ID` enter the CLIENT_ID from your GitHub oauth app
-- `wrangler secret put CLIENT_SECRET` enter the CLENT_SECRET from your GitHub oauth
-
 ### Hosting
-I am using Cloudflare Pages, but you can also use Netlify, Render, or any other service for hosting static sites. A push to master should trigger a build & deploy.
+I am using Cloudflare Pages, but you can also use Netlify, Render, or any other service for hosting static sites.
+A commit on master will trigger a build & deployment.
 
 ## Local Development
 
