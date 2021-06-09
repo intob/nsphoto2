@@ -88,8 +88,6 @@ collections: # A list of collections the CMS should be able to edit
       - file: "site/content/_index.en.md"
         name: home_en
         label: "Home EN"
-        media_folder: ""
-        public_folder: "en"
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Subtitle, name: subtitle, widget: string}
@@ -99,9 +97,6 @@ collections: # A list of collections the CMS should be able to edit
       - file: "site/content/_index.de.md"
         name: home_de
         label: "Home DE"
-        path: "home"
-        media_folder: ""
-        public_folder: "en"
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Subtitle, name: subtitle, widget: string}
