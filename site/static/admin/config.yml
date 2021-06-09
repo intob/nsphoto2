@@ -58,7 +58,6 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Publish Date", name: date, widget: datetime, i18n: true}
       - {label: Description, name: description, widget: text, i18n: true}
       - {label: "Tags", name: "tags", widget: list, max: 5, i18n: true}
-      - {label: "Featured Image", name: featured_image, widget: nsp-image, max_width: 750, i18n: duplicate, required: false}
       - {label: "YouTube Video ID", name: youtube_id, widget: string, i18n: duplicate}
   - name: "service"
     label: "Service"
