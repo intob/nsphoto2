@@ -20,10 +20,7 @@ export default class NSPImageList extends React.Component {
 
   handleRemoveImageItem = imageItem => {
     const { value, onChange } = this.props;
-
     const newValue = value.filter(i => i !== imageItem);
-
-    console.log(newValue);
     onChange(newValue);
   }
 

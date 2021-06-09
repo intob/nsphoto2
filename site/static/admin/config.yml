@@ -58,7 +58,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Publish Date", name: date, widget: datetime, i18n: true}
       - {label: Description, name: description, widget: text, i18n: true}
       - {label: "Tags", name: "tags", widget: list, max: 5, i18n: true}
-      - {label: "Featured Image", name: featured_image, widget: image, i18n: duplicate, required: false}
+      - {label: "Featured Image", name: featured_image, widget: nsp-image, i18n: duplicate, required: false}
       - {label: "YouTube Video ID", name: youtube_id, widget: string, i18n: duplicate}
   - name: "service"
     label: "Service"
@@ -71,7 +71,7 @@ collections: # A list of collections the CMS should be able to edit
     fields:
       - {label: Title, name: title, widget: string, i18n: true}
       - {label: Description, name: description, widget: text, i18n: true}
-      - {label: "Featured Image", name: featured_image, widget: image, required: false, i18n: duplicate}
+      - {label: "Featured Image", name: featured_image, widget: nsp-image, required: false, i18n: duplicate}
       - {label: Body, name: body, widget: markdown, required: false, i18n: true}
       - {label: "Packages", name: "packages", widget: list, i18n: true, fields: [
           {label: Name, name: "name", widget: string, i18n: true},
@@ -94,10 +94,8 @@ collections: # A list of collections the CMS should be able to edit
           - {label: Title, name: title, widget: string}
           - {label: Subtitle, name: subtitle, widget: string}
           - {label: Intro, name: intro, widget: string}
-          - {label: "Featured Image", name: featured_image, widget: image}
-          - {label: "Select Clients", name: clients, widget: list,
-              field: {label: Logo, name: logo, widget: image}
-            }
+          - {label: "Featured Image", name: featured_image, widget: nsp-image}
+          - {label: "Select Clients", name: clients, widget: nsp-image-list}
       - file: "site/content/_index.de.md"
         name: home_de
         label: "Home DE"
@@ -108,10 +106,8 @@ collections: # A list of collections the CMS should be able to edit
           - {label: Title, name: title, widget: string}
           - {label: Subtitle, name: subtitle, widget: string}
           - {label: Intro, name: intro, widget: string}
-          - {label: "Featured Image", name: featured_image, widget: image}
-          - {label: "Select Clients", name: clients, widget: list,
-              field: {label: Logo, name: logo, widget: image}
-            }
+          - {label: "Featured Image", name: featured_image, widget: nsp-image}
+          - {label: "Select Clients", name: clients, widget: nsp-image-list}
       - file: "site/content/contact/_index.en.md"
         name: contact_en
         label: "Contact EN"
