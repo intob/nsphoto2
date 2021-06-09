@@ -1,9 +1,9 @@
 {{ define "main" }}
 
 <article class="hero"
-    data-lazy-bg data-srcset-avif="{{ replace .Params.featured_image ".jpg" ".avif" }}"
-    data-lazy-bg data-srcset-webp="{{ replace .Params.featured_image ".jpg" ".webp" }}"
-    data-lazy-bg data-srcset-jpeg="{{ .Params.featured_image }}">
+    data-lazy-bg data-srcset-avif="{{ replace "lol.jpg" ".jpg" ".avif" }}"
+    data-lazy-bg data-srcset-webp="{{ replace "lol.jpg" ".jpg" ".webp" }}"
+    data-lazy-bg data-srcset-jpeg="{{ "lol.jpg" }}">
     <header>
         <div class="left">
             <h1>{{ .Params.title }}</h1>
