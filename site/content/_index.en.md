@@ -2,10 +2,49 @@
 title: Nicole Schafer
 subtitle: Photo & Film
 intro: Award-winning reportage photographer & filmmaker
-featured_image:
-  - https://nsphoto-media-store.dr-useless.workers.dev/3a6272f0731cfc12996ff5e9d1d1010ef22e26e16f952c2afa813cee70930d8c:image/avif
-  - https://nsphoto-media-store.dr-useless.workers.dev/2db0711dadb4978007b3c77a0830cf86b97e7f9f985efc08516ec16899bea36b:image/webp
-  - https://nsphoto-media-store.dr-useless.workers.dev/590dfe5f1d533755396d3c9b21cfb30a29543c499a039219898a7b4af71a7313:image/jpeg
+images:
+  - - https://nsphoto-media-store.dr-useless.workers.dev/2db0feb79d64d4ca93f66ed6bd6e6136729c7f8d52ccaf2a59a2c64691afd485:image/avif
+    - https://nsphoto-media-store.dr-useless.workers.dev/70b1cea8d21bd6a2cd97cb8dfae83a9b805daee6d2e4eb33b6fece1b7708f485:image/webp
+    - https://nsphoto-media-store.dr-useless.workers.dev/b42c8d1fb886f591218ae238106e33865c72937e6d9c47806d3bff39f57c5ce9:image/jpeg
+  - - https://nsphoto-media-store.dr-useless.workers.dev/318ffd3ce8dbbda6a36b8ff027396061176d4738ed718d9907a75a1c84bb1c75:image/avif
+    - https://nsphoto-media-store.dr-useless.workers.dev/9f3eba85ad4abf512412216aebc405499028cc4c9c4b085e368eb133028011a9:image/webp
+    - https://nsphoto-media-store.dr-useless.workers.dev/667e13127cd922e79d50f7a4234943985a4c8d26b7442f4aaf33ebf10aea07b7:image/jpeg
+  - - https://nsphoto-media-store.dr-useless.workers.dev/709347e4a598934d0cef531eeb9451ca7e1552fc3058248152ea29b2deb83819:image/avif
+    - https://nsphoto-media-store.dr-useless.workers.dev/82341169db8a61772c83d8edd29993e332d5ccaad1a923d40c783dd6d4294dfd:image/webp
+    - https://nsphoto-media-store.dr-useless.workers.dev/5bba2117c43c6f4deb8855f4ffba52c71fad2558e2e406be31221ea0fc67a580:image/jpeg
+  - - https://nsphoto-media-store.dr-useless.workers.dev/4be2b3dfc91759bdaf46d70f1e49588ebdd22803a612adbc7fa9ab0917d78890:image/avif
+    - https://nsphoto-media-store.dr-useless.workers.dev/ef21673ff0e1b0ae5d121d7f92296218792461b246ebf40ab85b7f7a93c0a1bc:image/webp
+    - https://nsphoto-media-store.dr-useless.workers.dev/7d2e0005cbf285800493c6d9487ddb3ad2d6d472bc11284d3722f5be0c2878fb:image/jpeg
+  - - https://nsphoto-media-store.dr-useless.workers.dev/e34bcaa52815619b0ebfca90f066c5018d19ca4cae599e3abcb4023acfb8a75a:image/avif
+    - https://nsphoto-media-store.dr-useless.workers.dev/240f741010a71965237bbc25b8ea780ba929ccdf089aab35f06787e4132a5598:image/webp
+    - https://nsphoto-media-store.dr-useless.workers.dev/617278bddf1d1b76612d4eb5a2f23f0d4cd37eb429760a12d9bb2397f9fe14db:image/jpeg
+  - - https://nsphoto-media-store.dr-useless.workers.dev/9f3ea0a974f39be6c81a3e22d38961a2eb6d1de2c884abba0fab42bb8a6afe60:image/avif
+    - https://nsphoto-media-store.dr-useless.workers.dev/17625396784b22ef7b2c011a0848b9d1c925ef62e412c39b1a4b5f813d629496:image/webp
+    - https://nsphoto-media-store.dr-useless.workers.dev/50665a31c743e1f8c6991ee7a2bc7f137fcf33e1d8862d75c464cb5c30c878a8:image/jpeg
+  - - https://nsphoto-media-store.dr-useless.workers.dev/22ba1775034eafc8c26740d98ed59e06ac41f2671ca54196b505d51049d19517:image/avif
+    - https://nsphoto-media-store.dr-useless.workers.dev/6302fe51df5de56b5683169f8195a2a9922c41e4c8c4971bad13477dea363dab:image/webp
+    - https://nsphoto-media-store.dr-useless.workers.dev/11d7f1809a12220c0cb31eed535e1110ed88b0c6a034323742ba0b225c2fb09c:image/jpeg
+  - - https://nsphoto-media-store.dr-useless.workers.dev/0f2bb665d0303abab96aa40135f298c5aa2f623a3c9832379b04904e28baf836:image/avif
+    - https://nsphoto-media-store.dr-useless.workers.dev/4e6afa2912a497b76b1c985587c578d5bb4ad02276e9ddfe45339216c76652aa:image/webp
+    - https://nsphoto-media-store.dr-useless.workers.dev/0a6031ea8b28e826b4ac8e771b8112d62048a7679554d28afca8023feefbe7f7:image/jpeg
+  - - https://nsphoto-media-store.dr-useless.workers.dev/919a5844e63b19303d93fe9c8b0fb9a7b09842e0f58fd26482f41eb8e785ea2e:image/avif
+    - https://nsphoto-media-store.dr-useless.workers.dev/e01263314e0ee6093186216f94e017c47dd34386a9c8d18debba0733ea58359d:image/webp
+    - https://nsphoto-media-store.dr-useless.workers.dev/e8f4a038c55d29cc83f698a7a0bc436a7cf74b6bf89a5dfac622d2ff71abc3e3:image/jpeg
+  - - https://nsphoto-media-store.dr-useless.workers.dev/0ac6f5a6a7f670cefb13835bf8093e19e4aa1062d0a211af68ff1e7e7f03c8ce:image/avif
+    - https://nsphoto-media-store.dr-useless.workers.dev/7cf7fa5cdf6ade46bbaca8838bab6a85fdb6d82d3b16dbbef02b5265e570d923:image/webp
+    - https://nsphoto-media-store.dr-useless.workers.dev/15bf9819764b4d28fa3936099af90e89050995791cf78fc92806eb8b13f1a2a7:image/jpeg
+  - - https://nsphoto-media-store.dr-useless.workers.dev/c2066283185394620ef0af2b5c3578a1ebe47d96cc131294f4333ceefc7d289a:image/avif
+    - https://nsphoto-media-store.dr-useless.workers.dev/2e652d502d1c0edba4efcf1c95b1945fdf80c88b9a17685c903c5492028a315b:image/webp
+    - https://nsphoto-media-store.dr-useless.workers.dev/92cda79b16ebc434c1c4a9162519577f809e8bc4c57d00ff695f99d3000f43e6:image/jpeg
+  - - https://nsphoto-media-store.dr-useless.workers.dev/2dfeb258183d45b3ff99637d090382710005bc198255ab13dc9291ec2b558027:image/avif
+    - https://nsphoto-media-store.dr-useless.workers.dev/cf05c6181c2cfa76d33cae39e97c764e379076affa5cb4e8b6eb40635166252e:image/webp
+    - https://nsphoto-media-store.dr-useless.workers.dev/2d5c07e421db80b8b779c423803565081ecfe81c81eb4bdab283e0a6fb5e5d26:image/jpeg
+  - - https://nsphoto-media-store.dr-useless.workers.dev/767e22f0a2e2ea0307475f488262aa029f00bba666a5bb4fd4c39f92fd2146c2:image/avif
+    - https://nsphoto-media-store.dr-useless.workers.dev/ec4c9aec5621fd68ced92149b26e8d5af9873dca58c28f890271714d0948ee55:image/webp
+    - https://nsphoto-media-store.dr-useless.workers.dev/57795fb21eb7ce77408cbc6866ff3b554b26ba53744bb27d646a87dd4042be1d:image/jpeg
+  - - https://nsphoto-media-store.dr-useless.workers.dev/64c0578333d5bcaafb511a42a689773ad0a0fd2aaad19e2e2030d42288f32586:image/avif
+    - https://nsphoto-media-store.dr-useless.workers.dev/3aa4ad61b156975c43fc8e6db6541b07ddc433189235606d9202be8b8a88cf7b:image/webp
+    - https://nsphoto-media-store.dr-useless.workers.dev/f1a468d01b71d0e518756bcf79ce639e1ef8183ce2e9585031a5aca21302b6bd:image/jpeg
 clients:
   - - https://nsphoto-media-store.dr-useless.workers.dev/28dc6706e800762514ab057535887a2dd70910a0574fa77552cac4b3732ee235:image/avif
     - https://nsphoto-media-store.dr-useless.workers.dev/e1879281e7ba2753d72b00e84873500d4aa253afbf6c57186021592acc66f6b3:image/webp

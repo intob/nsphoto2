@@ -1,0 +1,30 @@
+.hero-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+	grid-gap: 2px;
+	grid-auto-rows: 120px;
+	grid-auto-flow: dense;
+	padding: 0 5px;
+}
+
+.hero-grid-item {
+	width: unset;
+	height: unset;
+	margin: unset;
+	overflow: hidden;
+}
+
+.hero-grid-item picture {
+	height: 100%;
+}
+
+.hero-grid-item picture img {
+	height: 100%;
+	border-radius: 5px;
+}
+
+@media (min-width: 600px) {
+	.hero-grid {
+		grid-gap: 5px;
+	}
+}

@@ -1,11 +1,6 @@
 {{ define "main" }}
 
-<article class="hero"data-lazy-bg
-    {{ range .Params.featured_image }}
-    {{ $mimeType := index (split . ":") 2 }}
-    data-srcset-{{ index (split $mimeType "/") 1 }}="{{ . }}"
-    {{ end }}
->
+<article class="hero-grid">
     <header>
         <div class="left">
             <h1>{{ .Params.title }}</h1>
@@ -17,6 +12,11 @@
             <h3>{{ .Params.intro }}</h3>
         </div>
     </header>
+    {{ range .Params.images }}
+        <div class="hero-grid-item">
+            {{ partial "picture" . }}
+        </div>
+    {{ end }}
 </article>
 <article>
     {{ partial "media-grid" . }}
