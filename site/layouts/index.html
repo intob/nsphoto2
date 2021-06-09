@@ -17,7 +17,17 @@
     {{ end }}
     {{ range .Params.images }}
         <div class="hero-grid-item">
-            {{ partial "picture" . }}
+            <picture data-super-lazy>
+                {{ $default := "" }}
+                {{ range . }}
+                    {{ $mimeType := index (split . ":") 2 }}
+                    <source data-srcset="{{ . }}" type="{{ $mimeType }}">
+                    {{ if eq $mimeType "image/jpeg" }}
+                        {{ $default = . }}
+                    {{ end }}
+                {{ end }}
+                <img data-srcset="{{ $default }}" alt="image/jpeg"/>
+            </picture>
         </div>
     {{ end }}
 </article>
