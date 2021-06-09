@@ -3,9 +3,9 @@ title: Nicole Schafer
 subtitle: Photo & Film
 intro: Award-winning reportage photographer & filmmaker
 featured_image:
-  - https://nsphoto-media-store.dr-useless.workers.dev/0d80857f30e907fce92099698512c146b7be0dd19d4745cee6d7e59a4099c729:image/avif
-  - https://nsphoto-media-store.dr-useless.workers.dev/a88c62ba6f05bf1b5f27ef415ac6ecfed09507b685d8f308ba45be4c6a256ebf:image/webp
-  - https://nsphoto-media-store.dr-useless.workers.dev/641bbf055df7b49c5f6ab6880e953211bdb9ca73ab5591901fc103503f92556e:image/jpeg
+  - https://nsphoto-media-store.dr-useless.workers.dev/f5e1d49b8c7a5298de22b65ffede3f3f73c8191dd0f6829c844f1474addb21f5:image/avif
+  - https://nsphoto-media-store.dr-useless.workers.dev/2db0711dadb4978007b3c77a0830cf86b97e7f9f985efc08516ec16899bea36b:image/webp
+  - https://nsphoto-media-store.dr-useless.workers.dev/9dca0f63825440d06039d0b933aac6748fea382a47511def90fe32ac768f1d37:image/jpeg
 clients:
   - - https://nsphoto-media-store.dr-useless.workers.dev/28dc6706e800762514ab057535887a2dd70910a0574fa77552cac4b3732ee235:image/avif
     - https://nsphoto-media-store.dr-useless.workers.dev/e1879281e7ba2753d72b00e84873500d4aa253afbf6c57186021592acc66f6b3:image/webp
