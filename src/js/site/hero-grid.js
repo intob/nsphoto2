@@ -17,7 +17,9 @@ function loadRandomImage(images) {
       source.addEventListener('load', () => {
         image.removeAttribute('data-super-lazy');
         if (images.length > 0) {
-          loadRandomImage(images);
+          setTimeout(() => {
+            loadRandomImage(images);
+          }, 50);
         }
       });
     }
