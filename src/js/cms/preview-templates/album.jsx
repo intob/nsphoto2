@@ -1,15 +1,13 @@
 import * as React from "react";
-import * as CMS from "netlify-cms-core";
 import { format } from "date-fns";
-import { isArrayBindingPattern } from 'typescript';
 
-export default class AlbumPreview extends React.Component<CMS.PreviewTemplateComponentProps> {
+export default class AlbumPreview extends React.Component {
   render() {
     const {entry} = this.props;
     let images = entry.getIn(["data", "images"]);
     let videos = entry.getIn(["data", "videos"]);
 
-    const videosTemplate = videos && videos.map((youtubeId: any) => {
+    const videosTemplate = videos && videos.map((youtubeId) => {
       const youtubeIframeSrc = `https://www.youtube.com/embed/${youtubeId}?modestbranding=1&showinfo=0&rel=0&iv_load_policy=3&color=white`
       return (
         <>
@@ -24,12 +22,12 @@ export default class AlbumPreview extends React.Component<CMS.PreviewTemplateCom
       images = images.toArray();
     }
 
-    const imagesTemplate = images && images.map((img: any) => {
+    const imagesTemplate = images && images.map(img => {
       let iterableImg = img;
       if (!Array.isArray(img)) {
         iterableImg = img.toArray();
       }
-      const imageUrl = iterableImg.filter((i: string[]) => i.indexOf('webp') > -1)[0];
+      const imageUrl = iterableImg.filter(i => i.indexOf('webp') > -1)[0];
       return (
       <>
         <div className="media-grid-item">

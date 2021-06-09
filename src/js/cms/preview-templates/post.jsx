@@ -1,8 +1,7 @@
 import * as React from "react";
-import * as CMS from "netlify-cms-core";
 import { format } from "date-fns";
 
-export default class PostPreview extends React.Component<CMS.PreviewTemplateComponentProps> {
+export default class PostPreview extends React.Component {
   render() {
     const {entry, widgetFor, getAsset} = this.props;
     //const image = getAsset(entry.getIn(["data", "featured_image"]));

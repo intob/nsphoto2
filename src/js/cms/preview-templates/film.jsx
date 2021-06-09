@@ -1,8 +1,7 @@
 import * as React from "react";
-import * as CMS from "netlify-cms-core";
 import { format } from "date-fns";
 
-export default class FilmPreview extends React.Component<CMS.PreviewTemplateComponentProps> {
+export default class FilmPreview extends React.Component {
   render() {
     const {entry} = this.props;
     const youtubeId = entry.getIn(["data", "youtube_id"]);
