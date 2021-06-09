@@ -3,7 +3,7 @@ export function store(data, mimeType) {
     const key = buildKey(hash, mimeType);
     return MEDIA.get(key, {type:"arrayBuffer"}).then(currentValue => {
       if (!currentValue) {
-        return MEDIA.put(key, data).then(() => key);
+        return MEDIA.put(key, data, { expirationTtl: 3600 }).then(() => key);
       } else {
         return Promise.resolve(key);
       }

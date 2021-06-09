@@ -1,9 +1,11 @@
 {{ define "main" }}
 
-<article class="hero"
-    data-lazy-bg data-srcset-avif="{{ replace "lol.jpg" ".jpg" ".avif" }}"
-    data-lazy-bg data-srcset-webp="{{ replace "lol.jpg" ".jpg" ".webp" }}"
-    data-lazy-bg data-srcset-jpeg="{{ "lol.jpg" }}">
+<article class="hero"data-lazy-bg
+    {{ range .Params.featured_image }}
+    {{ $mimeType := index (split . ":") 2 }}
+    data-srcset-{{ index (split $mimeType "/") 1 }}="{{ . }}"
+    {{ end }}
+>
     <header>
         <div class="left">
             <h1>{{ .Params.title }}</h1>

@@ -1,5 +1,8 @@
-import validateGithubToken from "./auth";
-import { getKeyFromRequestUrl, getMimeTypeFromRequest, getMimeTypeFromKey, store, getAllowOriginHeader } from "./util";
+import { MEDIA } from 'stylis';
+import validateAuth from "./auth";
+import { getKeyFromRequestUrl, getMimeTypeFromRequest, getMimeTypeFromKey, store } from "./util";
+
+const cacheTtl = 604800; // 1 week
 
 addEventListener("fetch", event => {
   event.respondWith(handle(event.request));
@@ -36,7 +39,8 @@ async function handle(request) {
         status: 200,
         headers: {
           "content-type": getMimeTypeFromKey(key),
-          "content-length": data.byteLength
+          "content-length": data.byteLength,
+          "cache-control": "immutable"
         }
       });
       return Promise.resolve(response);
@@ -44,28 +48,22 @@ async function handle(request) {
   }
 
   if (request.method === "PUT") {
-    const authHeader = request.headers.get("Authorization");
-    if (!authHeader) {
-      return Promise.resolve(new Response("Unauthorized", { status: 401 }));
-    }
-    const token = authHeader.replace("Bearer ", "");             
-    return validateGithubToken(token).then(isAuthenticated => {
-      if (!isAuthenticated) {
-        return Promise.resolve(new Response("Unauthorized", { status: 401 }));
-      }
-      return request.arrayBuffer()
-      .then(data => store(data, getMimeTypeFromRequest(request)))
-      .then(key => {
-        const requestUrl = new URL(request.url);
-        const fetchUrl = `${requestUrl.protocol}//${requestUrl.host}/${key}`;
-        return Promise.resolve(new Response(fetchUrl, {
-          headers: {
-            "access-control-allow-origin": "*",
-            "content-type": "text/plain"
-          }
-        }));
+    return validateAuth(reqest)
+      .catch(() => Promise.resolve(new Response("Unauthorized", { status: 401 })))
+      .then(() => {
+        return request.arrayBuffer()
+        .then(data => store(data, getMimeTypeFromRequest(request)))
+        .then(key => {
+          const requestUrl = new URL(request.url);
+          const fetchUrl = `${requestUrl.protocol}//${requestUrl.host}/${key}`;
+          return Promise.resolve(new Response(fetchUrl, {
+            headers: {
+              "access-control-allow-origin": "*",
+              "content-type": "text/plain"
+            }
+          }));
+        });
       });
-    });
   }
 
   return Promise.resolve(new Response("Method not allowed. Allowed methods: OPTIONS, GET, PUT", { status: 405 }));
