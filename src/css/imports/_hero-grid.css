@@ -205,3 +205,43 @@
 		display: none;
 	}
 }
+
+@media (min-width: 1630px) {
+	.hero-grid-item:nth-child(n+65) {
+		display: flex;
+	}
+
+	.hero-grid-item:nth-child(n+71) {
+		display: none;
+	}
+}
+
+@media (min-width: 1755px) {
+	.hero-grid-item:nth-child(n+71) {
+		display: flex;
+	}
+
+	.hero-grid-item:nth-child(n+77) {
+		display: none;
+	}
+}
+
+@media (min-width: 1880px) {
+	.hero-grid-item:nth-child(n+77) {
+		display: flex;
+	}
+
+	.hero-grid-item:nth-child(n+83) {
+		display: none;
+	}
+}
+
+@media (min-width: 2005px) {
+	.hero-grid-item:nth-child(n+83) {
+		display: flex;
+	}
+
+	.hero-grid-item:nth-child(n+89) {
+		display: none;
+	}
+}
