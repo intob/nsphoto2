@@ -7,17 +7,17 @@ import initTagFilter from './tag-filter';
 
 
 ready().then(() => {
-  initMenu();
-  initLazyLoading();
-  initTagFilter();
+	initMenu();
+	initLazyLoading();
+	initTagFilter();
 });
 
 load().then(() => {
-  initHeroGridLoading();
+	initHeroGridLoading();
 });
 
 window.addEventListener('resize', () => {
-  window.requestAnimationFrame(() => {
-    initHeroGridLoading();
-  });
-})
+	window.requestAnimationFrame(() => {
+		initHeroGridLoading();
+	});
+});

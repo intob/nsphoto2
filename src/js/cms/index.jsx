@@ -1,9 +1,9 @@
 import CMS from 'netlify-cms-app';
 
-import NSPImage from './nsp-image';
-import NSPImageList from './nsp-image-list';
+import NSPImage from './nsp-image/index';
+import NSPImageList from './nsp-image-list/index';
 
-import HomePreview from './preview/home';
+//import HomePreview from './preview/home';
 import PostPreview from './preview/post';
 import AlbumPreview from './preview/album';
 import ServicePreview from './preview/service';
@@ -14,7 +14,7 @@ CMS.registerWidget('nsp-image-list', NSPImageList);
 
 CMS.registerPreviewStyle('/index.css');
 
-CMS.registerPreviewTemplate('home', HomePreview);
+//CMS.registerPreviewTemplate('home', HomePreview);
 CMS.registerPreviewTemplate('post', PostPreview);
 CMS.registerPreviewTemplate('album', AlbumPreview);
 CMS.registerPreviewTemplate('film', FilmPreview);
