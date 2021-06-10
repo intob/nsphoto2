@@ -81,3 +81,4 @@ globals:
   ENV: true
   module: true
   MEDIA: true
+  caches: true

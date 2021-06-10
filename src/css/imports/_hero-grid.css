@@ -14,6 +14,8 @@
 .hero-grid .intro,
 .hero-grid .description {
 	display: flex;
+  margin: 5px;
+  border-radius: 5px;
 }
 
 .hero-grid-item picture img {
