@@ -129,3 +129,9 @@
 		grid-row-end: span 2;
 	}
 }
+
+@media (min-width: 2005px) {
+	.media-grid {
+    max-width: 2005px;
+  }
+}

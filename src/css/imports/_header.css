@@ -1,6 +1,7 @@
 header {
   width: 100%;
   display: flex;
+  justify-content: center;
 }
 
 header.hero {
@@ -103,7 +104,6 @@ img.logo {
 	nav {
     width: auto;
 		min-width: 700px;
-    margin: auto;
 	}
 }
 

@@ -1,9 +1,9 @@
 article {
 	display: flex;
 	flex-direction: column;
-	margin: 0 auto;
+  align-items: center;
   padding: 10px 0;
-	max-width: 2005px;
+  width: 100%;
 }
 
 article section {
