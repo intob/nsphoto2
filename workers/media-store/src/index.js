@@ -37,7 +37,7 @@ async function handle(request) {
         }
 
         return refreshPromise.then(() => {
-          const clentResponse = new Response(data, {
+          const response = new Response(data, {
             status: 200,
             headers: {
               "content-type": getMimeTypeFromKey(key),
@@ -45,18 +45,7 @@ async function handle(request) {
               "cache-control": `immutable, max-age=${clientCacheTtl}`
             }
           });
-
-          const cacheResponse = new Response(data, {
-            status: 200,
-            headers: {
-              "content-type": getMimeTypeFromKey(key),
-              "content-length": data.byteLength,
-              "cache-control": `max-age=${clientCacheTtl}`
-            }
-          });
-
-          return caches.default.put(request, cacheResponse)
-            .then(() => Promise.resolve(clentResponse));
+          return Promise.resolve(response);
         });
       });
   }
