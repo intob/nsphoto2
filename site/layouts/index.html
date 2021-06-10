@@ -1,35 +1,33 @@
 {{ define "main" }}
 
 <article class="hero-grid">
-    <div class="hero-grid-item title">
-        <h1>{{ .Params.title }}</h1>
-    </div>
-    <div class="hero-grid-item subtitle">
-        <h2>{{ .Params.subtitle }}</h2>
-    </div>
-    <div class="hero-grid-item intro">
-        <h3>{{ .Params.intro }}</h3>
-    </div>
-    {{ if .Params.description }}
-        <div class="hero-grid-item description">
-            <h3>{{ .Params.description }}</h3>
-        </div>
-    {{ end }}
-    {{ range .Params.images }}
-        <div class="hero-grid-item">
-            <picture data-super-lazy>
-                {{ $default := "" }}
-                {{ range . }}
-                    {{ $mimeType := index (split . ":") 2 }}
-                    <source data-srcset="{{ . }}" type="{{ $mimeType }}">
-                    {{ if eq $mimeType "image/jpeg" }}
-                        {{ $default = . }}
-                    {{ end }}
-                {{ end }}
-                <img data-srcset="{{ $default }}" alt="img"/>
-            </picture>
-        </div>
-    {{ end }}
+  <div class="hero-grid-item title">
+      <h1>{{ .Params.title }}</h1>
+  </div>
+  <div class="hero-grid-item subtitle">
+      <h2>{{ .Params.subtitle }}</h2>
+  </div>
+  <div class="hero-grid-item intro">
+      <h3>{{ .Params.intro }}</h3>
+  </div>
+  <div class="hero-grid-item description">
+      <h3>{{ .Params.description }}</h3>
+  </div>
+  {{ range .Params.images }}
+      <div class="hero-grid-item">
+          <picture data-super-lazy>
+              {{ $default := "" }}
+              {{ range . }}
+                  {{ $mimeType := index (split . ":") 2 }}
+                  <source data-srcset="{{ . }}" type="{{ $mimeType }}">
+                  {{ if eq $mimeType "image/jpeg" }}
+                      {{ $default = . }}
+                  {{ end }}
+              {{ end }}
+              <img data-srcset="{{ $default }}" alt="img"/>
+          </picture>
+      </div>
+  {{ end }}
 </article>
 <article>
     {{ partial "media-grid" . }}

@@ -1,9 +1,20 @@
+header {
+  width: 100%;
+  display: flex;
+}
+
+header.hero {
+  background-color: var(--color-text);
+}
+
 nav {
 	display: flex;
 	flex-direction: row;
-	width: 100%;
 	justify-content: space-between;
 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  max-width: 700px;
+  padding: 0 10px;
+  background-color: var(--color-bg);
 }
 
 nav ul {
@@ -85,6 +96,13 @@ img.logo {
 	margin: 5px;
 	width: 45px;
 	height: 45px;
+}
+
+@media (min-width: 710px) {
+	nav {
+    margin: auto;
+		min-width: 700px;
+	}
 }
 
 @media (min-width: 800px) {

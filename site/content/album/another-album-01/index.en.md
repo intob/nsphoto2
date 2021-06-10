@@ -1,13 +1,14 @@
 ---
-title: Mega Hochzeit zeit
+title: Another Album
 date: 2021-05-27T09:07:27.123Z
-description: Mega! This is a super awesome wedding album. Enjoy the photos. DE
+description: Enjoy the photos
 tags:
-  - wedding
+  - outdoor
+  - forest
 featured_image:
-  - https://nsphoto-media-store.dr-useless.workers.dev/216dbcc8dbf9ae134bf4b4bfc36c8232c918cb2ff14d5e2e720b760cc76d6039:image/avif
-  - https://nsphoto-media-store.dr-useless.workers.dev/b5df357dbd9c6dbd344afb091250d073722860a4cf96b6c0be76919ff3c860c6:image/webp
-  - https://nsphoto-media-store.dr-useless.workers.dev/60f3de49c39f4bef2f55dda731fd3793a93a2d8034062c2ed422fd8f624da41c:image/jpeg
+  - https://nsphoto-media-store.dr-useless.workers.dev/2dfeb258183d45b3ff99637d090382710005bc198255ab13dc9291ec2b558027:image/avif
+  - https://nsphoto-media-store.dr-useless.workers.dev/cf05c6181c2cfa76d33cae39e97c764e379076affa5cb4e8b6eb40635166252e:image/webp
+  - https://nsphoto-media-store.dr-useless.workers.dev/2d5c07e421db80b8b779c423803565081ecfe81c81eb4bdab283e0a6fb5e5d26:image/jpeg
 images:
   - - https://nsphoto-media-store.dr-useless.workers.dev/10496ec3df0fe17951fffab24892c6bfb09ed3196b3ce17666098a3b59920122:image/avif
     - https://nsphoto-media-store.dr-useless.workers.dev/ff9e40f98bddd9bd1699d15ec696f947af80b8bb361f12dc2539af203a3fdf6d:image/webp
