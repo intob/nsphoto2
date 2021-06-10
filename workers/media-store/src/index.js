@@ -1,9 +1,10 @@
 import validateAuth from "./auth";
 import { getKeyFromRequestUrl, getMimeTypeFromRequest, getMimeTypeFromKey, store } from "./util";
 
-export const keyTtl = 31556926; // 1 year in s
-const refreshThreshold = 5259600000; // 2 months in ms
-const cacheTtl = 3600; // 1 hour in s
+export const keyTtl = 15552000; // 6 months in s
+const refreshThreshold = 7776000000; // 3 months in ms
+const kvCacheTtl = 3600; // 1 hour in s
+const clientCacheTtl = 5259600; // 2 month in s
 
 addEventListener("fetch", event => {
   event.respondWith(handle(event.request));
@@ -20,7 +21,7 @@ async function handle(request) {
     if (!key) {
       return Promise.resolve(new Response("Not found", { status: 404 }));
     }
-    return MEDIA.getWithMetadata(key, {type: "arrayBuffer", cacheTtl: cacheTtl})
+    return MEDIA.getWithMetadata(key, {type: "arrayBuffer", cacheTtl: kvCacheTtl})
       .then(valueWithMetadata => {
         const data = valueWithMetadata.value;
         const metadata = valueWithMetadata.metadata;
@@ -36,15 +37,26 @@ async function handle(request) {
         }
 
         return refreshPromise.then(() => {
-          const response = new Response(data, {
+          const clentResponse = new Response(data, {
             status: 200,
             headers: {
               "content-type": getMimeTypeFromKey(key),
               "content-length": data.byteLength,
-              "cache-control": "immutable"
+              "cache-control": `immutable, max-age=${clientCacheTtl}`
             }
           });
-          return Promise.resolve(response);
+
+          const cacheResponse = new Response(data, {
+            status: 200,
+            headers: {
+              "content-type": getMimeTypeFromKey(key),
+              "content-length": data.byteLength,
+              "cache-control": `max-age=${clientCacheTtl}`
+            }
+          });
+
+          return caches.default.put(request, cacheResponse)
+            .then(() => Promise.resolve(clentResponse));
         });
       });
   }

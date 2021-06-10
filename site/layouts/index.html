@@ -1,22 +1,35 @@
 {{ define "main" }}
 
-<article class="hero"data-lazy-bg
-    {{ range .Params.featured_image }}
-    {{ $mimeType := index (split . ":") 2 }}
-    data-srcset-{{ index (split $mimeType "/") 1 }}="{{ . }}"
+<article class="hero-grid">
+    <div class="hero-grid-item title">
+        <h1>{{ .Params.title }}</h1>
+    </div>
+    <div class="hero-grid-item subtitle">
+        <h2>{{ .Params.subtitle }}</h2>
+    </div>
+    <div class="hero-grid-item intro">
+        <h3>{{ .Params.intro }}</h3>
+    </div>
+    {{ if .Params.description }}
+        <div class="hero-grid-item description">
+            <h3>{{ .Params.description }}</h3>
+        </div>
     {{ end }}
->
-    <header>
-        <div class="left">
-            <h1>{{ .Params.title }}</h1>
+    {{ range .Params.images }}
+        <div class="hero-grid-item">
+            <picture data-super-lazy>
+                {{ $default := "" }}
+                {{ range . }}
+                    {{ $mimeType := index (split . ":") 2 }}
+                    <source data-srcset="{{ . }}" type="{{ $mimeType }}">
+                    {{ if eq $mimeType "image/jpeg" }}
+                        {{ $default = . }}
+                    {{ end }}
+                {{ end }}
+                <img data-srcset="{{ $default }}" alt="img"/>
+            </picture>
         </div>
-        <div class="right">
-            <h2>{{ .Params.subtitle }}</h2>
-        </div>
-        <div class="left">
-            <h3>{{ .Params.intro }}</h3>
-        </div>
-    </header>
+    {{ end }}
 </article>
 <article>
     {{ partial "media-grid" . }}

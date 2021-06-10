@@ -1,16 +1,17 @@
 article {
 	display: flex;
 	flex-direction: column;
-	margin: 20px 0;
+	margin: 10px auto;
+	max-width: 2005px;
 }
 
 article section {
 	align-self: center;
-	width: calc(100% - 20px);
+	width: calc(100% - 10px);
 }
 
 article section {
-	padding: 0 10px;
+	padding: 0 5px;
 }
 
 article .metadata {
@@ -26,7 +27,7 @@ article .metadata .tags span:not(:last-of-type):after {
 	content: ",";
 }
 
-@media (min-width: 800px) {
+@media (min-width: 710px) {
 	article section {
 		width: 700px;
 		padding: 0;

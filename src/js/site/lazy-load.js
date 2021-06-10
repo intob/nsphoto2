@@ -1,5 +1,3 @@
-import {supportsAvif, supportsWebp} from './caniuse';
-
 export default function initLazyLoading() {
   const observerOptions = {
     threshold: 0.3
@@ -16,13 +14,6 @@ export default function initLazyLoading() {
   lazyIframes.forEach(lazyIframe => {
     lazyIframeObserver.observe(lazyIframe);
   });
-
-  const lazyBackgrounds = [...document.querySelectorAll('[data-lazy-bg]')];
-  const lazyBackgroundObserver = getLazyBackgroundObserver(observerOptions);
-  lazyBackgrounds.forEach(lazyBackground => {
-    lazyBackgroundObserver.observe(lazyBackground);
-  });
-
 }
 
 function getLazyImageObserver(options) {
@@ -53,31 +44,6 @@ function getLazyIframeObserver(options) {
         entry.target.addEventListener('load', () => {
           entry.target.removeAttribute('data-lazy');
         });
-        intersectionObserver.unobserve(entry.target);
-      }
-    });
-  }, options);
-  return intersectionObserver;
-}
-
-function getLazyBackgroundObserver(options) {
-  const intersectionObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const item = entry.target;
-        Promise.all([supportsAvif(), supportsWebp()])
-          .then(([supportsAvif, supportsWebp]) => {
-            item.removeAttribute('data-lazy-bg');
-            if (supportsAvif) {
-              item.style.backgroundImage = `url(${item.dataset.srcsetAvif})`;
-              return;
-            }
-            if (supportsWebp) {
-              item.style.backgroundImage = `url(${item.dataset.srcsetWebp})`;
-              return;
-            }
-            item.style.backgroundImage = `url(${item.dataset.srcsetJpeg})`;
-          });
         intersectionObserver.unobserve(entry.target);
       }
     });

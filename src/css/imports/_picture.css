@@ -3,7 +3,7 @@ picture {
   transition: opacity 0.25s;
 }
 
-picture[data-lazy] {
+picture[data-lazy], picture[data-super-lazy] {
   opacity: 0;
 }
 
