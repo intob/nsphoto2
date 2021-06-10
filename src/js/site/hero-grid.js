@@ -3,7 +3,7 @@ export default function initHeroGridLoading() {
     .filter(item => item.querySelector('picture[data-super-lazy]') && getComputedStyle(item).display !== 'none')
     .map(item => item.querySelector('picture[data-super-lazy]'));
   if(heroImages.length > 0) {
-    loadRandomImage(heroImages);
+    loadRandomImage(heroImages, heroImages.length);
   }
 }
 
@@ -17,9 +17,7 @@ function loadRandomImage(images) {
       source.addEventListener('load', () => {
         image.removeAttribute('data-super-lazy');
         if (images.length > 0) {
-          setTimeout(() => {
-            loadRandomImage(images);
-          }, 50);
+          loadRandomImage(images);
         }
       });
     }

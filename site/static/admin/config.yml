@@ -91,7 +91,7 @@ collections: # A list of collections the CMS should be able to edit
           - {label: Title, name: title, widget: string}
           - {label: Subtitle, name: subtitle, widget: string}
           - {label: Intro, name: intro, widget: string}
-          - {label: Description, name: description, widget: string, required: false}
+          - {label: Description, name: description, widget: string}
           - {label: Images, name: images, widget: nsp-image-list, width: 145, height: 120, min_count: 89}
           - {label: "Select Clients", name: clients, widget: nsp-image-list, width: 120, quality: 100}
       - file: "site/content/_index.de.md"
@@ -101,7 +101,7 @@ collections: # A list of collections the CMS should be able to edit
           - {label: Title, name: title, widget: string}
           - {label: Subtitle, name: subtitle, widget: string}
           - {label: Intro, name: intro, widget: string}
-          - {label: Description, name: description, widget: string, required: false}
+          - {label: Description, name: description, widget: string}
           - {label: Images, name: images, widget: nsp-image-list, width: 145, height: 120, min_count: 89}
           - {label: "Select Clients", name: clients, widget: nsp-image-list, width: 120, quality: 100}
       - file: "site/content/contact/_index.en.md"
