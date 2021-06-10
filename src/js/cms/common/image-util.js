@@ -8,24 +8,24 @@ export function readFile(file) {
   });
 }
 
-export function processImage(data, file, progressHandler, width = undefined, height = undefined, fit = undefined) {
+export function processImage(data, file, progressHandler, width = undefined, height = undefined, fit = undefined, quality = undefined) {
   const resizeOptions = width || height ? {width: width, height: height, fit: fit, withoutEnlargement: true,} : undefined;
 
-  const jpeg = optimizeImage(data, file.type, 'image/jpeg', resizeOptions, { mozjpeg: true })
+  const jpeg = optimizeImage(data, file.type, 'image/jpeg', resizeOptions, { mozjpeg: true, quality: quality })
     .then(data => {
       progressHandler(file, 16);
       return uploadData(data, file.type);
     });
   jpeg.then(() => progressHandler(file, 16));
 
-  const webp = optimizeImage(data, file.type, 'image/webp', resizeOptions, { reductionEffort: 6 })
+  const webp = optimizeImage(data, file.type, 'image/webp', resizeOptions, { reductionEffort: 6, quality: quality })
     .then(data => {
       progressHandler(file, 16);
       return uploadData(data, 'image/webp');
     });
   webp.then(() => progressHandler(file, 16));
 
-  const avif = optimizeImage(data, file.type, 'image/avif', resizeOptions, { speed: 5 })
+  const avif = optimizeImage(data, file.type, 'image/avif', resizeOptions, { speed: 5, quality: quality })
     .then(data => {
       progressHandler(file, 16);
       return uploadData(data, 'image/avif');

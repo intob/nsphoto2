@@ -48,9 +48,10 @@ export default class NSPImage extends React.Component {
     const width = this.props.field.get("width");
     const height = this.props.field.get("height");
     const fit = this.props.field.get("fit");
+    const quality = this.props.field.get("quality");
     this.setState({ progress: 1 });
     readFile(file)
-      .then(data => processImage(data, file, this.handleProgress, width, height, fit))
+      .then(data => processImage(data, file, this.handleProgress, width, height, fit, quality))
       .then(responses => {
         this.handleHideModal();
         this.props.onChange(responses);

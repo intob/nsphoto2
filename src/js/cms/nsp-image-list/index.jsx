@@ -44,13 +44,14 @@ export default class NSPImageList extends React.Component {
     const width = this.props.field.get("width");
     const height = this.props.field.get("height");
     const fit = this.props.field.get("fit");
+    const quality = this.props.field.get("quality");
     const promises = [];
     [].forEach.call(files, file => {
       this.setState(state => {
         state.uploads[file.name] = { progress: 0 };
       });
       const promise = readFile(file)
-      .then(data => processImage(data, file, this.handleFileProgress, width, height, fit))
+      .then(data => processImage(data, file, this.handleFileProgress, width, height, fit, quality))
       .then(responses => {
         this.setState(state => {
           state.uploads[file.name] = undefined;
@@ -67,6 +68,22 @@ export default class NSPImageList extends React.Component {
 
   handleFileProgress = (file, newProgress) => {
     this.setState(state => state.uploads[file.name].progress = state.uploads[file.name].progress + newProgress);
+  }
+
+  isValid = () => {
+    const minCount = this.props.field.get("min_count");
+    if (!minCount) {
+      return true;
+    }
+    return this.getCount() >= minCount;
+  }
+
+  getCount = () => {
+    if (Array.isArray(this.props.value)) {
+      return this.props.value.length;
+    } else {
+      return this.props.value.toArray().length;
+    }
   }
 
   renderUploadList = () => {
@@ -115,11 +132,13 @@ export default class NSPImageList extends React.Component {
   }
 
   render() {
-    const { classNameWidget } = this.props;
+    const { classNameWidget, field } = this.props;
+    const minCount = field.get("min_count");
     return (
       <>
         <div className={`nsp-widget ${classNameWidget}`}>
           <button onClick={this.handleShowModal}>Add images</button>
+          <div className="image-count">Count: {this.getCount()} {minCount ? ` / ${minCount}` : ""}</div>
           <div className="image-list">
             { this.renderImageItems() }
           </div>
