@@ -1,10 +1,4 @@
 ---
-title: 4000er Tour
-date: 2021-05-27T09:07:27.123Z
-description: Enjoy the photos
-tags:
-  - outdoor
-  - mountains
 featured_image:
   - https://nsphoto-media-store.dr-useless.workers.dev/4739aac27e07fd0fe1292308d0af7baae561c3285e48ec204ec9411a122e1dd7:image/avif
   - https://nsphoto-media-store.dr-useless.workers.dev/60cd949a12bda023c2ae562502425beaaf65b3f13be5e1d9110f691f661f5711:image/webp
