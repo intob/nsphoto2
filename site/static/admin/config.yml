@@ -2,7 +2,7 @@ backend:
   name: github
   repo: dr-useless/nsphoto2
   base_url: https://nsphoto-github-oauth.dr-useless.workers.dev
-  branch: master
+  branch: add-polish
 
 media_folder: "site/static/media" # Folder where user uploaded files should go
 public_folder: media
