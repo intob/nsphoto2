@@ -6,10 +6,11 @@ export default function initTagFilter() {
 
 	const tagElements = document.querySelectorAll(tagSelector);
 	tagElements.forEach(tagElement => {
-		tagElement.removeAttribute('hidden');
-		tagElement.addEventListener('click', () => {
+		tagElement.parentElement.removeAttribute('hidden');
+		tagElement.addEventListener('click', e => {
+      e.preventDefault();
 			filterMedia(tagElement.dataset.tag);
-			tagElements.forEach(t => t === tagElement ? t.classList.add('active') : t.classList.remove('active'));
+			tagElements.forEach(t => t === tagElement ? t.parentElement.classList.add('active') : t.parentElement.classList.remove('active'));
 		});
 	});
 }
@@ -18,7 +19,7 @@ function filterDuplicates(tagElements) {
 	const seen = {};
 	tagElements.forEach(tagElement => {
 		// eslint-disable-next-line no-prototype-builtins
-		seen.hasOwnProperty(tagElement.dataset.tag) ? tagElement.remove() : seen[tagElement.dataset.tag] = true;
+		seen.hasOwnProperty(tagElement.dataset.tag) ? tagElement.parentElement.remove() : seen[tagElement.dataset.tag] = true;
 	});
 }
 
