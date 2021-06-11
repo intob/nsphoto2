@@ -21,10 +21,10 @@ export default class PostPreview extends React.Component {
               <p>{ format(entry.getIn(["data", "date"]), "yyyy-mm-dd") }</p>
               <p>Read in x minutes</p>
             </div>
+            <p>{ entry.getIn(["data", "description"]) }</p>
             <picture>
               <img src={thumbnailUrl}/>
             </picture>
-            <p>{ entry.getIn(["data", "description"]) }</p>
             
           </section>
           <section>

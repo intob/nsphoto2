@@ -1,6 +1,3 @@
-# Translations for German
-# https://gohugo.io/content-management/multilingual/#translation-of-strings
-
 [previous]
 other = "Vorherige"
 
@@ -55,3 +52,7 @@ other = "Mitteilung"
 
 [submit]
 other = "Senden"
+
+[readingTime]
+one = "In 1 Minute lesen"
+other = "In {{.Count}} Minuten lesen"
