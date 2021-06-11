@@ -1,14 +1,14 @@
 ---
-title: Another Album 1
+title: Another Album 4
 date: 2021-05-27T09:07:27.123Z
 description: Enjoy the photos
 tags:
-  - outdoor
-  - forest
+  - wedding
+  - awesome
 featured_image:
-  - https://nsphoto-media-store.dr-useless.workers.dev/2dfeb258183d45b3ff99637d090382710005bc198255ab13dc9291ec2b558027:image/avif
-  - https://nsphoto-media-store.dr-useless.workers.dev/cf05c6181c2cfa76d33cae39e97c764e379076affa5cb4e8b6eb40635166252e:image/webp
-  - https://nsphoto-media-store.dr-useless.workers.dev/2d5c07e421db80b8b779c423803565081ecfe81c81eb4bdab283e0a6fb5e5d26:image/jpeg
+  - https://nsphoto-media-store.dr-useless.workers.dev/149a4f186612e946f81305059a3cfa054c54f4c52bd3049c0ce1915d155f2a4a:image/avif
+  - https://nsphoto-media-store.dr-useless.workers.dev/9d17600e018987fd8b6463a890dcc0bf0b58c6c0a277fd653afdff18b296da52:image/webp
+  - https://nsphoto-media-store.dr-useless.workers.dev/5713d3c6cfa0ff7d88fcd0758c84cb5106d4d839a267cd5bbb2fbff8e2e571be:image/jpeg
 images:
   - - https://nsphoto-media-store.dr-useless.workers.dev/10496ec3df0fe17951fffab24892c6bfb09ed3196b3ce17666098a3b59920122:image/avif
     - https://nsphoto-media-store.dr-useless.workers.dev/ff9e40f98bddd9bd1699d15ec696f947af80b8bb361f12dc2539af203a3fdf6d:image/webp

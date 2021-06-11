@@ -1,5 +1,5 @@
 ---
-title: Another Album
+title: Another Album 2
 date: 2021-05-27T09:07:27.123Z
 description: Enjoy the photos
 tags:
