@@ -30,6 +30,15 @@ const mainBuild = esbuild.build({
 }).catch(() => process.exit(1));
 buildPromises.push(mainBuild);
 
+const heroBuild = esbuild.build({
+  entryPoints: ['./src/js/site/hero.js'],
+  bundle: true,
+  minify: !isDev(),
+  watch: watch(),
+  outfile: './dist/hero.js',
+}).catch(() => process.exit(1));
+buildPromises.push(heroBuild);
+
 Promise.all(buildPromises).then(() => log('done'));
 
 function watch() {

@@ -5,6 +5,11 @@
 	<link rel="preload" as="style" href="/index.css">
 	<link href="/index.css" rel="stylesheet">
 
+  {{ if .IsHome }}
+    <link rel="preload" as="style" href="/hero.css">
+	  <link href="/hero.css" rel="stylesheet">
+  {{ end }}
+
 	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
 	<link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans&display=swap" crossorigin>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans&display=swap" crossorigin>

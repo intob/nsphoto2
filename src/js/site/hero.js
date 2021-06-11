@@ -1,4 +1,17 @@
-export default function initHeroGridLoading() {
+import '../../css/hero.css';
+import {load} from './async';
+
+load().then(() => {
+	initHeroGridLoading();
+});
+
+window.addEventListener('resize', () => {
+	window.requestAnimationFrame(() => {
+		initHeroGridLoading();
+	});
+});
+
+function initHeroGridLoading() {
 	const heroImages = [...document.querySelectorAll('.hero-grid-item')]
 		.filter(item => item.querySelector('picture[data-super-lazy]') && getComputedStyle(item).display !== 'none')
 		.map(item => item.querySelector('picture[data-super-lazy]'));
