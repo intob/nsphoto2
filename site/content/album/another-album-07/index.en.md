@@ -1,14 +1,14 @@
 ---
-title: Another Album 7
+title: Matterhorn
 date: 2021-05-27T09:07:27.123Z
 description: Enjoy the photos
 tags:
-  - wedding
-  - awesome
+  - mountains
+  - outdoor
 featured_image:
-  - https://nsphoto-media-store.dr-useless.workers.dev/149a4f186612e946f81305059a3cfa054c54f4c52bd3049c0ce1915d155f2a4a:image/avif
-  - https://nsphoto-media-store.dr-useless.workers.dev/9d17600e018987fd8b6463a890dcc0bf0b58c6c0a277fd653afdff18b296da52:image/webp
-  - https://nsphoto-media-store.dr-useless.workers.dev/5713d3c6cfa0ff7d88fcd0758c84cb5106d4d839a267cd5bbb2fbff8e2e571be:image/jpeg
+  - https://nsphoto-media-store.dr-useless.workers.dev/9b07c90fd0cc98fa7bd2b3e99efa7b9d78dfcc32f258a8b79c503e2c4d2bb91c:image/avif
+  - https://nsphoto-media-store.dr-useless.workers.dev/cb550f1e83f68716cc9ed7621acb2e905bdc57241101276a3311a21c688106e9:image/webp
+  - https://nsphoto-media-store.dr-useless.workers.dev/517678baf34f4ef2f263031c55ace6f848423b3f200c5e60c65808e848c3a519:image/jpeg
 images:
   - - https://nsphoto-media-store.dr-useless.workers.dev/10496ec3df0fe17951fffab24892c6bfb09ed3196b3ce17666098a3b59920122:image/avif
     - https://nsphoto-media-store.dr-useless.workers.dev/ff9e40f98bddd9bd1699d15ec696f947af80b8bb361f12dc2539af203a3fdf6d:image/webp
