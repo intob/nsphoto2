@@ -24,7 +24,7 @@ collections:
     fields:
       - {label: Title, name: title, widget: string, i18n: true}
       - {label: "Publish Date", name: date, widget: datetime , i18n: duplicate}
-      - {label: "Intro Blurb", name: description, widget: text, i18n: true}
+      - {label: Description, name: description, widget: text, i18n: true}
       - {label: Thumbnail, name: thumbnail, widget: nsp-image, required: false, width: 750, i18n: duplicate}
       - {label: Body, name: body, widget: markdown, i18n: true}
   - name: "album"
