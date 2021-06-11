@@ -1,14 +1,13 @@
 ---
-title: Another Album 9
+title: Nicolas Hojac
 date: 2021-05-27T09:07:27.123Z
 description: Enjoy the photos
 tags:
-  - wedding
-  - awesome
+  - outdoor
 featured_image:
-  - https://nsphoto-media-store.dr-useless.workers.dev/149a4f186612e946f81305059a3cfa054c54f4c52bd3049c0ce1915d155f2a4a:image/avif
-  - https://nsphoto-media-store.dr-useless.workers.dev/9d17600e018987fd8b6463a890dcc0bf0b58c6c0a277fd653afdff18b296da52:image/webp
-  - https://nsphoto-media-store.dr-useless.workers.dev/5713d3c6cfa0ff7d88fcd0758c84cb5106d4d839a267cd5bbb2fbff8e2e571be:image/jpeg
+  - https://nsphoto-media-store.dr-useless.workers.dev/5ac9d823d3a41e411c885f7752f99370cca41f71b30e3f279fef92d9d9bbb2cc:image/avif
+  - https://nsphoto-media-store.dr-useless.workers.dev/c1bbde79b5a85bacf17fa536b9e470269f47a3ec7692b066c83b2f241f0ce1c5:image/webp
+  - https://nsphoto-media-store.dr-useless.workers.dev/65ab61c1b5dadb5c4ba118c85b542ee3023bf2e9e920fe1e1ce5d577b03ab5a5:image/jpeg
 images:
   - - https://nsphoto-media-store.dr-useless.workers.dev/10496ec3df0fe17951fffab24892c6bfb09ed3196b3ce17666098a3b59920122:image/avif
     - https://nsphoto-media-store.dr-useless.workers.dev/ff9e40f98bddd9bd1699d15ec696f947af80b8bb361f12dc2539af203a3fdf6d:image/webp
