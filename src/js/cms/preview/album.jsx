@@ -24,9 +24,11 @@ export default class AlbumPreview extends React.Component {
 
     const imagesTemplate = images && images.map(img => {
       let iterableImg = img;
+      
       if (!Array.isArray(img)) {
         iterableImg = img.toArray();
       }
+
       const imageUrl = iterableImg.filter(i => i.indexOf('webp') > -1)[0];
       return (
       <>

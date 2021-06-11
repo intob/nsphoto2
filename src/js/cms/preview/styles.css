@@ -1,0 +1,8 @@
+article.hero div.hero-grid {
+  width: calc(200% - 10px);
+  transform: scale(0.5);
+}
+
+article.hero div.hero-grid div.hero-grid-item {
+  display: flex;
+}

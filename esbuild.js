@@ -12,6 +12,15 @@ const cmsBuild = esbuild.build({
 }).catch(() => process.exit(1));
 buildPromises.push(cmsBuild);
 
+const cmsPreviewStylesBuild = esbuild.build({
+  entryPoints: ['./src/js/cms/preview/styles.css'],
+  bundle: true,
+  minify: !isDev(),
+  watch: watch(),
+  outfile: './dist/cms-preview-styles.css',
+}).catch(() => process.exit(1));
+buildPromises.push(cmsPreviewStylesBuild);
+
 const contactBuild = esbuild.build({
   entryPoints: ['./src/js/site/contact.js'],
   bundle: true,

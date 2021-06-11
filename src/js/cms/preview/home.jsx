@@ -2,55 +2,78 @@ import * as React from "react";
 
 export default class HomePreview extends React.Component {
   render() {
-    //const {entry, getAsset} = this.props;
-    //let image = getAsset(entry.getIn(["data", "image"]));
+    const {entry} = this.props;
+    let images = entry.getIn(["data", "images"]);
+    let clientLogos = entry.getIn(["data", "client_logos"]);
 
-    renderHeroItems() {
+    if (!Array.isArray(images)) {
+      images = images.toArray();
+    }
+
+    const heroImagesTemplate = images && images.map(img => {
+      let iterableImg = img;
+      if (!Array.isArray(img)) {
+        iterableImg = img.toArray();
+      }
+      const imageUrl = iterableImg.filter(i => i.indexOf('webp') > -1)[0];
+      return (
+      <>
+        <div className="hero-grid-item">
+          <picture>
+            <img src={imageUrl}/>
+          </picture>
+        </div>
+      </>
+      );
+    });
+
+    if (!Array.isArray(clientLogos)) {
+      clientLogos = clientLogos.toArray();
+    }
+
+    const clientLogosTemplate =  clientLogos && clientLogos.map(clientLogo => {
+      let iterableClientLogo = clientLogo;
+      if (!Array.isArray(clientLogo)) {
+        iterableClientLogo = clientLogo.toArray();
+      }
+      const imageUrl = iterableClientLogo.filter(i => i.indexOf('webp') > -1)[0];
       return (
         <>
-      
-      <div class="hero-grid-item">
-                  <picture data-super-lazy>
-                      {{ $default := "" }}
-                      {{ range . }}
-                          {{ $mimeType := index (split . ":") 2 }}
-                          <source data-srcset="{{ . }}" type="{{ $mimeType }}">
-                          {{ if eq $mimeType "image/jpeg" }}
-                              {{ $default = . }}
-                          {{ end }}
-                      {{ end }}
-                      <img data-srcset="{{ $default }}" alt="img"/>
-                  </picture>
-              </div>
-    }
+          <div className="logo-grid-item">
+            <picture>
+              <img src={imageUrl}/>
+            </picture>
+          </div>
+        </>
+      );
+    });
+
     return (
       <>
-        <article class="hero-grid">
-          <div class="hero-grid-item title">
-            <h1>{ entry.getIn(["data", "title"])}</h1>
+      <article className="hero">
+        <div className="hero-grid">
+          <div className="hero-grid-item title">
+            <h1>{entry.getIn(["data", "title"])}</h1>
           </div>
-          <div class="hero-grid-item subtitle">
-            <h2>{ entry.getIn(["data", "subtitle"])}</h2>
+          <div className="hero-grid-item subtitle">
+            <h2>{entry.getIn(["data", "subtitle"])}</h2>
           </div>
-          <div class="hero-grid-item intro">
-            <h3>{ entry.getIn(["data", "intro"])}</h3>
+          <div className="hero-grid-item intro">
+            <h3>{entry.getIn(["data", "intro"])}</h3>
           </div>
-          <div class="hero-grid-item description">
-              <h3>{{ .Params.description }}</h3>
+          <div className="hero-grid-item description">
+              <h3>{entry.getIn(["data", "description"])}</h3>
           </div>
-          {{ range .Params.images }}
-              
-          {{ end }}
-        </article>
-        <article>
-            {{ partial "media-grid" . }}
-            <section>
-                {{ partial "latest-posts" . }}
-            </section>
-            <section>
-                {{ partial "logo-grid" . }}
-            </section>
-        </article>
+          { heroImagesTemplate }
+        </div>
+      </article>
+      <article>
+        <section>
+          <div className="logo-grid">
+            { clientLogosTemplate }
+          </div>
+        </section>
+      </article>
       </>
     );
   }
