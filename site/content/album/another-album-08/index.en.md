@@ -1,14 +1,13 @@
 ---
-title: Another Album 8
+title: Mavie
 date: 2021-05-27T09:07:27.123Z
 description: Enjoy the photos
 tags:
-  - wedding
-  - awesome
+  - family
 featured_image:
-  - https://nsphoto-media-store.dr-useless.workers.dev/149a4f186612e946f81305059a3cfa054c54f4c52bd3049c0ce1915d155f2a4a:image/avif
-  - https://nsphoto-media-store.dr-useless.workers.dev/9d17600e018987fd8b6463a890dcc0bf0b58c6c0a277fd653afdff18b296da52:image/webp
-  - https://nsphoto-media-store.dr-useless.workers.dev/5713d3c6cfa0ff7d88fcd0758c84cb5106d4d839a267cd5bbb2fbff8e2e571be:image/jpeg
+  - https://nsphoto-media-store.dr-useless.workers.dev/9fd24b66388e728e3c295d3141e601e91afd9e3fc3ed569ae5aaba739eb46ee3:image/avif
+  - https://nsphoto-media-store.dr-useless.workers.dev/9ad8a4420ce402c1c460587ff6d9ce9601bf6f413f39a8a5c45f52b53c9ba617:image/webp
+  - https://nsphoto-media-store.dr-useless.workers.dev/6677b29baf60e32894c30dfdcc284eab48cd01c3122b55fbb98483e4ef147dff:image/jpeg
 images:
   - - https://nsphoto-media-store.dr-useless.workers.dev/10496ec3df0fe17951fffab24892c6bfb09ed3196b3ce17666098a3b59920122:image/avif
     - https://nsphoto-media-store.dr-useless.workers.dev/ff9e40f98bddd9bd1699d15ec696f947af80b8bb361f12dc2539af203a3fdf6d:image/webp
