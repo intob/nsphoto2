@@ -2,7 +2,7 @@ backend:
   name: github
   repo: dr-useless/nsphoto2
   base_url: https://nsphoto-github-oauth.dr-useless.workers.dev
-  branch: master
+  branch: polish-cms
 
 media_folder: "site/static/media"
 public_folder: media
@@ -25,7 +25,7 @@ collections:
       - {label: Title, name: title, widget: string, i18n: true}
       - {label: "Publish Date", name: date, widget: datetime , i18n: duplicate}
       - {label: "Intro Blurb", name: description, widget: text, i18n: true}
-      - {label: "Featured Image", name: featured_image, widget: nsp-image, required: false, width: 750, i18n: duplicate}
+      - {label: Thumbnail, name: thumbnail, widget: nsp-image, required: false, width: 750, i18n: duplicate}
       - {label: Body, name: body, widget: markdown, i18n: true}
   - name: "album"
     label: "Album"
@@ -39,8 +39,8 @@ collections:
       - {label: Title, name: title, widget: string, i18n: true}
       - {label: "Publish Date", name: date, widget: datetime, i18n: duplicate}
       - {label: Description, name: description, widget: text, i18n: true}
-      - {label: "Tags", name: "tags", widget: list, max: 5, i18n: true}
-      - {label: "Featured Image", name: featured_image, widget: nsp-image, width: 750, i18n: duplicate}
+      - {label: Tags, name: "tags", widget: list, max: 5, i18n: true}
+      - {label: Thumbnail, name: thumbnail, widget: nsp-image, width: 750, i18n: duplicate}
       - {label: Images, name: images, widget: nsp-image-list, width: 750, i18n: duplicate}
       - {label: Videos, name: videos, widget: list, i18n: true, add_to_top: true, required: false,
           field: {label: "YouTube Video ID", name: youtube_id, widget: string, i18n: true}
@@ -57,7 +57,7 @@ collections:
       - {label: Title, name: title, widget: string, i18n: true}
       - {label: "Publish Date", name: date, widget: datetime, i18n: true}
       - {label: Description, name: description, widget: text, i18n: true}
-      - {label: "Tags", name: "tags", widget: list, max: 5, i18n: true}
+      - {label: Tags, name: "tags", widget: list, max: 5, i18n: true}
       - {label: "YouTube Video ID", name: youtube_id, widget: string, i18n: duplicate}
   - name: "service"
     label: "Service"
@@ -70,7 +70,7 @@ collections:
     fields:
       - {label: Title, name: title, widget: string, i18n: true}
       - {label: Description, name: description, widget: text, i18n: true}
-      - {label: "Featured Image", name: featured_image, widget: nsp-image, width: 750, i18n: duplicate, required: false}
+      - {label: Thumbnail, name: thumbnail, widget: nsp-image, width: 750, i18n: duplicate, required: false}
       - {label: Body, name: body, widget: markdown, required: false, i18n: true}
       - {label: "Packages", name: "packages", widget: list, i18n: true, fields: [
           {label: Name, name: "name", widget: string, i18n: true},

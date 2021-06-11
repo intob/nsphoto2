@@ -4,7 +4,7 @@ date: 2021-05-27T09:07:27.123Z
 description: Mega! This is a super awesome wedding album. Enjoy the photos. DE
 tags:
   - wedding
-featured_image:
+thumbnail:
   - https://nsphoto-media-store.dr-useless.workers.dev/216dbcc8dbf9ae134bf4b4bfc36c8232c918cb2ff14d5e2e720b760cc76d6039:image/avif
   - https://nsphoto-media-store.dr-useless.workers.dev/b5df357dbd9c6dbd344afb091250d073722860a4cf96b6c0be76919ff3c860c6:image/webp
   - https://nsphoto-media-store.dr-useless.workers.dev/60f3de49c39f4bef2f55dda731fd3793a93a2d8034062c2ed422fd8f624da41c:image/jpeg

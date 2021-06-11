@@ -7,8 +7,8 @@
         <p>Read in {{ .ReadingTime }} minutes</p>
       </div>
       <p>{{ .Description }}</p>
-      {{ if .Params.featured_image }}
-        {{ partial "picture" .Params.featured_image }}
+      {{ if .Params.thumbnail }}
+        {{ partial "picture" .Params.thumbnail }}
       {{ end }}
     </section>
     <section>

@@ -3,8 +3,14 @@ import { format } from "date-fns";
 
 export default class PostPreview extends React.Component {
   render() {
-    const {entry, widgetFor, getAsset} = this.props;
-    //const image = getAsset(entry.getIn(["data", "featured_image"]));
+    const {entry, widgetFor} = this.props;
+
+    let thumbnail = entry.getIn(["data", "thumbnail"]);
+    if (thumbnail && !Array.isArray(thumbnail)) {
+      thumbnail = thumbnail.toArray();
+    }
+
+    const thumbnailUrl = thumbnail && thumbnail.filter(i => i.indexOf('webp') > -1)[0];
 
     return (
       <>
@@ -15,6 +21,9 @@ export default class PostPreview extends React.Component {
               <p>{ format(entry.getIn(["data", "date"]), "yyyy-mm-dd") }</p>
               <p>Read in x minutes</p>
             </div>
+            <picture>
+              <img src={thumbnailUrl}/>
+            </picture>
             <p>{ entry.getIn(["data", "description"]) }</p>
             
           </section>

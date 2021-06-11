@@ -5,7 +5,7 @@ description: Enjoy the photos
 tags:
   - outdoor
   - mountains
-featured_image:
+thumbnail:
   - https://nsphoto-media-store.dr-useless.workers.dev/4739aac27e07fd0fe1292308d0af7baae561c3285e48ec204ec9411a122e1dd7:image/avif
   - https://nsphoto-media-store.dr-useless.workers.dev/60cd949a12bda023c2ae562502425beaaf65b3f13be5e1d9110f691f661f5711:image/webp
   - https://nsphoto-media-store.dr-useless.workers.dev/92c2198bfb8ddaec1d5d34671c4559753284d06968f8614b801cc84dbe152c1b:image/jpeg
