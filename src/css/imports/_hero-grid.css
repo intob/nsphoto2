@@ -19,8 +19,12 @@ article.hero {
 .hero-grid .intro,
 .hero-grid .description {
 	display: flex;
-  margin: 5px;
+  padding: 5px;
   border-radius: 5px;
+}
+
+.hero-grid h1 {
+  font-weight: 400;
 }
 
 .hero-grid .title, .hero-grid .description {
@@ -248,6 +252,10 @@ article.hero {
   .hero-grid .title {
 		grid-column: 4 / span 3;
 	}
+
+  .hero-grid h1 {
+    font-size: 3rem;
+  }
 
 	.hero-grid .subtitle {
 		grid-column: 7 / span 2;
