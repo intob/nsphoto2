@@ -1,14 +1,14 @@
 ---
-title: Another Album
+title: Silberhorn hut
 date: 2021-05-27T09:07:27.123Z
 description: This is a super awesome album. Enjoy the photos.
 tags:
   - outdoor
   - mountains
 featured_image:
-  - https://nsphoto-media-store.dr-useless.workers.dev/10496ec3df0fe17951fffab24892c6bfb09ed3196b3ce17666098a3b59920122:image/avif
-  - https://nsphoto-media-store.dr-useless.workers.dev/ff9e40f98bddd9bd1699d15ec696f947af80b8bb361f12dc2539af203a3fdf6d:image/webp
-  - https://nsphoto-media-store.dr-useless.workers.dev/17af1ca4c901cfe4e58517603286ec8f857fd833304c0835aeee6ddd09ef9e6c:image/jpeg
+  - https://nsphoto-media-store.dr-useless.workers.dev/d9ea4c2dbb9102074d278793d7a89ead3e03ecba0d1fccce735cfd14612d8da5:image/avif
+  - https://nsphoto-media-store.dr-useless.workers.dev/1463a909d1e9f9078b851c41d0a5341c05e070d8d9c365e14a876ee4ca5a5e75:image/webp
+  - https://nsphoto-media-store.dr-useless.workers.dev/e494f0d749829ab6b8bbf8cff6d070224c3e8ed220e1d8d3c85c9e1ee5901533:image/jpeg
 images:
   - - https://nsphoto-media-store.dr-useless.workers.dev/10496ec3df0fe17951fffab24892c6bfb09ed3196b3ce17666098a3b59920122:image/avif
     - https://nsphoto-media-store.dr-useless.workers.dev/ff9e40f98bddd9bd1699d15ec696f947af80b8bb361f12dc2539af203a3fdf6d:image/webp
