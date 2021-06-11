@@ -11,6 +11,6 @@
 			<img data-srcset="{{ $thumbnail }}" alt="{{ .Params.youtube_id }} thumbnail"/>
 		</picture>
 	{{ else }}
-		{{  partial "picture" .Params.featured_image }}
+		{{  partial "picture" .Params.thumbnail }}
 	{{ end }}
 </a>

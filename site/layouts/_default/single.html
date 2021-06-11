@@ -4,11 +4,11 @@
       <h1>{{.Title}}</h1>
       <div class="metadata light">
         <p>{{ .Date.Format "2006-02-19" }}</p>
-        <p>Read in {{ .ReadingTime }} minutes</p>
+        <p>{{ i18n "readingTime" .ReadingTime }}</p>
       </div>
       <p>{{ .Description }}</p>
-      {{ if .Params.featured_image }}
-        {{ partial "picture" .Params.featured_image }}
+      {{ if .Params.thumbnail }}
+        {{ partial "picture" .Params.thumbnail }}
       {{ end }}
     </section>
     <section>

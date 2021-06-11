@@ -3,8 +3,8 @@
     <section>
       <h1>{{.Title}}</h1>
       <p>{{ .Description }}</p>
-    {{ if .Params.featured_image }}
-      {{ partial "picture" (dict "src" .Params.featured_image) }}
+    {{ if .Params.thumbnail }}
+      {{ partial "picture" (dict "src" .Params.thumbnail) }}
     {{ end }}
       {{ .Content }}
     </section>

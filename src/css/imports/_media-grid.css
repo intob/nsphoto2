@@ -39,6 +39,7 @@
 	padding: 2px;
 	background-color: var(--color-bg);
 	font-size: 1.25rem;
+  border-radius: 2px;
 }
 
 .media-grid-item .icon {
@@ -47,7 +48,7 @@
 	margin: 5px;
 	padding: 5px;
 	background-color: var(--color-bg);
-	border-radius: 5px;
+  border-radius: 2px;
 	font-size: 1.6rem;	
 }
 

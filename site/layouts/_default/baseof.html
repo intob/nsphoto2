@@ -3,23 +3,15 @@
   {{ partial "head" . }}
   <body>
     {{ block "header" . }}
-      {{ partial "header" . }}
+      {{ partialCached "header" . .Section }}
     {{end}}
 
     {{ block "main" . }}{{ end }}
 
     {{ block "footer" . }}
-      {{ partial "footer" . }}
+      {{ partialCached "footer" . }}
     {{end}}
 
-    <script async src="/index.js"></script>
-
-    {{ if .IsHome }}
-      <script async src="/hero.js"></script>
-    {{ end }}
-
-    {{ if eq .Page.Section "contact"}}
-      <script async src="/contact.js"></script>
-    {{ end }}
+    {{ partialCached "scripts" . .Section }}
   </body>
 </html>

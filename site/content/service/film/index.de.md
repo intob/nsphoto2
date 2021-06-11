@@ -1,7 +1,7 @@
 ---
 title: Film
 description: I make epic films... DE
-featured_image: null
+thumbnail: null
 packages:
   - price: 100
 ---
