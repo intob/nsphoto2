@@ -1,6 +1,7 @@
 {{ define "main" }}
 
-<article class="hero-grid">
+<article class="hero">
+  <div class="hero-grid">
     <div class="hero-grid-item title">
         <h1>{{ .Params.title }}</h1>
     </div>
@@ -10,11 +11,9 @@
     <div class="hero-grid-item intro">
         <h3>{{ .Params.intro }}</h3>
     </div>
-    {{ if .Params.description }}
-        <div class="hero-grid-item description">
-            <h3>{{ .Params.description }}</h3>
-        </div>
-    {{ end }}
+    <div class="hero-grid-item description">
+        <h3>{{ .Params.description }}</h3>
+    </div>
     {{ range .Params.images }}
         <div class="hero-grid-item">
             <picture data-super-lazy>
@@ -30,14 +29,12 @@
             </picture>
         </div>
     {{ end }}
+  </div>
 </article>
 <article>
     {{ partial "media-grid" . }}
-    <section>
-        {{ partial "latest-posts" . }}
-    </section>
-    <section>
-        {{ partial "logo-grid" . }}
+    {{ partial "latest-posts" . }}
+    {{ partial "logo-grid" . }}
     </section>
 </article>
 

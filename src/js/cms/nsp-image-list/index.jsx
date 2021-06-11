@@ -1,7 +1,7 @@
 import * as React from 'react';
-import "../common/styles.css";
+import "../styles.css";
 import "./styles.css";
-import { readFile, processImage } from '../common/image-util';
+import { readFile, processImage } from '../image';
 
 export default class NSPImageList extends React.Component {
 

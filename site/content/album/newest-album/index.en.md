@@ -1,10 +1,9 @@
 ---
-title: Awesome Wedding
+title: Generic Wedding
 date: 2021-05-27T09:07:27.123Z
-description: This is a super awesome wedding album. Enjoy the photos.
+description: This is a wedding album. Enjoy the photos.
 tags:
   - wedding
-  - awesome
 featured_image:
   - https://nsphoto-media-store.dr-useless.workers.dev/216dbcc8dbf9ae134bf4b4bfc36c8232c918cb2ff14d5e2e720b760cc76d6039:image/avif
   - https://nsphoto-media-store.dr-useless.workers.dev/b5df357dbd9c6dbd344afb091250d073722860a4cf96b6c0be76919ff3c860c6:image/webp

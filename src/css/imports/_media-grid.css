@@ -109,7 +109,7 @@
 		grid-row-end: span 2;
 	}
 
-	.media-grid-item:nth-child(6n):not(.span) {
+	.media-grid-item:nth-child(6n):not(.span):not(.film) {
 		grid-column-end: span 2;
 		grid-row-end: span 3;
 	}
@@ -128,4 +128,10 @@
 		grid-column-end: span 3;
 		grid-row-end: span 2;
 	}
+}
+
+@media (min-width: 2005px) {
+	.media-grid {
+    max-width: 2005px;
+  }
 }

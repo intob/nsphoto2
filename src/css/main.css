@@ -2,7 +2,7 @@
 @import './imports/_reset.css';
 @import './imports/_typography';
 @import './imports/_link';
-@import './imports/_nav';
+@import './imports/_header';
 @import './imports/_footer';
 @import './imports/_article';
 @import './imports/_packages';
@@ -13,6 +13,5 @@
 @import './imports/_pagination';
 @import './imports/_form';
 @import './imports/_picture.css';
-@import './imports/_hero-grid.css';
 
 @import './imports/_colors.css';

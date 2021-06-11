@@ -4,7 +4,7 @@ import colors from 'colors';
 let buildPromises = [];
 
 const cmsBuild = esbuild.build({
-  entryPoints: ['./src/js/cms/cms.js'],
+  entryPoints: ['./src/js/cms/index.jsx'],
   bundle: true,
   minify: !isDev(),
   watch: watch(),
@@ -29,6 +29,15 @@ const mainBuild = esbuild.build({
   outfile: './dist/index.js',
 }).catch(() => process.exit(1));
 buildPromises.push(mainBuild);
+
+const heroBuild = esbuild.build({
+  entryPoints: ['./src/js/site/hero.js'],
+  bundle: true,
+  minify: !isDev(),
+  watch: watch(),
+  outfile: './dist/hero.js',
+}).catch(() => process.exit(1));
+buildPromises.push(heroBuild);
 
 Promise.all(buildPromises).then(() => log('done'));
 
