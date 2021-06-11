@@ -46,7 +46,7 @@ images:
   - - https://nsphoto-media-store.dr-useless.workers.dev/64c0578333d5bcaafb511a42a689773ad0a0fd2aaad19e2e2030d42288f32586:image/avif
     - https://nsphoto-media-store.dr-useless.workers.dev/3aa4ad61b156975c43fc8e6db6541b07ddc433189235606d9202be8b8a88cf7b:image/webp
     - https://nsphoto-media-store.dr-useless.workers.dev/f1a468d01b71d0e518756bcf79ce639e1ef8183ce2e9585031a5aca21302b6bd:image/jpeg
-clients:
+client_logos:
   - - https://nsphoto-media-store.dr-useless.workers.dev/28dc6706e800762514ab057535887a2dd70910a0574fa77552cac4b3732ee235:image/avif
     - https://nsphoto-media-store.dr-useless.workers.dev/e1879281e7ba2753d72b00e84873500d4aa253afbf6c57186021592acc66f6b3:image/webp
     - https://nsphoto-media-store.dr-useless.workers.dev/32c7ec007a49e6fd32a268582e54ac5150ecc627c26ee682331a47a242401967:image/png

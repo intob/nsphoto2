@@ -280,7 +280,7 @@ images:
   - - https://nsphoto-media-store.dr-useless.workers.dev/b22726d0f861d9dbcfc687ade7223c2e150715432a22ecbadc6047c2f46cd125:image/avif
     - https://nsphoto-media-store.dr-useless.workers.dev/e91418b0646178d111bdeea04cb4150d1e5c1ea7f44c8fbd48cf98e14fbd99d6:image/webp
     - https://nsphoto-media-store.dr-useless.workers.dev/71d814f5745ae208398741ce3e6277745f8481fead96de24e0084f0f8d53e64d:image/jpeg
-clients:
+client_logos:
   - - https://nsphoto-media-store.dr-useless.workers.dev/97a6619095f45fee1d3abfc452b7d2eda6a4cbc1fbb8da73179bad2b3b660389:image/avif
     - https://nsphoto-media-store.dr-useless.workers.dev/181786acdf22e73b65d3eca734abb9105c37838f0b58cf14e9c7a007bb8c3d58:image/webp
     - https://nsphoto-media-store.dr-useless.workers.dev/12fc69e7d61c3f3f84b1bdbb981840d51147fe7f7b12014ab64c854a67e6a0b4:image/png
