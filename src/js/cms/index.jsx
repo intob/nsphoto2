@@ -13,8 +13,11 @@ CMS.registerWidget('nsp-image', NSPImage);
 CMS.registerWidget('nsp-image-list', NSPImageList);
 
 CMS.registerPreviewStyle('/index.css');
+CMS.registerPreviewStyle('/hero.css');
+CMS.registerPreviewStyle('/cms-preview-styles.css');
 
-CMS.registerPreviewTemplate('home', HomePreview);
+CMS.registerPreviewTemplate('home_en', HomePreview);
+CMS.registerPreviewTemplate('home_de', HomePreview);
 CMS.registerPreviewTemplate('post', PostPreview);
 CMS.registerPreviewTemplate('album', AlbumPreview);
 CMS.registerPreviewTemplate('film', FilmPreview);

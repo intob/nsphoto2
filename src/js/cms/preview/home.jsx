@@ -2,9 +2,9 @@ import * as React from "react";
 
 export default class HomePreview extends React.Component {
   render() {
-    const {entry, getAsset} = this.props;
-    let images = getAsset(entry.getIn(["data", "images"]));
-    let clientLogos = getAsset(entry.getIn(["data", "client_logos"]));
+    const {entry} = this.props;
+    let images = entry.getIn(["data", "images"]);
+    let clientLogos = entry.getIn(["data", "client_logos"]);
 
     if (!Array.isArray(images)) {
       images = images.toArray();
@@ -27,11 +27,16 @@ export default class HomePreview extends React.Component {
       );
     });
 
-    if (!Array.isArray(clients)) {
-      clients = clients.toArray();
+    if (!Array.isArray(clientLogos)) {
+      clientLogos = clientLogos.toArray();
     }
 
     const clientLogosTemplate =  clientLogos && clientLogos.map(clientLogo => {
+      let iterableClientLogo = clientLogo;
+      if (!Array.isArray(clientLogo)) {
+        iterableClientLogo = clientLogo.toArray();
+      }
+      const imageUrl = iterableClientLogo.filter(i => i.indexOf('webp') > -1)[0];
       return (
         <>
           <div className="logo-grid-item">
@@ -40,29 +45,31 @@ export default class HomePreview extends React.Component {
             </picture>
           </div>
         </>
-        );
+      );
     });
 
     return (
       <>
-      <article class="hero-grid">
-        <div class="hero-grid-item title">
-          <h1>{entry.getIn(["data", "title"])}</h1>
+      <article className="hero">
+        <div className="hero-grid">
+          <div className="hero-grid-item title">
+            <h1>{entry.getIn(["data", "title"])}</h1>
+          </div>
+          <div className="hero-grid-item subtitle">
+            <h2>{entry.getIn(["data", "subtitle"])}</h2>
+          </div>
+          <div className="hero-grid-item intro">
+            <h3>{entry.getIn(["data", "intro"])}</h3>
+          </div>
+          <div className="hero-grid-item description">
+              <h3>{entry.getIn(["data", "description"])}</h3>
+          </div>
+          { heroImagesTemplate }
         </div>
-        <div class="hero-grid-item subtitle">
-          <h2>{entry.getIn(["data", "subtitle"])}</h2>
-        </div>
-        <div class="hero-grid-item intro">
-          <h3>{entry.getIn(["data", "intro"])}</h3>
-        </div>
-        <div class="hero-grid-item description">
-            <h3>{entry.getIn(["data", "description"])}</h3>
-        </div>
-        { heroImagesTemplate }
       </article>
       <article>
         <section>
-          <div class="logo-grid">
+          <div className="logo-grid">
             { clientLogosTemplate }
           </div>
         </section>

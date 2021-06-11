@@ -71,11 +71,11 @@ export default class NSPImageList extends React.Component {
   }
 
   isValid = () => {
-    const minCount = this.props.field.get("min_count");
-    if (!minCount) {
+    const validCount = this.props.field.get("count");
+    if (!validCount) {
       return true;
     }
-    return this.getCount() >= minCount;
+    return this.getCount() === validCount;
   }
 
   getCount = () => {
@@ -133,12 +133,12 @@ export default class NSPImageList extends React.Component {
 
   render() {
     const { classNameWidget, field } = this.props;
-    const minCount = field.get("min_count");
+    const validCount = field.get("count");
     return (
       <>
         <div className={`nsp-widget ${classNameWidget}`}>
           <button onClick={this.handleShowModal}>Add images</button>
-          <div className="image-count">Count: {this.getCount()} {minCount ? ` / ${minCount}` : ""}</div>
+          <div className="image-count">Count: {this.getCount()} {validCount ? ` / ${validCount}` : ""}</div>
           <div className="image-list">
             { this.renderImageItems() }
           </div>
