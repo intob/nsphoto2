@@ -37,6 +37,11 @@ article.hero {
 
 .hero-grid-item picture img {
 	border-radius: 5px;
+  transition: filter 0.25s;
+}
+
+.hero-grid-item picture img:hover {
+	filter: brightness(1.2);
 }
 
 @media (min-width: 360px) {
