@@ -1,14 +1,13 @@
 ---
-title: Another Album 5
+title: Holz Zollhaus
 date: 2021-05-27T09:07:27.123Z
 description: Enjoy the photos
 tags:
-  - wedding
-  - awesome
+  - corporate
 featured_image:
-  - https://nsphoto-media-store.dr-useless.workers.dev/149a4f186612e946f81305059a3cfa054c54f4c52bd3049c0ce1915d155f2a4a:image/avif
-  - https://nsphoto-media-store.dr-useless.workers.dev/9d17600e018987fd8b6463a890dcc0bf0b58c6c0a277fd653afdff18b296da52:image/webp
-  - https://nsphoto-media-store.dr-useless.workers.dev/5713d3c6cfa0ff7d88fcd0758c84cb5106d4d839a267cd5bbb2fbff8e2e571be:image/jpeg
+  - https://nsphoto-media-store.dr-useless.workers.dev/dae37a080635715dbb35bd4bc76d61d82fd21a6f991c3d981c161ed904571ada:image/avif
+  - https://nsphoto-media-store.dr-useless.workers.dev/1284a082b1f546ed07d4a913613837cbc580e37495f93bd5ccb4120928621d07:image/webp
+  - https://nsphoto-media-store.dr-useless.workers.dev/9a83b7597d20ee24d2e805f2e85ea10e369f1e8f1ad6338f0a13e483f0ec8087:image/jpeg
 images:
   - - https://nsphoto-media-store.dr-useless.workers.dev/10496ec3df0fe17951fffab24892c6bfb09ed3196b3ce17666098a3b59920122:image/avif
     - https://nsphoto-media-store.dr-useless.workers.dev/ff9e40f98bddd9bd1699d15ec696f947af80b8bb361f12dc2539af203a3fdf6d:image/webp
