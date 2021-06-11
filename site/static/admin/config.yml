@@ -4,7 +4,7 @@ backend:
   base_url: https://nsphoto-github-oauth.dr-useless.workers.dev
   branch: master
 
-media_folder: "site/static/media" # Folder where user uploaded files should go
+media_folder: "site/static/media"
 public_folder: media
 
 locale: en
@@ -13,15 +13,15 @@ i18n:
   locales: [en, de]
   default_locale: en
 
-collections: # A list of collections the CMS should be able to edit
-  - name: post # Used in routes, ie.: /admin/collections/:slug/edit
-    label: Post # Used in the UI, ie.: "New Post"
-    folder: "site/content/post" # The path to the folder where the documents are stored
+collections:
+  - name: post
+    label: Post
+    folder: "site/content/post"
     path: "{{slug}}/index"
     public_folder: "en/post/{{slug}}"
     i18n: true
-    create: true # Allow users to create new documents in this collection
-    fields: # The fields each document in this collection have
+    create: true
+    fields:
       - {label: Title, name: title, widget: string, i18n: true}
       - {label: "Publish Date", name: date, widget: datetime , i18n: duplicate}
       - {label: "Intro Blurb", name: description, widget: text, i18n: true}
@@ -107,6 +107,8 @@ collections: # A list of collections the CMS should be able to edit
       - file: "site/content/contact/_index.en.md"
         name: contact_en
         label: "Contact EN"
+        editor:
+          preview: false
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Body, name: body, widget: markdown}
@@ -114,6 +116,8 @@ collections: # A list of collections the CMS should be able to edit
       - file: "site/content/contact/_index.de.md"
         name: contact_de
         label: "Contact DE"
+        editor:
+          preview: false
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Body, name: body, widget: markdown}
