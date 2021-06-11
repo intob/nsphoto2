@@ -24,7 +24,7 @@ article.hero {
 }
 
 .hero-grid h1 {
-  font-weight: 400;
+  font-size: 1.8rem;
 }
 
 .hero-grid .title, .hero-grid .description {
@@ -254,7 +254,7 @@ article.hero {
 	}
 
   .hero-grid h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
 	.hero-grid .subtitle {
