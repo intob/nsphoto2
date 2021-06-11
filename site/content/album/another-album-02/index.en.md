@@ -1,14 +1,13 @@
 ---
-title: Another Album 2
+title: Couple
 date: 2021-05-27T09:07:27.123Z
 description: Enjoy the photos
 tags:
-  - wedding
-  - awesome
+  - couple
 featured_image:
-  - https://nsphoto-media-store.dr-useless.workers.dev/149a4f186612e946f81305059a3cfa054c54f4c52bd3049c0ce1915d155f2a4a:image/avif
-  - https://nsphoto-media-store.dr-useless.workers.dev/9d17600e018987fd8b6463a890dcc0bf0b58c6c0a277fd653afdff18b296da52:image/webp
-  - https://nsphoto-media-store.dr-useless.workers.dev/5713d3c6cfa0ff7d88fcd0758c84cb5106d4d839a267cd5bbb2fbff8e2e571be:image/jpeg
+  - https://nsphoto-media-store.dr-useless.workers.dev/ef663380987f83a38c40efe2ca560feaeb053ad4b769075453b4b42f46502150:image/avif
+  - https://nsphoto-media-store.dr-useless.workers.dev/77d6b31512e442b0caa22761ddf95bf84b0be016da4ac9cb88f1428895b13bae:image/webp
+  - https://nsphoto-media-store.dr-useless.workers.dev/bce57f49e923fa2a77667962482ab674905b5a7bbe9bf4d7fc2fa476b062f7f9:image/jpeg
 images:
   - - https://nsphoto-media-store.dr-useless.workers.dev/10496ec3df0fe17951fffab24892c6bfb09ed3196b3ce17666098a3b59920122:image/avif
     - https://nsphoto-media-store.dr-useless.workers.dev/ff9e40f98bddd9bd1699d15ec696f947af80b8bb361f12dc2539af203a3fdf6d:image/webp
