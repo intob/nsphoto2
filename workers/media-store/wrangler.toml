@@ -1,11 +1,11 @@
-name = "nsphoto-media-store"
+name = "media-store"
 type = "javascript"
 account_id = "b7554562ae5b04f46e2b9efa3e565d72"
 workers_dev = true
 route = ""
 zone_id = ""
 kv_namespaces = [
-  { binding = "MEDIA", id = "ca5d24db13f9460f970da35332b3315a", preview_id = "08680b754f5641a7916548a805789667" }
+  { binding = "MEDIA", id = "3e573c6e3cd74390889ac7d34b1942fc", preview_id = "51f77fdfb7664de9b9d7628fa573a6b8" }
 ]
 
 [build]

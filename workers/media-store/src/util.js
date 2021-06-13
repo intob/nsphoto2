@@ -28,11 +28,13 @@ export function store(data, mimeType, force = false) {
 }
 
 export function getKeyFromRequestUrl(requestUrl) {
-  return new URL(requestUrl).pathname.replace("/", "");
+  const [,type,subtype,hash] = new URL(requestUrl).pathname.split("/");
+  return `${type}/${subtype}/${hash}`
 }
 
 export function getMimeTypeFromKey(key) {
-  return key.split(":")[1];
+  const [type, subtype,] = key.split("/");
+  return `${type}/${subtype}`;
 }
 
 export function getMimeTypeFromRequest(request) {
@@ -44,7 +46,7 @@ function hash(arrayBuffer) {
 }
 
 function buildKey(hash, mimeType) {
-  return `${arrayBufferToHex(hash)}:${mimeType}`
+  return `${mimeType}/${arrayBufferToHex(hash)}`
 }
 
 function arrayBufferToHex(arrayBuffer) {
