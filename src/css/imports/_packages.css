@@ -1,7 +1,3 @@
-section.packages ul {
-	list-style-type: "🎁";
-}
-
 section.packages ul li::marker {
 	content: "🎁 ";
 	font-size: 1.5rem;
