@@ -1,11 +1,14 @@
 section.packages ul {
-	/*list-style: none;*/
 	list-style-type: "🎁";
 }
 
 section.packages ul li::marker {
 	content: "🎁 ";
 	font-size: 1.5rem;
+}
+
+section.packages ul ul {
+	list-style-type: "✔️";
 }
 
 section.packages ul ul li::marker {
