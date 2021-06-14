@@ -64,7 +64,7 @@ export default class NSPImage extends React.Component {
     let thumbnail = "";
     if (Array.isArray(value)) {
       thumbnail = value.filter(i => i.indexOf('webp') > -1)[0];
-    } else if (value && typeof value === "object") {
+    } else if (typeof value === "object") {
       thumbnail = value.toArray().filter(i => i.indexOf('webp') > -1)[0];
     }
 

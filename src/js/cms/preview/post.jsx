@@ -25,7 +25,6 @@ export default class PostPreview extends React.Component {
             <picture>
               <img src={thumbnailUrl}/>
             </picture>
-            
           </section>
           <section>
             { widgetFor("body") }

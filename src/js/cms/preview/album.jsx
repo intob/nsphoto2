@@ -18,7 +18,7 @@ export default class AlbumPreview extends React.Component {
       );
     });
 
-    if (!Array.isArray(images)) {
+    if (images && !Array.isArray(images)) {
       images = images.toArray();
     }
 
