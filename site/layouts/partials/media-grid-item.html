@@ -1,4 +1,4 @@
-<a href="{{ .RelPermalink }}" class="media-grid-item no-hover{{ if eq .Section "film" }} film{{ end }}" data-tags="{{ range .Params.tags }}{{ lower . }},{{ end }}">
+<a href="{{ .RelPermalink }}" class="media-grid-item no-hover" data-tags="{{ range .Params.tags }}{{ lower . }},{{ end }}">
 	<h2>{{ .Title }}</h2>
 
 	{{ if eq .Section "film"}}
