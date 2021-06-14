@@ -79,6 +79,9 @@ export default class NSPImageList extends React.Component {
   }
 
   getCount = () => {
+    if (!this.props.value) {
+      return 0;
+    }
     if (Array.isArray(this.props.value)) {
       return this.props.value.length;
     } else {

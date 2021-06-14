@@ -2,7 +2,7 @@ backend:
   name: github
   repo: dr-useless/nsphoto2
   base_url: https://nsphoto-github-oauth.dr-useless.workers.dev
-  branch: master
+  branch: improve-meda-store-path
 
 media_folder: "site/static/media"
 public_folder: media

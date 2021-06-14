@@ -15,7 +15,7 @@ async function handle(request) {
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
         "Access-Control-Allow-Headers": "Content-Type",
-      },
+      }
     });
   }
 
@@ -24,10 +24,7 @@ async function handle(request) {
   const code = searchParams.get('code')
 
   if (request.method === "GET" && !code) {
-    return Response.redirect(
-      `https://github.com/login/oauth/authorize?client_id=${client_id}&scope=repo%20read:user`,
-      302
-    );
+    return Response.redirect(`https://github.com/login/oauth/authorize?client_id=${client_id}&scope=repo%20read:user`, 302);
   }
 
   try {
@@ -38,9 +35,9 @@ async function handle(request) {
         headers: {
           "content-type": "application/json",
           "user-agent": "cloudflare-worker-github-oauth",
-          accept: "application/json",
+          "accept": "application/json"
         },
-        body: JSON.stringify({ client_id, client_secret, code }),
+        body: JSON.stringify({ client_id, client_secret, code })
       }
     );
     const result = await response.json();
@@ -66,24 +63,23 @@ async function handle(request) {
       <script>
         (function() {
           function recieveMessage(e) {
-            if (!e.origin.match("${origin}")) {
+            if (!e.origin.match('${origin}')) {
               return;
             }
-            // send message to main window
             window.opener.postMessage(
-              "authorization:github:success:${JSON.stringify(content)}",
+              'authorization:github:success:${JSON.stringify(content)}',
               e.origin
-            )
+            );
           }
-          window.addEventListener("message", recieveMessage, false)
-          window.opener.postMessage("authorizing:github", "*")
+          window.addEventListener('message', recieveMessage, false);
+          window.opener.postMessage('authorizing:github', '*');
         })()
       </script>
     </html>`
 
     return new Response(script, {
       status: 200,
-      headers,
+      headers
     });
   } catch (error) {
     console.error(error);

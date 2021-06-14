@@ -56,7 +56,7 @@ function optimizeImage(data, contentType, targetType, resizeOptions, outputOptio
 }
 
 function uploadData(data, contentType) {
-	return fetch('https://nsphoto-media-store.dr-useless.workers.dev/', {
+	return fetch('https://media-store.dr-useless.workers.dev/', {
 		method: 'PUT',
 		headers: {
 			'authorization': getAuthToken(),

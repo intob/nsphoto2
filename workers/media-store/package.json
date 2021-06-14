@@ -1,5 +1,5 @@
 {
-    "name": "nsphoto-media-store",
+    "name": "media-store",
     "version": "1.0.0",
     "private": true,
     "description": "A Cloudflare Worker to handle storing & retrieving media files, using Cloudflare KV",

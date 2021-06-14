@@ -6,7 +6,7 @@ export default class HomePreview extends React.Component {
     let images = entry.getIn(["data", "images"]);
     let clientLogos = entry.getIn(["data", "client_logos"]);
 
-    if (!Array.isArray(images)) {
+    if (images && !Array.isArray(images)) {
       images = images.toArray();
     }
 
@@ -27,7 +27,7 @@ export default class HomePreview extends React.Component {
       );
     });
 
-    if (!Array.isArray(clientLogos)) {
+    if (clientLogos && !Array.isArray(clientLogos)) {
       clientLogos = clientLogos.toArray();
     }
 
