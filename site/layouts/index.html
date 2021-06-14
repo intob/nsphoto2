@@ -19,7 +19,8 @@
             <picture data-super-lazy>
                 {{ $default := "" }}
                 {{ range . }}
-                    {{ $mimeType := index (split . ":") 2 }}
+                    {{ $segments := split . "/" }}
+                    {{ $mimeType := printf "%s/%s" (index $segments 3) (index $segments 4) }}
                     <source data-srcset="{{ . }}" type="{{ $mimeType }}">
                     {{ if eq $mimeType "image/jpeg" }}
                         {{ $default = . }}
