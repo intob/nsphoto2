@@ -47,19 +47,21 @@ export default class NSPImageList extends React.Component {
     const quality = this.props.field.get("quality");
     const promises = [];
     [].forEach.call(files, file => {
-      this.setState(state => {
-        state.uploads[file.name] = { progress: 0 };
-      });
-      const promise = readFile(file)
-      .then(data => processImage(data, file, this.handleFileProgress, width, height, fit, quality))
-      .then(responses => {
+      if (!this.state.uploads[file.name]) {
         this.setState(state => {
-          state.uploads[file.name] = undefined;
+          state.uploads[file.name] = { progress: 0 };
         });
-        this.props.onChange([...this.props.value||[], [...responses]]);
-        return responses;
-      });
-      promises.push(promise);
+        const promise = readFile(file)
+        .then(data => processImage(data, file, this.handleFileProgress, width, height, fit, quality))
+        .then(responses => {
+          this.setState(state => {
+            state.uploads[file.name] = undefined;
+          });
+          this.props.onChange([...this.props.value||[], [...responses]]);
+          return responses;
+        });
+        promises.push(promise);
+      }
     });
     return Promise.all(promises).then(() => {
       this.setState({ modalVisible: false, uploads: []});

@@ -63,6 +63,7 @@
 .media-tags li {
 	padding: 5px;
 	cursor: pointer;
+  border-radius: 2px;
 }
 
 .media-tags li.active {

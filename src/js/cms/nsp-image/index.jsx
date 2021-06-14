@@ -31,7 +31,7 @@ export default class NSPImage extends React.Component {
   handleDropzoneDrop = event => {
     event.stopPropagation();
     event.preventDefault();
-    addFile(event.dataTransfer.files[0]);
+    this.addFile(event.dataTransfer.files[0]);
   }
 
   handleFileInput = event => {
