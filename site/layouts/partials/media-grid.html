@@ -1,17 +1,17 @@
 {{ $pages := where .Site.RegularPages "Section" "in" (slice "album" "film") }}
 
 <div class="limit-width">
-  <ul class="media-tags">
-    <li><a href="#" class="link active" data-tag="">{{ i18n "all" }}</a></li>
-    {{ range $pages }}
-      {{ range .Params.tags }}
-        <li hidden><a href="#" class="link" data-tag="{{ lower . }}">{{ . }}</a></li>
-      {{ end }}
-    {{ end }}
-  </ul>
+	<ul class="media-tags">
+		<li><a href="#" class="link active" data-tag="">{{ i18n "all" }}</a></li>
+		{{ range $pages }}
+			{{ range .Params.tags }}
+				<li hidden><a href="#" class="link" data-tag="{{ lower . }}">{{ . }}</a></li>
+			{{ end }}
+		{{ end }}
+	</ul>
 </div>
 <div class="media-grid">
-  {{ range $pages.ByPublishDate.Reverse }}
-    {{ partial "media-grid-item" . }}
-  {{ end }}
+	{{ range $pages.ByPublishDate.Reverse }}
+		{{ partial "media-grid-item" . }}
+	{{ end }}
 </div>

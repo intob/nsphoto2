@@ -8,7 +8,7 @@ export default function initTagFilter() {
 	tagElements.forEach(tagElement => {
 		tagElement.parentElement.removeAttribute('hidden');
 		tagElement.addEventListener('click', e => {
-      e.preventDefault();
+			e.preventDefault();
 			filterMedia(tagElement.dataset.tag);
 			tagElements.forEach(t => t === tagElement ? t.parentElement.classList.add('active') : t.parentElement.classList.remove('active'));
 		});

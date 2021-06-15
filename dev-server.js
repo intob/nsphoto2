@@ -15,9 +15,9 @@ app.use(connectLivereload());
 app.use(express.static('dist'));
 
 app.listen(appPort, () => {
-  log(`listening on localhost:${appPort}`);
+	log(`listening on localhost:${appPort}`);
 });
 
 function log(message) {
-  console.log(colors.green('DevServer:'), message);
+	console.log(colors.green('DevServer:'), message);
 }

@@ -1,16 +1,16 @@
 {{ define "main" }}
-  <article>
-    <section class="limit-width">
-      <h1>{{.Title}}</h1>
-      <div class="metadata light">
-        <p>{{ .Date.Format "2006-02-19" }}</p>
-        <p>{{ i18n "readingTime" .ReadingTime }}</p>
-      </div>
-      <p>{{ .Description }}</p>
-      {{ if .Params.thumbnail }}
-        {{ partial "picture" .Params.thumbnail }}
-      {{ end }}
-      {{ .Content }}
-    </section>
-  </article>
+	<article>
+		<section class="limit-width">
+			<h1>{{.Title}}</h1>
+			<div class="metadata light">
+				<p>{{ .Date.Format "2006-02-19" }}</p>
+				<p>{{ i18n "readingTime" .ReadingTime }}</p>
+			</div>
+			<p>{{ .Description }}</p>
+			{{ if .Params.thumbnail }}
+				{{ partial "picture" .Params.thumbnail }}
+			{{ end }}
+			{{ .Content }}
+		</section>
+	</article>
 {{ end }}

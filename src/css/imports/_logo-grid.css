@@ -21,8 +21,8 @@
 }
 
 @media(min-width: 710px) {
-  .logo-grid {
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    grid-auto-rows: minmax(120px, auto);
-  }
+	.logo-grid {
+		grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+		grid-auto-rows: minmax(120px, auto);
+	}
 }

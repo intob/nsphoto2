@@ -1,47 +1,47 @@
 {{ define "main" }}
 
 <article>
-  <section class="hero">
-    <div class="hero-grid">
-      <div class="hero-grid-item title">
-          <h1>{{ .Params.title }}</h1>
-      </div>
-      <div class="hero-grid-item subtitle">
-          <h2>{{ .Params.subtitle }}</h2>
-      </div>
-      <div class="hero-grid-item intro">
-          <h3>{{ .Params.intro }}</h3>
-      </div>
-      <div class="hero-grid-item description">
-          <h3>{{ .Params.description }}</h3>
-      </div>
-      {{ range .Params.images }}
-          <div class="hero-grid-item">
-              <picture data-super-lazy>
-                  {{ $default := "" }}
-                  {{ range . }}
-                      {{ $segments := split . "/" }}
-                      {{ $mimeType := printf "%s/%s" (index $segments 3) (index $segments 4) }}
-                      <source data-srcset="{{ . }}" type="{{ $mimeType }}">
-                      {{ if eq $mimeType "image/jpeg" }}
-                          {{ $default = . }}
-                      {{ end }}
-                  {{ end }}
-                  <img data-srcset="{{ $default }}" alt="img"/>
-              </picture>
-          </div>
-      {{ end }}
-    </div>
-  </section>
-  <section>
-    {{ partial "media-grid" . }}
-  </section>
-  <section>
-    {{ partial "latest-posts" . }}
-  </section>
-  <section>
-    {{ partial "logo-grid" . }}
-  </section>
+	<section class="hero">
+		<div class="hero-grid">
+			<div class="hero-grid-item title">
+					<h1>{{ .Params.title }}</h1>
+			</div>
+			<div class="hero-grid-item subtitle">
+					<h2>{{ .Params.subtitle }}</h2>
+			</div>
+			<div class="hero-grid-item intro">
+					<h3>{{ .Params.intro }}</h3>
+			</div>
+			<div class="hero-grid-item description">
+					<h3>{{ .Params.description }}</h3>
+			</div>
+			{{ range .Params.images }}
+					<div class="hero-grid-item">
+							<picture data-super-lazy>
+									{{ $default := "" }}
+									{{ range . }}
+											{{ $segments := split . "/" }}
+											{{ $mimeType := printf "%s/%s" (index $segments 3) (index $segments 4) }}
+											<source data-srcset="{{ . }}" type="{{ $mimeType }}">
+											{{ if eq $mimeType "image/jpeg" }}
+													{{ $default = . }}
+											{{ end }}
+									{{ end }}
+									<img data-srcset="{{ $default }}" alt="img"/>
+							</picture>
+					</div>
+			{{ end }}
+		</div>
+	</section>
+	<section>
+		{{ partial "media-grid" . }}
+	</section>
+	<section>
+		{{ partial "latest-posts" . }}
+	</section>
+	<section>
+		{{ partial "logo-grid" . }}
+	</section>
 </article>
 
 {{ end }}

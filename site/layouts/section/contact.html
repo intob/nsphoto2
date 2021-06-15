@@ -25,10 +25,10 @@
 			<p class="response error" hidden></p>
 			<p class="success-message" hidden>{{ .Params.success_message }}</p>
 		</form>
-    <p>
-		  {{ $privacyPolicy := .Site.GetPage "/privacy"}}
-		  <a href="{{ $privacyPolicy.Permalink }}">{{ $privacyPolicy.Title }}</a>
-    </p>
+		<p>
+			{{ $privacyPolicy := .Site.GetPage "/privacy"}}
+			<a href="{{ $privacyPolicy.Permalink }}">{{ $privacyPolicy.Title }}</a>
+		</p>
 	</section>
 </article>
 

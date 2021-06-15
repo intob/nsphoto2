@@ -1,9 +1,9 @@
 <head>
-  {{ partialCached "head-base" . .Section }}
+	{{ partialCached "head-base" . .Section }}
 
 	<title>{{ if not (in $.Site.Title .Title) }}{{.Title}} | {{ end }}{{ $.Site.Title }}</title>
 	
-  <meta name="description" content="{{ default .Params.description .Params.intro }}">
+	<meta name="description" content="{{ default .Params.description .Params.intro }}">
 
 	<meta property="og:type" content="website">
 	<meta property="og:title" content="{{ if not (in $.Site.Title .Title) }}{{.Title}} | {{ end }}{{ $.Site.Title }}">

@@ -1,40 +1,40 @@
 {
-  "name": "nsphoto2",
-  "version": "1.0.0",
-  "description": "Website for Nicole Schafer Photo & Film, built with Hugo & netlifycms",
-  "repository": "github.com/dr-useless/nsphoto2",
-  "main": "index.js",
-  "type": "module",
-  "scripts": {
-    "lint": "eslint src/js",
-    "lint:fix": "eslint src/js --fix",
-    "start": "run-p start:**",
-    "start:hugo": "hugo -d ../dist -s site --watch",
-    "start:esbuild": "node ./esbuild.js --dev",
-    "start:server": "node ./dev-server.js",
-    "prebuild": "rimraf dist",
-    "build": "npm run build:hugo && npm run build:esbuild",
-    "build:hugo": "hugo -d ../dist -s site --minify",
-    "build:esbuild": "node ./esbuild.js"
-  },
-  "author": "github.com/dr-useless",
-  "license": "MIT",
-  "dependencies": {
-    "date-fns": "^2.22.1",
-    "netlify-cms-app": "^2.15.19",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
-  },
-  "devDependencies": {
-    "colors": "^1.4.0",
-    "connect-livereload": "^0.6.1",
-    "esbuild": "^0.12.5",
-    "eslint": "^7.27.0",
-    "eslint-plugin-import": "^2.23.4",
-    "eslint-plugin-react": "^7.24.0",
-    "express": "^4.17.1",
-    "livereload": "^0.9.3",
-    "npm-run-all": "^4.1.5",
-    "rimraf": "^3.0.2"
-  }
+	"name": "nsphoto2",
+	"version": "1.0.0",
+	"description": "Website for Nicole Schafer Photo & Film, built with Hugo & netlifycms",
+	"repository": "github.com/dr-useless/nsphoto2",
+	"main": "index.js",
+	"type": "module",
+	"scripts": {
+		"lint": "eslint src/js",
+		"lint:fix": "eslint src/js --fix",
+		"start": "run-p start:**",
+		"start:hugo": "hugo -d ../dist -s site --watch",
+		"start:esbuild": "node ./esbuild.js --dev",
+		"start:server": "node ./dev-server.js",
+		"prebuild": "rimraf dist",
+		"build": "npm run build:hugo && npm run build:esbuild",
+		"build:hugo": "hugo -d ../dist -s site --minify",
+		"build:esbuild": "node ./esbuild.js"
+	},
+	"author": "github.com/dr-useless",
+	"license": "MIT",
+	"dependencies": {
+		"date-fns": "^2.22.1",
+		"netlify-cms-app": "^2.15.19",
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2"
+	},
+	"devDependencies": {
+		"colors": "^1.4.0",
+		"connect-livereload": "^0.6.1",
+		"esbuild": "^0.12.5",
+		"eslint": "^7.27.0",
+		"eslint-plugin-import": "^2.23.4",
+		"eslint-plugin-react": "^7.24.0",
+		"express": "^4.17.1",
+		"livereload": "^0.9.3",
+		"npm-run-all": "^4.1.5",
+		"rimraf": "^3.0.2"
+	}
 }

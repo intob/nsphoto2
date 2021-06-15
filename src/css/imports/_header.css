@@ -1,11 +1,11 @@
 header {
-  width: 100%;
-  display: flex;
-  justify-content: center;
+	width: 100%;
+	display: flex;
+	justify-content: center;
 }
 
 header.hero {
-  background-color: var(--color-text);
+	background-color: var(--color-text);
 }
 
 nav {
@@ -13,10 +13,10 @@ nav {
 	flex-direction: row;
 	justify-content: space-between;
 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  width: 100%;
-  max-width: 700px;
-  padding: 0 10px;
-  background-color: var(--color-bg);
+	width: 100%;
+	max-width: 700px;
+	padding: 0 10px;
+	background-color: var(--color-bg);
 }
 
 nav ul {
@@ -85,13 +85,13 @@ nav.active li a {
 }
 
 .bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    background-color: #101010;
+		display: block;
+		width: 25px;
+		height: 3px;
+		margin: 5px auto;
+		-webkit-transition: all 0.3s ease-in-out;
+		transition: all 0.3s ease-in-out;
+		background-color: #101010;
 }
 
 img.logo {
@@ -102,10 +102,10 @@ img.logo {
 
 @media (min-width: 720px) {
 	nav {
-    width: auto;
+		width: auto;
 		min-width: 700px;
 	}
-  
+	
 	img.logo {
 		width: 60px;
 		height: 60px;

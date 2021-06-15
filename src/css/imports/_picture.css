@@ -1,18 +1,18 @@
 picture {
-  opacity: 1;
-  transition: opacity 0.25s;
+	opacity: 1;
+	transition: opacity 0.25s;
 }
 
 picture[data-lazy], picture[data-super-lazy] {
-  opacity: 0;
+	opacity: 0;
 }
 
 picture[data-lazy] img {
-  height: 250px;
+	height: 250px;
 }
 
 picture img {
-  object-fit: cover;
+	object-fit: cover;
 	object-position: center center;
 	width: 100%;
 }

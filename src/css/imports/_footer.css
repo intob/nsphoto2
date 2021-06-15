@@ -53,7 +53,7 @@ ul.social svg, ul.social a {
 	footer > div {
 		max-width: 700px;
 		display: flex;
-    justify-content: space-between;
+		justify-content: space-between;
 		padding: 0;
 	}
 
