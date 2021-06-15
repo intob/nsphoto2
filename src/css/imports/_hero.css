@@ -1,9 +1,11 @@
-article.hero {
+.hero {
   background-color: var(--color-text);
+  width: 100%;
 }
 
 .hero-grid {
   width: calc(100% - 10px);
+  align-self: center;
 }
 
 .hero-grid-item {

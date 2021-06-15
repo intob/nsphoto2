@@ -1,6 +1,6 @@
 {{ define "main" }}
   <article>
-    <div class="media-grid album">
+    <section class="media-grid album">
       <div class="media-grid-item">
         <h1>{{.Title}}</h1>
         <div class="metadata light">
@@ -23,6 +23,6 @@
             {{ partial "youtube-video" $video }}
         </div>
       {{ end }}
-    </div>
+    </section>
   </article>
 {{ end }}

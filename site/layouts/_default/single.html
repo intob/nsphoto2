@@ -1,6 +1,6 @@
 {{ define "main" }}
   <article>
-    <section>
+    <section class="limit-width">
       <h1>{{.Title}}</h1>
       <div class="metadata light">
         <p>{{ .Date.Format "2006-02-19" }}</p>
@@ -10,9 +10,7 @@
       {{ if .Params.thumbnail }}
         {{ partial "picture" .Params.thumbnail }}
       {{ end }}
-    </section>
-    <section>
-        {{ .Content }}
+      {{ .Content }}
     </section>
   </article>
 {{ end }}

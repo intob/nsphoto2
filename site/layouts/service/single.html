@@ -1,6 +1,6 @@
 {{ define "main" }}
   <article>
-    <section>
+    <section class="limit-width">
       <h1>{{.Title}}</h1>
       <p>{{ .Description }}</p>
     {{ if .Params.thumbnail }}
@@ -8,7 +8,7 @@
     {{ end }}
       {{ .Content }}
     </section>
-    <section class="packages">
+    <section class="limit-width packages">
       <h2>{{ i18n "packages"}}</h2>
       <ul>
         {{ range .Params.packages }}
