@@ -1,25 +1,25 @@
 a, .link {
-    text-decoration: none;
-    color: var(--color-text);
-    user-select: none;
+	text-decoration: none;
+	color: var(--color-text);
+	user-select: none;
 }
 
 a:not(.no-hover),
 .link {
-    display: inline-block;
+	display: inline-block;
 }
 
 a:not(.no-hover)::after, 
 .link::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 1px;
-    background: var(--color-primary);
-    transition: width .3s;
+	content: '';
+	display: block;
+	width: 0;
+	height: 1px;
+	background: var(--color-primary);
+	transition: width .3s;
 }
 
 a:not(.no-hover):hover::after,
 .link:hover::after {
-    width: 100%;
+	width: 100%;
 }

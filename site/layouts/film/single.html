@@ -1,19 +1,19 @@
 {{ define "main" }}
-  <article>
-    <section>
-      <h1>{{.Title}}</h1>
-      <div class="metadata light">
-        <p class="tags">
-          {{ range .Params.tags }}
-            <span>{{.}}</span>
-          {{end}}
-        </p>
-        <p>{{ .Date.Format "2006-02-19" }}</p>
-      </div>
-      <p>{{ .Description }}</p>
-      <div class="video-container">
-        {{ partial "youtube-video" .Params.youtube_id }}
-      </div>
-    </section>
-  </article>
+	<article>
+		<section class="limit-width">
+			<h1>{{.Title}}</h1>
+			<div class="metadata light">
+				<p class="tags">
+					{{ range .Params.tags }}
+						<span>{{.}}</span>
+					{{end}}
+				</p>
+				<p>{{ .Date.Format "2006-02-19" }}</p>
+			</div>
+			<p>{{ .Description }}</p>
+			<div class="video-container">
+				{{ partial "youtube-video" .Params.youtube_id }}
+			</div>
+		</section>
+	</article>
 {{ end }}

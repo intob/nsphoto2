@@ -1,11 +1,9 @@
 {{ define "main" }}
 
 <article>
-	<section>
+	<section class="limit-width">
 		<h1>{{ .Title }}</h1>
 		{{ .Content }}
-	</section>
-	<section>
 		<form class="contact" method="POST">
 			<fieldset>
 				<label>{{ i18n "name" }}</label>
@@ -27,9 +25,10 @@
 			<p class="response error" hidden></p>
 			<p class="success-message" hidden>{{ .Params.success_message }}</p>
 		</form>
-		<br/>
-		{{ $privacyPolicy := .Site.GetPage "/privacy"}}
-		<a href="{{ $privacyPolicy.Permalink }}">{{ $privacyPolicy.Title }}</a>
+		<p>
+			{{ $privacyPolicy := .Site.GetPage "/privacy"}}
+			<a href="{{ $privacyPolicy.Permalink }}">{{ $privacyPolicy.Title }}</a>
+		</p>
 	</section>
 </article>
 

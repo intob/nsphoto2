@@ -1,9 +1,11 @@
-article.hero {
-  background-color: var(--color-text);
+.hero {
+	background-color: var(--color-text);
+	width: 100%;
 }
 
 .hero-grid {
-  width: calc(100% - 10px);
+	width: calc(100% - 10px);
+	align-self: center;
 }
 
 .hero-grid-item {
@@ -18,25 +20,25 @@ article.hero {
 .hero-grid .intro,
 .hero-grid .description {
 	display: flex;
-  padding: 5px;
-  border-radius: 5px;
+	padding: 5px;
+	border-radius: 5px;
 }
 
 .hero-grid h1 {
-  font-size: 1.9rem;
+	font-size: 1.9rem;
 }
 
 .hero-grid .title, .hero-grid .description {
-  color: var(--color-bg);
+	color: var(--color-bg);
 }
 
 .hero-grid .subtitle, .hero-grid .intro {
-  background-color: var(--color-bg);
+	background-color: var(--color-bg);
 }
 
 .hero-grid-item picture img {
 	border-radius: 5px;
-  transition: filter 0.25s;
+	transition: filter 0.25s;
 }
 
 .hero-grid-item picture img:hover {
@@ -253,13 +255,13 @@ article.hero {
 }
 
 @media (min-width: 1755px) {
-  .hero-grid .title {
+	.hero-grid .title {
 		grid-column: 4 / span 3;
 	}
 
-  .hero-grid h1 {
-    font-size: 2.5rem;
-  }
+	.hero-grid h1 {
+		font-size: 2.5rem;
+	}
 
 	.hero-grid .subtitle {
 		grid-column: 7 / span 2;
@@ -301,8 +303,8 @@ article.hero {
 		display: none;
 	}
 
-  .hero-grid {
-    padding: 10px 5px;
-    max-width: 2005px;
-  }
+	.hero-grid {
+		padding: 10px 5px;
+		max-width: 2005px;
+	}
 }

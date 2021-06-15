@@ -1,14 +1,14 @@
 {
-    "name": "nsphoto-contact",
-    "version": "1.0.0",
-    "private": true,
-    "description": "A Cloudflare Worker to handle contact form requests",
-    "main": "contact.js",
-    "author": "github.com/dr-useless",
-    "license": "MIT",
-    "release": {
-        "branches": [
-            "main"
-        ]
-    }
+		"name": "nsphoto-contact",
+		"version": "1.0.0",
+		"private": true,
+		"description": "A Cloudflare Worker to handle contact form requests",
+		"main": "contact.js",
+		"author": "github.com/dr-useless",
+		"license": "MIT",
+		"release": {
+				"branches": [
+						"main"
+				]
+		}
 }

@@ -1,34 +1,34 @@
 {{ define "main" }}
-  <article>
-    <section>
-      <h1>{{.Title}}</h1>
-      <p>{{ .Description }}</p>
-    {{ if .Params.thumbnail }}
-      {{ partial "picture" (dict "src" .Params.thumbnail) }}
-    {{ end }}
-      {{ .Content }}
-    </section>
-    <section class="packages">
-      <h2>{{ i18n "packages"}}</h2>
-      <ul>
-        {{ range .Params.packages }}
-        <li>
-          <header>
-            <h3>{{ .name }}</h3>
-            <h3 class="price">{{ .price }}.- CHF</h3>
-          </header>
-          <p>{{ .description }}</p>
-          <ul>
-            {{ range .features }}
-              <li>
-                <h4>{{ .name }}</h4>
-              <p>{{ .description }}</p>
-              </li>
-            {{ end }}
-          </ul>
-        </li>
-        {{ end }}
-      </ul>
-    </section>
-  </article>
+	<article>
+		<section class="limit-width">
+			<h1>{{.Title}}</h1>
+			<p>{{ .Description }}</p>
+		{{ if .Params.thumbnail }}
+			{{ partial "picture" (dict "src" .Params.thumbnail) }}
+		{{ end }}
+			{{ .Content }}
+		</section>
+		<section class="limit-width packages">
+			<h2>{{ i18n "packages"}}</h2>
+			<ul>
+				{{ range .Params.packages }}
+				<li>
+					<header>
+						<h3>{{ .name }}</h3>
+						<h3 class="price">{{ .price }}.- CHF</h3>
+					</header>
+					<p>{{ .description }}</p>
+					<ul>
+						{{ range .features }}
+							<li>
+								<h4>{{ .name }}</h4>
+							<p>{{ .description }}</p>
+							</li>
+						{{ end }}
+					</ul>
+				</li>
+				{{ end }}
+			</ul>
+		</section>
+	</article>
 {{ end }}

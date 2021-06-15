@@ -1,9 +1,7 @@
-<section>
-  <div class="logo-grid">
-    {{ range .Params.client_logos }}
-      <div class="logo-grid-item">
-        {{ partial "picture" . }}
-      </div>
-    {{ end }}
-  </div>
-</section>
+<div class="logo-grid limit-width">
+	{{ range .Params.client_logos }}
+		<div class="logo-grid-item">
+			{{ partial "picture" . }}
+		</div>
+	{{ end }}
+</div>

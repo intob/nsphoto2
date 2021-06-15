@@ -49,15 +49,15 @@ ul.social svg, ul.social a {
 	height: 100%;
 }
 
-@media (min-width: 710px) {
+@media (min-width: 720px) {
 	footer > div {
 		max-width: 700px;
 		display: flex;
+		justify-content: space-between;
 		padding: 0;
 	}
 
 	footer section {
-		width: 50%;
 		align-self: flex-start;
 	}
 }

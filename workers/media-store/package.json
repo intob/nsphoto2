@@ -1,17 +1,17 @@
 {
-    "name": "media-store",
-    "version": "1.0.0",
-    "private": true,
-    "description": "A Cloudflare Worker to handle storing & retrieving media files, using Cloudflare KV",
-    "main": "dist/index.js",
-    "type": "module",
-    "scripts": {
-        "build": "node ./esbuild.js"
-    },
-    "author": "github.com/dr-useless",
-    "license": "MIT",
-    "dependencies": {
-        "esbuild": "^0.12.6",
-        "sharp": "^0.28.3"
-    }
+		"name": "media-store",
+		"version": "1.0.0",
+		"private": true,
+		"description": "A Cloudflare Worker to handle storing & retrieving media files, using Cloudflare KV",
+		"main": "dist/index.js",
+		"type": "module",
+		"scripts": {
+				"build": "node ./esbuild.js"
+		},
+		"author": "github.com/dr-useless",
+		"license": "MIT",
+		"dependencies": {
+				"esbuild": "^0.12.6",
+				"sharp": "^0.28.3"
+		}
 }

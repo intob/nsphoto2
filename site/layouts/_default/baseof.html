@@ -1,17 +1,17 @@
 <!doctype html>
 <html lang="{{ $.Site.Language.Lang }}">
-  {{ partial "head" . }}
-  <body>
-    {{ block "header" . }}
-      {{ partialCached "header" . .Section }}
-    {{end}}
+	{{ partial "head" . }}
+	<body>
+		{{ block "header" . }}
+			{{ partialCached "header" . .Section }}
+		{{end}}
 
-    {{ block "main" . }}{{ end }}
+		{{ block "main" . }}{{ end }}
 
-    {{ block "footer" . }}
-      {{ partialCached "footer" . }}
-    {{end}}
+		{{ block "footer" . }}
+			{{ partialCached "footer" . }}
+		{{end}}
 
-    {{ partialCached "scripts" . .Section }}
-  </body>
+		{{ partialCached "scripts" . .Section }}
+	</body>
 </html>

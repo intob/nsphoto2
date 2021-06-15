@@ -1,35 +1,35 @@
 .nsp-widget .image-list {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
 }
 
 .nsp-widget .image-count {
-  border: none;
-  border-radius: 5px;
-  font-weight: 500;
-  font-size: 13px;
-  height: 23px;
-  line-height: 23px;
-  padding: 0px 15px;
-  background-color: #eee;
-  margin: 5px;
+	border: none;
+	border-radius: 5px;
+	font-weight: 500;
+	font-size: 13px;
+	height: 23px;
+	line-height: 23px;
+	padding: 0px 15px;
+	background-color: #eee;
+	margin: 5px;
 }
 
 .nsp-widget .image-list .image-item {
-  width: 145px;
-  height: 120px;
-  margin: 2px;
-  position: relative;
+	width: 145px;
+	height: 120px;
+	margin: 2px;
+	position: relative;
 }
 
 .nsp-widget .image-list .image-item .remove {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: inline-block;
-  padding: 5px;
-  line-height: 1.25rem;
-  font-size: 1.25rem;
-  cursor: pointer;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: inline-block;
+	padding: 5px;
+	line-height: 1.25rem;
+	font-size: 1.25rem;
+	cursor: pointer;
 }

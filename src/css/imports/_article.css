@@ -1,18 +1,14 @@
-article {
+article section {
 	display: flex;
 	flex-direction: column;
-  align-items: center;
-  padding: 10px 0;
-  width: 100%;
+	align-self: center;
+	padding: 10px 0;
 }
 
-article section {
+article .limit-width {
 	align-self: center;
 	width: calc(100% - 10px);
-}
-
-article section {
-	padding: 5px;
+	padding: 10px 5px;
 }
 
 article .metadata {
@@ -29,8 +25,14 @@ article .metadata .tags span:not(:last-of-type):after {
 }
 
 @media (min-width: 710px) {
-	article section {
+	article {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	
+	article .limit-width {
 		width: 700px;
-    padding: 10px 0;
+		padding: 10px 0;
 	}
 }

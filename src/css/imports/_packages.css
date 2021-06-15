@@ -1,11 +1,15 @@
 section.packages ul {
-	/*list-style: none;*/
-	list-style-type: "🎁";
+	padding-left: 30px;
 }
 
 section.packages ul li::marker {
 	content: "🎁 ";
 	font-size: 1.5rem;
+}
+
+section.packages ul ul {
+	list-style-type: "✔️";
+	padding-left: 25px;
 }
 
 section.packages ul ul li::marker {
@@ -16,6 +20,7 @@ section.packages ul ul li::marker {
 section.packages header {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 }
 
 section.packages .price {
