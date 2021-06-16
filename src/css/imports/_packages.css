@@ -1,9 +1,10 @@
 section.packages ul {
+	list-style-type: "📦";
 	padding-left: 30px;
 }
 
 section.packages ul li::marker {
-	content: "🎁 ";
+	content: "📦 ";
 	font-size: 1.5rem;
 }
 
