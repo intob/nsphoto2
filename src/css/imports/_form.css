@@ -43,6 +43,7 @@ input:user-invalid, textarea:user-invalid {
 }
 
 button {
+	margin: 10px 0;
 	padding: 10px;
 	background-color: var(--color-bg-dark);
 	border: 0;
