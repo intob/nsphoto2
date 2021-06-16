@@ -1,12 +1,12 @@
 @font-face {
   font-family: system;
   font-style: normal;
-  font-weight: 200;
-  src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+  font-weight: 300;
+  src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma"), sans-serif;
 }
 
 html {
-	font-size: 16px;
+	font-size: 14px;
 }
 
 body, p {
@@ -15,8 +15,8 @@ body, p {
 	line-height: 1.5rem;
 }
 
-h1, h2, h3, h4, h5, h6, div, nav, a {
-	font-family: 'Montserrat', sans-serif;
+h1, h2, h3, h4, h5, h6, a {
+	font-family: 'Montserrat', system;
 	font-weight: 100;
 	line-height: 1.7rem;
 }
