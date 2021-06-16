@@ -71,15 +71,15 @@ collections:
       - {label: Title, name: title, widget: string, i18n: true}
       - {label: Description, name: description, widget: text, i18n: true}
       - {label: Thumbnail, name: thumbnail, widget: nsp-image, width: 750, i18n: duplicate, required: false}
-      - {label: Body, name: body, widget: markdown, required: false, i18n: true}
+      - {label: Body, name: body, widget: markdown, buttons: [bold, italic, code, link, heading-two, heading-three, heading-four, heading-five, heading-six, quote, bulleted-list, numbered-list], required: false, i18n: true}
       - {label: "Packages", name: "packages", widget: list, i18n: true, fields: [
           {label: Name, name: "name", widget: string, i18n: true},
           {label: Description, name: description, widget: text, i18n: true},
+          {label: Price, name: price, widget: number, value_type: int, min: 0, step: 1, default: 100, i18n: duplicate},
           {label: Features, name: features, widget: list, i18n: true, fields: [
             {label: Name, name: "name", widget: string, i18n: true},
             {label: Description, name: description, widget: text, i18n: true}
-          ]},
-          {label: Price, name: price, widget: number, value_type: int, min: 0, step: 1, default: 100, i18n: duplicate}
+          ]}
         ]}
   - name: pages
     label: Pages
@@ -111,7 +111,7 @@ collections:
           preview: false
         fields:
           - {label: Title, name: title, widget: string}
-          - {label: Body, name: body, widget: markdown}
+          - {label: Body, name: body, widget: markdown, buttons: [bold, italic, code, link, heading-two, heading-three, heading-four, heading-five, heading-six, quote, bulleted-list, numbered-list]}
           - {label: "Success Message", name: success_message, widget: text}
       - file: "site/content/contact/_index.de.md"
         name: contact_de
@@ -120,17 +120,17 @@ collections:
           preview: false
         fields:
           - {label: Title, name: title, widget: string}
-          - {label: Body, name: body, widget: markdown}
+          - {label: Body, name: body, widget: markdown, buttons: [bold, italic, code, link, heading-two, heading-three, heading-four, heading-five, heading-six, quote, bulleted-list, numbered-list]}
           - {label: "Success Message", name: success_message, widget: text}
       - file: "site/content/privacy/_index.en.md"
         name: privacy_en
         label: "Privacy Policy EN"
         fields:
           - {label: Title, name: title, widget: string}
-          - {label: Body, name: body, widget: markdown}
+          - {label: Body, name: body, widget: markdown, buttons: [bold, italic, code, link, heading-two, heading-three, heading-four, heading-five, heading-six, quote, bulleted-list, numbered-list]}
       - file: "site/content/privacy/_index.de.md"
         name: privacy_de
         label: "Privacy Policy DE"
         fields:
           - {label: Title, name: title, widget: string}
-          - {label: Body, name: body, widget: markdown}
+          - {label: Body, name: body, widget: markdown, buttons: [bold, italic, code, link, heading-two, heading-three, heading-four, heading-five, heading-six, quote, bulleted-list, numbered-list]}
