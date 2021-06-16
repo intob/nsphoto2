@@ -1,6 +1,6 @@
 section.packages ul {
 	list-style-type: "📦";
-	padding-left: 30px;
+	padding-left: 1.8rem;
 }
 
 section.packages ul li::marker {
@@ -10,7 +10,6 @@ section.packages ul li::marker {
 
 section.packages ul ul {
 	list-style-type: "✔️";
-	padding-left: 25px;
 }
 
 section.packages ul ul li::marker {
