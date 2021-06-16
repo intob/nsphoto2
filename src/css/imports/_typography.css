@@ -1,28 +1,17 @@
-@font-face {
-  font-family: system;
-  font-style: normal;
-  font-weight: 300;
-  src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma"), sans-serif;
-}
-
 html {
 	font-size: 16px;
 }
-@media (min-width: 900px) {
-	html {
-		font-size: 17px;
-	}
-}
 
-body, p {
-	font-family: system;
+body {
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+	font-weight: 400;
 	font-size: 1rem;
 	line-height: 1.2;
 }
 
-h1, h2, h3, h4, h5, h6, header, .link {
-	font-family: 'Montserrat', system;
-	font-weight: 100;
+h1, h2, h3, h4, h5, h6 {
+	font-family: ui-rounded, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+	font-weight: 500;
 	line-height: 1.4;
 }
 
