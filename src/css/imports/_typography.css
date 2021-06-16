@@ -6,10 +6,7 @@
 }
 
 html {
-	font-size: 13px;
-}
-@media (min-width: 900px) {
-  html { font-size: 14px; }
+	font-size: 14px;
 }
 
 body, p {
