@@ -6,7 +6,10 @@
 }
 
 html {
-	font-size: 14px;
+	font-size: 13px;
+}
+@media (min-width: 900px) {
+  html { font-size: 14px; }
 }
 
 body, p {
@@ -15,7 +18,7 @@ body, p {
 	line-height: 1.5rem;
 }
 
-h1, h2, h3, h4, h5, h6, a {
+h1, h2, h3, h4, h5, h6, header, .link {
 	font-family: 'Montserrat', system;
 	font-weight: 100;
 	line-height: 1.7rem;
