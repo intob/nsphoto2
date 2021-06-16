@@ -6,7 +6,11 @@ export default function initLazyLoading() {
 	const lazyImages = [...document.querySelectorAll('picture[data-lazy]')];
 	const lazyImageObserver = getLazyImageObserver(observerOptions);
 	lazyImages.forEach(lazyImage => {
-		lazyImageObserver.observe(lazyImage.parentElement);
+		let observable = lazyImage.parentElement;
+		if (lazyImage.parentElement.offsetHeight > window.innerHeight) {
+			observable = lazyImage;
+		}
+		lazyImageObserver.observe(observable);
 	});
 
 	const lazyIframes = [...document.querySelectorAll('iframe[data-lazy]')];
@@ -20,7 +24,7 @@ function getLazyImageObserver(options) {
 	const intersectionObserver = new IntersectionObserver(entries => {
 		entries.forEach(entry => {
 			if (entry.isIntersecting) {
-				const lazyImage = entry.target.querySelector('[data-lazy]');
+				const lazyImage = entry.target.querySelector('[data-lazy]') || entry.target;
 				[...lazyImage.querySelectorAll('[data-srcset]')].forEach(source => {
 					source.srcset = source.dataset.srcset;
 					if (source.tagName === 'IMG') {
