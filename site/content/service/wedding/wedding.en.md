@@ -1,7 +1,6 @@
 ---
 title: Wedding
 description: I will take photos while you get married.
-thumbnail: null
 packages:
   - price: 1000
     name: Source
@@ -44,8 +43,6 @@ packages:
       - name: Until midnight
         description: I will party with you & take photos until midnight.
 ---
-# Special day
-
 ## Yes, very special
 
 This is a very special day. I will take photos of your **very special** day. This is my job. I like my job. This is an example paragraph; please don't publish this.
