@@ -15,5 +15,7 @@
 	],
 	"start_url": "https://nicole-schafer.com",
 	"scope": "https://nicole-schafer.com",
-	"display": "browser"
+	"display": "browser",
+  "theme_color": "#fff",
+	"background_color": "#fff"
 }
