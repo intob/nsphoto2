@@ -1,7 +1,8 @@
 import CMS from 'netlify-cms-app';
 
-import NSPImage from './nsp-image/index';
-import NSPImageList from './nsp-image-list/index';
+import NSPImage from './nsp-image';
+import NSPImageList from './nsp-image-list';
+import NSPYoutube from './nsp-youtube';
 
 import HomePreview from './preview/home';
 import PostPreview from './preview/post';
@@ -11,6 +12,7 @@ import FilmPreview from './preview/film';
 
 CMS.registerWidget('nsp-image', NSPImage);
 CMS.registerWidget('nsp-image-list', NSPImageList);
+CMS.registerWidget('nsp-youtube', NSPYoutube);
 
 CMS.registerPreviewStyle('/index.css');
 CMS.registerPreviewStyle('/hero.css');
