@@ -1,6 +1,7 @@
 body {
 	margin: 0;
 	background-color: var(--color-bg);
+	-webkit-text-size-adjust: none;
 }
 
 a {

@@ -1,15 +1,15 @@
 section.packages ul {
-	padding-left: 30px;
+	list-style-type: "📦";
+	padding-left: 1.8rem;
 }
 
 section.packages ul li::marker {
-	content: "🎁 ";
+	content: "📦 ";
 	font-size: 1.5rem;
 }
 
 section.packages ul ul {
 	list-style-type: "✔️";
-	padding-left: 25px;
 }
 
 section.packages ul ul li::marker {

@@ -1,5 +1,6 @@
 {
 	"name": "Nicole Schafer Photo & Film",
+	"short_name": "Nicole Schafer",
 	"icons": [
 		{
 			"src": "\/media\/icon-192x192.png",
@@ -12,6 +13,9 @@
 			"type": "image\/png"
 		}
 	],
-	"theme_color": "#FEFFFE",
-	"display": "standalone"
+	"start_url": "https://nicole-schafer.com",
+	"scope": "https://nicole-schafer.com",
+	"display": "browser",
+  "theme_color": "#fff",
+	"background_color": "#fff"
 }

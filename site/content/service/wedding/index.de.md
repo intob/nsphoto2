@@ -1,7 +1,6 @@
 ---
 title: Hochzeit
 description: Hochzeit JAAHH!
-thumbnail: null
 packages:
   - price: 100
     name: Quelle
