@@ -1,28 +1,30 @@
 {{ define "main" }}
 	<article>
-		<section class="media-grid album">
-			<div class="media-grid-item">
-				<h1>{{.Title}}</h1>
-				<div class="metadata light">
-					<p class="tags">
-						{{ range .Params.tags }}
-							<span>{{.}}</span>
-						{{end}}
-					</p>
-					<p>{{ .Date.Format "2006-02-19" }}</p>
+		<section>
+			<div class="media-grid album">
+				<div class="media-grid-item">
+					<h1>{{.Title}}</h1>
+					<div class="metadata light">
+						<p class="tags">
+							{{ range .Params.tags }}
+								<span>{{.}}</span>
+							{{end}}
+						</p>
+						<p>{{ .Date.Format "2006-02-19" }}</p>
+					</div>
+					<p>{{ .Description }}</p>
 				</div>
-				<p>{{ .Description }}</p>
+				{{ range $i, $image := .Params.images}}
+					<div class="media-grid-item" style="order: {{ $i }}">
+						{{ partial "picture" $image }}
+					</div>
+				{{ end }}
+				{{ range $i, $video := .Params.videos}}
+					<div class="media-grid-item span span-3-2 video-container" style="order:{{ add $i 4 }}">
+							{{ partial "youtube-video" $video }}
+					</div>
+				{{ end }}
 			</div>
-			{{ range $i, $image := .Params.images}}
-				<div class="media-grid-item" style="order: {{ $i }}">
-					{{ partial "picture" $image }}
-				</div>
-			{{ end }}
-			{{ range $i, $video := .Params.videos}}
-				<div class="media-grid-item span span-3-2 video-container" style="order:{{ add $i 4 }}">
-						{{ partial "youtube-video" $video }}
-				</div>
-			{{ end }}
 		</section>
 	</article>
 {{ end }}
