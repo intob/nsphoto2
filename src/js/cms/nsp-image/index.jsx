@@ -1,6 +1,5 @@
 import * as React from 'react'
 import "../styles.css";
-import "./styles.css";
 import { readFile, processImage } from '../image';
 
 export default class NSPImage extends React.Component {

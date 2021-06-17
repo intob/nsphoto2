@@ -7,13 +7,15 @@ export default class NSPYoutube extends React.Component {
 
 	constructor(props) {
 		super(props);
-		this.state = { progress: 0 };
+		this.state = { progress: 0, id: this.getStoredId() };
+	}
+
+	handleInputChange = event => {
+		this.setState(() => ({id: event.target.value}));
 	}
 
 	handleProgress = (fileName, newProgress) => {
-		this.setState(state => ({
-			progress: state.progress + newProgress
-		}));
+		this.setState(state => ({progress: state.progress + newProgress}));
 	}
 
 	getYoutubeThumbnail = id => {
@@ -21,22 +23,24 @@ export default class NSPYoutube extends React.Component {
 			.then(response => response.arrayBuffer());
 	}
 
-	handleChange = event => {
-		const id = event.target.value;
+	loadThumbnail = () => {
 		const width = this.props.field.get("thumbnail_width");
-		return this.getYoutubeThumbnail(id)
+		this.setState(() => ({progess: 5}));
+		return this.getYoutubeThumbnail(this.state.id)
 			.then(data => processImage(data, this.handleProgress, undefined, "image/jpeg", width))
 			.then(responses => {
-				this.props.onChange({id: id, thumbnail: responses});
-				this.setState(state => ({progress: 0}));
+				this.props.onChange({id: this.state.id, thumbnail: responses});
+				this.setState(() => ({progress: 0}));
 			});
+	}
+
+	getStoredId = () => {
+		const value = this.props.value;
+		return value && (value.id || value.getIn(["id"]) || "");
 	}
 
 	render() {
 		const { value, classNameWidget } = this.props;
-
-		console.log(value);
-		const id = value && (value.id || value.getIn(["id"]) || "");
 
 		let thumbnail = value && (value.thumbnail || value.getIn(["thumbnail"]) || "");
 		if (Array.isArray(thumbnail)) {
@@ -50,9 +54,10 @@ export default class NSPYoutube extends React.Component {
 				<div className={`nsp-widget ${classNameWidget}`}>
 					<fieldset>
 						<label>Youtube ID</label>
-						<input type="text" onChange={this.handleChange} value={id}/>
+						<input type="text" id="youtube-id" value={this.state.id} onChange={this.handleInputChange}/>
+						<button onClick={this.loadThumbnail} disabled={this.getStoredId() === this.state.id}>Load thumbnail</button>
+						<div className="progress" hidden={this.state.progress === 0}>{this.state.progress > 0 ? `${this.state.progress}%` : ""}</div>
 					</fieldset>
-					<div className="progress">{this.state.progress}</div>
 					<img className="thumbnail" src={thumbnail}/>
 				</div>
 			</>
