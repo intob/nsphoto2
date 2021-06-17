@@ -10,29 +10,26 @@ export default class NSPYoutube extends React.Component {
 		this.state = { progress: 0 };
 	}
 
-	handleProgress = (file, newProgress) => {
+	handleProgress = (fileName, newProgress) => {
 		this.setState(state => ({
 			progress: state.progress + newProgress
 		}));
 	}
 
-	addFile = file => {
-		const width = this.props.field.get("width");
-		const height = this.props.field.get("height");
-		const fit = this.props.field.get("fit");
-		const quality = this.props.field.get("quality");
-		this.setState({ progress: 1 });
-		readFile(file)
-			.then(data => processImage(data, file, this.handleProgress, width, height, fit, quality))
-			.then(responses => {
-				this.handleHideModal();
-				this.props.onChange(responses);
-				this.setState({ progress: 0 });
-			});
+	getYoutubeThumbnail = id => {
+		return fetch(`https://nsphoto-youtube.dr-useless.workers.dev/vi/${id}/maxresdefault.jpg`)
+			.then(response => response.arrayBuffer());
 	}
 
 	handleChange = event => {
-		this.props.onChange({id: event.target.value});
+		const id = event.target.value;
+		const width = this.props.field.get("thumbnail_width");
+		return this.getYoutubeThumbnail(id)
+			.then(data => processImage(data, this.handleProgress, undefined, "image/jpeg", width))
+			.then(responses => {
+				this.props.onChange({id: id, thumbnail: responses});
+				this.setState(state => ({progress: 0}));
+			});
 	}
 
 	render() {
@@ -41,7 +38,7 @@ export default class NSPYoutube extends React.Component {
 		console.log(value);
 		const id = value && (value.id || value.getIn(["id"]) || "");
 
-		let thumbnail = ""
+		let thumbnail = value && (value.thumbnail || value.getIn(["thumbnail"]) || "");
 		if (Array.isArray(thumbnail)) {
 			thumbnail = thumbnail.filter(i => i.indexOf('webp') > -1)[0];
 		} else if (typeof thumbnail === "object") {
