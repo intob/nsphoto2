@@ -42,7 +42,7 @@
 }
 
 .hero-grid-item picture img:hover {
-	filter: brightness(1.2);
+	filter: brightness(1.1);
 }
 
 @media (min-width: 360px) {
