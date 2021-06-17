@@ -2,14 +2,8 @@
 	<h2>{{ .Title }}</h2>
 
 	{{ if eq .Section "film"}}
-	<span class="icon">🎥</span>
-	{{ end }}
-
-	{{ if .Params.youtube_id }}
-		{{ $thumbnail := printf "https://i.ytimg.com/vi/%s/hqdefault.jpg" .Params.youtube_id }}
-		<picture data-lazy>
-			<img data-srcset="{{ $thumbnail }}" alt="{{ .Params.youtube_id }} thumbnail"/>
-		</picture>
+		<span class="icon">🎥</span>
+		{{ partial "picture" .Params.youtube_video.thumbnail }}
 	{{ else }}
 		{{  partial "picture" .Params.thumbnail }}
 	{{ end }}
