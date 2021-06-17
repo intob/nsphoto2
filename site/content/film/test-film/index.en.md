@@ -2,6 +2,9 @@
 title: Test film
 date: 2021-06-17T14:16:44.701Z
 description: Descrrrription
+tags:
+  - adventure
+  - winter
 youtube_video:
   id: fY0KOLAv1S4
   thumbnail:
