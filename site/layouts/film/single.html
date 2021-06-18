@@ -1,6 +1,9 @@
 {{ define "main" }}
 	<article>
 		<section class="limit-width">
+			<div class="video-container">
+				{{ partial "youtube-video" .Params.youtube_video.id }}
+			</div>
 			<h1>{{.Title}}</h1>
 			<div class="metadata light">
 				<p class="tags">
@@ -11,9 +14,6 @@
 				<p>{{ .Date.Format "2006-02-19" }}</p>
 			</div>
 			<p>{{ .Description }}</p>
-			<div class="video-container">
-				{{ partial "youtube-video" .Params.youtube_video.id }}
-			</div>
 		</section>
 	</article>
 {{ end }}

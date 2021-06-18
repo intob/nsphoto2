@@ -19,15 +19,15 @@ export default class FilmPreview extends React.Component {
 			<>
 				<article>
 					<section className="limit-width">
+						<div className="video-container">
+							<iframe src={youtubeIframeSrc} width="560" height="315" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+						</div>
 						<h1>{ entry.getIn(["data", "title"])}</h1>
 						<div className="metadata light">
 							<p>{ format(entry.getIn(["data", "date"]), "yyyy-mm-dd") }</p>
 							<p className="tags">{tagsTemplate}</p>
 						</div>
 						<p>{ entry.getIn(["data", "description"]) }</p>
-						<div className="video-container">
-							<iframe src={youtubeIframeSrc} width="560" height="315" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-						</div>
 					</section>
 				</article>
 			</>

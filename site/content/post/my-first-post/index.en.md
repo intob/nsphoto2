@@ -3,10 +3,7 @@ title: My first post
 date: 2021-06-01T20:12:57.760Z
 description: Having trained seriously with bodyweight exercises for a long time,
   I strongly believe that a solidly construed bodyweight strength training
-  regimen is at least as good as weights for strength for the upper body. The
-  legs are a slightly different case because they are much stronger than the
-  upper body they require weighted stimuli to make optimal progress. Hence,
-  optimal strength and hypertrophy requires barbells for the legs. Test
+  regimen is at least as good as weights for strength for the upper body.
 thumbnail:
   - https://media-store.dr-useless.workers.dev/image/avif/fd84211fa6ca66ebd63216cd593615ea984701509ad9bda8ea2985158002201c
   - https://media-store.dr-useless.workers.dev/image/webp/518702b5ffb24708cd5a6b657ef73d90392df0bd493a4a097d44109f1364ec09
