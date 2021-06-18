@@ -2,7 +2,7 @@ backend:
   name: github
   repo: dr-useless/nsphoto2
   base_url: https://nsphoto-github-oauth.dr-useless.workers.dev
-  branch: optimize-fonts
+  branch: master
 
 media_folder: "site/static/media"
 public_folder: media
@@ -58,7 +58,7 @@ collections:
       - {label: "Publish Date", name: date, widget: datetime, i18n: true}
       - {label: Description, name: description, widget: text, i18n: true}
       - {label: Tags, name: "tags", widget: list, max: 5, i18n: true}
-      - {label: "YouTube Video ID", name: youtube_id, widget: string, i18n: duplicate}
+      - {label: "YouTube Video", name: youtube_video, widget: nsp-youtube, thumbnail_width: 750, i18n: duplicate}
   - name: "service"
     label: "Service"
     folder: "site/content/service"

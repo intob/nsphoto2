@@ -8,29 +8,29 @@ export function readFile(file) {
 	});
 }
 
-export function processImage(data, file, progressHandler, width = undefined, height = undefined, fit = undefined, quality = undefined) {
+export function processImage(data, progressHandler, fileName = undefined, contentType = undefined, width = undefined, height = undefined, fit = undefined, quality = undefined) {
 	const resizeOptions = width || height ? {width: width, height: height, fit: fit, withoutEnlargement: true} : undefined;
 
-	const jpeg = optimizeImage(data, file.type, 'image/jpeg', resizeOptions, {mozjpeg: true, quality: quality})
+	const jpeg = optimizeImage(data, contentType, 'image/jpeg', resizeOptions, {mozjpeg: true, quality: quality})
 		.then(data => {
-			progressHandler(file, 16);
-			return uploadData(data, file.type);
+			progressHandler(fileName, 16);
+			return uploadData(data, contentType);
 		});
-	jpeg.then(() => progressHandler(file, 16));
+	jpeg.then(() => progressHandler(fileName, 16));
 
-	const webp = optimizeImage(data, file.type, 'image/webp', resizeOptions, {reductionEffort: 6, quality: quality})
+	const webp = optimizeImage(data, contentType, 'image/webp', resizeOptions, {reductionEffort: 6, quality: quality})
 		.then(data => {
-			progressHandler(file, 16);
+			progressHandler(fileName, 16);
 			return uploadData(data, 'image/webp');
 		});
-	webp.then(() => progressHandler(file, 16));
+	webp.then(() => progressHandler(fileName, 16));
 
-	const avif = optimizeImage(data, file.type, 'image/avif', resizeOptions, {speed: 5, quality: quality})
+	const avif = optimizeImage(data, contentType, 'image/avif', resizeOptions, {speed: 5, quality: quality})
 		.then(data => {
-			progressHandler(file, 16);
+			progressHandler(fileName, 16);
 			return uploadData(data, 'image/avif');
 		});
-	avif.then(() => progressHandler(file, 16));
+	avif.then(() => progressHandler(fileName, 16));
 
 	return Promise.all([avif, webp, jpeg]);
 }

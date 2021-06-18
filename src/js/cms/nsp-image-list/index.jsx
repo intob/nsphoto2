@@ -52,7 +52,7 @@ export default class NSPImageList extends React.Component {
 					state.uploads[file.name] = { progress: 0 };
 				});
 				const promise = readFile(file)
-				.then(data => processImage(data, file, this.handleFileProgress, width, height, fit, quality))
+				.then(data => processImage(data, this.handleFileProgress, file.name, file.type, width, height, fit, quality))
 				.then(responses => {
 					this.setState(state => {
 						state.uploads[file.name] = undefined;
@@ -68,8 +68,8 @@ export default class NSPImageList extends React.Component {
 		});
 	}
 
-	handleFileProgress = (file, newProgress) => {
-		this.setState(state => state.uploads[file.name].progress = state.uploads[file.name].progress + newProgress);
+	handleFileProgress = (fileName, newProgress) => {
+		this.setState(state => state.uploads[fileName].progress = state.uploads[fileName].progress + newProgress);
 	}
 
 	isValid = () => {

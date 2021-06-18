@@ -1,6 +1,5 @@
 import * as React from 'react'
 import "../styles.css";
-import "./styles.css";
 import { readFile, processImage } from '../image';
 
 export default class NSPImage extends React.Component {
@@ -38,7 +37,7 @@ export default class NSPImage extends React.Component {
 		this.addFile(event.target.files[0]);
 	}
 
-	handleProgress = (file, newProgress) => {
+	handleProgress = (fileName, newProgress) => {
 		this.setState(state => ({
 			progress: state.progress + newProgress
 		}));
@@ -51,7 +50,7 @@ export default class NSPImage extends React.Component {
 		const quality = this.props.field.get("quality");
 		this.setState({ progress: 1 });
 		readFile(file)
-			.then(data => processImage(data, file, this.handleProgress, width, height, fit, quality))
+		.then(data => processImage(data, this.handleProgress, file.name, file.type, width, height, fit, quality))
 			.then(responses => {
 				this.handleHideModal();
 				this.props.onChange(responses);
