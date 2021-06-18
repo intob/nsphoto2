@@ -1,10 +1,10 @@
 import validateAuth from "./auth";
 import { getKeyFromRequestUrl, getMimeTypeFromRequest, getMimeTypeFromKey, store } from "./util";
 
-export const keyTtl = 15552000; // 6 months in s
+export const keyTtl = 31556926; // 1 year in s
 const refreshThreshold = 7776000000; // 3 months in ms
 const kvCacheTtl = 3600; // 1 hour in s
-const clientCacheTtl = 5259600; // 2 month in s
+const clientCacheTtl = 5259600; // 2 months in s
 
 addEventListener("fetch", event => {
 	event.respondWith(handle(event.request));
@@ -12,7 +12,7 @@ addEventListener("fetch", event => {
 
 /**
  * Each key has the following structure:
- * {id}:{mimeType}
+ * {mimeType}/{id}
  */
 
 async function handle(request) {
