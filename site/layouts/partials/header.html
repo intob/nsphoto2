@@ -1,6 +1,6 @@
 <header {{ if .IsHome }}class="hero"{{ end }}>
 	<nav>
-		<a href="/" class="no-hover">
+		<a href="{{ .Site.Home.Permalink }}" class="no-hover">
 			<img src="/media/logo.svg" alt="NS Logo" class="logo"/>
 		</a>
 		<div class="menu">
