@@ -5,6 +5,7 @@
 }
 
 .nsp-widget .image-count {
+	display: inline-block;
 	border: none;
 	border-radius: 5px;
 	font-weight: 500;
@@ -25,11 +26,12 @@
 
 .nsp-widget .image-list .image-item .remove {
 	position: absolute;
-	top: 0;
+	top: 10px;
 	left: 0;
 	display: inline-block;
-	padding: 5px;
+	padding: 2px;
 	line-height: 1.25rem;
 	font-size: 1.25rem;
 	cursor: pointer;
+	background-color: #eee;
 }
