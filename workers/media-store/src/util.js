@@ -41,6 +41,18 @@ export function getMimeTypeFromRequest(request) {
 	return request.headers.get("content-type");
 }
 
+export function validateReferer(referer) {
+	const whitelist = [
+		"https://nicole-schafer.com/",
+		"https://beta.nicole-schafer.com/",
+		"http://localhost:3000/"
+	];
+	if (whitelist.indexOf(referer) > -1) {
+		return true;
+	}
+	return false;
+}
+
 function hash(arrayBuffer) {
 	return crypto.subtle.digest('SHA-256', arrayBuffer);
 }
