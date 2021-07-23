@@ -4,7 +4,7 @@
 			<h1>{{.Title}}</h1>
 			<p>{{ .Description }}</p>
 		{{ if .Params.thumbnail }}
-			{{ partial "picture" (dict "src" .Params.thumbnail) }}
+			{{  partial "picture" .Params.thumbnail }}
 		{{ end }}
 			{{ .Content }}
 		</section>
