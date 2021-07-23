@@ -1,12 +1,6 @@
 ---
 title: Wedding
-description: A very special day, two people in love, surrounded by all the
-  beloved people in your life, an unforgettable moment... To remember this day
-  as if it happened yesterday, I will capture all the emotions and moments.
-  Authentic and naturally, in a documentary style, individually adapted to the
-  location and to your wishes. From the styling of the bride, the exchange of
-  the rings, the cutting of the cake to the wedding dance, this special day is
-  full of moments to remember.
+description: Authentic, natural reportage of your unforgettable day.
 packages:
   - price: 1900
     name: Stream
@@ -33,14 +27,4 @@ packages:
       - name: Until midnight
         description: I will party with you & take photos until midnight.
 ---
-## Yes, very special
-
-This is a very special day. I will take photos of your **very special** day. This is my job. I like my job. This is an example paragraph; please don't publish this.
-
-## I will take photos
-
-I like taking photos. I will take lots of photos.
-
-### My photos are good
-
-My photos are the best in the world. Everyone likes my photos. Especially Joey.
+A very special day, two people in love, surrounded by all the beloved people in your life, an unforgettable moment... To remember this day as if it happened yesterday, I will capture all the emotions and moments. Authentic and naturally, in a documentary style, individually adapted to the location and to your wishes. From the styling of the bride, the exchange of the rings, the cutting of the cake to the wedding dance, this special day is full of moments to remember.
