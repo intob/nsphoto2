@@ -1,7 +1,6 @@
 ---
 title: Film
-description: Jedes Filmprojekt ist einzigartig. Bitte nimm doch mit mir Kontakt auf, damit wir dein Projekt besprechen können.
-  Bin gespannt was das es sein wird :)
+description: Ich mache Kurzfilme für alle möglichen Kunden.
 thumbnail:
   - https://media-store.dr-useless.workers.dev/image/avif/fd84211fa6ca66ebd63216cd593615ea984701509ad9bda8ea2985158002201c
   - https://media-store.dr-useless.workers.dev/image/webp/518702b5ffb24708cd5a6b657ef73d90392df0bd493a4a097d44109f1364ec09
