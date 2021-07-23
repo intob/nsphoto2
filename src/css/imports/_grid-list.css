@@ -27,10 +27,9 @@
 	width: 100%;
 }
 
-
 .grid-list-item img {
-	max-width: 300px;
-	height: 100%;
+	width: 120px;
+	height: auto;
 }
 
 .item-description {
@@ -48,5 +47,6 @@
 @media (min-width: 600px) {
 	.grid-list-item img {
 		width: 300px;
+		height: 100%;
 	}
 }

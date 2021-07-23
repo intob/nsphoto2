@@ -1,6 +1,6 @@
 ---
 title: Film
-description: I make epic films.
+description: Each film project is unique and has many variables. Please get in touch, and we can discuss your project. I am curious to hear about it :)
 thumbnail:
   - https://media-store.dr-useless.workers.dev/image/avif/fd84211fa6ca66ebd63216cd593615ea984701509ad9bda8ea2985158002201c
   - https://media-store.dr-useless.workers.dev/image/webp/518702b5ffb24708cd5a6b657ef73d90392df0bd493a4a097d44109f1364ec09
@@ -19,3 +19,4 @@ packages:
       - name: Epico
         description: So much awesome
 ---
+Each film project is unique and has many variables. Please get in touch, and we can discuss your project. I am curious to hear about it :)
