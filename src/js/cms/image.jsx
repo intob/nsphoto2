@@ -47,7 +47,7 @@ function optimizeImage(data, contentType, targetType, resizeOptions, outputOptio
 	if (resizeOptions) {
 		headers['resize-options'] = JSON.stringify(resizeOptions);
 	}
-	return fetch('https://joeynici.synology.me:3002/', {
+	return fetch('https://storage.nicole-schafer.com:3002/', {
 		method: 'POST',
 		headers: headers,
 		body: data
