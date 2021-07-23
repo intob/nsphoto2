@@ -78,7 +78,7 @@ collections:
           {label: Price, name: price, widget: number, value_type: int, min: 0, step: 1, default: 100, i18n: duplicate},
           {label: Features, name: features, widget: list, i18n: true, fields: [
             {label: Name, name: "name", widget: string, i18n: true},
-            {label: Description, name: description, widget: text, i18n: true}
+            {label: Description, name: description, widget: text, i18n: true, required: false}
           ]}
         ]}
   - name: pages
