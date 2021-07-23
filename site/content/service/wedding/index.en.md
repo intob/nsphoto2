@@ -27,6 +27,8 @@ packages:
         description: 7 hours
       - name: Location scouting
       - name: Evening location
+      - name: Photobooth
+        description: 400 prints included
   - price: 5900
     name: Ocean 🌊
     description: Everything from Stream & River, plus...
