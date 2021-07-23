@@ -1,23 +1,13 @@
 ---
 title: Wedding
-description: I will take photos while you get married.
+description: A very special day, two people in love, surrounded by all the
+  beloved people in your life, an unforgettable moment... To remember this day
+  as if it happened yesterday, I will capture all the emotions and moments.
+  Authentic and naturally, in a documentary style, individually adapted to the
+  location and to your wishes. From the styling of the bride, the exchange of
+  the rings, the cutting of the cake to the wedding dance, this special day is
+  full of moments to remember.
 packages:
-  - price: 1000
-    name: Source
-    description: This is my cheapest wedding package. Available Mo-Fr.
-    features:
-      - name: Duration
-        description: 3 hours
-      - name: Initial meeting
-        description: We will meet each other before any shooting. This meeting serves to
-          break the ice, and become comfortable with each-other. This will help
-          to make the photos more natural.
-      - name: Couple shoot
-        description: Shooting the two of you as a couple, in a location of your choice.
-      - name: Wedding ceremony
-        description: Shooing while you are getting married.
-      - name: Reception
-        description: Shooting you and your guests while you have fun at the reception.
   - price: 1900
     name: Stream
     description: Everything from Source package, plus...
