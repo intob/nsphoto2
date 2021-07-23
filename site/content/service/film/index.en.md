@@ -1,7 +1,6 @@
 ---
 title: Film
 description: I make epic films.
-thumbnail: null
 packages:
   - price: 1000
     name: Basic
