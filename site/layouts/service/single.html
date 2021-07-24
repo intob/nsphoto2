@@ -15,7 +15,9 @@
 				<li>
 					<header>
 						<h3>{{ .name }}</h3>
-						<h3 class="price">{{ .price }}.- CHF</h3>
+						{{ if .price }}
+							<h3 class="price">{{ .price }}.- CHF</h3>
+						{{ end }}
 					</header>
 					<p>{{ .description }}</p>
 					<ul>
