@@ -12,7 +12,7 @@ packages:
     features:
       - name: 8 hours of shooting
         description: ""
-      - name: Post-production
+      - name: Cutting & post-production
         description: 225.- per hour
   - price: ""
     name: Multi-day project

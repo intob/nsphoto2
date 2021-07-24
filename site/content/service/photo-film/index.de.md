@@ -11,7 +11,7 @@ packages:
     name: Standard
     features:
       - name: 8 Stunden Einsatzdauer
-      - name: Schnitt & Postproduktion
+      - name: Bearbeiten & Postproduktion
         description: 225.- CHF per hour
     description: ""
 ---
