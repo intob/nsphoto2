@@ -1,7 +1,0 @@
-{{ if gt (len (where .Site.RegularPages "Section" "post")) 0 }}
-	<div class="grid-list limit-width">
-		{{ range first 4 (where .Site.RegularPages "Section" "post") }}
-			{{ .Render "li" }}
-		{{ end }}
-	</div>
-{{ end }}
