@@ -14,7 +14,7 @@ packages:
         description: ""
       - name: Post-production
         description: All cutting & editing is included in the price, up to 3 revisions.
-  - price: 1
+  - price: ""
     name: Multi-day project
     description: For bigger projects, please contact me for a quote.
     features: []
