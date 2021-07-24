@@ -3,7 +3,7 @@
 		<section class="limit-width">
 			<h1>{{ i18n (lower .Title) }}</h1>
 			<div class="grid-list">
-				{{ range (.Paginator 4).Pages.ByPublishDate.Reverse }}
+				{{ range (.Paginator 16).Pages.ByPublishDate }}
 						{{ .Render "li"}}
 				{{ end }}
 			</div>
