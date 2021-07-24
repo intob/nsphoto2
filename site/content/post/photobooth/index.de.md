@@ -24,8 +24,8 @@ images:
     - https://media-store.dr-useless.workers.dev/image/webp/fb7f24fed7bbbf5a1c0f8fb156156d023eed4d41afdcae447d202553a0aaec85
     - https://media-store.dr-useless.workers.dev/image/jpeg/cc2921eec931ed232504160eb9a2552a064497c8278b012f19a3179a9ec301eb
 ---
-Nach einem langen Entwicklungsprozess und der Zusammenarbeit mit einem Top-Schreiner aus der Region, möchte ich Ihnen meine Fotobox vorstellen.
+Nach einem langen Entwicklungsprozess und der Zusammenarbeit mit einem Top-Schreiner aus der Region, möchte ich Ihnen mein Photobooth vorstellen.
 
-Seit 2013 ist mein Photobooth auf Hochzeiten und viele Anfragen für Ausstellungen, Events und Geburtstage haben sich gehäuft.
+Seit 2013 steht mein Photobooth auf Hochzeiten und es haben sich viele Anfragen für Ausstellungen, Events und Geburtstage angehäuft.
 
 Ich kann es für jede Hochzeit empfehlen. Spaß und tolle Erinnerungen sind garantiert.
