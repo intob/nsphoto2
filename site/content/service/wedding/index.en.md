@@ -31,10 +31,7 @@ packages:
       - name: Photobooth
         description: >-
           I will set up [my photobooth](/en/post/photobooth) at your evening
-          location.
-
-
-          400 prints are included.
+          location. 400 prints are included.
   - price: 5900
     name: Ocean 🌊
     description: Everything from Stream & River, plus...

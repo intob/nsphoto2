@@ -27,6 +27,9 @@ packages:
         description: 7 Std.
       - name: Standort-Scouting
       - name: Abendlicher-Shooting
+      - name: Photobooth
+        description: >-
+          Ich baue [mein Photobooth](/de/post/photobooth) an Ihrer Abend Location auf. 400 Drucke sind inklusive.
   - price: 5900
     name: Ozean 🌊
     description: Alles von Quelle & Fluss, plus...

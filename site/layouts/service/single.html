@@ -27,7 +27,7 @@
 							<li>
 								<h4>{{ .name }}</h4>
 							{{ if .description }}
-								<p>{{ .description }}</p>
+								{{ markdownify .description }}
 							{{ end }}
 							</li>
 						{{ end }}

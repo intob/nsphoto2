@@ -28,3 +28,9 @@ section.packages .price {
 	padding: 5px;
 	background-color: var(--color-bg-dark);
 }
+
+section.packages a {
+	padding: 5px;
+	border-radius: 2px;
+	background-color: var(--color-bg-dark);
+}
