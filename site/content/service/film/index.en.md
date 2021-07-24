@@ -8,15 +8,23 @@ thumbnail:
 packages:
   - price: 2000
     name: Budget
-    description: One day of shooting, and post-production.
+    description: For small projects with limited budget.
     features:
-      - name: One day of shooting
+      - name: 8 hours of shooting
         description: ""
       - name: Post-production
-        description: All cutting & editing is included in the price, up to 3 revisions.
+        description: 225.- per hour
   - price: ""
     name: Multi-day project
     description: For bigger projects, please contact me for a quote.
     features: []
 ---
-Each film project is unique and has many variables. Please get in touch, and we can discuss your project. I am curious to hear about it :)
+I have skills for virtually all filming requirements, including:
+
+* Flying drone
+* Sound engineering
+* Steady shots with gimbal
+* Interviews
+* Alpinism & rope-access
+* Diving & under-water shots
+* Timelapses
