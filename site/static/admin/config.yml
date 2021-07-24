@@ -27,6 +27,7 @@ collections:
       - {label: Description, name: description, widget: text, i18n: true}
       - {label: Thumbnail, name: thumbnail, widget: nsp-image, required: false, width: 750, i18n: duplicate}
       - {label: Body, name: body, widget: markdown, i18n: true}
+      - {label: Images, name: images, widget: nsp-image-list, width: 750, i18n: duplicate, required: false}
   - name: "album"
     label: "Album"
     folder: "site/content/album"
