@@ -29,7 +29,12 @@ packages:
       - name: Location scouting
       - name: Evening shooting
       - name: Photobooth
-        description: 400 prints included
+        description: >-
+          I will set up [my photobooth](/en/post/photobooth) at your evening
+          location.
+
+
+          400 prints are included.
   - price: 5900
     name: Ocean 🌊
     description: Everything from Stream & River, plus...
@@ -40,5 +45,3 @@ packages:
       - name: Preparation shooting
 ---
 A very special day, two people in love, surrounded by all the beloved people in your life, an unforgettable moment... For you to remember as if it happened yesterday, I will capture all the emotions and moments. Authentic and naturally, in a documentary style, individually adapted to the location and to your wishes. From the styling of the bride, the exchange of the rings, the cutting of the cake to the wedding dance, this special day is full of moments to remember.
-
-For packages River & Ocean, I will set up [/en/post/photobooth](/en/post/photobooth) at your evening location.
