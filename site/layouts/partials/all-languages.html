@@ -1,9 +1,3 @@
-{{ if .IsTranslated }}
-	{{ range .Translations }}
+{{ range $.Site.Home.Translations }}
 	<li><a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a></li>
-	{{ end}}
-{{ else }}
-	{{ range $.Site.Home.AllTranslations }}
-	<li><a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a></li>
-	{{ end }}
 {{ end }}

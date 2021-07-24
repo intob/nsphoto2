@@ -1,5 +1,5 @@
 import validateAuth from "./auth";
-import { getKeyFromRequestUrl, getMimeTypeFromRequest, getMimeTypeFromKey, store, validateReferer } from "./util";
+import { getKeyFromRequestUrl, getMimeTypeFromRequest, getMimeTypeFromKey, store } from "./util";
 
 export const keyTtl = 31556926; // 1 year in s
 const refreshThreshold = 7776000000; // 3 months in ms
@@ -16,7 +16,7 @@ addEventListener("fetch", event => {
  */
 
 async function handle(request) {
-	if (validateReferer(request.headers.get("referer")) && request.method === "GET") {
+	if (request.method === "GET") {
 		const key = getKeyFromRequestUrl(request.url);
 		if (!key) {
 			return Promise.resolve(new Response("Not found", { status: 404 }));
