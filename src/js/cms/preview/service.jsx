@@ -31,6 +31,7 @@ export default class ServicePreview extends React.Component {
 					<>
 						<li>
 							<h4>{ f.getIn(["name"]) }</h4>
+							<div class="price">{ f.getIn(["price"]) }</div>
 							<p>{ f.getIn(["description"]) }</p>
 						</li>
 					</>

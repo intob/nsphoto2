@@ -16,6 +16,10 @@ section ul ul li h4 {
 	display: inline-block;
 }
 
+section ul ul li .price {
+	margin-left: 10px;
+}
+
 section.packages ul ul li::marker {
 	content: "✔️ ";
 	font-size: 1.25rem;

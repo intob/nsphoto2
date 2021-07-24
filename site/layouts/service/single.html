@@ -26,12 +26,12 @@
 						{{ range .features }}
 							<li>
 								<h4>{{ .name }}</h4>
+								{{ if .price }}
+									<div class="price">{{ .price }}</div>
+								{{ end }}
 								{{ if .description }}
 									<p>{{ markdownify .description }}</p>
 								{{ end }}
-							{{ if .price }}
-								<div class="price">{{ .price }}</div>
-							{{ end }}
 							</li>
 						{{ end }}
 					</ul>
