@@ -12,7 +12,8 @@ packages:
     features:
       - name: Erstes Treffen
         description: Ich treffe mich immer mit meinen Kunden vor ihrem Hochzeitstag.
-          Dies ist um das Eis zu brechen, damit wir natürliche und authentische Fotos.
+          Dies ist um das Eis zu brechen, damit wir natürliche und authentische
+          Fotos.
       - name: Dauer
         description: 3 Std.
       - name: Brautpaar-Shooting
