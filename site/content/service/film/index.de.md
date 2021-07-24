@@ -13,6 +13,9 @@ packages:
       - name: 8 Stunden Einsatzdauer
       - name: Post-Produktion
         description: 225.- pro Stunde
+  - price: ""
+    name: Mehrtägiges Projekt
+    description: Für größere Projekte kontaktieren Sie mich bitte für ein Angebot.
 ---
 Ich habe Fähigkeiten für praktisch alle Anforderungen beim Filmen, einschließlich:
 
