@@ -1,6 +1,6 @@
 ---
 title: Über mich
-date: 2021-07-24T12:48:47.175Z
+date: 2021-07-24T12:57:13.625Z
 description: Eine kurze Geschichte meines Lebens und meiner Interessen.
 thumbnail:
   - https://media-store.dr-useless.workers.dev/image/avif/fd84211fa6ca66ebd63216cd593615ea984701509ad9bda8ea2985158002201c
