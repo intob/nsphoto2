@@ -1,7 +1,7 @@
 ---
 title: About me
 date: 2021-07-24T12:57:13.625Z
-description: A brief history of my life & interests.
+description: A brief description of my life & interests.
 thumbnail:
   - https://media-store.dr-useless.workers.dev/image/avif/1a0fdb08806101380750ea7909bb047728f6f3b59aa4fd5ff41528673617eb2d
   - https://media-store.dr-useless.workers.dev/image/webp/2be430a6ec09805f2e16cc4653aeb930e1147c8e426ff55f65bb5c54bd001191
