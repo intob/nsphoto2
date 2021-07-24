@@ -15,4 +15,5 @@ picture img {
 	object-fit: cover;
 	object-position: center center;
 	width: 100%;
+	border-radius: 5px;
 }

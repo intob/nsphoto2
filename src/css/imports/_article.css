@@ -5,6 +5,11 @@ article section {
 	padding: 10px 0;
 }
 
+article section.padding-side {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
 article .limit-width {
 	align-self: center;
 	width: calc(100% - 10px);

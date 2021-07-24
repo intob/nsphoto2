@@ -1,9 +1,4 @@
-.grid-list {
-	width: 100%;
-}
-
-.grid-list-item {
-	position: relative;
+.list-item {
 	display: flex;
 	width: 100%;
 	margin-bottom: 20px;
@@ -11,9 +6,7 @@
 	transition: 0.25s;
 }
 
-.grid-list-item::after {
-	position: absolute;
-	bottom: 0;
+.item-details::after {
 	content: '';
 	display: block;
 	width: 0;
@@ -22,31 +15,31 @@
 	transition: width .3s;
 }
 
-.grid-list-item:hover::after,
-.link:hover::after {
+.list-item:hover .item-details::after {
 	width: 100%;
 }
 
-.grid-list-item img {
+.list-item img {
 	width: 120px;
 	height: auto;
 	max-height: 100px;
 }
 
-.item-description {
+.item-details {
 	display: block;
+	margin-left: 5px;
 }
 
-.grid-list-item h2, .grid-list-item p {
+.list-item h2, .list-item p {
 	margin: 5px;
 }
 
-.grid-list-item h3 {
+.list-item h3 {
 	margin: 0;
 }
 
 @media (min-width: 600px) {
-	.grid-list-item img {
+	.list-item img {
 		width: 300px;
 		height: 100%;
 		max-height: unset;

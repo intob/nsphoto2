@@ -37,7 +37,6 @@
 }
 
 .hero-grid-item picture img {
-	border-radius: 5px;
 	transition: filter 0.25s;
 }
 

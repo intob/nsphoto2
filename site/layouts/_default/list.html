@@ -2,7 +2,7 @@
 	<article>
 		<section class="limit-width">
 			<h1>{{ i18n (lower .Title) }}</h1>
-			<div class="grid-list">
+			<div class="list">
 				{{ range (.Paginator 16).Pages.ByPublishDate }}
 						{{ .Render "li"}}
 				{{ end }}
