@@ -11,6 +11,15 @@
 				{{ partial "picture" .Params.thumbnail }}
 			{{ end }}
 			{{ .Content }}
+			{{ if .Params.images }}
+				<div class="media-grid">
+					{{ range $i, $image := .Params.images}}
+						<div class="media-grid-item" style="order: {{ $i }}">
+							{{ partial "picture" $image }}
+						</div>
+					{{ end }}
+				</div>
+			{{ end }}
 		</section>
 	</article>
 {{ end }}
