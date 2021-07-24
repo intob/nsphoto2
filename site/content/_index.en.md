@@ -4,39 +4,6 @@ subtitle: Photo & Film
 intro: Award-winning reportage photographer & filmmaker
 description: Based in Switzerland, available worldwide
 images:
-  - - https://media-store.dr-useless.workers.dev/image/avif/b9c2907c5adb9c4618cb0b0d860a1b30511264016731196c83b1b725222a0695
-    - https://media-store.dr-useless.workers.dev/image/webp/88c3cfe8a6d87c66656aa00dafe3bc1b6acfca37181d4bc63e5cb8597cf754b9
-    - https://media-store.dr-useless.workers.dev/image/jpeg/6cd34cbdc35824c5d2b7f9df3db5f6aa996351257ba4899578d695c1891a9741
-  - - https://media-store.dr-useless.workers.dev/image/avif/679b758eb88c93e8a80244308cc30d8c2a2d072d80f0c02a6d6f46bdad9b46aa
-    - https://media-store.dr-useless.workers.dev/image/webp/fed6643574308ad203a9349d8950d186d09890ea17410e63bd221fd72d2dd19c
-    - https://media-store.dr-useless.workers.dev/image/jpeg/b140a6b9bc7441e82c85eab2178390f6d5b094e2c9eb9f32d3ab5feeaab885b0
-  - - https://media-store.dr-useless.workers.dev/image/avif/5851ac69173e59cbfc2c46b621907a10691f755ecd4b0df6a909044cf19a148a
-    - https://media-store.dr-useless.workers.dev/image/webp/128b296d4f0897f6fca86189920d17b7598c5628a760cd1a36842cc9a7307389
-    - https://media-store.dr-useless.workers.dev/image/jpeg/b813bc31532431d64901d202aa60e862cb65c2685fe07a6eca4ce41aab162ce7
-  - - https://media-store.dr-useless.workers.dev/image/avif/f365844f6b16352b47727ac09e3847bd0df3375b8ac2472e538454f718367f32
-    - https://media-store.dr-useless.workers.dev/image/webp/610652ebfed23ce6c045815e88c4b30d4412031e01e58bad5ffe5aa53764b270
-    - https://media-store.dr-useless.workers.dev/image/jpeg/5004e9cb57efec5b1c89c94ca2eaa471e8dcf678bade430c898d2d97eb9459a9
-  - - https://media-store.dr-useless.workers.dev/image/avif/77df6f7ef6ab2f31e1ea1d9f7220cfd86ed18b3e85646e8617f059d6307bcb77
-    - https://media-store.dr-useless.workers.dev/image/webp/45dc3bdc87879831a75c2151269e8baac67953da112fe66fc1e5167b4a471e19
-    - https://media-store.dr-useless.workers.dev/image/jpeg/c49288551300ae4efd68488aa32912db4353dde2987aa2db308de71f02a228f6
-  - - https://media-store.dr-useless.workers.dev/image/avif/8365be0e362c26f9fb787e0d8e166574d969c865ff7db07f2f0e9af7cd9ac6d2
-    - https://media-store.dr-useless.workers.dev/image/webp/9c76cf0c0305b961d6f376f98fda81b67617af34bc905a39a5eeda7590ac9371
-    - https://media-store.dr-useless.workers.dev/image/jpeg/c5be9fc7292c115e7a88b0404a22a08398beb9ca59da2e6b3d13f0226bb1ac35
-  - - https://media-store.dr-useless.workers.dev/image/avif/9839a2de881b0af730144d641e509237c1edee3daf6183613daf944b9529211c
-    - https://media-store.dr-useless.workers.dev/image/webp/ec6ba9edfd113bb1eea25b922ee1ddf18d13e476c0da46a0f50f697c9ba2e12e
-    - https://media-store.dr-useless.workers.dev/image/jpeg/5a8c5596ec2c10e1d7c2cec1715b70d45b4c61cba3964a5716cec59cc35ee904
-  - - https://media-store.dr-useless.workers.dev/image/avif/5561522abbceb3c72b4f3441779b9fcb2e283e9d369046d1b2657d88361e1bd6
-    - https://media-store.dr-useless.workers.dev/image/webp/7308734129486a1104a0cc515cc85c953036d430cc412cfc01f2a622345d4676
-    - https://media-store.dr-useless.workers.dev/image/jpeg/0abbffbe4b77c611f1fd960131615e7811a01e9ffc83f7c0e9be9450dc50db34
-  - - https://media-store.dr-useless.workers.dev/image/avif/28d7a553180c129322eda6c22e6be0e16220ddd9f7a9dc550ef5e4381400f684
-    - https://media-store.dr-useless.workers.dev/image/webp/fbc87c3e62a92c11d0fbbf70796f67af01c140c35e40d64fbe01a8ea392e5034
-    - https://media-store.dr-useless.workers.dev/image/jpeg/74c5aee84ec65abb7372cb6f3d4d6e3f5e4b43390512fb85325b771e01345445
-  - - https://media-store.dr-useless.workers.dev/image/avif/b93b8fa2c2fe6cbf76f465e34da7b1391c1a8e2b127d487ddfacc1476907e680
-    - https://media-store.dr-useless.workers.dev/image/webp/323b78eedba202671118fed0f11462d464465bb08547299ec2ebd5d691e5acb2
-    - https://media-store.dr-useless.workers.dev/image/jpeg/9ffd44298a7ee712c28421c60c2b0fc83ca37f6425d355fc14048d25e4e23411
-  - - https://media-store.dr-useless.workers.dev/image/avif/a14aa5b0f95051faff4c6c8b06f36a91fb0ae955f8858ab4b34b8557852a6a5c
-    - https://media-store.dr-useless.workers.dev/image/webp/4884499993e6996f27b4e8486127247d7f7c0852b0410f8828fffce7fa055450
-    - https://media-store.dr-useless.workers.dev/image/jpeg/352df5c509b9c272b92091ce045d05a4ea1db158ac8068a2b444608cd88bddeb
   - - https://media-store.dr-useless.workers.dev/image/avif/f8731833d83f1eef9a1e6b6f7217f5b707583c75a2d74549894ef4e024e4a54f
     - https://media-store.dr-useless.workers.dev/image/webp/6c282acd13d4bef7b77c15490fe11accf25eba03581c4a90920f6c42c023ae6e
     - https://media-store.dr-useless.workers.dev/image/jpeg/5adb5f4925dd57e6f99589fca652829d9fc6139321be3f608c7fc37fdc6ca03b
@@ -52,27 +19,15 @@ images:
   - - https://media-store.dr-useless.workers.dev/image/avif/ca8c63f0bd0fa107feff3addc6075521350ff4f9a4abf16f2f56b5f82bdae828
     - https://media-store.dr-useless.workers.dev/image/webp/eea428b886d66baa857f665906520f93a85d39349dc1bfe9d9d815cf15c7ed6c
     - https://media-store.dr-useless.workers.dev/image/jpeg/f97ba2e33039fb958b965139d2ae0194c6109f2bc613185de9f891d66e4a5ae4
-  - - https://media-store.dr-useless.workers.dev/image/avif/04b5206e36a966eb61ea3f539ca14b9904db8a3ba910db7d3fd947051b186867
-    - https://media-store.dr-useless.workers.dev/image/webp/ed5349f1f84323206e95741d57d8d16b2c65b53f0c3edc5473ec01bcb0db6172
-    - https://media-store.dr-useless.workers.dev/image/jpeg/4431f8123aed4f6969bd3bd2c146c2a1758d831ac64358014945450228494d75
   - - https://media-store.dr-useless.workers.dev/image/avif/cc8972efdda288ebe6acbf2083702d77136cde90a6d91389e8127f48a20a8150
     - https://media-store.dr-useless.workers.dev/image/webp/b855bdc3d53b647e1a59915e41d1591dd1ec9cb13fdeed6dfe8bffad98c21545
     - https://media-store.dr-useless.workers.dev/image/jpeg/11b3a4f47e9162a91484da3ab2389fef7b26525b5b38bca45ee25f0378623917
-  - - https://media-store.dr-useless.workers.dev/image/avif/ab4577841175de1a6d475195d3de9233a06a8fc76121a64aca888a4fbcd1b467
-    - https://media-store.dr-useless.workers.dev/image/webp/a82848fd80a9ffc2055bfb7ca0c289230d1430b4cfc810ac9b2287772fc5f136
-    - https://media-store.dr-useless.workers.dev/image/jpeg/45624dd3f290441727fc8af5594e7e81f61a350c681153e6258d5b790ac11447
   - - https://media-store.dr-useless.workers.dev/image/avif/b37c78a2bd4167aa199b44c03a5e7dbcaa872c05c41929b27ab97948c6b195f7
     - https://media-store.dr-useless.workers.dev/image/webp/5dab55d7cf9d21c8ccd5e2819bc2d35bac9a46229ce9b6edc02c97b564d67566
     - https://media-store.dr-useless.workers.dev/image/jpeg/19794277d15061142d7a748611e24d7bfc5fcd503cef563880dcc695f8383055
   - - https://media-store.dr-useless.workers.dev/image/avif/43973abab8ef9de3d2d79d6e57aa7230706bb542bab6d5812ae5c87357d8949c
     - https://media-store.dr-useless.workers.dev/image/webp/7410a19da53fdde94483056c3ef3900b0fdb7f766ff11295b506f53a0b7f86ae
     - https://media-store.dr-useless.workers.dev/image/jpeg/7ad828a28ab5616bb45b5304667c806a55822377caf47bfe35c693d80014b56c
-  - - https://media-store.dr-useless.workers.dev/image/avif/b1eae5654e3b82a7ced5bd367604e6bd8e30601f7c4338cf49c5269d84066a91
-    - https://media-store.dr-useless.workers.dev/image/webp/2c156a25939be22cca6a89a0ec9e38337e8c24a57e69c044c92675857ea740e3
-    - https://media-store.dr-useless.workers.dev/image/jpeg/c46ad1f94f12dd78288ba443c334b2215fee5a70df35193d169b15244419aae1
-  - - https://media-store.dr-useless.workers.dev/image/avif/aa7f33468a9d158a35c74994825dfbc3599f742d05be363c0872c14af5dee690
-    - https://media-store.dr-useless.workers.dev/image/webp/86e28600a7a3c186f509bf764560590bf7e7e0829f97778a937ee63eb27cf766
-    - https://media-store.dr-useless.workers.dev/image/jpeg/c6805162fc5ae015fdd74eaa0102083d198532816d6400a524c8ed684c444702
   - - https://media-store.dr-useless.workers.dev/image/avif/9ffacb4c553ceb76de331d9716d494fd3b32276567e9fab47848908450d9eace
     - https://media-store.dr-useless.workers.dev/image/webp/98580b1c9b65afb89112fc89134edfeb025091a61accb0b464e6a315fe99d193
     - https://media-store.dr-useless.workers.dev/image/jpeg/91144045ff3de321518f471aea97653389ea4d35b20e6a894cd206afe32490fb
@@ -106,6 +61,9 @@ images:
   - - https://media-store.dr-useless.workers.dev/image/avif/c154c6b04541dadb103f3ac731e891d487329aa27f36be52038aa5092e60c3e5
     - https://media-store.dr-useless.workers.dev/image/webp/816426a8497f2610b2c59b9bc13c8ccca72a50d53c896705787095a5c9d382e2
     - https://media-store.dr-useless.workers.dev/image/jpeg/4cf5b60d5a293376f183383bbbfbddfd3e5aec6272e01b232c193a8fec0d94e4
+  - - https://media-store.dr-useless.workers.dev/image/avif/ab4577841175de1a6d475195d3de9233a06a8fc76121a64aca888a4fbcd1b467
+    - https://media-store.dr-useless.workers.dev/image/webp/a82848fd80a9ffc2055bfb7ca0c289230d1430b4cfc810ac9b2287772fc5f136
+    - https://media-store.dr-useless.workers.dev/image/jpeg/45624dd3f290441727fc8af5594e7e81f61a350c681153e6258d5b790ac11447
   - - https://media-store.dr-useless.workers.dev/image/avif/c8e81cf3f56f78e092701c8928337a08c74b185d76f203df9948ff8c3f2b92c8
     - https://media-store.dr-useless.workers.dev/image/webp/0de7a397d1336a8417365a3a9c7496cf4e03692ed0cfa3fd3c9d15cb0273a771
     - https://media-store.dr-useless.workers.dev/image/jpeg/f9ffe2fe6e87544fb068a6a4d6661403e1c2f0f0cfc70b0e2f621bacbcc387e0
@@ -127,6 +85,9 @@ images:
   - - https://media-store.dr-useless.workers.dev/image/avif/86f4dcf3abef78c114d7ac8ca9a7712111eb835f1686ee4c89d1558b4adaf717
     - https://media-store.dr-useless.workers.dev/image/webp/3bbb0f1672089f677e1825d6666541f197374f0e26e914ed83bfc6bcd5b413f3
     - https://media-store.dr-useless.workers.dev/image/jpeg/4e2d710fe0699b53b8d1c85edebe3d6276a52c86f768d1f3e7d83348450a6c98
+  - - https://media-store.dr-useless.workers.dev/image/avif/04b5206e36a966eb61ea3f539ca14b9904db8a3ba910db7d3fd947051b186867
+    - https://media-store.dr-useless.workers.dev/image/webp/ed5349f1f84323206e95741d57d8d16b2c65b53f0c3edc5473ec01bcb0db6172
+    - https://media-store.dr-useless.workers.dev/image/jpeg/4431f8123aed4f6969bd3bd2c146c2a1758d831ac64358014945450228494d75
   - - https://media-store.dr-useless.workers.dev/image/avif/bd9d936e1a907eb0a871023a40bfea9f85d151b94fc0fc4fd39782bfd2bf03af
     - https://media-store.dr-useless.workers.dev/image/webp/20e6a93deaec99b53d9100ee39e0cf41f25c775a003becfdb2ee76c23e22d932
     - https://media-store.dr-useless.workers.dev/image/jpeg/027318b6b184d0a3304352cb5be8086229f0ed2557ff16e18f71c417d4715485
@@ -139,6 +100,9 @@ images:
   - - https://media-store.dr-useless.workers.dev/image/avif/761c1bb6d4e09e9b7659add7f60ef065cbd8db630cdc910e12c819cbc2e42124
     - https://media-store.dr-useless.workers.dev/image/webp/124c4cb79c836854398e1ea55d2aeedf4708f0b81ba0d8cfae0aef0a96b744b7
     - https://media-store.dr-useless.workers.dev/image/jpeg/4aba6f88a5ee66daa69a0f9941c0cd206e6d19f17275b7810dd9b30a7c7a24b2
+  - - https://media-store.dr-useless.workers.dev/image/avif/28d7a553180c129322eda6c22e6be0e16220ddd9f7a9dc550ef5e4381400f684
+    - https://media-store.dr-useless.workers.dev/image/webp/fbc87c3e62a92c11d0fbbf70796f67af01c140c35e40d64fbe01a8ea392e5034
+    - https://media-store.dr-useless.workers.dev/image/jpeg/74c5aee84ec65abb7372cb6f3d4d6e3f5e4b43390512fb85325b771e01345445
   - - https://media-store.dr-useless.workers.dev/image/avif/4552928e0ce9c82b83724d7ddfcb377fdb57781efb693b4de52573eb7c66f505
     - https://media-store.dr-useless.workers.dev/image/webp/c1e5229d6ac471379c3cfa271f2bbb454415372e1205c6a4829124c7099f24a8
     - https://media-store.dr-useless.workers.dev/image/jpeg/7c7750fae22d2cb3ebcd2bd773b0578d41fdb7d98afe6efe1feb0a9095efc746
@@ -151,6 +115,9 @@ images:
   - - https://media-store.dr-useless.workers.dev/image/avif/204997d9cbe72d375286eab9198c53a1224b6bf7c3a24f3dc8b6ba15542b390b
     - https://media-store.dr-useless.workers.dev/image/webp/de8792c75c48c252a62fa7de03a35f47cdff9098acb43fd907c922fc53210bdd
     - https://media-store.dr-useless.workers.dev/image/jpeg/b34e6302c7460802a09edf387d0fd42f17287d297a05f9f1a30df7e8bf7cd68b
+  - - https://media-store.dr-useless.workers.dev/image/avif/b1eae5654e3b82a7ced5bd367604e6bd8e30601f7c4338cf49c5269d84066a91
+    - https://media-store.dr-useless.workers.dev/image/webp/2c156a25939be22cca6a89a0ec9e38337e8c24a57e69c044c92675857ea740e3
+    - https://media-store.dr-useless.workers.dev/image/jpeg/c46ad1f94f12dd78288ba443c334b2215fee5a70df35193d169b15244419aae1
   - - https://media-store.dr-useless.workers.dev/image/avif/ab69221fe62c7c2e769518c99976f20b45ac7c2f2e9c987e93b4253def26aff7
     - https://media-store.dr-useless.workers.dev/image/webp/eb5115f0de5c99f30f5b6678516e3634e59505d37d7f8b2b6e5abeb405b1271f
     - https://media-store.dr-useless.workers.dev/image/jpeg/bc92dd3e62413c4a353f3d6952da605ebf632a4437c8d862cffceba46ed578dd
@@ -178,6 +145,9 @@ images:
   - - https://media-store.dr-useless.workers.dev/image/avif/adfbb66b93ca76cbf7c566a6de49316aa4d632932e59ba6b393a40234988038b
     - https://media-store.dr-useless.workers.dev/image/webp/27d8ffda4dba9d0f0c5092448c033916ed8b104d09c587f9e87360939f7ac3ca
     - https://media-store.dr-useless.workers.dev/image/jpeg/e878c8bb52761d12ad8382a68e962cead862e2c4e434d72f04c9fa2d00008aef
+  - - https://media-store.dr-useless.workers.dev/image/avif/aa7f33468a9d158a35c74994825dfbc3599f742d05be363c0872c14af5dee690
+    - https://media-store.dr-useless.workers.dev/image/webp/86e28600a7a3c186f509bf764560590bf7e7e0829f97778a937ee63eb27cf766
+    - https://media-store.dr-useless.workers.dev/image/jpeg/c6805162fc5ae015fdd74eaa0102083d198532816d6400a524c8ed684c444702
   - - https://media-store.dr-useless.workers.dev/image/avif/24a695c00e9507dcb4dfb2b18bfbb9c77eb7f83452f61569abec5a54f8bd62c4
     - https://media-store.dr-useless.workers.dev/image/webp/7fbf8fb2daa0a07e660c6d8d45d241eb5514ecb64aabeb8c491b144f8e340604
     - https://media-store.dr-useless.workers.dev/image/jpeg/26fa95fe1b3c68586e57cd182890981a2a217d22a8e667b5ec203fd5215e8f01
@@ -220,6 +190,9 @@ images:
   - - https://media-store.dr-useless.workers.dev/image/avif/7b65351cf13c6d1536acdb350a1e64e73e04c966dd11bc6cc1d93f726b73fe59
     - https://media-store.dr-useless.workers.dev/image/webp/2b490115bd4e19668d4e91d3ce23453b255d29c04f659349269661de88cd0d67
     - https://media-store.dr-useless.workers.dev/image/jpeg/e05809d893912a636fea871ac677fe45b01d92f1c7f370bce2dd6264ee40fc1b
+  - - https://media-store.dr-useless.workers.dev/image/avif/b93b8fa2c2fe6cbf76f465e34da7b1391c1a8e2b127d487ddfacc1476907e680
+    - https://media-store.dr-useless.workers.dev/image/webp/323b78eedba202671118fed0f11462d464465bb08547299ec2ebd5d691e5acb2
+    - https://media-store.dr-useless.workers.dev/image/jpeg/9ffd44298a7ee712c28421c60c2b0fc83ca37f6425d355fc14048d25e4e23411
   - - https://media-store.dr-useless.workers.dev/image/avif/65d22c576b61773508cf905b2624ab178558c632146df220a1a3899359402225
     - https://media-store.dr-useless.workers.dev/image/webp/f7bbc655381174e63a4a186923f022915666235a31291d3f8c4441dd1a0ef60a
     - https://media-store.dr-useless.workers.dev/image/jpeg/1ccb2209ab6cea2279ad8ea594714b99a28c75b5da04070cc49c3a9e7847fd48
@@ -250,6 +223,9 @@ images:
   - - https://media-store.dr-useless.workers.dev/image/avif/aaca7109d25108260ec52d2dda55333a3245c6aee18d80acfe806f1fe3b7f86e
     - https://media-store.dr-useless.workers.dev/image/webp/e33727ce3034404d328a12f86efb97068d3ca069f8c370073b0bc1ea524e3fc7
     - https://media-store.dr-useless.workers.dev/image/jpeg/4c759f14527a80cd7a6eb9e571b6609a6ac0fb5940d82f8a64b38027f8ede6f1
+  - - https://media-store.dr-useless.workers.dev/image/avif/a14aa5b0f95051faff4c6c8b06f36a91fb0ae955f8858ab4b34b8557852a6a5c
+    - https://media-store.dr-useless.workers.dev/image/webp/4884499993e6996f27b4e8486127247d7f7c0852b0410f8828fffce7fa055450
+    - https://media-store.dr-useless.workers.dev/image/jpeg/352df5c509b9c272b92091ce045d05a4ea1db158ac8068a2b444608cd88bddeb
   - - https://media-store.dr-useless.workers.dev/image/avif/11efa20b5f16facea2ff36bb459565751b0e8bf57e88fa81c1f0eb930f89aaf0
     - https://media-store.dr-useless.workers.dev/image/webp/bf77397f559f7807fcdf807fe6d7ec5762a78d290edbdbb68b39ca08216f39ef
     - https://media-store.dr-useless.workers.dev/image/jpeg/d645df1b8dd42a230f3c24b9f8f22a7e6bffea40c7bba0f98b30e7fe331fb630
@@ -280,6 +256,30 @@ images:
   - - https://media-store.dr-useless.workers.dev/image/avif/80020cf01ba67006d4e13ed5f17e0e792d9b38e712b1fbae749f01248c389709
     - https://media-store.dr-useless.workers.dev/image/webp/07041e5b6bf307784347fc8baa1c5e3d2802375eab58c638d7021f065dbb7fb8
     - https://media-store.dr-useless.workers.dev/image/jpeg/c98e49780add21519651f3e91b8fe11df7aaf5e41d8e73f55ee77cc8bbb1989e
+  - - https://media-store.dr-useless.workers.dev/image/avif/b9c2907c5adb9c4618cb0b0d860a1b30511264016731196c83b1b725222a0695
+    - https://media-store.dr-useless.workers.dev/image/webp/88c3cfe8a6d87c66656aa00dafe3bc1b6acfca37181d4bc63e5cb8597cf754b9
+    - https://media-store.dr-useless.workers.dev/image/jpeg/6cd34cbdc35824c5d2b7f9df3db5f6aa996351257ba4899578d695c1891a9741
+  - - https://media-store.dr-useless.workers.dev/image/avif/679b758eb88c93e8a80244308cc30d8c2a2d072d80f0c02a6d6f46bdad9b46aa
+    - https://media-store.dr-useless.workers.dev/image/webp/fed6643574308ad203a9349d8950d186d09890ea17410e63bd221fd72d2dd19c
+    - https://media-store.dr-useless.workers.dev/image/jpeg/b140a6b9bc7441e82c85eab2178390f6d5b094e2c9eb9f32d3ab5feeaab885b0
+  - - https://media-store.dr-useless.workers.dev/image/avif/5851ac69173e59cbfc2c46b621907a10691f755ecd4b0df6a909044cf19a148a
+    - https://media-store.dr-useless.workers.dev/image/webp/128b296d4f0897f6fca86189920d17b7598c5628a760cd1a36842cc9a7307389
+    - https://media-store.dr-useless.workers.dev/image/jpeg/b813bc31532431d64901d202aa60e862cb65c2685fe07a6eca4ce41aab162ce7
+  - - https://media-store.dr-useless.workers.dev/image/avif/f365844f6b16352b47727ac09e3847bd0df3375b8ac2472e538454f718367f32
+    - https://media-store.dr-useless.workers.dev/image/webp/610652ebfed23ce6c045815e88c4b30d4412031e01e58bad5ffe5aa53764b270
+    - https://media-store.dr-useless.workers.dev/image/jpeg/5004e9cb57efec5b1c89c94ca2eaa471e8dcf678bade430c898d2d97eb9459a9
+  - - https://media-store.dr-useless.workers.dev/image/avif/77df6f7ef6ab2f31e1ea1d9f7220cfd86ed18b3e85646e8617f059d6307bcb77
+    - https://media-store.dr-useless.workers.dev/image/webp/45dc3bdc87879831a75c2151269e8baac67953da112fe66fc1e5167b4a471e19
+    - https://media-store.dr-useless.workers.dev/image/jpeg/c49288551300ae4efd68488aa32912db4353dde2987aa2db308de71f02a228f6
+  - - https://media-store.dr-useless.workers.dev/image/avif/8365be0e362c26f9fb787e0d8e166574d969c865ff7db07f2f0e9af7cd9ac6d2
+    - https://media-store.dr-useless.workers.dev/image/webp/9c76cf0c0305b961d6f376f98fda81b67617af34bc905a39a5eeda7590ac9371
+    - https://media-store.dr-useless.workers.dev/image/jpeg/c5be9fc7292c115e7a88b0404a22a08398beb9ca59da2e6b3d13f0226bb1ac35
+  - - https://media-store.dr-useless.workers.dev/image/avif/9839a2de881b0af730144d641e509237c1edee3daf6183613daf944b9529211c
+    - https://media-store.dr-useless.workers.dev/image/webp/ec6ba9edfd113bb1eea25b922ee1ddf18d13e476c0da46a0f50f697c9ba2e12e
+    - https://media-store.dr-useless.workers.dev/image/jpeg/5a8c5596ec2c10e1d7c2cec1715b70d45b4c61cba3964a5716cec59cc35ee904
+  - - https://media-store.dr-useless.workers.dev/image/avif/5561522abbceb3c72b4f3441779b9fcb2e283e9d369046d1b2657d88361e1bd6
+    - https://media-store.dr-useless.workers.dev/image/webp/7308734129486a1104a0cc515cc85c953036d430cc412cfc01f2a622345d4676
+    - https://media-store.dr-useless.workers.dev/image/jpeg/0abbffbe4b77c611f1fd960131615e7811a01e9ffc83f7c0e9be9450dc50db34
 client_logos:
   - - https://media-store.dr-useless.workers.dev/image/avif/97a6619095f45fee1d3abfc452b7d2eda6a4cbc1fbb8da73179bad2b3b660389
     - https://media-store.dr-useless.workers.dev/image/webp/181786acdf22e73b65d3eca734abb9105c37838f0b58cf14e9c7a007bb8c3d58
