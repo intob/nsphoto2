@@ -74,7 +74,7 @@ collections:
       - {label: Body, name: body, widget: markdown, buttons: [bold, italic, code, link, heading-two, heading-three, heading-four, heading-five, heading-six, quote, bulleted-list, numbered-list], required: false, i18n: true}
       - {label: "Packages", name: "packages", widget: list, i18n: true, fields: [
           {label: Name, name: "name", widget: string, i18n: true},
-          {label: Description, name: description, widget: text, i18n: true},
+          {label: Description, name: description, widget: text, i18n: true, required: false},
           {label: Price, name: price, widget: number, value_type: int, min: 0, step: 1, default: 100, i18n: duplicate, required: false},
           {label: Features, name: features, widget: list, i18n: true, fields: [
             {label: Name, name: "name", widget: string, i18n: true},

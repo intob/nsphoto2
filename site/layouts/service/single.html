@@ -19,12 +19,16 @@
 							<h3 class="price">{{ .price }}.- CHF</h3>
 						{{ end }}
 					</header>
-					<p>{{ .description }}</p>
+					{{ if .description}}
+						<p>{{ .description }}</p>
+					{{ end }}
 					<ul>
 						{{ range .features }}
 							<li>
 								<h4>{{ .name }}</h4>
-							<p>{{ .description }}</p>
+							{{ if .description }}
+								<p>{{ .description }}</p>
+							{{ end }}
 							</li>
 						{{ end }}
 					</ul>
