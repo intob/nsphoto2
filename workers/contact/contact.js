@@ -20,11 +20,22 @@ async function handle(request) {
 	const headers = {
 		"Content-Type": "application/json",
 		"Access-Control-Allow-Origin": "*",
+		"Vary": "Origin"
 	};
 
 	try {
 		if (request.method !== "POST") {
 			throw {status: "error", statusCode: 405, message: "Method not allowed, use POST"};
+		}
+
+		const recaptchaToken = request.headers.get("g-recaptcha");
+		if (!recaptchaToken) {
+			throw {status: "error", statusCode: 405, message: "reCaptcha header missing"};
+		}
+
+		const recaptchaIsValid = await verifyRecaptcha(recaptchaToken);
+		if (!recaptchaIsValid) {
+			throw {status: "error", statusCode: 400, message: "Invalid reCaptcha"};
 		}
 
 		const {name, email, phone, message} = await parseRequest(request);
@@ -37,30 +48,29 @@ async function handle(request) {
 			throw {status: "error", statusCode: 400, message: "Please enter a valid email address"};
 		}
 
-		const recaptchaToken = request.headers.get("g-recaptcha");
-		if (!recaptchaToken) {
-			throw {status: "error", statusCode: 405, message: "reCaptcha header missing"};
-		}
-
-		const recaptchaIsValid = true;//await verifyRecaptcha(recaptchaToken);
-		if (!recaptchaIsValid) {
-			throw {status: "error", statusCode: 400, message: "Invalid reCaptcha"};
-		}
-
 		const notification = buildNotification(name, email, phone, message);
 
-		sendTelegramMessage(notification);
+		return sendTelegramMessage(notification)
+			.catch(error => {
+				return new Response(JSON.stringify({status: "error", message: error}), {
+					status: 500,
+					headers,
+				});
+			})
+			.then(() => {
+				return new Response(JSON.stringify({status: "sucesss", message: "Sent"}), {
+					status: 200,
+					headers,
+				});
+			});
 
-		const pushoverResponse = await (await sendPushoverNotification(notification)).json();
+		/*const pushoverResponse = await (await sendPushoverNotification(notification)).json();
 
 		if (pushoverResponse.status !== 1) {
 			throw {status: "error", statusCode: 500, message: "Failed to send notification"};
-		}
+		}*/
 
-		return new Response(JSON.stringify({status: "sucesss", message: "Sent"}), {
-			status: 200,
-			headers,
-		});
+		
 	} catch (error) {
 			return new Response(JSON.stringify(error), {
 				status: error.statusCode,
@@ -124,11 +134,12 @@ async function verifyRecaptcha(recaptchaToken) {
 
 function sendTelegramMessage(notification) {
 	if (!TELEGRAM_CHATS || !TELEGRAM_BOT_TOKEN) {
-		return Promise.resolve();
+		return Promise.reject("TELEGRAM_CHATS or TELEGRAM_BOT_TOKEN is missing");
 	}
+	const notificationEncoded = encodeURIComponent(notification);
 	const chats = TELEGRAM_CHATS.split(',');
 	const promises = chats.map(chatId => {
-		return fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage?chat_id=${chatId}&text=${notification}`);
+		return fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage?chat_id=${chatId}&text=${notificationEncoded}`);
 	});
 	return Promise.allSettled(promises);
 }
