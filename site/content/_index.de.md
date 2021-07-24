@@ -1,7 +1,7 @@
 ---
 title: Nicole Schafer
 subtitle: Photo & Film
-intro: Preisgekrönte Reportage Fotografin und Filmemacherin
+intro: Preisgekrönte Reportage-Fotografin & Filmemacherin
 description: Sitz in der Schweiz, weltweit verfügbar
 images:
   - - https://media-store.dr-useless.workers.dev/image/avif/f8731833d83f1eef9a1e6b6f7217f5b707583c75a2d74549894ef4e024e4a54f
