@@ -24,8 +24,8 @@ images:
     - https://media-store.dr-useless.workers.dev/image/webp/fb7f24fed7bbbf5a1c0f8fb156156d023eed4d41afdcae447d202553a0aaec85
     - https://media-store.dr-useless.workers.dev/image/jpeg/cc2921eec931ed232504160eb9a2552a064497c8278b012f19a3179a9ec301eb
 ---
-After a long development process and the cooperation of a top carpenter from the region, I would like to introduce you to my photo box.
+After a long development process and the cooperation of a top carpenter from the region, I would like to introduce you to my photobooth.
 
-Since 2013 my Photobooth is at weddings and many requests for exhibitions, events and birthdays have piled up.
+Since 2013 my photobooth has been at weddings and many requests for exhibitions, events and birthdays have piled up.
 
 I can recommend it for every wedding. Fun and awesome memories are guaranteed.
