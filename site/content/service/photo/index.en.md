@@ -9,9 +9,9 @@ thumbnail:
 packages:
   - price: 2000
     name: Standard
-    description: 8 hours shooting
     features:
+      - name: 8 hours shooting
       - name: Editing
-        description: 225.- per hour
+        description: 225.- CHF per hour
 ---
 Look at my portfolio. If you like my style, I'm sure we'll have a productive & fun time shooting for your project.

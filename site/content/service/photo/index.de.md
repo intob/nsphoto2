@@ -9,8 +9,8 @@ thumbnail:
 packages:
   - price: 2000
     name: Standard
-    description: 8 Stunden Einsatzdauer
     features:
+      - name: 8 Stunden Einsatzdauer
       - name: Bearbeiten
         description: 225.- pro Stunde
 ---
