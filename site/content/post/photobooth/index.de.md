@@ -1,5 +1,8 @@
 ---
+title: Photobooth
 date: 2021-07-24T13:38:55.803Z
+description: Auf einem Holzstativ montiert, hält eine schöne handgefertigte Box eine DSLR & professionellen Blitz.
+  Ein Touchscreen macht die Bedienung einfach und macht Spaß.
 thumbnail:
   - https://media-store.dr-useless.workers.dev/image/avif/72b05d7d8af13ee9a750802b770466815f077cc06e9876ee485b5f88ea72c2f3
   - https://media-store.dr-useless.workers.dev/image/webp/db1ea032d54f9ef88a2ece9894eb78531ee816f4bb55d65249151b48e9986ab6
@@ -21,3 +24,8 @@ images:
     - https://media-store.dr-useless.workers.dev/image/webp/fb7f24fed7bbbf5a1c0f8fb156156d023eed4d41afdcae447d202553a0aaec85
     - https://media-store.dr-useless.workers.dev/image/jpeg/cc2921eec931ed232504160eb9a2552a064497c8278b012f19a3179a9ec301eb
 ---
+Nach einem langen Entwicklungsprozess und der Zusammenarbeit mit einem Top-Schreiner aus der Region, möchte ich Ihnen meine Fotobox vorstellen.
+
+Seit 2013 ist mein Photobooth auf Hochzeiten und viele Anfragen für Ausstellungen, Events und Geburtstage haben sich gehäuft.
+
+Ich kann es für jede Hochzeit empfehlen. Spaß und tolle Erinnerungen sind garantiert.
