@@ -19,7 +19,7 @@ packages:
     name: Mehrtägiges Projekt
     description: Für größere Projekte kontaktieren Sie mich bitte für ein Angebot.
 ---
-Meine Nikkon Z7 II macht unglaubliche Fotos, aber ich kann auch stabile, 4k-Videos mit sehr gutem Dynamikumfang aufnehmen. Sie werden überrascht sein, was alles möglich ist.
+Meine Nikon Z7 II macht unglaubliche Fotos, aber ich kann auch stabile, 4k-Videos mit sehr gutem Dynamikumfang aufnehmen. Sie werden überrascht sein, was alles möglich ist.
 
 Dieser Ansatz ist besonders effektiv für Expeditionen und Abenteuer, bei denen das Gewicht der Ausrüstung begrenzt ist, der Zugang schwierig ist und die Zeit knapp ist.
 
