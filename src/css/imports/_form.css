@@ -3,18 +3,9 @@ form {
 	flex-wrap: wrap;
 }
 
-fieldset {
-	border: none;
-	padding: 0;
-}
-
-fieldset:not(.message) {
+input, textarea:not(.message) {
 	margin-right: 10px;
 	margin-bottom: 10px;
-}
-
-fieldset.message {
-	width: calc(100% - 20px);
 }
 
 label {

@@ -23,93 +23,61 @@ async function handle(request) {
 		"Vary": "Origin"
 	};
 
-	try {
-		if (request.method !== "POST") {
-			throw {status: "error", statusCode: 405, message: "Method not allowed, use POST"};
-		}
-
-		const recaptchaToken = request.headers.get("g-recaptcha");
-		if (!recaptchaToken) {
-			throw {status: "error", statusCode: 405, message: "reCaptcha header missing"};
-		}
-
-		const recaptchaIsValid = await verifyRecaptcha(recaptchaToken);
-		if (!recaptchaIsValid) {
-			throw {status: "error", statusCode: 400, message: "Invalid reCaptcha"};
-		}
-
-		const {name, email, phone, message} = await parseRequest(request);
-
-		if (!name || !email || !message) {
-			throw {status: "error", statusCode: 400, message: "Please complete all required fields"};
-		}
-
-		if (!emailRegex.test(email)) {
-			throw {status: "error", statusCode: 400, message: "Please enter a valid email address"};
-		}
-
-		const notification = buildNotification(name, email, phone, message);
-
-		return sendTelegramMessage(notification)
-			.catch(error => {
-				return new Response(JSON.stringify({status: "error", message: error}), {
-					status: 500,
-					headers,
-				});
-			})
-			.then(() => {
-				return new Response(JSON.stringify({status: "sucesss", message: "Sent"}), {
-					status: 200,
-					headers,
-				});
-			});
-
-		/*const pushoverResponse = await (await sendPushoverNotification(notification)).json();
-
-		if (pushoverResponse.status !== 1) {
-			throw {status: "error", statusCode: 500, message: "Failed to send notification"};
-		}*/
-
-		
-	} catch (error) {
-			return new Response(JSON.stringify(error), {
-				status: error.statusCode,
-				headers
-			});
+	
+	if (request.method !== "POST") {
+		return new Response(JSON.stringify({status: "error", statusCode: 405, message: "Method not allowed, use POST"}, {status: 500, headers}));
 	}
+
+	const recaptchaToken = request.headers.get("g-recaptcha");
+	if (!recaptchaToken) {
+		return new Response(JSON.stringify({status: "error", statusCode: 405, message: "reCaptcha header missing"}, {status: 500, headers}));
+	}
+
+	const recaptchaIsValid = await verifyRecaptcha(recaptchaToken);
+	if (!recaptchaIsValid) {
+		return new Response(JSON.stringify({status: "error", statusCode: 400, message: "Invalid reCaptcha"}, {status: 500, headers}));
+	}
+
+	const {firstName, lastName, email, phone, message} = await parseRequest(request);
+
+	if (!firstName || !lastName || !email || !message) {
+		return new Response(JSON.stringify({status: "error", statusCode: 400, message: "Please complete all required fields"}, {status: 500, headers}));
+	}
+
+	if (!emailRegex.test(email)) {
+		return new Response(JSON.stringify({status: "error", statusCode: 400, message: "Please enter a valid email address"}, {status: 500, headers}));
+	}
+
+	const notification = buildNotification(firstName, lastName, email, phone, message);
+
+	return Promise.all([sendTelegramMessage(notification), sendTelegramContact(firstName, lastName, phone)])
+		.catch(error => {
+			return new Response(JSON.stringify({status: "error", message: error}), {
+				status: 500,
+				headers,
+			});
+		})
+		.then(() => {
+			return new Response(JSON.stringify({status: "sucesss", message: "Sent"}), {
+				status: 200,
+				headers,
+			});
+		});
 }
 
 async function parseRequest(request) {
 	const json = await request.json();
 	return {
-		name: json.name,
+		firstName: json.firstName,
+		lastName: json.lastName,
 		email: json.email,
 		phone: json.phone,
 		message: json.message
 	}
 }
 
-function buildNotification(name, email, phone, message) {
-	return `${name} // ${message} // ${email}, ${phone}`;
-}
-
-async function sendPushoverNotification(notification) {
-	return fetch(
-		"https://api.pushover.net/1/messages.json",
-		{
-			method: "POST",
-			headers: {
-				"Content-Type": "application/json",
-				"User-Agent": "cloudflare-worker-nsphoto-contact",
-				accept: "application/json",
-			},
-			body: JSON.stringify({
-				token: PUSHOVER_TOKEN,
-				user: PUSHOVER_USER_KEY,
-				message: notification
-			})
-		}
-	);
+function buildNotification(firstName, lastName, email, phone, message) {
+	return `${lastName}, ${firstName} // ${message} // ${email}, ${phone}`;
 }
 
 async function verifyRecaptcha(recaptchaToken) {
@@ -124,11 +92,9 @@ async function verifyRecaptcha(recaptchaToken) {
 		}
 	)
 	const responseJson = await response.json()
-
 	if (!responseJson.success) {
 		return false;
 	}
-
 	return true;
 }
 
@@ -140,6 +106,20 @@ function sendTelegramMessage(notification) {
 	const chats = TELEGRAM_CHATS.split(',');
 	const promises = chats.map(chatId => {
 		return fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage?chat_id=${chatId}&text=${notificationEncoded}`);
+	});
+	return Promise.allSettled(promises);
+}
+
+function sendTelegramContact(firstName, lastName, phone) {
+	if (!phone) {
+		return Promise.resolve();
+	}
+	if (!TELEGRAM_CHATS || !TELEGRAM_BOT_TOKEN) {
+		return Promise.reject("TELEGRAM_CHATS or TELEGRAM_BOT_TOKEN is missing");
+	}
+	const chats = TELEGRAM_CHATS.split(',');
+	const promises = chats.map(chatId => {
+		return fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendContact?chat_id=${chatId}&first_name=${encodeURIComponent(firstName)}&last_name=${encodeURIComponent(lastName)}&phone_number=${encodeURIComponent(phone)}`);
 	});
 	return Promise.allSettled(promises);
 }

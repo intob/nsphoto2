@@ -38,8 +38,11 @@ other = "Social Media"
 [selectClients]
 other = "Ausgewählte Kunden"
 
-[name]
-other = "Name"
+[firstName]
+other = "Vornamen"
+
+[lastName]
+other = "Nachname"
 
 [email]
 other = "Email"

@@ -49,7 +49,8 @@ function sendToWorker(token) {
 
 	});
 	const body = JSON.stringify({
-		name: document.querySelector('input[name=name]').value,
+		firstName: document.querySelector('input[name=first-name]').value,
+		lastName: document.querySelector('input[name=last-name]').value,
 		email: document.querySelector('input[name=email]').value,
 		phone: document.querySelector('input[name=phone]').value,
 		message: document.querySelector('textarea[name=message]').value
