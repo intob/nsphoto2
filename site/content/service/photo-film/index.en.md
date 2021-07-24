@@ -13,7 +13,7 @@ packages:
       - name: 8 hours shooting
       - name: Editing & post-production
         description: 225.- per hour
-    description: blahh
+    description: ""
 ---
 My Nikkon Z7 II makes incredible photos, but I can also shoot stable, 4k video with very good dynamic range. You will be surprised what is possible.
 
