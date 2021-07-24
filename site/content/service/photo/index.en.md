@@ -10,7 +10,7 @@ packages:
   - price: 2000
     name: Standard
     features:
-      - name: 8 hours shooting
+      - name: 8 hours of shooting
       - name: Editing
         description: 225.- CHF per hour
 ---
