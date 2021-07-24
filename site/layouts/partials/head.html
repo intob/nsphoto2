@@ -9,5 +9,11 @@
 	<meta property="og:title" content="{{ if not (in $.Site.Title .Title) }}{{.Title}} | {{ end }}{{ $.Site.Title }}">
 	<meta property="og:description" content="{{ default .Params.description .Params.intro }}">
 	<meta property="og:url" content="{{ .Permalink | absLangURL }}">
-	<meta property="og:image" content="{{ default "/media/og-image.jpg" .Params.thumbnail | absURL }}">
+
+	{{ $thumbnail := "/media/og-image.jpg" }}
+	{{ if .Params.thumbnail }}
+		{{ $thumbnail = index .Params.thumbnail 2 }}
+	{{ end }}
+
+	<meta property="og:image" content="{{ $thumbnail | absURL }}">
 </head>
