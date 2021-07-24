@@ -50,7 +50,10 @@ async function handle(request) {
 
 	const notification = buildNotification(firstName, lastName, email, phone, message);
 
-	return Promise.all([sendTelegramMessage(notification), sendTelegramContact(firstName, lastName, email, phone)])
+	return Promise.all([
+			sendTelegramMessage(notification),
+			sendTelegramContact(firstName, lastName, phone)
+		])
 		.catch(error => {
 			return new Response(JSON.stringify({status: "error", message: error}), {
 				status: 500,
@@ -109,29 +112,16 @@ function sendTelegramMessage(notification) {
 	return Promise.allSettled(promises);
 }
 
-function sendTelegramContact(firstName, lastName, email, phone) {
+function sendTelegramContact(firstName, lastName, phone) {
 	if (!phone) {
 		return Promise.resolve();
 	}
 	if (!TELEGRAM_CHATS || !TELEGRAM_BOT_TOKEN) {
 		return Promise.reject("TELEGRAM_CHATS or TELEGRAM_BOT_TOKEN is missing");
 	}
-	const vcard = makeVCard(firstName, lastName, email, phone);
 	const chats = TELEGRAM_CHATS.split(',');
 	const promises = chats.map(chatId => {
-		return fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendContact?chat_id=${chatId}&first_name=${encodeURIComponent(firstName)}&last_name=${encodeURIComponent(lastName)}&phone_number=${encodeURIComponent(phone)}&vcard=${encodeURIComponent(vcard)}`);
+		return fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendContact?chat_id=${chatId}&first_name=${encodeURIComponent(firstName)}&last_name=${encodeURIComponent(lastName)}&phone_number=${encodeURIComponent(phone)}`);
 	});
 	return Promise.allSettled(promises);
-}
-
-function makeVCard(firstName, lastName, email, phone) {
-	return `
-		BEGIN:VCARD
-		VERSION:4.0
-		N:${lastName}, ${firstName}
-		FN:${firstName} ${lastName}
-		TEL;WORK;MSG:${phone}
-		EMAIL;INTERNET:${email}
-		END:VCARD
-	`;
 }
