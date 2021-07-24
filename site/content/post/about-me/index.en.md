@@ -3,9 +3,9 @@ title: About me
 date: 2021-07-24T12:57:13.625Z
 description: A brief history of my life & interests.
 thumbnail:
-  - https://media-store.dr-useless.workers.dev/image/avif/fd84211fa6ca66ebd63216cd593615ea984701509ad9bda8ea2985158002201c
-  - https://media-store.dr-useless.workers.dev/image/webp/518702b5ffb24708cd5a6b657ef73d90392df0bd493a4a097d44109f1364ec09
-  - https://media-store.dr-useless.workers.dev/image/jpeg/573055cb84ab22846d83b8a9864c80e57e98dd4b065e4fc9a42f39c9137c2f85
+  - https://media-store.dr-useless.workers.dev/image/avif/1a0fdb08806101380750ea7909bb047728f6f3b59aa4fd5ff41528673617eb2d
+  - https://media-store.dr-useless.workers.dev/image/webp/2be430a6ec09805f2e16cc4653aeb930e1147c8e426ff55f65bb5c54bd001191
+  - https://media-store.dr-useless.workers.dev/image/jpeg/c5fe48988cce541dfd29cc8e9925bfdd54e8391d395b3c18e09fa97a6c6d158c
 ---
 Born in 1987, in a small town in Switzerland, I grew up hiking in the Swiss alps. Going on camping trips with my family and being outdoors, adventure was always part of my life.
 
