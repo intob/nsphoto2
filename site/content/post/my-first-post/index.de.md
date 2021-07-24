@@ -1,6 +1,6 @@
 ---
 title: Meine erste Post
-date: 2021-06-01T20:12:57.760Z
+date: 2021-07-24T12:48:47.175Z
 description: Having trained seriously with bodyweight exercises for a long time,
   I strongly believe that a solidly construed bodyweight strength training
   regimen is at least as good as weights for strength for the upper body.
