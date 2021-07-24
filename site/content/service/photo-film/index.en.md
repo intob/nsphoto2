@@ -19,7 +19,7 @@ packages:
     description: For bigger projects, please contact me for a quote.
     features: []
 ---
-My Nikkon Z7 II makes incredible photos, but I can also shoot stable, 4k video with very good dynamic range. You will be surprised by what is possible.
+My Nikon Z7 II makes incredible photos, but I can also shoot stable, 4k video with very good dynamic range. You will be surprised by what is possible.
 
 This approach is particularly effective for expeditions & adventures where gear weight is limited, access is challenging & time is short.
 
