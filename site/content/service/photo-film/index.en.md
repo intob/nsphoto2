@@ -12,7 +12,7 @@ packages:
     features:
       - name: 8 hours of shooting
       - name: Editing & post-production
-        description: 225.- CHF per hour
+        price: 225.- CHF per hour
     description: ""
   - price: ""
     name: Multi-day project

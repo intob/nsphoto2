@@ -12,6 +12,6 @@ packages:
     features:
       - name: 8 Stunden Einsatzdauer
       - name: Bearbeiten
-        description: 225.- CHF pro Stunde
+        price: 225.- CHF pro Stunde
 ---
 Schauen Sie sich mein Portfolio an. Wenn Ihnen mein Stil gefällt, bin ich sicher, dass wir eine produktive & spaßige Zeit beim Shooting für Ihr Projekt haben werden.

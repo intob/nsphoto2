@@ -12,6 +12,10 @@ section.packages ul ul {
 	list-style-type: "✔️";
 }
 
+section ul ul li h4 {
+	display: inline-block;
+}
+
 section.packages ul ul li::marker {
 	content: "✔️ ";
 	font-size: 1.25rem;

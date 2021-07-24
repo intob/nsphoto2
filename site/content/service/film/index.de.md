@@ -12,7 +12,7 @@ packages:
     features:
       - name: 8 Stunden Einsatzdauer
       - name: Post-Produktion
-        description: 225.- pro Stunde
+        price: 225.- CHF pro Stunde
   - price: ""
     name: Mehrtägiges Projekt
     description: Für größere Projekte kontaktieren Sie mich bitte für ein Angebot.

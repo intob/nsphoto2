@@ -12,7 +12,7 @@ packages:
     features:
       - name: 8 Stunden Einsatzdauer
       - name: Bearbeiten & Postproduktion
-        description: 225.- CHF per hour
+        price: 225.- CHF per hour
     description: ""
   - price: ""
     name: Mehrtägiges Projekt
