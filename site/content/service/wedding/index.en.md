@@ -41,4 +41,4 @@ packages:
 ---
 A very special day, two people in love, surrounded by all the beloved people in your life, an unforgettable moment... For you to remember as if it happened yesterday, I will capture all the emotions and moments. Authentic and naturally, in a documentary style, individually adapted to the location and to your wishes. From the styling of the bride, the exchange of the rings, the cutting of the cake to the wedding dance, this special day is full of moments to remember.
 
-For packages River & Ocean, I will set up [/en/post/photobooth](my photobooth) at your evening location.
+For packages River & Ocean, I will set up [/en/post/photobooth](/en/post/photobooth) at your evening location.
