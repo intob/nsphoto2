@@ -14,6 +14,9 @@ packages:
       - name: Bearbeiten & Postproduktion
         description: 225.- CHF per hour
     description: ""
+  - price: ""
+    name: Mehrtägiges Projekt
+    description: Für größere Projekte kontaktieren Sie mich bitte für ein Angebot.
 ---
 Meine Nikkon Z7 II macht unglaubliche Fotos, aber ich kann auch stabile, 4k-Videos mit sehr gutem Dynamikumfang aufnehmen. Sie werden überrascht sein, was alles möglich ist.
 
