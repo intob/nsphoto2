@@ -30,7 +30,12 @@
 	margin-left: 5px;
 }
 
-.list-item h2, .list-item p {
+.list-item h2 {
+	margin: 0 5px 5px 5px;
+	line-height: 1.2;
+}
+
+.list-item p {
 	margin: 5px;
 }
 
