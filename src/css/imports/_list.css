@@ -27,20 +27,16 @@
 
 .item-details {
 	display: block;
-	margin-left: 5px;
+	margin-left: 10px;
 }
 
 .list-item h2 {
-	margin: 0 5px 5px 5px;
+	margin: 0 0 5px 0;
 	line-height: 1.2;
 }
 
 .list-item p {
-	margin: 5px;
-}
-
-.list-item h3 {
-	margin: 0;
+	margin: 5px 0;
 }
 
 @media (min-width: 600px) {
