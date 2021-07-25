@@ -8,7 +8,7 @@ thumbnail:
   - https://media-store.dr-useless.workers.dev/image/jpeg/11d7f1809a12220c0cb31eed535e1110ed88b0c6a034323742ba0b225c2fb09c
 packages:
   - price: 1600
-    name: Source
+    name: Stream
     description: The base wedding package.
     features:
       - name: Initial meeting
@@ -16,7 +16,7 @@ packages:
           vital for us to break the ice, so we can get natural & authentic
           photos.
       - name: Duration
-        description: 3 hours
+        meta: 3 hours
       - name: Bridal couple shoot
       - name: Wedding ceremony
       - name: Reception
@@ -25,7 +25,7 @@ packages:
     description: Everything from Stream, plus...
     features:
       - name: Duration
-        description: 7 hours
+        meta: 7 hours
       - name: Location scouting
       - name: Evening shooting
       - name: Photobooth
@@ -37,7 +37,7 @@ packages:
     description: Everything from Stream & River, plus...
     features:
       - name: Duration
-        description: 12 hours or until midnight
+        meta: 12 hours or until midnight
       - name: Engagement shooting
       - name: Preparation shooting
 ---

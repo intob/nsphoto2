@@ -6,7 +6,7 @@ thumbnail:
   - https://media-store.dr-useless.workers.dev/image/webp/6302fe51df5de56b5683169f8195a2a9922c41e4c8c4971bad13477dea363dab
   - https://media-store.dr-useless.workers.dev/image/jpeg/11d7f1809a12220c0cb31eed535e1110ed88b0c6a034323742ba0b225c2fb09c
 packages:
-  - price: 950
+  - price: 1600
     name: Quelle
     description: Das Basis-Hochzeitspaket.
     features:
@@ -15,7 +15,7 @@ packages:
           Dies ist um das Eis zu brechen, damit wir natürliche und authentische
           Fotos.
       - name: Dauer
-        description: 3 Std.
+        meta: 3 Std.
       - name: Brautpaar-Shooting
       - name: Hochzeitsfeier
       - name: Apero
@@ -24,7 +24,7 @@ packages:
     description: Alles von Quelle, plus...
     features:
       - name: Dauer
-        description: 7 Std.
+        meta: 7 Std.
       - name: Standort-Scouting
       - name: Abendlicher-Shooting
       - name: Photobooth
@@ -35,11 +35,9 @@ packages:
     description: Alles von Quelle & Fluss, plus...
     features:
       - name: Dauer
-        description: 12 Std. oder bis Mitternacht
+        meta: 12 Std. oder bis Mitternacht
       - name: Verlobungs-Shooting
       - name: Vorbereitung-Shooting
-      - name: Fotobox
-        description: 400 Drucke enthalten
 ---
 Ein ganz besonderer Tag, zwei Menschen die um die Wette strahlen, alle die Menschen um sich, die einem Wichtig sind. Alles in allem einfach unvergesslich. Damit sich dieser Tag auch noch in einigen Jahren anfühlt als wäre er gerade gestern gewesen, werde ich all die Emotionen und Details mit meiner Kamera für die Ewigkeit festhalten. Individuell an die Location angepasst und auf Ihre Wünsche eingehend.
 

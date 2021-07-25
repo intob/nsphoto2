@@ -6,9 +6,7 @@ load().then(() => {
 });
 
 window.addEventListener('resize', () => {
-	window.requestAnimationFrame(() => {
-		initHeroGridLoading();
-	});
+	window.requestAnimationFrame(() => initHeroGridLoading());
 });
 
 function initHeroGridLoading() {
@@ -16,7 +14,7 @@ function initHeroGridLoading() {
 		.filter(item => item.querySelector('picture[data-super-lazy]') && getComputedStyle(item).display !== 'none')
 		.map(item => item.querySelector('picture[data-super-lazy]'));
 	if (heroImages.length > 0) {
-		loadRandomImage(heroImages, heroImages.length);
+		loadRandomImage(heroImages);
 	}
 }
 

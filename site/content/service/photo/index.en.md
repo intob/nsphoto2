@@ -12,6 +12,6 @@ packages:
     features:
       - name: 8 hours of shooting
       - name: Editing
-        price: 225.- CHF per hour
+        meta: 225.- CHF per hour
 ---
 Look at my portfolio. If you like my style, I'm sure we'll have a productive & fun time shooting for your project.

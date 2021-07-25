@@ -16,7 +16,7 @@
 					<header>
 						<h3>{{ .name }}</h3>
 						{{ if .price }}
-							<h3 class="price">{{ .price }}.- CHF</h3>
+							<h3 class="meta">{{ .price }}.- CHF</h3>
 						{{ end }}
 					</header>
 					{{ if .description}}
@@ -26,8 +26,8 @@
 						{{ range .features }}
 							<li>
 								<h4>{{ .name }}</h4>
-								{{ if .price }}
-									<div class="price">{{ .price }}</div>
+								{{ if .meta }}
+									<div class="meta">{{ .meta }}</div>
 								{{ end }}
 								{{ if .description }}
 									<p>{{ markdownify .description }}</p>

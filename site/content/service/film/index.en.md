@@ -13,7 +13,7 @@ packages:
       - name: 8 hours of shooting
         description: ""
       - name: Cutting & post-production
-        price: 225.- CHF per hour
+        meta: 225.- CHF per hour
   - price: ""
     name: Multi-day project
     description: For bigger projects, please contact me for a quote.
