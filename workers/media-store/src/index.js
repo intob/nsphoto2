@@ -42,7 +42,7 @@ async function handle(request) {
 						headers: {
 							"content-type": getMimeTypeFromKey(key),
 							"content-length": data.byteLength,
-							"cache-control": `immutable, max-age=${clientCacheTtl}`
+							"cache-control": `public, max-age=${clientCacheTtl}, immutable`
 						}
 					});
 					return Promise.resolve(response);
