@@ -4,7 +4,7 @@ import { getKeyFromRequestUrl, getMimeTypeFromRequest, getMimeTypeFromKey, store
 export const keyTtl = 31556926; // 1 year in s
 const refreshThreshold = 7776000000; // 3 months in ms
 const kvCacheTtl = 3600; // 1 hour in s
-const clientCacheTtl = 5259600; // 2 months in s
+const clientCacheTtl = 31556926; // 1 year in s
 
 addEventListener("fetch", event => {
 	event.respondWith(handle(event.request));
