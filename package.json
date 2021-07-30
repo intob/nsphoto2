@@ -16,7 +16,12 @@
 		"build": "npm run build:hugo && npm run build:esbuild",
 		"build:hugo": "hugo -d ../dist -s site --minify",
 		"build:esbuild": "node ./esbuild.js",
-		"fetch:images": "node ./fetch-images.js"
+		"fetch:images": "node ./fetch-images.js",
+		"workers:publish": "npm run workers:contact:publish; npm run workers:github-oauth:publish; npm run workers:media-store:publish; npm run workers:youtube:publish",
+		"workers:contact:publish": "cd ./workers/contact; wrangler publish",
+		"workers:github-oauth:publish": "cd ./workers/github-oauth; wrangler publish",
+		"workers:media-store:publish": "cd ./workers/media-store; wrangler publish",
+		"workers:youtube:publish": "cd ./workers/youtube; wrangler publish"
 	},
 	"author": "github.com/dr-useless",
 	"license": "MIT",
