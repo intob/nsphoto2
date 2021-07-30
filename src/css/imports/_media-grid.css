@@ -33,7 +33,7 @@
 	margin: 5px;
 	padding: 2px;
 	background-color: var(--color-bg);
-	font-size: 1rem;
+	font-size: 0.8rem;
 	border-radius: 2px;
 }
 
@@ -135,6 +135,10 @@
 	.media-grid-item:nth-child(6n):not(.span) {
 		grid-column-end: span 4;
 		grid-row-end: span 3;
+	}
+
+	.media-grid-item h2 {
+		font-size: 1rem;
 	}
 }
 
