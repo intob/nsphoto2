@@ -11,8 +11,8 @@
 			<input type="tel" name="phone" aria-label="{{ i18n "phone" }}" placeholder="{{ i18n "phone" }}" autocomplete="tel" />
 			<textarea name="message" aria-label="{{ i18n "message" }}" placeholder="{{ i18n "message" }}" rows="6" autocomplete="off" required></textarea>
 			<button type="submit" class="link">{{ i18n "submit" }}</button>
-			<p class="response error" hidden></p>
-			<p class="success-message" hidden>{{ .Params.success_message }}</p>
+			<h2 class="response error" hidden></h2>
+			<h2 class="success-message" hidden>{{ .Params.success_message }}</h2>
 		</form>
 		<p>
 			{{ $privacyPolicy := .Site.GetPage "/privacy"}}
