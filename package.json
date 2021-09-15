@@ -27,17 +27,17 @@
 	"license": "MIT",
 	"dependencies": {
 		"date-fns": "^2.22.1",
-		"netlify-cms-app": "^2.15.19",
+		"netlify-cms-app": "^2.15.44",
 		"react": "^17.0.2",
 		"react-dom": "^17.0.2"
 	},
 	"devDependencies": {
 		"colors": "^1.4.0",
 		"connect-livereload": "^0.6.1",
-		"esbuild": "^0.12.5",
-		"eslint": "^7.27.0",
-		"eslint-plugin-import": "^2.23.4",
-		"eslint-plugin-react": "^7.24.0",
+		"esbuild": "^0.12.28",
+		"eslint": "^7.32.0",
+		"eslint-plugin-import": "^2.24.2",
+		"eslint-plugin-react": "^7.25.1",
 		"express": "^4.17.1",
 		"livereload": "^0.9.3",
 		"npm-run-all": "^4.1.5",
