@@ -1,6 +1,5 @@
 ---
 title: Photobooth
-date: 2021-07-24T13:38:55.803Z
 description: Mounted on a wooden tripod, a beautiful handcrafted box holds a
   DSLR & professional flash. A touchscreen makes use easy & fun.
 thumbnail:

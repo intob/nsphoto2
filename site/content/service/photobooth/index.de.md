@@ -1,6 +1,5 @@
 ---
 title: Photobooth
-date: 2021-07-24T13:38:55.803Z
 description: Auf einem Holzstativ montiert, hält eine schöne handgefertigte Box eine DSLR & professionellen Blitz.
   Ein Touchscreen macht die Bedienung einfach und macht Spaß.
 thumbnail:
