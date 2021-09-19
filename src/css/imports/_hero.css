@@ -21,7 +21,6 @@
 .hero-grid .description {
 	display: flex;
 	padding: 5px;
-	border-radius: 5px;
 }
 
 .hero-grid h1 {
