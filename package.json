@@ -34,7 +34,7 @@
 	"devDependencies": {
 		"colors": "^1.4.0",
 		"connect-livereload": "^0.6.1",
-		"esbuild": "^0.12.28",
+		"esbuild": "^0.13.3",
 		"eslint": "^7.32.0",
 		"eslint-plugin-import": "^2.24.2",
 		"eslint-plugin-react": "^7.25.1",
