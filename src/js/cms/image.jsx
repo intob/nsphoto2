@@ -1,3 +1,6 @@
+const IMGIN = "//imgin.fly.dev"
+const IMGIN_SECRET = "gy9amurwhso9px2mppnc"
+
 export function readFile(file) {
 	return new Promise(resolve => {
 		const reader = new FileReader();
@@ -8,46 +11,40 @@ export function readFile(file) {
 	});
 }
 
-export function processImage(data, progressHandler, fileName = undefined, contentType = undefined, width = undefined, height = undefined, fit = undefined, quality = undefined) {
-	const resizeOptions = width || height ? {width: width, height: height, fit: fit, withoutEnlargement: true} : undefined;
-
-	const jpeg = optimizeImage(data, contentType, 'image/jpeg', resizeOptions, {mozjpeg: true, quality: quality})
+export function processImage(data, progressHandler, fileName, contentType, width, height) {
+	const jpeg = optimizeImage(data, contentType, 'jpeg', width, height)
 		.then(data => {
 			progressHandler(fileName, 16);
 			return uploadData(data, contentType);
 		});
 	jpeg.then(() => progressHandler(fileName, 16));
 
-	const webp = optimizeImage(data, contentType, 'image/webp', resizeOptions, {reductionEffort: 6, quality: quality})
+	const webp = optimizeImage(data, contentType, 'webp', width, height)
 		.then(data => {
 			progressHandler(fileName, 16);
 			return uploadData(data, 'image/webp');
 		});
 	webp.then(() => progressHandler(fileName, 16));
 
-	const avif = optimizeImage(data, contentType, 'image/avif', resizeOptions, {speed: 5, quality: quality})
-		.then(data => {
-			progressHandler(fileName, 16);
-			return uploadData(data, 'image/avif');
-		});
-	avif.then(() => progressHandler(fileName, 16));
-
-	return Promise.all([avif, webp, jpeg]);
+	return Promise.all([webp, jpeg]);
 }
 
-function optimizeImage(data, contentType, targetType, resizeOptions, outputOptions) {
+function optimizeImage(data, contentType, format, width, height) {
 	const headers = {
 		'content-length': data.byteLength,
 		'content-type': contentType,
-		'accept': targetType
-	};
-	if (outputOptions) {
-		headers['output-options'] = JSON.stringify(outputOptions);
+		'authorization': IMGIN_SECRET
 	}
-	if (resizeOptions) {
-		headers['resize-options'] = JSON.stringify(resizeOptions);
+	const params = new URLSearchParams()
+	params.set("format", format)
+	if (width) {
+		params.set("width", width)
 	}
-	return fetch('https://storage.nicole-schafer.com:3002/', {
+	if (height) {
+		params.set("height", height)
+	}
+
+	return fetch(`${IMGIN}?${params.toString()}`, {
 		method: 'POST',
 		headers: headers,
 		body: data
