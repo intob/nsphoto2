@@ -93,6 +93,11 @@
 		overflow: hidden;
 	}
 
+	.media-grid-item:nth-child(1):not(.span) {
+		grid-column-end: span 3;
+		grid-row-end: span 2;
+	}
+
 	.media-grid-item:nth-child(2n):not(.span) {
 		grid-column-end: span 2;
 		grid-row-end: span 2;
