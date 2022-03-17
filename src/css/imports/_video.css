@@ -10,10 +10,13 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
+}
+
+iframe.video {
 	opacity: 1;
 	transition: opacity 0.5s;
 }
 
-.video-container iframe[data-lazy] {
+iframe.video[data-lazy] {
 	opacity: 0;
 }

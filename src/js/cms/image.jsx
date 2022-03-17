@@ -15,7 +15,7 @@ export function processImage(data, progressHandler, fileName, contentType, width
 	const jpeg = optimizeImage(data, contentType, 'jpeg', width, height)
 		.then(data => {
 			progressHandler(fileName, 16);
-			return uploadData(data, contentType);
+			return uploadData(data, "image/jpeg");
 		});
 	jpeg.then(() => progressHandler(fileName, 16));
 

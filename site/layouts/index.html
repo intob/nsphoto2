@@ -33,8 +33,12 @@
 			{{ end }}
 		</div>
 	</section>
-	<section class="padding-side">
-		{{ partial "youtube-video" .Params.showreel }}
+	<section class="showreel">
+		<div class="limit-width">
+			<div class="video-container">
+				{{ partial "youtube-video" .Params.showreel.id }}
+			</div>
+		</div>
 	</section>
 	<section class="padding-side">
 		{{ partial "media-grid" . }}

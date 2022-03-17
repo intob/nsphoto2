@@ -1,12 +1,12 @@
-<picture data-lazy>
+<picture>
 	{{ $default := "" }}
 	{{ range . }}
 		{{ $segments := split . "/" }}
 		{{ $mimeType := printf "%s/%s" (index $segments 3) (index $segments 4) }}
-		<source data-srcset="{{ . }}" type="{{ $mimeType }}">
+		<source src="{{ . }}" type="{{ $mimeType }}">
 		{{ if eq $mimeType "image/jpeg" }}
 			{{ $default = . }}
 		{{ end }}
 	{{ end }}
-	<img data-srcset="{{ $default }}" alt="image/jpeg"/>
+	<img src="{{ $default }}" alt="image"/>
 </picture>

@@ -1,19 +1,19 @@
 {{ define "main" }}
 	<article>
+		<section class="limit-width">
+			<h1>{{.Title}}</h1>
+			<div class="metadata light">
+				<p class="tags">
+					{{ range .Params.tags }}
+						<span>{{.}}</span>
+					{{end}}
+				</p>
+				<p>{{ .Date.Format "2006-01-25" }}</p>
+			</div>
+			<p>{{ .Description }}</p>
+		</section>
 		<section class="padding-side">
 			<div class="media-grid album">
-				<div class="media-grid-item">
-					<h1>{{.Title}}</h1>
-					<div class="metadata light">
-						<p class="tags">
-							{{ range .Params.tags }}
-								<span>{{.}}</span>
-							{{end}}
-						</p>
-						<p>{{ .Date.Format "2006-01-02" }}</p>
-					</div>
-					<p>{{ .Description }}</p>
-				</div>
 				{{ range $i, $image := .Params.images}}
 					<div class="media-grid-item" style="order: {{ $i }}">
 						{{ partial "picture" $image }}
