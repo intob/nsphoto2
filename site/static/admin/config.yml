@@ -2,7 +2,7 @@ backend:
   name: github
   repo: intob/nsphoto2
   base_url: https://nsphoto-github-oauth.intob.workers.dev
-  branch: big-changes
+  branch: master
 
 media_folder: "site/static/media"
 public_folder: media
