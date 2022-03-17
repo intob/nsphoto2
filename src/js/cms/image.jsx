@@ -16,17 +16,24 @@ export function processImage(data, progressHandler, fileName, contentType, width
 		.then(data => {
 			progressHandler(fileName, 16);
 			return uploadData(data, "image/jpeg");
-		});
-	jpeg.then(() => progressHandler(fileName, 16));
+		})
+		.then(() => progressHandler(fileName, 16));
 
 	const webp = optimizeImage(data, contentType, 'webp', width, height)
 		.then(data => {
 			progressHandler(fileName, 16);
 			return uploadData(data, 'image/webp');
-		});
-	webp.then(() => progressHandler(fileName, 16));
+		})
+		.then(() => progressHandler(fileName, 16));
 
-	return Promise.all([webp, jpeg]);
+	const avif = optimizeImage(data, contentType, 'avif', width, height)
+		.then(data => {
+			progressHandler(fileName, 16);
+			return uploadData(data, 'image/avif');
+		})
+		.then(() => progressHandler(fileName, 16));
+
+	return Promise.all([webp, jpeg, avif]);
 }
 
 function optimizeImage(data, contentType, format, width, height) {
