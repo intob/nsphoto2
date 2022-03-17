@@ -4,12 +4,12 @@
 			<div class="video-container">
 				{{ partial "youtube-video" .Params.youtube_video.id }}
 			</div>
-			<h1>{{.Title}}</h1>
+			<h1>{{ .Title }}</h1>
 			<div class="metadata light">
 				<p class="tags">
 					{{ range .Params.tags }}
-						<span>{{.}}</span>
-					{{end}}
+						<span>{{ . }}</span>
+					{{ end }}
 				</p>
 				<p>{{ .Date.Format "2006-01-02" }}</p>
 			</div>

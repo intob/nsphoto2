@@ -1,7 +1,7 @@
 {{ define "main" }}
 	<article>
 		<section class="limit-width">
-			<h1>{{.Title}}</h1>
+			<h1>{{ .Title }}</h1>
 			<p>{{ .Description }}</p>
 			{{ if .Params.thumbnail }}
 				{{  partial "picture" .Params.thumbnail }}
@@ -9,7 +9,7 @@
 			{{ .Content }}
 			{{ if .Params.images }}
 				<div class="media-grid">
-					{{ range $i, $image := .Params.images}}
+					{{ range $i, $image := .Params.images }}
 						<div class="media-grid-item" style="order: {{ $i }}">
 							{{ partial "picture" $image }}
 						</div>
@@ -29,7 +29,7 @@
 								<h3 class="meta">{{ .price }}.- CHF</h3>
 							{{ end }}
 						</header>
-						{{ if .description}}
+						{{ if .description }}
 							<p>{{ .description }}</p>
 						{{ end }}
 						<ul>

@@ -1,12 +1,12 @@
 {{ define "main" }}
 	<article>
 		<section class="limit-width">
-			<h1>{{.Title}}</h1>
+			<h1>{{ .Title }}</h1>
 			<div class="metadata light">
 				<p class="tags">
 					{{ range .Params.tags }}
-						<span>{{.}}</span>
-					{{end}}
+						<span>{{ . }}</span>
+					{{ end }}
 				</p>
 				<p>{{ .Date.Format "2006-01-25" }}</p>
 			</div>
@@ -14,12 +14,12 @@
 		</section>
 		<section class="padding-side">
 			<div class="media-grid album">
-				{{ range $i, $image := .Params.images}}
+				{{ range $i, $image := .Params.images }}
 					<div class="media-grid-item" style="order: {{ $i }}">
 						{{ partial "picture" $image }}
 					</div>
 				{{ end }}
-				{{ range $i, $video := .Params.videos}}
+				{{ range $i, $video := .Params.videos }}
 					<div class="media-grid-item span span-3-2 video-container" style="order:{{ add $i 4 }}">
 							{{ partial "youtube-video" $video }}
 					</div>

@@ -15,7 +15,7 @@
 			<h2 class="success-message" hidden>{{ .Params.success_message }}</h2>
 		</form>
 		<p>
-			{{ $privacyPolicy := .Site.GetPage "/privacy"}}
+			{{ $privacyPolicy := .Site.GetPage "/privacy" }}
 			<a href="{{ $privacyPolicy.Permalink }}">{{ $privacyPolicy.Title }}</a>
 		</p>
 	</section>

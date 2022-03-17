@@ -12,12 +12,6 @@ export default function initLazyLoading() {
 		}
 		lazyImageObserver.observe(observable);
 	});
-
-	const lazyIframes = [...document.querySelectorAll('iframe[data-lazy]')];
-	const lazyIframeObserver = getLazyIframeObserver(observerOptions);
-	lazyIframes.forEach(lazyIframe => {
-		lazyIframeObserver.observe(lazyIframe);
-	});
 }
 
 function getLazyImageObserver(options) {
@@ -32,21 +26,6 @@ function getLazyImageObserver(options) {
 							lazyImage.removeAttribute('data-lazy');
 						});
 					}
-				});
-				intersectionObserver.unobserve(entry.target);
-			}
-		});
-	}, options);
-	return intersectionObserver;
-}
-
-function getLazyIframeObserver(options) {
-	const intersectionObserver = new IntersectionObserver(entries => {
-		entries.forEach(entry => {
-			if (entry.isIntersecting) {
-				entry.target.src = entry.target.dataset.srcsetIframe;
-				entry.target.addEventListener('load', () => {
-					entry.target.removeAttribute('data-lazy');
 				});
 				intersectionObserver.unobserve(entry.target);
 			}
