@@ -3,7 +3,7 @@
 	{{ range . }}
 		{{ $segments := split . "/" }}
 		{{ $mimeType := printf "%s/%s" (index $segments 3) (index $segments 4) }}
-		<source src="{{ . }}" type="{{ $mimeType }}">
+		<source srcset="{{ . }}" type="{{ $mimeType }}">
 		{{ if eq $mimeType "image/jpeg" }}
 			{{ $default = . }}
 		{{ end }}
