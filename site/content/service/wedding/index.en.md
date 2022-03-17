@@ -3,9 +3,9 @@ title: Wedding
 description: Authentic, natural reportage of your unforgettable day, tailored to
   your wishes.
 thumbnail:
-  - https://media-store.dr-useless.workers.dev/image/avif/22ba1775034eafc8c26740d98ed59e06ac41f2671ca54196b505d51049d19517
-  - https://media-store.dr-useless.workers.dev/image/webp/6302fe51df5de56b5683169f8195a2a9922c41e4c8c4971bad13477dea363dab
-  - https://media-store.dr-useless.workers.dev/image/jpeg/11d7f1809a12220c0cb31eed535e1110ed88b0c6a034323742ba0b225c2fb09c
+  - https://media-store.intob.workers.dev/image/avif/22ba1775034eafc8c26740d98ed59e06ac41f2671ca54196b505d51049d19517
+  - https://media-store.intob.workers.dev/image/webp/6302fe51df5de56b5683169f8195a2a9922c41e4c8c4971bad13477dea363dab
+  - https://media-store.intob.workers.dev/image/jpeg/11d7f1809a12220c0cb31eed535e1110ed88b0c6a034323742ba0b225c2fb09c
 packages:
   - price: 1600
     name: Stream

@@ -1,7 +1,7 @@
 import loadScript from './load-script';
 import {ready} from './async';
 
-const workerUrl = 'https://nsphoto-contact.dr-useless.workers.dev';
+const workerUrl = 'https://nsphoto-contact.intob.workers.dev';
 const recaptchaScriptUrl = 'https://www.google.com/recaptcha/api.js?render=6Lfv0bUUAAAAAMGdj5GMUSsPWIL8IK4pKE50epBF';
 
 const contactFormSelector = 'form.contact';

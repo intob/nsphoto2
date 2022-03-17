@@ -4,7 +4,7 @@
 	"private": true,
 	"description": "A Cloudflare Worker to handle GitHub oauth requests",
 	"main": "github-oauth.js",
-	"author": "github.com/dr-useless",
+	"author": "github.com/intob",
 	"license": "MIT",
 	"release": {
 		"branches": [

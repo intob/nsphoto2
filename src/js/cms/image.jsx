@@ -53,7 +53,7 @@ function optimizeImage(data, contentType, format, width, height) {
 }
 
 function uploadData(data, contentType) {
-	return fetch('https://media-store.dr-useless.workers.dev/', {
+	return fetch('https://media-store.intob.workers.dev/', {
 		method: 'PUT',
 		headers: {
 			'authorization': getAuthToken(),

@@ -19,7 +19,7 @@ export default class NSPYoutube extends React.Component {
 	}
 
 	getYoutubeThumbnail = id => {
-		return fetch(`https://nsphoto-youtube.dr-useless.workers.dev/vi/${id}/maxresdefault.jpg`)
+		return fetch(`https://nsphoto-youtube.intob.workers.dev/vi/${id}/maxresdefault.jpg`)
 			.then(response => response.arrayBuffer());
 	}
 

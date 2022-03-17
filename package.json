@@ -2,7 +2,7 @@
 	"name": "nsphoto2",
 	"version": "1.0.0",
 	"description": "Website for Nicole Schafer Photo & Film, built with Hugo & netlifycms",
-	"repository": "github.com/dr-useless/nsphoto2",
+	"repository": "github.com/intob/nsphoto2",
 	"main": "index.js",
 	"type": "module",
 	"scripts": {
@@ -23,7 +23,7 @@
 		"workers:media-store:publish": "cd ./workers/media-store; wrangler publish",
 		"workers:youtube:publish": "cd ./workers/youtube; wrangler publish"
 	},
-	"author": "github.com/dr-useless",
+	"author": "github.com/intob",
 	"license": "MIT",
 	"dependencies": {
 		"date-fns": "^2.28.0",

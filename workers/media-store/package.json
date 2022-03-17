@@ -8,7 +8,7 @@
 		"scripts": {
 				"build": "node ./esbuild.js"
 		},
-		"author": "github.com/dr-useless",
+		"author": "github.com/intob",
 		"license": "MIT",
 		"dependencies": {
 				"esbuild": "^0.13.3"

@@ -1,7 +1,7 @@
 backend:
   name: github
-  repo: dr-useless/nsphoto2
-  base_url: https://nsphoto-github-oauth.dr-useless.workers.dev
+  repo: intob/nsphoto2
+  base_url: https://nsphoto-github-oauth.intob.workers.dev
   branch: big-changes
 
 media_folder: "site/static/media"

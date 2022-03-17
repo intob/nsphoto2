@@ -2,7 +2,7 @@ import path from 'path';
 import fs from 'fs';
 import https from 'https';
 
-const imageRegex = /https:\/\/media-store.dr-useless.workers.dev\/image\/\w+\/\w+/g;
+const imageRegex = /https:\/\/media-store.intob.workers.dev\/image\/\w+\/\w+/g;
 
 function recFindByExt(base,ext,files,result) {
 	files = files || fs.readdirSync(base);
