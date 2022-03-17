@@ -26,8 +26,8 @@ defaultContentLanguageInSubdir = true
 				url = "/service"
 				weight = 2
 		[[languages.de.menu.main]]
-				name = "Blog"
-				url = "/post"
+				name = "Über mich"
+				url = "/about"
 				weight = 3
 		[[languages.de.menu.main]]
 				name = "Kontakt"
@@ -49,8 +49,8 @@ defaultContentLanguageInSubdir = true
 				url = "/service"
 				weight = 2
 		[[languages.en.menu.main]]
-				name = "Blog"
-				url = "/post"
+				name = "About me"
+				url = "/about"
 				weight = 3
 		[[languages.en.menu.main]]
 				name = "Contact"

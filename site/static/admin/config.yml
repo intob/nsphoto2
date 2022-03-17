@@ -2,7 +2,7 @@ backend:
   name: github
   repo: dr-useless/nsphoto2
   base_url: https://nsphoto-github-oauth.dr-useless.workers.dev
-  branch: master
+  branch: big-changes
 
 media_folder: "site/static/media"
 public_folder: media
@@ -14,20 +14,6 @@ i18n:
   default_locale: en
 
 collections:
-  - name: post
-    label: Post
-    folder: "site/content/post"
-    path: "{{slug}}/index"
-    public_folder: "en/post/{{slug}}"
-    i18n: true
-    create: true
-    fields:
-      - {label: Title, name: title, widget: string, i18n: true}
-      - {label: "Publish Date", name: date, widget: datetime , i18n: duplicate, date_format: "YYYY-MM-DD", time_format: "HH:mm"}
-      - {label: Description, name: description, widget: text, i18n: true}
-      - {label: Thumbnail, name: thumbnail, widget: nsp-image, required: false, width: 750, i18n: duplicate}
-      - {label: Body, name: body, widget: markdown, i18n: true}
-      - {label: Images, name: images, widget: nsp-image-list, width: 750, i18n: duplicate, required: false}
   - name: "album"
     label: "Album"
     folder: "site/content/album"
@@ -73,7 +59,8 @@ collections:
       - {label: Description, name: description, widget: text, i18n: true}
       - {label: Thumbnail, name: thumbnail, widget: nsp-image, width: 750, i18n: duplicate, required: false}
       - {label: Body, name: body, widget: markdown, buttons: [bold, italic, code, link, heading-two, heading-three, heading-four, heading-five, heading-six, quote, bulleted-list, numbered-list], required: false, i18n: true}
-      - {label: "Packages", name: "packages", widget: list, i18n: true, fields: [
+      - {label: Images, name: images, widget: nsp-image-list, width: 750, i18n: duplicate, required: false}
+      - {label: "Packages", name: "packages", widget: list, i18n: true, required: false, fields: [
           {label: Name, name: "name", widget: string, i18n: true},
           {label: Description, name: description, widget: text, i18n: true, required: false},
           {label: Price, name: price, widget: number, value_type: int, min: 0, step: 1, default: 100, i18n: duplicate, required: false},
@@ -94,8 +81,8 @@ collections:
           - {label: Subtitle, name: subtitle, widget: string}
           - {label: Intro, name: intro, widget: string}
           - {label: Description, name: description, widget: string}
+          - {label: "Showreel", name: showreel, widget: nsp-youtube, thumbnail_width: 1080}
           - {label: Images, name: images, widget: nsp-image-list, width: 145, height: 120, count: 92}
-          - {label: "Select Client Logos", name: client_logos, widget: nsp-image-list, width: 120, quality: 100}
       - file: "site/content/_index.de.md"
         name: home_de
         label: "Home DE"
@@ -104,8 +91,26 @@ collections:
           - {label: Subtitle, name: subtitle, widget: string}
           - {label: Intro, name: intro, widget: string}
           - {label: Description, name: description, widget: string}
+          - {label: "Showreel", name: showreel, widget: nsp-youtube, thumbnail_width: 1080}
           - {label: Images, name: images, widget: nsp-image-list, width: 145, height: 120, count: 92}
-          - {label: "Select Client Logos", name: client_logos, widget: nsp-image-list, width: 120, quality: 100}
+      - file: "site/content/about/_index.en.md"
+        name: about_en
+        label: "About EN"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Description, name: description, widget: text}
+          - {label: Body, name: body, widget: markdown}
+          - {label: Images, name: images, widget: nsp-image-list, width: 750, i18n: duplicate, required: false}
+          - {label: "Client Logos", name: client_logos, widget: nsp-image-list, width: 120, quality: 100, required: false}
+      - file: "site/content/about/_index.de.md"
+        name: about_de
+        label: "About DE"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Description, name: description, widget: text}
+          - {label: Body, name: body, widget: markdown}
+          - {label: Images, name: images, widget: nsp-image-list, width: 750, i18n: duplicate, required: false}
+          - {label: "Client Logos", name: client_logos, widget: nsp-image-list, width: 120, quality: 100, required: false}
       - file: "site/content/contact/_index.en.md"
         name: contact_en
         label: "Contact EN"

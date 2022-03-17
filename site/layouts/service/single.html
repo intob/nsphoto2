@@ -3,41 +3,52 @@
 		<section class="limit-width">
 			<h1>{{.Title}}</h1>
 			<p>{{ .Description }}</p>
-		{{ if .Params.thumbnail }}
-			{{  partial "picture" .Params.thumbnail }}
-		{{ end }}
+			{{ if .Params.thumbnail }}
+				{{  partial "picture" .Params.thumbnail }}
+			{{ end }}
 			{{ .Content }}
-		</section>
-		<section class="limit-width packages">
-			<h2>{{ i18n "packages"}}</h2>
-			<ul>
-				{{ range .Params.packages }}
-				<li>
-					<header>
-						<h3>{{ .name }}</h3>
-						{{ if .price }}
-							<h3 class="meta">{{ .price }}.- CHF</h3>
-						{{ end }}
-					</header>
-					{{ if .description}}
-						<p>{{ .description }}</p>
+			{{ if .Params.images }}
+				<div class="media-grid">
+					{{ range $i, $image := .Params.images}}
+						<div class="media-grid-item" style="order: {{ $i }}">
+							{{ partial "picture" $image }}
+						</div>
 					{{ end }}
-					<ul>
-						{{ range .features }}
-							<li>
-								<h4>{{ .name }}</h4>
-								{{ if .meta }}
-									<div class="meta">{{ .meta }}</div>
-								{{ end }}
-								{{ if .description }}
-									<p>{{ markdownify .description }}</p>
-								{{ end }}
-							</li>
-						{{ end }}
-					</ul>
-				</li>
-				{{ end }}
-			</ul>
+				</div>
+			{{ end }}
 		</section>
+		{{ if .Params.packages }}
+			<section class="limit-width packages">
+				<h2>{{ i18n "packages"}}</h2>
+				<ul>
+					{{ range .Params.packages }}
+					<li>
+						<header>
+							<h3>{{ .name }}</h3>
+							{{ if .price }}
+								<h3 class="meta">{{ .price }}.- CHF</h3>
+							{{ end }}
+						</header>
+						{{ if .description}}
+							<p>{{ .description }}</p>
+						{{ end }}
+						<ul>
+							{{ range .features }}
+								<li>
+									<h4>{{ .name }}</h4>
+									{{ if .meta }}
+										<div class="meta">{{ .meta }}</div>
+									{{ end }}
+									{{ if .description }}
+										<p>{{ markdownify .description }}</p>
+									{{ end }}
+								</li>
+							{{ end }}
+						</ul>
+					</li>
+					{{ end }}
+				</ul>
+			</section>
+		{{ end }}
 	</article>
 {{ end }}
